@@ -1,0 +1,13 @@
+<aside class="aside">
+	<nav class="nav-aside">
+		{{#each navdashboard}}
+		<div class="nav-aside-item">
+			{{#eq title compare=""}}
+			<div class="nav-aside-devider"></div>
+			{{else}}
+			<a href="{{link}}" class="nav-aside-link{{#eq ../active compare=title}} -active{{/eq}}"><i class="{{icon}}"></i> {{title}}</a>
+			{{/eq}}
+		</div>
+		{{/each}}
+	</nav>
+</aside>

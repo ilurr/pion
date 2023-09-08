@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true}}
+
+<body>
+
+	<!-- layout -->
+	<div class="container">
+
+		{{>block_top brand="pion-clinician" title="Create New Password" lead="Enter your new password below."}}
+
+		<div class="block-middle">
+			<div class="form-main">
+				<form action="forget-email-success.html">
+					{{>input type="password" label="New Password" name="password" placeholder="" txterror=txterrorPsswrd}}
+					{{>input type="password" label="New Password Confirmation" name="password2" placeholder="" txterror=txterrorPsswrd}}
+					<hr>
+					{{#if txterrorSystem}}
+					<div class="form-error text-center">{{txterrorSystem}}</div>
+					{{/if}}
+					{{>button name="forget" type="submit" label="Save Password" class="-disabled" disabled="true"}}
+				</form>
+			</div>
+		</div>
+		
+	</div>
+
+{{>js}}
+<script>
+	// script untuk keperluan dummy saja
+	let ss = document.querySelectorAll("input:not([type=submit])");
+	let fr = document.querySelector("input[type=submit]");
+	if(!!ss) {
+		for(let i=0;i<ss.length;i++) {
+			ss[i].addEventListener('input', cekInput);
+			ss[i].addEventListener('propertychange', cekInput); 
+		}
+	}
+	function cekInput(e) {
+		let va = e.target.value;
+		for(let i=0;i<ss.length;i++) {
+			console.log(ss[i].value);
+			if(ss[i].value!='') {
+				fr.classList.add("-primary");
+				fr.classList.remove("-disabled");
+				fr.removeAttribute("disabled");
+			} else {
+				fr.classList.add("-disabled");
+				fr.setAttribute("disabled","disabled");
+			}
+		}
+	} 
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{{#if page}}
+<a href="#" class="block-back -profile">
+    <span class="icon icon-back"></span>
+</a>
+{{#if title}}
+<div class="profile-title text-center">{{title}}</div>
+{{/if}}
+{{else}}
+<a href="{{title_link}}" class="block-back">
+    <span class="icon icon-back"></span>
+    {{title_back}}
+</a>
+{{/if}}

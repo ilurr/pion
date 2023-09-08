@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="Beranda"}}
+
+		<!-- cover -->
+		<section class="section cover">
+			<div class="cover-block">
+				<div class="cover-content">
+					<h1 class="cover-title">Psikolog kami mendengarkan Anda</h1>
+					<p class="cover-leading">Memberikan penilaian dan konsultasi, kami membuat intervensi yang dipersonalisasi untuk mendukung kesehatan mental keluarga Anda</p>
+				</div>
+			</div>
+			<div class="cover-asset" style="background-image: url(./asset/images/index/ilustration3.jpg);"></div>
+		</section>
+
+		<!-- statistic -->
+		<section class="section stat">
+			<div class="stat-block">
+				{{#each stat}}
+				<div class="stat-item">
+					<div class="stat-icon">
+						<span class="icon icon-{{icon}}"></span>
+					</div>
+					<div class="stat-count" data-target="{{amount}}">{{amount}}</div>
+					<h3 class="stat-lead">{{lead}}</h3>
+				</div>
+				{{/each}}
+			</div>
+		</section>
+
+		<!-- package package -->
+		<section class="section package">
+			<div class="package-block">
+				{{#each package}}
+				<div class="package-item package-bg{{theme}}">
+					<div class="package-asset">
+						<img src="./asset/images/package/{{asset}}" alt="{{title}}">
+					</div>
+					<h2 class="package-title">{{title}}</h2>
+					<p class="package-lead">{{lead}}</p>
+					<a href="{{link}}" role="link" class="button package-button">Lebih lanjut</a>
+				</div>
+				{{/each}}
+			</div>
+		</section>
+
+		<!-- issue -->
+		<section class="section issue">
+			<div class="issue-block">
+				<div class="issue-img">
+					<img src="./asset/images/index/issue.svg" alt="Isu-isu Psikologis yang dihadapi PIONeers">
+				</div>
+				<div class="issue-content">
+					<h3 class="issue-title">Isu-isu Psikologis yang dihadapi PIONeers</h3>
+					<ul class="issue-list">
+						{{#each issue}}
+						{{#gte @index compare=0}}
+						{{#gte @index compare=5}}
+						{{else}}
+						<li class="issue-item">
+							<a href="javascript:openModal('issueModal-{{@index}}')" role="button" class="issue-button"><span>{{title}}</span> <span class="icon icon-arrow-right"></span></a>
+						</li>
+
+						<div class="modal-content -medium" data-modal-target="issueModal-{{@index}}">
+							<div class="modal-header">
+								{{!-- <div class="modal-title">{{!title}}</div> --}}
+								<button class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
+									<i class="fa-solid fa-xmark"></i>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="issue-popup-title">{{title}}</div>
+								<div class="issue-popup">
+									{{{content}}}
+								</div>
+							</div>
+						</div>
+						{{/gte}}
+						{{else}}
+						{{/gte}}
+						{{/each}}
+						<li class="issue-item">
+							<a href="service.html" role="link" class="issue-button"><span>Isu-isu psikologis lainnya</span> <span class="icon icon-arrow-right"></span></a>
+						</li>
+					</ul>
+					{{>button type="link" href="booking.html" label="Buat Janji" class="-primary -auto"}}
+				</div>
+			</div>
+		</section>
+
+		<!-- testimonial -->
+		<section class="section testi">
+			<div class="testi-block">
+				<h3 class="testi-title">Apa yang Klien Kami Katakan</h3>
+				<div class="testi-tab">
+					{{#each testi}}
+					<div class="testi-tab-item" data-tab="menu">
+						<button data-href="{{href}}" class="testi-tab-button{{#eq @index compare=0}} -active{{/eq}}">{{cat}}</button>
+					</div>
+					{{/each}}
+				</div>
+				<div class="testi-body">
+					{{#each testi}}
+					<div class="testi-swiper swiper-testi">
+					<div id="{{href}}" class="testi-list swiper-wrapper{{#eq @index compare=0}} -active{{/eq}}" data-tab="content">
+						{{#each list}}
+						<div class="testi-list-item swiper-slide">
+							<div class="testi-col">
+								<div class="testi-rating">
+									<span class="icon icon-star"></span>
+									<span class="icon icon-star"></span>
+									<span class="icon icon-star"></span>
+									<span class="icon icon-star"></span>
+									<span class="icon icon-star"></span>
+								</div>
+								<div class="testi-row">
+									<div class="testi-avatar">
+										<img src="./asset/images/index/{{avatar}}" alt="">
+									</div>
+									<div class="testi-info">
+										<div class="testi-name">{{name}}</div>
+										<div class="testi-type">{{type}}</div>
+									</div>
+								</div>
+							</div>
+							<div class="testi-col">
+								<div class="testi-content">
+									{{{content}}}
+								</div>
+							</div>
+						</div>
+						{{/each}}
+					</div>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</section>
+
+		<!-- client -->
+		<section class="section client">
+			<div class="client-block">
+				<h3 class="client-title">Daftar klien</h3>
+				<div class="client-swiper swiper-client">
+					<div class="client-list swiper-wrapper">
+						{{#each client}}
+						<div class="client-item swiper-slide">
+							<div class="client-img">
+								<img src="./asset/images/client/{{asset}}" alt="{{title}}">
+							</div>
+						</div>
+						{{/each}}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+</body>
+</html>

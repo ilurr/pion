@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+			
+			<!-- booking -->
+			<section class="section board">
+
+				<div class="board-row">
+	
+					<div class="booking-block">
+
+						<h1 class="title -big">Booking Schedule</h1>
+						<div class="booking-body">
+
+							<div class="booking-summary">
+								<h2 class="title">Confirmation</h2>
+								<div class="booking-row">
+									<div class="booking-col">Age range</div>
+									<div class="booking-content">Child (0 - 12 years old)</div>
+								</div>
+								<div class="booking-row">
+									<div class="booking-col">Type of consultation</div>
+									<div class="booking-content">Counseling</div>
+								</div>
+								<div class="booking-row">
+									<div class="booking-col">Consultation method</div>
+									<div class="booking-content">
+										To client location <br>
+										Jl. Jenderal Sudirman No.Kav. 25, RT.10/RW.11, Kuningan, Karet Tengsin, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 10250
+									</div>
+								</div>
+								<div class="booking-row">
+									<div class="booking-col">Family</div>
+									<div class="booking-content">1st child of 4th</div>
+								</div>
+								<div class="booking-row">
+									<div class="booking-col">Family description</div>
+									<div class="booking-content">
+										1. Muhammad Akbar, L, 30 tahun, SMA <br>
+										2. Elita Nasution, L, 20 tahun, SMA <br>
+										3. Ali, L,70 tahun, SMA <br>
+										4. Citra Saraswati, L,70 tahun, SMA
+									</div>
+								</div>
+								<div class="booking-row">
+									<div class="booking-col">Parent / couple description</div>
+									<div class="booking-content">
+										1. Muhammad Akbar, L, 30 tahun, S1 <br>
+										2. Elita Nasution, L, 20 tahun, Kuliah <br>
+										3. Ali, L, 13 tahun, SMP <br>
+										4. Citra Saraswati, L,70 tahun, SMA
+									</div>
+								</div>
+								<div class="booking-row">
+									<div class="booking-col">Relationship</div>
+									<div class="booking-content">Married</div>
+								</div>
+								<div class="booking-row">
+									<div class="booking-col">Complaints</div>
+									<div class="booking-content">Sejak 5 April 2023 secara tiba" Timbul rasa gelisah dan cemas berlebihan tanpa sebab. Takut dg kegelapan terutama dikamar. Nafsu makan turun dan tidak bisa tidur. Bgmn cara mengatasi? Tetimakasih.</div>
+								</div>
+								<div class="booking-row">
+									<div class="booking-col">Symptoms</div>
+									<div class="booking-content">Tidak bisa tidur nyenyak, sering melamun.</div>
+								</div>
+								<div class="booking-row">
+									<div class="booking-col">Reason for consult</div>
+									<div class="booking-content">Ya biar sembuh, bisa menjalani hidup dengan tenang.</div>
+								</div>
+								<div class="booking-row">
+									<div class="booking-col">Psychiatrist</div>
+									<div class="booking-content">Dr. Rahma Paramita, M.Psi.</div>
+								</div>
+								<div class="booking-row">
+									<div class="booking-col">Date to visit</div>
+									<div class="booking-content">Selasa, 20 Desember 2023</div>
+								</div>
+								<div class="booking-row">
+									<div class="booking-col">Time to visit</div>
+									<div class="booking-content">18.00 WIB</div>
+								</div>
+								<div class="booking-row booking-action -center">
+									{{>button type="button" label="Edit my booking" class="-auto" onclick="window.history.go(-1); return false;"}}
+									{{>button type="link" href="booking-success.html" label="Confirm my booking" class="-primary -auto"}}
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+
+</body>
+</html>

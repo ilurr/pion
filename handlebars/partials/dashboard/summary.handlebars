@@ -1,0 +1,23 @@
+<div class="tile-list">
+	{{#each summary}}
+	<div class="card tile-card{{#eq @index compare=0}} -medium{{/eq}}">
+		<div class="card-body tile-body">
+			<div class="tile-col">
+				<div class="tile-icon">
+					<img src="./asset/images/dashboard/calender.svg" alt="">
+				</div>
+			</div>
+			<div class="tile-col">
+				<div class="tile-title">{{title}}</div>
+				<div class="tile-date">{{dates}}{{#if time}}<span>{{time}}</span>{{/if}}</div>
+				{{#if lead}}
+				<div class="tile-title">{{{lead}}}</div>
+				{{/if}}
+				{{#if action}}
+				<a href="#" class="tile-link">{{{action}}}</a>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+	{{/each}}
+</div>

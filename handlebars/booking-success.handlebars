@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+			
+			<!-- booking -->
+			<section class="section board">
+
+				<div class="board-row">
+	
+					<div class="booking-block">
+
+						<h1 class="title -big">Booking Schedule</h1>
+						<div class="booking-body">
+
+							<div class="booking-result">
+								<div class="booking-result-row">
+									<div class="booking-status">
+										<div class="booking-status-img">
+											<img src="./asset/images/dashboard/booking-success.png" alt="">
+										</div>
+										<div class="booking-status-col">
+											<div class="booking-status-title">Booking Success</div>
+											<div class="booking-status-lead">Your booking detail will be emailed</div>
+										</div>
+									</div>
+								</div>
+								<div class="booking-result-row booking-grey">
+									<div class="booking-result-row">
+										<h3 class="title">Please pay your order</h3>
+										<div class="booking-result-lead">Total bill must pay</div>
+										<div class="booking-result-price">Rp199.000,-</div>
+									</div>
+									<div class="booking-result-row">
+										<h2 class="title">How to pay</h2>
+										<div class="booking-result-howto">
+											<a href="#transfer1" class="accordion-toggle">ATM BCA <div class="icon icon-arrow-down"></div></a>
+											<div class="accordion-content" id="transfer1">
+												<ol>
+													<li>Pada menu utama , pilih Transaksi Lainnya</li>
+													<li>Pilih Transfer</li>
+													<li>Pilih ke Rek BCA Virtual Account</li>
+													<li>Masukan nomor 29905670971 lalu tekan Benar</li>
+													<li>Pada halaman konfirmasi transfer akan muncul detail pembayaran jika informasi telah sesuai tekan Ya</li>
+												</ol>
+											</div>
+											<a href="#transfer2" class="accordion-toggle">m-BCA (BCA Mobile) <div class="icon icon-arrow-down"></div></a>
+											<div class="accordion-content" id="transfer2">
+												<ol>
+													<li>Pada menu utama , pilih Transaksi Lainnya</li>
+													<li>Pilih Transfer</li>
+													<li>Pilih ke Rek BCA Virtual Account</li>
+													<li>Masukan nomor 29905670971 lalu tekan Benar</li>
+													<li>Pada halaman konfirmasi transfer akan muncul detail pembayaran jika informasi telah sesuai tekan Ya</li>
+												</ol>
+											</div>
+											<a href="#transfer3" class="accordion-toggle">Klik BCA <div class="icon icon-arrow-down"></div></a>
+											<div class="accordion-content" id="transfer3">
+												<ol>
+													<li>Pada menu utama , pilih Transaksi Lainnya</li>
+													<li>Pilih Transfer</li>
+													<li>Pilih ke Rek BCA Virtual Account</li>
+													<li>Masukan nomor 29905670971 lalu tekan Benar</li>
+													<li>Pada halaman konfirmasi transfer akan muncul detail pembayaran jika informasi telah sesuai tekan Ya</li>
+												</ol>
+											</div>
+										</div>
+									</div>
+									<div class="booking-result-row">
+										<h2 class="title">Consultation Detail</h2>
+										<div class="booking-row">
+											<div class="booking-col">Type of consultation</div>
+											<div class="booking-content">Counseling</div>
+										</div>
+										<div class="booking-row">
+											<div class="booking-col">Consultation method</div>
+											<div class="booking-content">
+												To client location <br>
+												Jl. Jenderal Sudirman No.Kav. 25, RT.10/RW.11, Kuningan, Karet Tengsin, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 10250
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="booking-row booking-action -center">
+									{{>button type="link" href="index.html" label="Back to home" class="-primary -auto"}}
+									{{>button type="link" href="index.html" label="Back to home" class="-primary -auto -loading"}}
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+
+</body>
+</html>

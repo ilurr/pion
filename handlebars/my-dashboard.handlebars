@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+
+			<!-- side -->
+			{{>aside active="Dashboard"}}
+			
+			<!-- dashboard -->
+			<section class="section board">
+
+				<div class="board-row">
+	
+					<h1 class="title"><span class="fa-solid fa-grip"></span> Dashboard</h1>
+
+					{{>summary}}
+
+				</div>
+
+				<div class="board-row">
+
+					<h2 class="title -small"><span class="fa-solid fa-clock-rotate-left"></span> Latest Sessions <a class="title-link" href="my-session.html">See more</a></h2>
+
+					<a href="booking.html" class="button -primary title-button">+ Buat janji kunjungan</a>
+
+					{{>list mysession=true index_start=0 index_end=3}}
+
+				</div>
+
+				<div class="board-row">
+
+					<h2 class="title -small"><span class="fa-regular fa-file-lines"></span> Billing <a class="title-link" href="my-invoices.html">See more</a></h2>
+
+					{{>list invoices=true index_start=1 index_end=3}}
+
+				</div>
+
+				<div class="board-row">
+
+					<h2 class="title -small"><i class="fa-regular fa-newspaper"></i> Related Articles <a class="title-link" href="media.html">See more</a></h2>
+
+					<div class="swiper-media">
+						{{>list medialist=true slider=true index_end=5}}
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+</body>
+</html>

@@ -1,0 +1,511 @@
+{{#if empty}}
+<div class="empty-block">
+	<div class="empty-img">
+		<img src="./asset/images/dashboard/session-empty.svg" alt="">
+	</div>
+	<div class="empty-lead">Kamu belum mempunyai jadwal kunjungan nih, yuk segera buat janji dengan dokter pilihanmu di sini</div>
+	<a href="#" class="button -primary empty-button" title="Buat janji kunjungan sekarang">Buat janji kunjungan sekarang</a>
+</div>
+{{/if}}
+{{#if invoices}}
+<div class="note-list -rounded -cols -invoice">
+	{{#if header}}
+	<div class="note-item -header desktop-only">
+		<div class="note-block">
+			<div class="note-col col-basis col-20">
+				<div class="note-content">Invoice Date</div>
+			</div>
+			<div class="note-col col-basis col-20">
+				<div class="note-content">Due Date</div>
+			</div>
+			<div class="note-col col-basis col-25">
+				<div class="note-content">No. Invoice</div>
+			</div>
+			<div class="note-col col-basis col-20">
+				<div class="note-content">Total</div>
+			</div>
+			<div class="note-col col-basis col-15">
+				<div class="note-content -right">Status</div>
+			</div>
+		</div>
+	</div>
+	{{/if}}
+	{{#each session}}
+	{{#gte @index compare=../index_start}}
+	{{#gte @index compare=../index_end}}
+	{{else}}
+	<div class="note-item">
+		<a href="javascript:openModal('invoiceModal-{{@index}}')" class="note-block">
+			<div class="note-col col-basis col-20">
+				<div class="note-header">Invoice Date</div>
+				<div class="note-content">{{dates}}</div>
+			</div>
+			<div class="note-col col-basis col-20">
+				<div class="note-header">Invoice Date</div>
+				<div class="note-content">{{dates}}</div>
+			</div>
+			<div class="note-col col-basis col-25">
+				<div class="note-header">No. Invoice</div>
+				<div class="note-content"><span class="note-invoice">{{invoice}}</span></div>
+			</div>
+			<div class="note-col col-basis col-20">
+				<div class="note-header">Total</div>
+				<div class="note-content">{{price}}</div>
+			</div>
+			<div class="note-col col-basis col-15">
+				<div class="note-header">Status</div>
+				<div class="note-content -right">
+					<span class="note-status -{{lowercase notes_code}}">{{payment}}</span>
+				</div>
+			</div>
+		</a>
+
+		<!-- modals -->
+		<div class="modal-content" data-modal-target="invoiceModal-{{@index}}">
+			<div class="modal-header">
+				<button class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+			</div>
+			<div class="modal-body">
+
+				<div class="note-modal">
+					<div class="note-row -mixcol">
+						<div class="note-col col-basis col-15">
+							<div class="note-header">Tanggal</div>
+							<div class="note-content">{{dates}}</div>
+						</div>
+						<div class="note-col col-basis col-10">
+							<div class="note-header">Waktu</div>
+							<div class="note-content">{{time}}</div>
+						</div>
+						<div class="note-col col-basis col-20">
+							<div class="note-header">No Invoice</div>
+							<div class="note-content"><span class="note-invoice">{{invoice}}</span></div>
+						</div>
+						<div class="note-col col-basis col-40">
+							<div class="note-header">Keterangan</div>
+							<div class="note-content"><strong>Assesment with {{counselor}}</strong></div>
+						</div>
+						<div class="note-col col-basis col-10">
+							<div class="note-header">Status</div>
+							<div class="note-content">
+								<span class="note-status -{{lowercase notes_code}}">{{notes}}</span>
+							</div>
+						</div>
+					</div>
+					<div class="note-row -showheader">
+						<div class="note-col col-basis">
+							<div class="note-header">Counselor</div>
+							<div class="note-content">{{counselor}}</div>
+						</div>
+						<div class="note-col col-basis">
+							<div class="note-header">Total</div>
+							<div class="note-content">{{price}}</div>
+						</div>
+					</div>
+					<div class="note-row -mixcol -showheader -block">
+						<div class="note-col col-basis col-85">
+							<div class="note-header">Additional</div>
+							<div class="note-content">Psychological test form</div>
+						</div>
+						<div class="note-col col-basis col-15 -right">
+							{{#eq notes compare="Done"}}
+							<a href="#" class="button -secondary -auto -disabled">Paid</a>
+							{{/eq}}
+							{{#eq notes compare="Ongoing"}}
+							<a href="#" class="button -secondary -auto">Settle Bill</a>
+							{{/eq}}
+						</div>
+					</div>
+					{{#eq notes compare="Done"}}
+					<div class="note-row">
+						<div class="note-col col-basis -right">
+							<a href="#" class="button -secondary -auto"><i class="fa-regular fa-file-lines"></i> Download Invoice</a>
+						</div>
+					</div>
+					{{/eq}}
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	{{/gte}}
+	{{else}}
+	{{/gte}}
+	{{/each}}
+</div>
+{{/if}}
+{{#if latest}}
+<div class="note-list">
+	<div class="note-header-block">
+		<div class="note-col col-basis col-20">
+			<div class="note-header">Tanggal</div>
+		</div>
+		<div class="note-col col-basis col-10">
+			<div class="note-header">Waktu</div>
+		</div>
+		<div class="note-col col-basis col-40">
+			<div class="note-header">Keterangan</div>
+		</div>
+		<div class="note-col col-basis col-30">
+			<div class="note-header">Status</div>
+		</div>
+	</div>
+	{{#each session}}
+	{{#eq status compare=../status}}
+	<div class="note-item">
+		<a href="javascript:openModal('sessionModal-{{@index}}')" class="note-block">
+			<div class="note-col col-basis col-20">
+				<div class="note-header">Tanggal</div>
+				<div class="note-content">{{dates}}</div>
+			</div>
+			<div class="note-col col-basis col-10">
+				<div class="note-header">Waktu</div>
+				<div class="note-content">{{time}}</div>
+			</div>
+			<div class="note-col col-basis col-40">
+				<div class="note-header">Keterangan</div>
+				<div class="note-content"><strong>Assesment with {{counselor}}</strong></div>
+			</div>
+			<div class="note-col col-basis col-30">
+				<div class="note-header">Status</div>
+				<div class="note-content">
+					<span class="note-status">{{notes}}</span>
+					<span class="note-more">More</span>
+				</div>
+			</div>
+		</a>
+
+		<!-- modals -->
+		<div class="modal-content" data-modal-target="sessionModal-{{@index}}">
+			<div class="modal-header">
+				<button class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+			</div>
+			<div class="modal-body">
+
+				<div class="note-modal">
+					<div class="note-row -mixcol">
+						<div class="note-col col-basis col-15">
+							<div class="note-header">Tanggal</div>
+							<div class="note-content">{{dates}}</div>
+						</div>
+						<div class="note-col col-basis col-10">
+							<div class="note-header">Waktu</div>
+							<div class="note-content">{{time}}</div>
+						</div>
+						<div class="note-col col-basis col-20">
+							<div class="note-header">No Invoice</div>
+							<div class="note-content"><span class="note-invoice">{{invoice}}</span></div>
+						</div>
+						<div class="note-col col-basis col-40">
+							<div class="note-header">Keterangan</div>
+							<div class="note-content"><strong>Assesment with {{counselor}}</strong></div>
+						</div>
+						<div class="note-col col-basis col-15">
+							<div class="note-header">Status</div>
+							<div class="note-content">
+								<span class="note-status -{{lowercase notes_code}}">{{notes}}</span>
+							</div>
+						</div>
+
+					</div>
+					<div class="note-row -showheader">
+						<div class="note-col col-basis">
+							<div class="note-header">Counselor</div>
+							<div class="note-content">{{counselor}}</div>
+						</div>
+						<div class="note-col col-basis">
+							<div class="note-header">Counseling Note:</div>
+							<div class="note-content">{{{content}}}</div>
+						</div>
+					</div>
+					<div class="note-row -mixcol -showheader -block">
+						<div class="note-col col-basis col-85">
+							<div class="note-header">Additional</div>
+							<div class="note-content">Psychological test form</div>
+						</div>
+						<div class="note-col col-basis col-15 -right">
+							{{#eq notes compare="Done"}}
+							<a href="#" class="button -secondary -auto -disabled">Paid</a>
+							{{else}}
+							<a href="#" class="button -secondary -auto">Settle Bill</a>
+							{{/eq}}
+						</div>
+					</div>
+					{{#eq notes compare="Done"}}
+					<div class="note-row">
+						<div class="note-col col-basis -right">
+							<a href="#" class="button -secondary -auto"><i class="fa-regular fa-file-lines"></i> Download Receipt</a>
+						</div>
+					</div>
+					{{/eq}}
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	{{/eq}}
+	{{/each}}
+</div>
+{{/if}}
+{{#if mysession}}
+<div class="note-list -rounded -cols">
+	{{#if header}}
+	<div class="note-item -header desktop-only">
+		<div class="note-block">
+			<div class="note-col col-basis col-15">
+				<div class="note-content">Tanggal</div>
+			</div>
+			<div class="note-col col-basis col-15">
+				<div class="note-content">Waktu</div>
+			</div>
+			<div class="note-col col-basis col-20">
+				<div class="note-content">Location</div>
+			</div>
+			<div class="note-col col-basis col-30">
+				<div class="note-content">Client</div>
+			</div>
+			<div class="note-col col-basis col-20">
+				<div class="note-content -right">Status</div>
+			</div>
+		</div>
+	</div>
+	{{/if}}
+	{{#each session}}
+	{{#gte @index compare=../index_start}}
+	{{#gte @index compare=../index_end}}
+	{{else}}
+	<div class="note-item">
+		<a href="javascript:openModal('sessionModal-{{@index}}')" class="note-block">
+			<div class="note-col col-basis col-15">
+				<div class="note-header">Tanggal</div>
+				<div class="note-content">{{dates}}</div>
+			</div>
+			<div class="note-col col-basis col-15">
+				<div class="note-header">Waktu</div>
+				<div class="note-content">{{time}}</div>
+			</div>
+			<div class="note-col col-basis col-20">
+				<div class="note-header">Location</div>
+				<div class="note-content"><span class="note-method">{{method}}</span></div>
+			</div>
+			<div class="note-col col-basis col-30">
+				<div class="note-header">Client</div>
+				<div class="note-content"><strong>{{client}}</strong></div>
+			</div>
+			<div class="note-col col-basis col-20">
+				<div class="note-header">Status</div>
+				<div class="note-content -right">
+					<span class="note-status -{{lowercase notes_code}}">{{notes}}</span>
+					{{!-- <span class="icon icon-arrow-down"></span> --}}
+				</div>
+			</div>
+		</a>
+
+		<!-- modals -->
+		<div class="modal-content" data-modal-target="sessionModal-{{@index}}">
+			<div class="modal-header">
+				<button class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+			</div>
+			<div class="modal-body">
+
+				<div class="note-modal">
+					<div class="note-row -mixcol">
+						<div class="note-col col-basis col-15">
+							<div class="note-header">Tanggal</div>
+							<div class="note-content">{{dates}}</div>
+						</div>
+						<div class="note-col col-basis col-10">
+							<div class="note-header">Waktu</div>
+							<div class="note-content">{{time}}</div>
+						</div>
+						<div class="note-col col-basis col-20">
+							<div class="note-header">No Invoice</div>
+							<div class="note-content"><span class="note-invoice">{{invoice}}</span></div>
+						</div>
+						<div class="note-col col-basis col-40">
+							<div class="note-header">Keterangan</div>
+							<div class="note-content"><strong>Assesment with {{counselor}}</strong></div>
+						</div>
+						<div class="note-col col-basis col-15">
+							<div class="note-header">Status</div>
+							<div class="note-content">
+								<span class="note-status -{{lowercase notes_code}}">{{notes}}</span>
+							</div>
+						</div>
+
+					</div>
+					<div class="note-row -showheader">
+						<div class="note-col col-basis">
+							<div class="note-header">Counselor</div>
+							<div class="note-content">{{counselor}}</div>
+						</div>
+						<div class="note-col col-basis">
+							<div class="note-header">Counseling Note:</div>
+							<div class="note-content">{{{content}}}</div>
+						</div>
+					</div>
+					<div class="note-row -mixcol -showheader -block">
+						<div class="note-col col-basis col-85">
+							<div class="note-header">Additional</div>
+							<div class="note-content">Psychological test form</div>
+						</div>
+						<div class="note-col col-basis col-15 -right">
+							{{#eq notes compare="Done"}}
+							<a href="#" class="button -secondary -auto -disabled">Paid</a>
+							{{else}}
+							<a href="#" class="button -secondary -auto">Settle Bill</a>
+							{{/eq}}
+						</div>
+					</div>
+					{{#eq notes compare="Done"}}
+					<div class="note-row">
+						<div class="note-col col-basis -right">
+							<a href="#" class="button -secondary -auto"><i class="fa-regular fa-file-lines"></i> Download Receipt</a>
+						</div>
+					</div>
+					{{/eq}}
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	{{/gte}}
+	{{else}}
+	{{/gte}}
+	{{/each}}
+</div>
+{{/if}}
+{{#if myclient}}
+<div class="note-list -rounded -cols">
+	{{#if header}}
+	<div class="note-item -header desktop-only">
+		<div class="note-block">
+			<div class="note-col col-basis col-30">
+				<div class="note-content">Nama</div>
+			</div>
+			<div class="note-col col-basis col-15">
+				<div class="note-content">Age</div>
+			</div>
+			<div class="note-col col-basis col-30">
+				<div class="note-content">Location</div>
+			</div>
+			<div class="note-col col-basis col-10">
+				<div class="note-content">Status</div>
+			</div>
+			<div class="note-col col-basis col-15">
+				<div class="note-content">Action</div>
+			</div>
+		</div>
+	</div>
+	{{/if}}
+	{{#each session}}
+	{{#unlessEq status compare=../status}}
+	<div class="note-item">
+		<a href="javascript:void(0)" class="note-block">
+			<div class="note-col col-basis col-30">
+				<div class="note-header">Nama</div>
+				<div class="note-content"><strong>{{client}}</strong></div>
+			</div>
+			<div class="note-col col-basis col-15">
+				<div class="note-header">Age</div>
+				<div class="note-content">{{age}} tahun</div>
+			</div>
+			<div class="note-col col-basis col-30">
+				<div class="note-header">Location</div>
+				<div class="note-content">{{city}}</div>
+			</div>
+			<div class="note-col col-basis col-10">
+				<div class="note-header">Status</div>
+				<div class="note-content">
+					<span class="note-status -active">Active</span>
+					{{!-- <span class="icon icon-arrow-down"></span> --}}
+				</div>
+			</div>
+			<div class="note-col col-basis col-15 desktop-only">
+				<div class="note-header">Action</div>
+				<div class="note-content note-action btn-client-detail" data-ref="dcs1">
+						<span class="fa-regular fa-folder"></span>
+						<span class="">Detail</span>
+				</div>
+			</div>
+		</a>
+
+		<!-- accordion -->
+		<div class="accordion-inline" data-accordion-target="clientCollapse-{{@index}}">
+
+			<div class="note-modal -row">
+				<div class="note-row -mixcol -showheader">
+						<div class="note-col col-basis col-15 note-img">
+								<img id="preview_avatar" src="http://aset-pionindonesia.modetes.com/images/dummy/avatar.jpeg" alt="" style="width:150px;">
+						</div>
+						<div class="note-col col-basis col-30">
+								<div class="note-col col-basis desktop-only">
+										<div class="note-header">Name</div>
+										<div class="note-content">{{client}}</div>
+								</div>
+								<div class="note-col col-basis desktop-only">
+										<div class="note-header">Age</div>
+										<div class="note-content">{{age}} years</div>
+								</div>
+								<div class="note-col col-basis">
+										<div class="note-header">Birth</div>
+										<div class="note-content"><p>Jakarta, Feb 13rd, 1990</p></div>
+								</div>
+						</div>
+						<div class="note-col col-basis col-30">
+								<div class="note-col col-basis">
+										<div class="note-header">Weight</div>
+										<div class="note-content"><p>70 kg</p></div>
+								</div>
+								<div class="note-col col-basis">
+										<div class="note-header">Height:</div>
+										<div class="note-content"><p>173 cm</p></div>
+								</div>
+						</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div onclick="javascript:toggleAccordion('clientCollapse-{{@index}}')" class="note-arrow" data-accordion-expand="More" data-accordion-collapse="Less"><i class="fa-solid fa-chevron-down"></i></div>
+	</div>
+	{{/unlessEq}}
+	{{/each}}
+</div>
+{{/if}}
+{{#if medialist}}
+<div class="media-list{{#if slider}} media-slider swiper-wrapper{{/if}}">
+	{{#each media}}
+	{{#gte @index compare=0}}
+	{{#gte @index compare=../index_end}}
+	{{else}}
+	<div class="media-item{{#if ../slider}} swiper-slide{{/if}}">
+		<a href="media-detail.html" class="media-link">
+			<div class="media-thumb">
+				<img src="{{img}}" alt="{{title}}">
+			</div>
+			<div class="media-box">
+				<h3 class="media-title">{{title}}</h3>
+				<div class="media-date">{{dates}}</div>
+			</div>
+		</a>
+	</div>
+	{{/gte}}
+	{{else}}
+	{{/gte}}
+	{{/each}}
+</div>
+{{#if slider}}
+<button class="media-arrow media-arrow-prev"><i class="fa-solid fa-chevron-left"></i></button>
+<button class="media-arrow media-arrow-next"><i class="fa-solid fa-chevron-right"></i></button>
+{{/if}}
+{{/if}}

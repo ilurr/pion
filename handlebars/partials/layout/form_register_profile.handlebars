@@ -1,0 +1,23 @@
+<div class="form-main">
+	<form action="{{action}}">
+		{{>input type="text" label="Email" name="email" placeholder="email"}}
+		<div class="form-hint">
+			<p>Alamat email yang dimasukkan ini akan menjadi KG Media ID baru milikmu.</p>
+		</div>
+		<hr>
+		{{>input type="text" label="URL Profil" name="url" placeholder="benno" txterror="URL profil yang anda masukkan sudah digunakan. <br>Silahkan gunakan URL profil lain" url=true}}
+		<div class="form-hint">
+			<p>Contoh URL profilmu: <br>https://www.kompasiana.com/benno.</p>
+		</div>
+		{{>checkbox type="checkbox" label="Saya bersedia menerima email terkait akun KG Media ID dan layanannya" name="agree" checked="true"}}
+		<hr>
+		{{#if txterrorSystem}}
+		<div class="form-error text-center">{{txterrorSystem}}</div>
+		{{/if}}
+		{{>button type="submit" label="Lanjutkan" class="-disabled" disabled="true"}}
+		<hr>
+		<div class="form-hint">
+			<p>Dengan menekan tombol “Lanjutkan”, kamu menyetujui bahwa data dan informasi KG Media ID milikmu akan digunakan untuk memberikan layanan sesuai <a href="https://www.kgmedia.id/legal-privacy-id" target="_blank">Kebijakan Data Pribadi KG Media</a>.</p>
+		</div>
+	</form>
+</div>

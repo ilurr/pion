@@ -1,0 +1,197 @@
+<link href="{{path}}/asset/css/kgm-verify.css" rel="stylesheet" type="text/css">
+<section class="kgmModal{{#if type}} -{{type}}{{/if}}{{#if hide}} -{{hide}}{{/if}}" id="kgmModal-{{page}}">
+    <div class="kgmModal-block">
+        {{#eq page compare="verify"}}
+        <div class="kgmModal-header">
+            <button type="button" onclick="document.getElementById('kgmModal-verify').style.display='none';return false;" class="kgmModal-close"></button>
+            <div class="kgmModal-title">Verifikasi akun KG Media ID</div>
+            <div class="kgmModal-id">ardi.suhanda@kompas.com</div>
+            <div class="kgmModal-img">
+                <img src="{{path}}/asset/images/popup/verify.png" alt="Verifikasi akun KG Media ID">
+            </div>
+        </div>
+        <div class="kgmModal-body">
+            <p>Periksa kembali dan lengkapi data dirimu.</p>
+            {{!-- <p>KG Media dapat menggunakan data dirimu untuk proses verifikasi akun ketika kamu membutuhkan bantuan atau jika kami menemukan aktifitas mencurigakan.</p> --}}
+            <p>Data dirimu akan digunakan untuk verifikasi akun ketika kamu membutuhkan bantuan atau ketika ditemukan aktivitas tidak biasa pada akunmu.</p>
+        </div>
+        <div class="kgmModal-footer">
+            {{!-- {{!>button type="link" htef="#" onclick="document.getElementById('kgmModal-verify').style.display='none';return false;" label="Nanti Saja" class=""}} --}}
+            {{>button type="link" href="verify-data.html" label="Lakukan Sekarang" class="-primary"}}
+        </div>
+        {{/eq}}
+        {{#eq page compare="complete"}}
+        <div class="kgmModal-header">
+            <div class="kgmModal-title">Lengkapi Profil</div>
+            <div class="kgmModal-id">ardi.suhanda@kompas.com</div>
+            <div class="kgmModal-img">
+                <img src="{{path}}/asset/images/popup/lengkapi.png" alt="Lengkapi Profil">
+            </div>
+        </div>
+        <div class="kgmModal-body">
+            <p>Segera lengkapi data dirimu untuk ikutan program <strong>#JernihBerkomentar</strong>.</p>
+        </div>
+        <div class="kgmModal-footer">
+            {{>button type="link" htef="#" onclick="document.getElementById('kgmModal-complete').style.display='none';return false;" label="Nanti Saja" class=""}}
+            {{>button type="link" href="verify-data.html" label="Lengkapi Profil" class="-primary"}}
+        </div>
+        {{/eq}}
+        {{#eq page compare="cookie"}}
+        <div class="kgmModal-body">
+            <div class="kgmModal-center">
+                <img src="https://dummy.kompas.com/repo/kgmedia/html/asset/images/popup/cookie.png"
+                    alt="Cookie Consent" class="kgmModal-cookie-img">
+            </div>
+            {{!-- <div class="kgmModal-title">Ada <i>cookie browser</i> di antara kita</div> --}}
+            <p>Kompas.com menggunakan <i>cookie browser</i> untuk meningkatkan performa, kenyamanan dan menganalisa website.</p>
+        </div>
+        <div class="kgmModal-footer">
+            <div class="form-row-big">
+                <div class="form-row">
+                    <a href="#" class="button -primary" id="kgmModal-btn-dismiss">Saya Mengerti</a>
+                </div>
+                <div class="form-row">
+                    <a href="#" class="button link" target="_blank">Pelajari lebih lanjut</a>
+                </div>
+            </div>
+        </div>
+        {{/eq}}
+        {{#eq page compare="onetap"}}
+        <div class="kgmModal-header">
+            <div class="kgmModal-header-inner">
+                <div class="kgmModal-header-logo">
+                    <img src="./asset/images/logo/logo-kompascom.svg"
+                        alt="Kompas.com">
+                </div>
+                <button type="button" onclick="document.getElementById('kgmModal-onetap').style.display='none';return false;" class="kgmModal-close"></button>
+            </div>
+        </div>
+        <div class="kgmModal-body">
+            <div class="kgmModal-title">Login untuk memaksimalkan pengalaman mengakses Kompas.com</div>
+
+            <div class="kgmModal-onetap">
+                <!-- google -->
+                <div class="form-google" id="onetap-other2">
+                    <div id="g_id_onload"
+                        data-client_id="776828813358-infk4sje3q07sa8mg8n6lq1mk2pdkkua.apps.googleusercontent.com"
+                        data-context="signin"
+                        data-ux_mode="popup"
+                        data-login_uri="https://account.kompas.com/social/user"
+                        data-itp_support="true">
+                    </div>
+                    
+                    <div class="g_id_signin"
+                        data-type="standard"
+                        data-shape="rectangular"
+                        data-theme="filled_blue"
+                        data-text="continue_with"
+                        data-size="large"
+                        data-logo_alignment="left">
+                    </div>
+                </div>
+
+                <!-- screen 1 -->
+                {{!-- <div class="form-text-bottom form-screen-2">
+                    {{>button link="#" type="link" label="Ingatkan saya nanti" class="-quaternary" size="-medium" onclick="document.getElementById('kgmModal-onetap').style.display='none';return false;"}}
+                </div> --}}
+
+                <!-- screen 2 -->
+                {{!-- <div class="form-text-up form-screen-2" style="display: none;">
+                    <p>Pilih metode login:</p>
+                </div>
+                <div class="form-text-bottom form-screen-2" style="display: none;">
+                    {{>button link="#" type="link" label="Lanjutkan dengan Facebook" class="-theme-facebook" icon_file=true icon="facebook"}}
+                    {{>button link="#" type="link" label="Lanjutkan dengan MyValue" class="-theme-myvalue" icon_file=true icon="myvalue"}}
+                    {{>button link="#" type="link" label="Lanjutkan dengan Email" class="-tertiary" icon="email"}}
+                    <div class="form-text text-center">
+                        <p><a href="register-email-alt.html">Daftar KG Media ID?</a> atau <a href="forget.html">lupa password?</a></p>
+                    </div>
+                </div> --}}
+
+                <!-- screen 3 -->
+                <div class="form-screen-3" id="loadLogin" style="display: none;">
+                    <div class="spinner" id="spinner">
+                        <svg class="spinner__circle" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.1" d="M72 36C72 55.8823 55.8823 72 36 72C16.1177 72 0 55.8823 0 36C0 16.1177 16.1177 0 36 0C55.8823 0 72 16.1177 72 36ZM11.2254 36C11.2254 49.6826 22.3174 60.7746 36 60.7746C49.6826 60.7746 60.7746 49.6826 60.7746 36C60.7746 22.3174 49.6826 11.2254 36 11.2254C22.3174 11.2254 11.2254 22.3174 11.2254 36Z" fill="#007AFF"/>
+                            <path d="M66.3873 36C69.4871 36 72.0447 33.4722 71.5633 30.41C71.1226 27.6061 70.3508 24.8577 69.2597 22.2234C67.4505 17.8557 64.7988 13.8871 61.4558 10.5442C58.1129 7.20125 54.1443 4.54951 49.7766 2.74034C47.1423 1.64916 44.3939 0.877377 41.59 0.436654C38.5278 -0.044683 36 2.51289 36 5.61271V5.61271C36 8.71252 38.5442 11.1622 41.5648 11.8585C42.8995 12.1661 44.2095 12.5846 45.4808 13.1113C48.4866 14.3563 51.2177 16.1812 53.5183 18.4817C55.8188 20.7823 57.6437 23.5134 58.8887 26.5192C59.4154 27.7905 59.8339 29.1005 60.1415 30.4352C60.8378 33.4558 63.2875 36 66.3873 36V36Z" fill="#007AFF"/>
+                        </svg>
+
+                        <svg class="spinner__check" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="-1 -1 32 32">
+                            <path stroke-width="2.5" d="M29.516129,15 C29.516129,23.01713 23.0173684,29.516129 15,29.516129 C6.98306327,29.516129 0.483870968,23.01713 0.483870968,15 C0.483870968,6.98330166 6.98306327,0.483870968 15,0.483870968 C23.0173684,0.483870968 29.516129,6.98330166 29.516129,15 L29.516129,15 Z"/>
+                            <polyline fill="none" stroke-width="2.5" points="9.484 14.856 13.694 19.046 21.943 10.839"/>
+                        </svg>
+                    </div>
+
+                    <div class="form-text text-center" id="loadLogin-redirect">
+                        <span>Mengalihkan...</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="kgmModal-footer">
+            <div class="kgmModal-info">Dengan login, kamu menyetujui <a href="https://www.kgmedia.id/legal-privacy-id" target="_blank">Kebijakan Data Pribadi</a></div>
+        </div>
+        {{/eq}}
+    </div>
+</section>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<style>
+/* untuk panduan alur dummy silakan hapus di prod */
+.form-google > * {
+ 	pointer-events: none;
+}
+</style>
+<script>
+    // untuk ngakalin LCP, baru muncul ketika user interaksi, seperti scroll
+    function oneTapShow() {
+        let otd = document.getElementById('kgmModal-onetap')
+        if(!!otd) {
+            otd.classList.remove('-hide');
+        }
+    }
+    function scrollOTS() {
+        oneTapShow();
+    }
+    window.addEventListener('scroll', scrollOTS);
+    //$(document.body).bind('mousemove keypress', scrollOTS);
+
+
+    // untuk panduan alur dummy silakan hapus di prod 
+    // klik login
+    let oto2 = document.getElementById('onetap-other2')
+    let fc2 = document.querySelectorAll('.form-screen-2')
+    if(!!oto2) {
+        oto2.addEventListener('click', function(e){
+            e.preventDefault()
+            fc2.forEach(function(item){
+                item.style.display='none'
+            })
+            let oto3 = document.getElementById('loadLogin')
+            if(!!oto3) {
+                oto3.style.display='block';
+                document.querySelector('.form-google').style.display='none'
+                document.querySelector('.kgmModal-header').style.display='none'
+                document.querySelector('.kgmModal-footer').style.display='none'
+
+                // animate
+                setTimeout(function() {
+                    document.getElementById('loadLogin').classList.add('successRedirect')
+
+                    // contoh alur untuk device limitasi
+                    //document.getElementById('kgmModal-onetap').classList.add('-hide');
+                    window.removeEventListener('scroll', scrollOTS);
+                    let mss = document.getElementById('kgmDialog-confirm-limit-device')
+                    if(!!mss) {
+                        mss.classList.add('-show')
+                    }
+                }, 2000);
+                setTimeout(function(){
+                    window.location.reload();
+                }, 5000);
+
+
+            }
+        })
+    }
+</script>

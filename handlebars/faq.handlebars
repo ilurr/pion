@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="FAQ"}}
+
+		<!-- media -->
+		<section class="section media">
+			<div class="board-row">
+
+				<div class="faq-block">
+					<h1 class="title -big">FAQ</h1>
+					<h2 class="title -small">Frequently Asked Questions</h2>
+					<div class="faq-list">
+						{{#each static.faq.content}}
+						<div class="faq-item">
+							<a href="#{{hyphenate topic}}" class="faq-toggle accordion-toggle">
+								<span>{{topic}}</span>
+								{{ask}}
+								<div class="icon icon-arrow-down"></div>
+							</a>
+							<div class="accordion-content faq-content" id="{{hyphenate topic}}">
+								{{{content}}}
+							</div>
+						</div>
+						{{/each}}
+					</div>
+					<div class="faq-footer">
+						<div class="faq-footer-img">
+							<img src="./asset/images/index/faq.png" alt="FAQ">
+						</div>
+						<div class="faq-footer-col">
+							<h2 class="title -small">Have another questions?</h2>
+							<div class="faq-lead">Tell us if you have specific question about our services.</div>
+							<a href="#" class="button -primary -auto">Send question</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+</body>
+</html>

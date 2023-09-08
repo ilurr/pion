@@ -1,0 +1,25 @@
+<div class="form-main">
+	<form action="{{action}}">
+		{{>input type="text" label="Nama Lengkap" name="name" placeholder="nama lengkap"}}
+		{{>select type="select" label="Gender" name="gender" placeholder="pilih gender" option="Pria,Wanita" txterror=txterrorGender}}
+		{{>input type="text" label="Tanggal Lahir" name="birth" placeholder="pilih tanggal lahir" function="js-datepicker" parent="js-datepicker-container" readonly="true"}}
+		{{!-- {{>input type="text" label="Tanggal Lahir" name="birth" placeholder=(moment "id" "D MMM YYYY") function="js-datepicker" parent="js-datepicker-container" readonly="true"}} --}}
+		{{>select type="select" label="Status Pernikahan" name="kawin" placeholder="pilih status pernikahan" option="Tidak kawin,Kawin,Cerai"}}
+		{{>input type="text" label="Nomor Handphone" name="handphone" placeholder="contoh 0816232123" txterror=txterrorHP}}
+		<div class="form-input-multi">
+			<label>Alamat Tempat Tinggal</label>
+			{{>input_address txterror=txterror}}
+		</div>
+		{{>select type="select" label="Pendidikan Terahkhir" name="education" placeholder="pilih pendidikan terakhir" option="Tidak sekolah,SD,SMP,SMA,Diploma,S1,S2,S3"}}
+		{{>select type="select" label="Jenis Pekerjaan" name="job" placeholder="pilih pekerjaan" option="Tidak bekerja,Swasta,PNS,Wirausaha"}}
+		<hr>
+		{{#if txterrorSystem}}
+		<div class="form-error text-center">{{txterrorSystem}}</div>
+		{{/if}}
+		{{>button type="submit" label="Simpan" class="-primary"}}
+		<hr>
+		<div class="form-hint">
+			<p>Dengan menekan tombol “Simpan”, kamu menyetujui bahwa data dan informasi KG Media ID milikmu akan digunakan untuk memberikan layanan sesuai <a href="#" target="_blank">Kebijakan Data Pribadi KG Media</a>.</p>
+		</div>
+	</form>
+</div>

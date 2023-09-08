@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="Layanan"}}
+
+		<!-- package -->
+		<section class="section package">
+			<div class="board-row">
+
+				<div class="package-page">
+					{{!-- <h1 class="title -big">Layanan</h1> --}}
+					<!-- package package -->
+					<div class="package-block">
+						{{#each package}}
+						<div class="package-item package-bg{{theme}}">
+							<div class="package-asset">
+								<img src="./asset/images/package/{{asset}}" alt="{{title}}">
+							</div>
+							<h2 class="package-title">{{title}}</h2>
+							<div class="package-list">
+								<ul>
+									{{#each list as |item|}}
+									<li>{{item}}</li>
+									{{/each}}
+								</ul>
+							</div>
+						</div>
+						{{/each}}
+					</div>
+				</div>
+
+				<!-- issue -->
+				<div class="issue-page">
+					<div class="issue-block">
+						<div class="issue-content">
+							<h3 class="issue-title">Isu-isu Psikologis yang dihadapi PIONeers</h3>
+							<ul class="issue-list">
+								{{#each issue}}
+								<li class="issue-item">
+									<a href="javascript:openModal('issueModal-{{@index}}')" role="button" class="issue-button">
+										<span>{{title}}</span> 
+										<div class="issue-figure">
+											<img src="./asset/images/issue/{{figure}}" alt="{{title}}">
+										</div>
+									</a>
+								</li>
+
+								<div class="modal-content -medium" data-modal-target="issueModal-{{@index}}">
+									<div class="modal-header">
+										{{!-- <div class="modal-title">{{!title}}</div> --}}
+										<button class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
+											<i class="fa-solid fa-xmark"></i>
+										</button>
+									</div>
+									<div class="modal-body">
+										<div class="issue-popup-title">{{title}}</div>
+										<div class="issue-popup">
+											{{{content}}}
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+</body>
+</html>

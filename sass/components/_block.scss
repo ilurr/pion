@@ -1,0 +1,136 @@
+.block {
+    &-top {
+        position: relative;
+        padding: 0.25rem 0;
+        text-align: center;
+        .logo {
+            position: relative;
+            & ~ .title {
+                margin-top: 30px;
+                justify-content: center;
+            }
+        }
+    }
+
+    &-profile {
+        position: relative;
+        padding: .625rem 0 1.125rem;
+        text-align: center;
+    }
+
+    &-middle {
+        position: relative;
+        padding: 0.25rem 0;
+        // text-align: center;
+    }
+
+    &-img {
+        position: relative;
+        padding: 2rem 0 .5rem;
+    }
+
+    &-footer {
+        position: relative;
+        padding: 0.25rem 0;
+        text-align: center;
+
+        &-info {
+            position: relative;
+            padding: 2.5rem 0;
+            font-size: .75rem;
+            color: #999;
+        }
+    }
+
+    &-login {
+        position: relative;
+        text-align: center;
+        padding-top: 0.25rem;
+        p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &-info {
+        padding-top: .875rem;
+        padding-bottom: 1.5rem;
+        font-size: .75rem;
+        line-height: 1.7;
+    }
+
+    &-network {
+        position: relative;
+        padding-top: .5rem;
+
+        &>p {
+            margin: 0;
+        }
+    }
+
+    &-profile {
+        &-bottom {
+            padding-bottom: 1rem;
+
+            p {
+                color: #000;
+            }
+        }
+    }
+
+    &-flex {
+        &-middle {
+            min-height: calc(100vh - 3.50rem);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+
+            &>* {
+                flex-grow: 1;
+            }
+        }
+    }
+
+    &-back {
+        display: flex;
+        align-items: center;
+        // font-size: .875rem;
+        // font-weight: 700;
+        // color: #454545;
+        padding: 1rem 0.938rem;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000;
+
+        @include min-responsive($screen-small-phone) {
+            padding: 1rem 1.250rem;
+        }
+
+        &:hover {
+            color: #454545;
+        }
+
+        &.-profile {
+            position: absolute;
+            top: 1rem;
+            z-index: 1;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+    }
+
+    &-caption{
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+}

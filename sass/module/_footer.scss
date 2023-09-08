@@ -1,0 +1,151 @@
+.footer {
+	position: relative;
+	background: #008DB8;
+	padding: 24px 16px 50px;
+	@include min-responsive($screen-tablet) {
+		padding: 32px 20px 50px;
+	}
+	@include min-responsive($screen-desktop) {
+		padding: 48px 60px 100px;
+	}
+	&-block {
+		position: relative;
+		@include min-responsive($screen-large-desktop) {
+			width: 1400px;
+			margin: 0 auto;
+		}
+	}
+	&-logo {
+		position: relative;
+		height: 50px;
+		@include min-responsive($screen-tablet) {
+			margin-left: -8px;
+			height: 60px;
+		}
+		img {
+			height: 50px;
+			filter: brightness(0) invert(1);
+			@include min-responsive($screen-tablet) {
+				height: 60px;
+			}
+		}
+	}
+	&-row {
+		position: relative;
+		padding: 15px 0;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		@include min-responsive($screen-tablet) {
+			gap: 24px;
+			justify-content: space-between;
+			flex-wrap: nowrap;
+		}
+	}
+	&-col {
+		position: relative;
+		padding: 15px 0;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+		@include min-responsive($screen-tablet) {
+			width: calc(100% / 3);
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+	}
+	&-title {
+		margin: 10px 0;
+		@include font-pack(false, 20px, 700, 1, #fff);
+		&:nth-child(3) {
+			margin: 20px 0 10px;
+		}
+	}
+	&-lead {
+		@include font-pack(false, 16px, 400, 150%, #fff);
+		text-align: center;
+		@include min-responsive($screen-tablet) {
+			text-align: left;
+		}
+	}
+	&-contact {
+		display: inline-flex;
+		align-items: center;
+		@include font-pack(false, 16px, 400, normal, #fff);
+		vertical-align: text-top;
+		gap: 6px;
+		& > .icon {
+			display: block;
+			width: 16px;
+			height: 16px;
+			filter: brightness(0) invert(1);
+		}
+		&:hover {
+			text-decoration: underline;
+			color: #fff;
+		}
+	}
+	&-button {
+		margin: 14px 0;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 20px;
+		height: 50px;
+		border: 2px solid #fff;
+		border-radius: 50px;
+		@include font-pack(false, 16px, 400, 150%, #fff);
+		&:hover {
+			background: #fff;
+			color: #008DB8;
+		}
+	}
+	&-socmed {
+		position: relative;
+		display: flex;
+		margin: 10px 0;
+		gap: 20px;
+		a {
+			color: #fff;
+			font-size: 1.125rem;
+		}
+	}
+	&-menu {
+		margin: 0 0 10px;
+		position: relative;
+		font-size: .875rem;
+		ul {
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			@include min-responsive($screen-tablet) {
+				justify-content: flex-start;
+			}
+		}
+		li {
+			&:after {
+				content: '-';
+				color: #fff;
+				padding: 0 5px;
+			}
+			&:last-child {
+				&:after {
+					content: '';
+					padding: 0;
+				}
+			}
+		}
+		a {
+			color: #fff;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

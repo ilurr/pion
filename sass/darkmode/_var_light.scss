@@ -1,0 +1,16 @@
+@mixin vars-light {
+	--btn-bg: #fff;
+	--btn-bg2: #FAFAFA;
+	--btn-br: #E2E2E2;
+	--btn-cl: #007AFF;
+	--btn-cl2: #006EE6;
+}
+@mixin vars-modal-light {
+    --bg-modal: #fff;
+    --bg-modal-header: #F6F9F9;
+    --cl-modal-black: #000;
+    --cl-modal-dark: #34475A;
+    --cl-modal-gray: #454545;
+    --cl-modal-btn: #007AFF;
+    --img-modal-gray: none;
+}

@@ -1,0 +1,21 @@
+<div class="panel">
+	<div class="profile-header">
+		{{#if title}}
+		<div class="profile-title">{{title}}</div>
+		{{/if}}
+		{{#eq avatar compare="true"}}
+		<div class="profile-img">
+			<img src="./asset/images/dummy/LEnrgQEJ_400x400.jpg" alt="">
+		</div>
+		{{else}}
+		<div class="profile-avatar" data-init="{{initial}}"></div>
+		{{/eq}}
+		<div class="form-row form-upload">
+			<label for="upload-photo">Ganti Foto</label>
+			<input type="file" typeFile=true name="photo" id="upload-photo" />
+		</div>
+		<h2 class="profile-name">{{name}}</h2>
+		<div class="profile-id">KG Media ID</div>
+		<div class="profile-email">{{email}}</div>
+	</div>
+</div>

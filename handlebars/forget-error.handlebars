@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true}}
+
+<body>
+
+	<div class="container container-back">
+			{{>block_back title_back="Back to Home" title_link="index.html"}}
+	</div>
+
+	<!-- layout -->
+	<div class="container">
+
+		{{>block_top brand="pion-clinician" title="Reset Password" lead="Enter your email or phone number to continue. We'll send you a link with instructions."}}
+
+		<div class="block-middle">
+			{{>form_forget action="forget-help.html" txterrorEmail="Your email or phone number are not found"}}
+		</div>
+
+		{{!>block_footer link=true}}
+		
+	</div>
+
+{{>js}}
+<script>
+	// script untuk keperluan dummy saja
+	let ss = document.querySelectorAll("input:not([type=submit])");
+	let fr = document.querySelector("input[type=submit]");
+	if(!!ss) {
+		for(let i=0;i<ss.length;i++) {
+			ss[i].addEventListener('input', cekInput);
+			ss[i].addEventListener('propertychange', cekInput); 
+		}
+	}
+	function cekInput(e) {
+		let va = e.target.value;
+		for(let i=0;i<ss.length;i++) {
+			console.log(ss[i].value);
+			if(ss[i].value!='') {
+				fr.classList.add("-primary");
+				fr.classList.remove("-disabled");
+				fr.removeAttribute("disabled");
+			} else {
+				fr.classList.add("-disabled");
+				fr.setAttribute("disabled","disabled");
+			}
+		}
+	} 
+</script>
+</body>
+</html>

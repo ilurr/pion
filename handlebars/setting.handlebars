@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+
+			<!-- side -->
+			{{>aside active="Setting"}}
+			
+			<!-- dashboard -->
+			<section class="section board">
+
+				<div class="board-row">
+
+					<h1 class="title"><a href="my-dashboard.html" class="title-back"><span class="icon icon-back"></span></a> Setting</h1>
+
+					<div class="setting-block">
+						<div class="setting-item">
+							<div class="setting-row">
+								<div class="setting-text">No. HP</div>
+								<div class="setting-info">
+									<div class="setting-content">098838694112</div>
+									<a class="setting-link" href="javascript:openModal('settingPhone')"><span class="icon icon-arrow-right"></span> <i>Ubah</i></a>
+								</div>
+							</div>
+
+							<div class="modal-content -small" data-modal-target="settingPhone">
+								<form action="#">
+								<div class="modal-header">
+									<div class="modal-title">Change Phone Number</div>
+									<button class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
+										<i class="fa-solid fa-xmark"></i>
+									</button>
+								</div>
+								<div class="modal-body">
+									{{>input type="text" label="Old Phone Number" name="phone_old" placeholder="Old Phone Number" nolabel="true" txterror=txterrorEmail}}
+									{{>input type="text" label="New Phone Number" name="phone_new" placeholder="New Phone Number" nolabel="true" txterror=txterrorEmail}}
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="button -auto -transparent" data-modal-button="dismiss">Cancel</button>
+									<button type="button" class="button -primary -auto" onclick="dummyChange('Your phone number has been changed')" type="button">Change</button>
+								</div>
+								</form>
+							</div>
+
+						</div>
+						<div class="setting-item">
+							<div class="setting-row">
+								<div class="setting-text">Email</div>
+								<div class="setting-info">
+									<div class="setting-content">alikuro@gmail.com</div>
+									<a class="setting-link" href="javascript:openModal('settingEmail')"><span class="icon icon-arrow-right"></span> <i>Change</i></a>
+								</div>
+							</div>
+
+							<div class="modal-content -small" data-modal-target="settingEmail">
+								<form action="#">
+								<div class="modal-header">
+									<div class="modal-title">Change Email</div>
+									<button class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
+										<i class="fa-solid fa-xmark"></i>
+									</button>
+								</div>
+								<div class="modal-body">
+									{{>input type="text" label="Your new email" name="email_new" placeholder="Your new email" nolabel="true" txterror=txterrorEmail}}
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="button -auto -transparent" data-modal-button="dismiss">Cancel</button>
+									<button type="button" class="button -primary -auto" onclick="dummyChange('Your email has been changed')" type="button">Change</button>
+								</div>
+								</form>
+							</div>
+
+						</div>
+						<div class="setting-item">
+							<div class="setting-row">
+								<div class="setting-text">Password</div>
+								<div class="setting-info">
+									<div class="setting-content">**********</div>
+									<a class="setting-link" href="javascript:openModal('settingPassword')"><span class="icon icon-arrow-right"></span> <i>Change password</i></a>
+								</div>
+							</div>
+
+							<div class="modal-content -small" data-modal-target="settingPassword">
+								<form action="#">
+									<div class="modal-header">
+										<div class="modal-title">Change Password</div>
+										<button class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
+											<i class="fa-solid fa-xmark"></i>
+										</button>
+									</div>
+									<div class="modal-body">
+										{{>input type="password" label="Old password" name="password_old" placeholder="Old password" nolabel="true" txterror=txterrorEmail}}
+										{{>input type="password" label="New password" name="password_new" placeholder="New password" nolabel="true" txterror=txterrorEmail}}
+										{{>input type="password" label="Confirm new password" name="password_new2" placeholder="Confirm new password" nolabel="true" txterror=txterrorEmail txthint="Password must contain at least 8 characters."}}
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="button -auto -transparent" data-modal-button="dismiss">Cancel</button>
+										<button type="button" class="button -primary -auto" onclick="dummyChange('Your password has been changed')" type="button">Change</button>
+									</div>
+								</form>
+							</div>
+
+						</div>
+
+						<h3 class="setting-subtitle">Notification</h3>
+						<div class="setting-item">
+							<label for="setting-email-notification">
+								<div class="setting-row">
+									<div class="setting-text">Email Notification</div>
+									<div class="setting-toggle form-toggle">
+										<input name="setting-email-notification" id="setting-email-notification" type="checkbox" autocomplete="off" checked="checked" onchange="reactionToast('Your email notification\'s setting has been changed')">
+										<span></span>
+									</div>
+								</div>
+							</label>
+						</div>
+						<div class="setting-item">
+							<label for="setting-phone-notification">
+								<div class="setting-row">
+									<div class="setting-text">WhatsApp Notification</div>
+									<div class="setting-toggle form-toggle">
+										<input name="setting-phone-notification" id="setting-phone-notification" type="checkbox" autocomplete="off" onchange="reactionToast('Your WhatsApp notification\'s setting has been changed')">
+										<span></span>
+									</div>
+								</div>
+							</label>
+						</div>
+
+						<h3 class="setting-subtitle">Account</h3>
+						<div class="setting-item">
+							<button type="button" class="button -auto setting-button-delete" onclick="openModal('deleteAccount')">Delete Account</button>
+
+							<div class="modal-content -small" data-modal-target="deleteAccount">
+								<form action="index.html">
+									<div class="modal-header">
+										<div class="modal-title">Delete Account</div>
+										<button class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
+											<i class="fa-solid fa-xmark"></i>
+										</button>
+									</div>
+									<div class="modal-body">
+										{{>input type="text" label="Email" name="email_del" placeholder="Your Email" nolabel="true" txterror=txterrorEmail}}
+										{{>input type="password" label="Password" name="password_del" placeholder="Your Password" nolabel="true" txterror=txterrorEmail}}
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="button -auto -transparent" data-modal-button="dismiss">Cancel</button>
+										<button class="button -auto -danger">Delete Account</button>
+									</div>
+								</form>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+<script>
+	function dummyChange(toastMsg) {
+		reactionToast(toastMsg)
+		closeModal()
+	}
+</script>
+</body>
+</html>

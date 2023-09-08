@@ -1,0 +1,20 @@
+<div class="form-main">
+	<form action="{{action}}">
+		{{>input type="text" label="Email" name="email" placeholder="Email" nolabel="true" txterror=txterrorEmail}}
+		{{>input type="text" label="Nama Lengkap" name="name" placeholder="Fullname" nolabel="true"}}
+		{{>input type="text" label="Phone Number" name="phone" placeholder="Phone Number" nolabel="true"}}
+		{{>select type="select" label="Gender" name="gender" placeholder="Gender" nolabel="true" option="Male,Female"}}
+		{{>input type="password" label="Password" name="password" placeholder="Password" nolabel="true" txterror=txterrorPsswrd}}
+		{{!>input type="text" label="Tanggal Lahir" name="birth" placeholder=(moment "id" "D MMM YYYY") txtVal=(moment "id" "D MMM YYYY") function="js-datepicker" parent="js-datepicker-container" readonly="true"}}
+		{{>input type="text" label="Date of Birth" name="birth" placeholder="Date of Birth" nolabel="true" function="js-datepicker" parent="js-datepicker-container" readonly="true"}}
+		{{!>checkbox type="checkbox" label="By creating an account you have agreed to our <a htef='#'>Terms & Condition</a> and <a htef='#'>Privacy Policy</a>." name="agree" checked="true"}}
+		<hr>
+		<div class="form-hint">
+			<p>By creating an account you have agreed to our <a href="#">Terms & Condition</a> and <a href="#">Privacy Policy</a>.</p>
+		</div>
+		{{#if txterrorSystem}}
+		<div class="form-error text-center">{{txterrorSystem}}</div>
+		{{/if}}
+		{{>button type="submit" label=txtLabelButton class="-disabled" disabled="true"}}
+	</form>
+</div>

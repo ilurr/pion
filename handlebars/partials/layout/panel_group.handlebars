@@ -1,0 +1,67 @@
+<div class="panel">
+	<div class="list">
+		<div class="list-item">
+			<span class="list-subtitle">Gender</span>
+			<div class="list-content">Laki-laki</div>
+		</div>
+		<div class="list-item">
+			<span class="list-subtitle">Tanggal Lahir</span>
+			<div class="list-content">23 September 1990</div>
+		</div>
+		<div class="list-item">
+			<span class="list-subtitle">Status Pernikahan</span>
+			{{#if txtStatus}}
+			<div class="list-content">{{{txtStatus}}}</div>
+			{{else}}
+			<div class="list-content"><span>Status pernikahanmu</span></div>
+			<div class="list-action"><a href="profile-edit.html">Lengkapi data</a></div>
+			{{/if}}
+		</div>
+	</div>
+</div>
+
+<div class="panel">
+	<div class="list">
+		<div class="list-item">
+			<span class="list-subtitle">Nomor Handphone</span>
+			{{#if txtPhone}}
+			<div class="list-content">{{{txtPhone}}}</div>
+			{{else}}
+			<div class="list-content"><span>Nomor handphone aktif saat ini</span></div>
+			<div class="list-action"><a href="profile-edit.html">Lengkapi data</a></div>
+			{{/if}}
+		</div>
+		<div class="list-item">
+			<span class="list-subtitle">Alamat</span>
+			{{#if txtAddress}}
+			<div class="list-content -height">{{{txtAddress}}}</div>
+			{{else}}
+			<div class="list-content -height"><span>Alamat tempat tinggalmu saat ini</span></div>
+			<div class="list-action"><a href="profile-edit.html">Lengkapi data</a></div>
+			{{/if}}
+		</div>
+	</div>
+</div>
+
+<div class="panel">
+	<div class="list">
+		<div class="list-item">
+			<span class="list-subtitle">Pendidikan Terakhir</span>
+			{{#if txtEducation}}
+			<div class="list-content">{{{txtEducation}}}</div>
+			{{else}}
+			<div class="list-content"><span>Pendidikan terakhirmu</span></div>
+			<div class="list-action"><a href="profile-edit.html">Lengkapi data</a></div>
+			{{/if}}
+		</div>
+		<div class="list-item">
+			<span class="list-subtitle">Pekerjaan</span>
+			{{#if txtJob}}
+			<div class="list-content">{{{txtJob}}}</div>
+			{{else}}
+			<div class="list-content"><span>Pekerjaanmu saat ini</span></div>
+			<div class="list-action"><a href="profile-edit.html">Lengkapi data</a></div>
+			{{/if}}
+		</div>
+	</div>
+</div>

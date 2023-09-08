@@ -1,0 +1,109 @@
+.faq {
+	&-block {
+		position: relative;
+		width: 100%;
+		display: flex;
+    flex-direction: column;
+    align-items: center;
+		// padding: 30px 0;
+		gap: 10px;
+		@include min-responsive($screen-tablet) {
+			width: calc(100% - 60px);
+			margin: 0 auto;
+			// padding: 30px;
+			gap: 20px;
+		}
+		@include min-responsive($screen-small-desktop) {
+			width: calc(100% - 200px);
+		}
+		@include min-responsive($screen-large-desktop) {
+			// gap: 40px;
+			width: 1250px;
+			padding: 0 70px;
+		}
+	}
+	&-list {
+		border-radius: 12px;
+		background: #fff;
+		padding: 20px;
+		width: 100%;
+		box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.12);
+		margin: 20px 0;
+		@include min-responsive($screen-tablet) {
+			border-radius: 20px;
+			padding: 30px;
+		}
+		@include min-responsive($screen-large-desktop) {
+			padding: 40px;
+		}
+	}
+	&-toggle {
+		position: relative;
+		flex-direction: column;
+		align-items: flex-start;
+		padding-right: 30px;
+		font-size: 14px;
+		gap: 5px;
+		@include min-responsive($screen-tablet) {
+			font-size: 16px;
+		}
+		span {
+			display: block;
+			font-size: 14px;
+			color: var(--primary-pion, #0DACDD);
+		}
+		.icon {
+			position: absolute;
+    	top: 35px;
+			right: 0;
+			@include min-responsive($screen-tablet) {
+				top: 40px;
+			}
+		}
+	}
+	&-item {
+		border-top: 1px solid #e8e8e8;
+		padding: 10px 0;
+		&:first-child {
+			padding: 0 0 10px;
+			border-top: none;
+		}
+	}
+	&-footer {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		max-width: 570px;
+		align-items: center;
+		@include min-responsive($screen-tablet) {
+			flex-direction: row;
+		}
+		&-img {
+			flex-grow: 0;
+			flex-basis: auto;
+			width: 100px;
+			@include min-responsive($screen-tablet) {
+				width: 100px;
+				flex-basis: 100px;
+			}
+		}
+		&-col {
+			flex-basis: 0;
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			align-items: center;
+			@include min-responsive($screen-tablet) {
+				align-items: flex-start;
+			}
+		}
+	}
+	&-lead {
+		text-align: center;
+		@include min-responsive($screen-tablet) {
+			text-align: left;
+		}
+	}
+}

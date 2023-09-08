@@ -1,0 +1,6 @@
+label {
+	position: relative;
+	@include font-pack(false, 0.875rem, 400, 1.2, #34475A);
+	display: inline-block;
+}
+

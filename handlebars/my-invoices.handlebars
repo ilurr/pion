@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+
+			<!-- side -->
+			{{>aside active="Billing"}}
+			
+			<!-- dashboard -->
+			<section class="section board">
+
+				<div class="board-row">
+	
+					<h1 class="title">
+						<span class="fa-regular fa-file-lines"></span>
+						Invoices 
+					</h1>
+
+					{{>list invoices=true header=true index_start=1 index_end=10}}
+
+					<div class="board-more">
+						<button class="button -primary -auto">Load more</button>
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+</body>
+</html>

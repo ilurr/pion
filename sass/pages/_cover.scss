@@ -1,0 +1,885 @@
+.cover {
+	position: relative;
+	background: #F0F1F5;
+	height: calc(85vh - 60px);
+	@include min-responsive($screen-middle) {
+		height: calc(100vh - 100px);
+	}
+	&-block {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 100%;
+		height: 100%;
+		padding-top: 7vh;
+		@include min-responsive($screen-small-desktop) {
+			padding-top: 0;
+			align-items: center;
+			padding-bottom: 100px;
+		}
+		@include min-responsive($screen-large-desktop) {
+			width: 1400px;
+			margin: 0 auto;
+		}
+	}
+	&-content {
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		padding: 0 16px;
+		@include min-responsive($screen-small-desktop) {
+			width: 55%;
+			padding: 0 36px;
+		}
+		@include min-responsive($screen-large-desktop) {
+			width: 50%;
+			padding: 0 24px;
+		}
+	}
+	&-title {
+		margin: 0;
+		@include font-pack(false, 24px, 700, 120%, #009ACA);
+		@include min-responsive($screen-tablet) {
+			@include font-pack(false, 34px, false, false, false);
+		}
+	}
+	&-lead {
+		margin: 0;
+		@include font-pack(false, 14px, 400, 24px, #009ACA);
+		@include min-responsive($screen-tablet) {
+			@include font-pack(false, 20px, false, 30px, false);
+		}
+	}
+	&-asset {
+		position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+    height: 330px;
+    z-index: 1;
+    background-size: auto 100%;
+		background-position: calc(100% + 105px) center;
+		background-repeat: no-repeat;
+		&.-b2 {
+			background-position: calc(100% + 80px) center;
+		}
+		&.-b3 {
+			background-position: calc(100% + 100px) center;
+			@include min-responsive($screen-tablet) {
+				background-position: calc(100% + 370px) center;
+			}
+			@include min-responsive($screen-small-desktop) {
+				background-position: calc(100% + 200px) center;
+			}
+		}
+		@include min-responsive($screen-tablet) {
+			height: 70vh;
+			background-position: calc(100% + 250px) center;
+		}
+		@include min-responsive($screen-small-desktop) {
+			height: 100%;
+			background-position: calc(100% + 200px) center;
+		}
+		@media (min-width: $screen-small-desktop) and (max-height: 700px) {
+			background-position: calc(100% + 0px) center;	
+		}
+		// @include min-responsive($screen-desktop) {
+		// 	background-position: calc(100% + 100px) center;
+		// }
+		// @include min-responsive($screen-large-desktop) {
+		// 	background-position: calc(100% + 0px) center;
+		// }
+	}
+}
+
+.stat {
+	position: relative;
+	margin-top: -20px;
+	z-index: 2;
+	overflow: hidden;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	@include min-responsive($screen-tablet) {
+		margin-top: -125px;
+		padding-top: 10px;
+	}
+	@include min-responsive($screen-small-desktop) {
+		padding-bottom: 70px;
+	}
+	&:before {
+		content: '';
+		border-radius: 100%;
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		left: calc(-54px / 2);
+		width: calc(100% + 54px);
+		height: 75px;
+		background: #fff;
+		@include min-responsive($screen-tablet) {
+			height: 150px;
+			top: 70px;
+		}
+	}
+	&-block {
+		position: relative;
+		width: 100%;
+		display: flex;
+    flex-direction: column;
+    align-items: center;
+		gap: 50px;
+		@include min-responsive($screen-tablet) {
+			gap: 40px;
+			width: calc(100% - 60px);
+			border-radius: 30px;
+			background: #fff;
+			box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.12);
+			margin: 0 auto;
+			flex-direction: row;
+			justify-content: center;
+			align-items: flex-start;
+			padding: 30px;
+		}
+		@include min-responsive($screen-small-desktop) {
+			padding: 40px;
+			gap: 100px;
+			width: calc(100% - 200px);
+		}
+		@include min-responsive($screen-large-desktop) {
+			width: 1250px;
+			border-radius: 48px;
+			padding: 36px 67px;
+		}
+	}
+	&-item {
+		width: 180px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		gap: 10px;
+		@include min-responsive($screen-tablet) {
+			width: 100%;
+		}
+	}
+	&-icon {
+		display: flex;
+		height: 36px;
+		width: 100%;
+		@include min-responsive($screen-tablet) {
+			height: 40px;
+		}
+		@include min-responsive($screen-large-desktop) {
+			height: 50px;
+		}
+		& > .icon {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+		}
+	}
+	&-count {
+		margin: 0;
+		@include font-pack(false, 34px, 700, 120%, #009ACA);
+		@include min-responsive($screen-tablet) {
+			@include font-pack(false, 36px, false, false, false);
+		}
+		@include min-responsive($screen-large-desktop) {
+			@include font-pack(false, 48px, false, false, false);
+		}
+	}
+	&-lead {
+		margin: 0;
+		text-align: center;
+		@include font-pack(false, 18px, 400, 150%, #8495A5);
+		@include min-responsive($screen-tablet) {
+			@include font-pack(false, 18px, false, false, false);
+		}
+		@include min-responsive($screen-large-desktop) {
+			@include font-pack(false, 20px, false, false, false);
+		}
+	}
+}
+
+.package {
+	position: relative;
+	&-block {
+		position: relative;
+		width: 100%;
+		display: flex;
+    flex-direction: column;
+		gap: 36px;
+		padding: 30px 20px;
+		@include min-responsive($screen-tablet) {
+			padding: 30px;
+			width: calc(100%);
+			flex-direction: row;
+			justify-content: center;
+			margin: 0 auto;
+		}
+		// @include min-responsive($screen-small-desktop) {
+		// 	width: calc(100% - 0px);
+		// }
+		@include min-responsive($screen-desktop) {
+			width: calc(100% - 200px);
+			padding: 50px 0;
+		}
+		@include min-responsive($screen-large-desktop) {
+			width: 1250px;
+		}
+	}
+	&-item {
+		width: 100%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		transition: all .2s cubic-bezier(0.68,-0.55,0.27,1.55);
+		padding: 24px 18px;
+		gap: 16px;
+		@include min-responsive($screen-tablet) {
+			width: calc(100% / 3);
+			padding: 36px 24px;
+			align-items: center;
+			justify-content: space-between;
+		}
+		@include range-responsive($screen-tablet, $screen-small-desktop) {
+			gap: 10px;
+			padding: 36px 15px 15px;
+		}
+		&:hover {
+			@include min-responsive($screen-tablet) {
+				transform: scale(1.1);
+			}
+		}
+	}
+	&-asset {
+		width: calc(100% + 36px);
+		position: relative;
+		margin: -24px -18px 0;
+		padding-top: calc((309/400 * 100%) + 24px);
+		@include min-responsive($screen-tablet) {
+			margin: -36px -24px 0;
+			width: calc(100% + 48px);
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+		}
+	}
+	&-title {
+		margin: 0;
+		text-align: center;
+		@include font-pack(false, 24px, 700, 36px, #112639);
+		@include min-responsive($screen-tablet) {
+			@include font-pack(false, 18px, false, 120%, false);
+		}
+		@include min-responsive($screen-small-desktop) {
+			font-size: 30px;
+		}
+		@include min-responsive($screen-large-desktop) {
+			@include font-pack(false, 36px, false, false, false);
+		}
+	}
+	&-lead {
+		margin: 0;
+		text-align: center;
+		@include font-pack(false, 14px, 400, 150%, #112639);
+		@include min-responsive($screen-tablet) {
+			@include font-pack(false, 16px, false, false, false);
+		}
+		@include min-responsive($screen-large-desktop) {
+			@include font-pack(false, 20px, false, false, false);
+		}
+	}
+	&-button {
+		background: #112639;
+		border-radius: 12px;
+		height: 50px;
+		border: 1px solid #112639;
+		@include font-pack(false, 16px, 600, 24px, #fff);
+		@include min-responsive($screen-tablet) {
+			height: 60px;
+			font-size: 18px;
+		}
+		&:hover {
+			color: #fff;
+			background: #000;
+		}
+	}
+	&-bg {
+		&green {
+			&:before {
+				background: #CAFFDF;
+			}
+			.package-button {
+				&:hover {
+					border: 1px solid darken(#CAFFDF, 50%);
+					background: darken(#CAFFDF, 50%);
+				}
+			}
+		}
+		&blue {
+			&:before {
+				background: #DBF4FF;
+			}
+			.package-button {
+				&:hover {
+					border: 1px solid darken(#DBF4FF, 50%);
+					background: darken(#DBF4FF, 50%);
+				}
+			}
+		}
+		&yellow {
+			&:before {
+				background: #FFF7DB;
+			}
+			.package-button {
+				&:hover {
+					border: 1px solid darken(#FFF7DB, 50%);
+					background: darken(#FFF7DB, 50%);
+				}
+			}
+		}
+		&green,
+		&blue,
+		&yellow {
+			&:before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: calc(100% - 200px);
+				pointer-events: none;
+				bottom: 0;
+				left: 0;
+				z-index: -1;
+				border-radius: 24px;
+				@include range-responsive($screen-tablet, $screen-small-desktop) {
+					height: calc(100% - 150px);
+				}
+			}
+		}
+	}
+	&-page {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&-page &-item {
+		&:hover {
+			@include min-responsive($screen-tablet) {
+				transform: scale(1);
+			}
+		}
+	}
+	&-page &-item &-title {
+		order: 1;
+	}
+	&-page &-item &-asset {
+		order: 3;
+		margin: 0 -18px -24px;
+		@include min-responsive($screen-tablet) {
+			margin: 0 -24px -36px;
+		}
+	}
+	&-page &-item &-list {
+		order: 2;
+		width: 100%;
+	}
+	&-page &-bggreen:before, 
+	&-page &-bgblue:before, 
+	&-page &-bgyellow:before {
+		height: 100%;
+	}
+	&-page &-block {
+		padding: 20px;
+		@include min-responsive($screen-tablet) {
+			padding: 20px 30px;
+		}
+		@include min-responsive($screen-desktop) {
+			padding: 20px 0;
+		}
+	}
+	&-list {
+		ul {
+			list-style-type: disc;
+			margin-left: 20px;
+		}
+		li {
+			margin: 1rem 0;
+			&:first-child {
+				margin: .25rem 0 1rem;
+			}
+		}
+	}
+}
+
+.issue {
+	position: relative;
+	&-block {
+		position: relative;
+		width: 100%;
+		display: flex;
+    flex-direction: column;
+		padding: 30px 20px;
+		gap: 20px;
+		@include min-responsive($screen-tablet) {
+			padding: 30px;
+			// width: calc(100% - 100px);
+			flex-direction: row;
+			justify-content: space-between;
+			margin: 0 auto;
+		}
+		@include min-responsive($screen-small-desktop) {
+			gap: 80px;
+			align-items: center;
+		}
+		@include min-responsive($screen-desktop) {
+			width: calc(100% - 200px);
+			padding: 50px 20px;
+			gap: 100px;
+		}
+		@include min-responsive($screen-large-desktop) {
+			width: 1250px;
+		}
+	}
+	&-popup {
+		&-title {
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 150%;
+			margin: 0 0 .75rem;
+		}
+	}
+	&-img {
+		width: 100%;
+		height: 200px;
+		display: flex;
+		overflow: hidden;
+		justify-content: center;
+		@include min-responsive($screen-tablet) {
+			// width: 170px;
+			// flex-basis: 170px;
+			// height: 280px;
+			display: none;
+		}
+		@include min-responsive($screen-small-desktop) {
+			display: flex;
+			width: 360px;
+			flex-basis: 360px;
+			flex-grow: 0;
+			height: 580px;
+			justify-content: flex-start;
+		}
+		img {
+			height: 210%;
+			@include min-responsive($screen-tablet) {
+				height: 100%;
+			}
+		}
+	}
+	&-content {
+		width: 100%;
+		display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+		gap: 10px;
+		@include min-responsive($screen-small-desktop) {
+			gap: 36px;
+			width: auto;
+			flex-basis: 0;
+			flex-grow: 1;
+		}
+	}
+	&-title {
+		margin: 0;
+		text-align: center;
+		padding: 0 20px;
+		@include font-pack(false, 20px, 700, 150%, #112639);
+		@include min-responsive($screen-tablet) {
+			padding: 0;
+			text-align: left;
+			@include font-pack(false, 28px, false, false, false);
+		}
+	}
+	&-list {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	&-item {
+		position: relative;
+		border-bottom: 1px solid #B7C1CB;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	&-button {
+		display: flex;
+		padding: 15px 0;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+		@include font-pack(false, 16px, 400, 150%, #112639);
+		@include min-responsive($screen-tablet) {
+			padding: 20px 0;
+			font-size: 20px;
+		}
+		& > span {
+			flex-grow: 1;
+			flex-basis: 0;
+		}
+		&:hover {
+			color: var(--primary-pion, #0DACDD);
+		}
+		.icon {
+			flex-grow: 0;
+			flex-basis: 24px;
+			width: 24px;
+			height: 24px;
+			display: flex;
+			background-size: contain;
+			@include min-responsive($screen-tablet) {
+				flex-basis: 32px;
+				width: 32px;
+				height: 32px;
+			}
+		}
+	}
+	&-page &-title {
+		text-align: center;
+	}
+	&-page &-list {
+		gap: 20px;
+		flex-wrap: wrap;
+    flex-direction: row;
+		@include min-responsive($screen-small-desktop) {
+			gap: 36px;
+		}
+	}
+	// &-page &-figure {
+	// }
+	&-page &-figure {
+		flex-basis: 100px;
+		width: 100px;
+		height: 100px;
+		flex-grow: 0;
+		@include min-responsive($screen-tablet) {
+			flex-basis: 120px;
+			width: 120px;
+			height: 120px;
+		}
+		@include min-responsive($screen-small-desktop) {
+			flex-basis: 150px;
+			width: 150px;
+			height: 150px;
+		}
+	}
+	&-page &-button {
+		padding: 0;
+		height: 100%;
+		gap: 0;
+		span {
+			flex-basis: 0;
+			flex-grow: 1;
+			padding-left: 20px;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 4;
+			-webkit-box-orient: vertical;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 130%;
+			@include min-responsive($screen-desktop) {
+				font-size: 18px;
+			}
+		}
+	}
+	&-page &-content {
+		gap: 36px;
+	}
+	&-page &-item {
+		width: 100%;
+		border-bottom: none;
+		box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.05);
+		border-radius: 12px;
+		border: 1px solid var(--neutral-grey-100, #D3DAE0);
+		transition: all .2s cubic-bezier(0.68,-0.55,0.27,1.55);
+		&:hover {
+			@include min-responsive($screen-small-desktop) {
+				transform: scale(1.05);
+			}
+		}
+		@include min-responsive($screen-middle) {
+			width: calc((100% - 36px) / 2);
+		}
+		@include min-responsive($screen-small-desktop) {
+			box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.12);
+			width: calc((100% - 72px) / 3);
+		}
+	}
+}
+
+.testi {
+	position: relative;
+	&-block {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		padding: 30px 20px;
+		gap: 20px;
+		@include min-responsive($screen-tablet) {
+			padding: 30px;
+			// gap: 80px;
+			// width: calc(100% - 100px);
+			// flex-direction: row;
+			justify-content: space-between;
+			margin: 0 auto;
+		}
+		@include min-responsive($screen-desktop) {
+			width: calc(100% - 200px);
+			padding: 50px 20px;
+			// gap: 100px;
+		}
+		@include min-responsive($screen-large-desktop) {
+			width: 1250px;
+		}
+	}	
+	&-title {
+		margin: 0;
+		text-align: center;
+		padding: 0;
+		@include font-pack(false, 20px, 700, 150%, #112639);
+		@include min-responsive($screen-tablet) {
+			@include font-pack(false, 28px, false, false, false);
+		}
+	}
+	&-tab {
+		position: relative;
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 10px;
+		@include max-responsive($screen-middle) {
+			width: 100vw;
+			overflow-x: auto;
+			margin: 0 -20px -15px;
+			padding-bottom: 15px;
+		}
+		@include min-responsive($screen-small-desktop) {
+			justify-content: center;
+		}
+		&-item {
+			position: relative;
+			@include max-responsive($screen-middle) {
+				&:first-child {
+					margin-left: 15px;
+				}
+				&:last-child {
+					margin-right: 15px;
+				}
+			}
+		}
+		&-button {
+			@include font-pack(false, 16px, 600, 150%, #3D4954);
+			border-radius: 24px;
+			padding: 0 16px;
+			white-space: nowrap;
+			border: 1px solid #E3EAF1;
+			&:hover {
+				color: #3D4954;
+				background: #E3EAF1;
+			}
+			&.-active {
+				color: #fff;
+				background: #009ACA;
+			}
+		}
+	}
+	&-body {
+		position: relative;
+		margin: 0 -20px;
+		// padding-top: 10px;
+	}
+	&-swiper {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+	}
+	&-list {
+		position: relative;
+		display: none;
+		&.-active {
+			display: flex;
+		}
+		&-item {
+			position: relative;
+			padding: 0 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 10px;
+			@include min-responsive($screen-tablet) {
+				align-items: center;
+				flex-direction: row;
+				gap: 50px;
+			}
+		}
+	}
+	&-col {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		flex-grow: 1;
+		flex-basis: 25%;
+		&:last-child {
+			flex-basis: 75%;
+		}
+	}
+	&-row {
+		position: relative;
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 20px;
+	}
+	&-avatar {
+		flex-basis: 50px;
+		width: 50px;
+		height: 50px;
+		flex-grow: 0;
+	}
+	&-info {
+		flex-grow: 1;
+		flex-basis: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+	}
+	&-name {
+		@include font-pack(false, 18px, 700, 120%, #112639);
+	}
+	&-type {
+		@include font-pack(false, 14px, 400, 120%, #6A6B6A);
+	}
+	&-content {
+		@include font-pack(false, 16px, 400, 150%, #6A6B6A);
+		p, ul, ol {
+			@include font-pack(false, 16px, 400, 150%, #6A6B6A);
+		}
+		ul, ol {
+			list-style-type: disc;
+			margin: 5px 20px;
+		}
+		ol {
+			list-style-type: decimal;
+		}
+	}
+	&-rating {
+		position: relative;
+		display: flex;
+		.icon {
+			display: flex;
+			width: 20px;
+			height: 20px;
+			background-size: contain;
+		}
+	}
+}
+
+.client {
+	position: relative;
+	&-block {
+		position: relative;
+		width: 100%;
+		display: flex;
+    flex-direction: column;
+		// gap: 36px;
+		// flex-wrap: wrap;
+		justify-content: center;
+		padding: 30px 0;
+		margin: 0 auto 20px;
+		@include min-responsive($screen-tablet) {
+			width: calc(100% - 100px);
+			// flex-direction: row;
+			align-items: center;
+			margin: 0 auto 20px;
+		}
+		@include min-responsive($screen-desktop) {
+			padding: 50px 0;
+			width: calc(100% - 200px);
+		}
+		@include min-responsive($screen-large-desktop) {
+			width: 1250px;
+		}
+	}
+	&-swiper {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+	}
+	&-title {
+		margin: 0;
+		text-align: center;
+		padding: 0 20px;
+		@include font-pack(false, 20px, 700, 150%, #112639);
+		@include min-responsive($screen-tablet) {
+			@include font-pack(false, 28px, false, false, false);
+		}
+	}
+	&-list {
+		position: relative;
+		width: 100%;
+	// 	display: flex;
+	// 	justify-content: center;
+	// 	// flex-wrap: wrap;
+	// 	@include min-responsive($screen-tablet) {
+	// 		// flex-wrap: nowrap;
+	// 		justify-content: space-between;
+	// 	}
+	}
+	&-item {
+		// width: calc(100% / 2);
+		display: flex;
+		justify-content: center;
+		@include min-responsive($screen-tablet) {
+			// width: calc(100% / 7);
+		}
+	}
+	&-img {
+		width: 150px;
+		height: 150px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			filter: grayscale(1);
+			transition: all .2s ease;
+		}
+		&:hover {
+			img {
+				filter: none;
+			}
+		}
+	}
+}

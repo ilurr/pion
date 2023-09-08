@@ -1,0 +1,13 @@
+<div class="form-main">
+	<form action="{{action}}">
+		{{>input type="text" label="Email / Phone Number" name="email" placeholder="Email / Phone Number" txterror=txterrorEmail txtVal=txtValEmail nolabel="true"}}
+		{{!-- <div class="form-hint">
+			<p>KG Media ID milikmu adalah alamat email yang kamu gunakan untuk login di Kompas.com, Tribunnews.com, Grid.id, dan layanan KG Media lainnya.</p>
+		</div> --}}
+		<hr>
+		{{#if txterrorSystem}}
+		<div class="form-error text-center">{{txterrorSystem}}</div>
+		{{/if}}
+		{{>button name="forget" type="submit" label="Reset Password" class="-disabled" disabled="true"}}
+	</form>
+</div>

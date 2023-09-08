@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true}}
+
+<body>
+
+	<!-- layout -->
+	<div class="container">
+
+		{{>block_top brand="pion-clinician" title="Failed!" lead="Error processing your registration. Please try again after few minutes." titleClass="-error"}}
+
+		<div class="block-middle">
+			{{>button type="link" label="Continue" class="-primary" href="register.html"}}
+		</div>
+
+		{{!>block_footer link=true}}
+		
+	</div>
+
+{{>js}}
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="Media"}}
+
+		<!-- media -->
+		<section class="section media">
+			<div class="board-row">
+
+				<h1 class="title -big">Pion di media</h1>
+				{{>list medialist=true index_end=7}}
+
+				<div class="paging">
+					<div class="paging-list">
+						<a href="#" class="paging-link -disabled">&lt</a>
+						<a href="#" class="paging-link -active">1</a>
+						<a href="#" class="paging-link">2</a>
+						<a href="#" class="paging-link">3</a>
+						<a href="#" class="paging-link">&gt</a>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+</body>
+</html>

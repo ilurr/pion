@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true}}
+
+<body>
+
+	<div class="container container-back">
+			{{>block_back title_back="Back to Login" title_link="login.html"}}
+	</div>
+
+	<!-- layout -->
+	<div class="container">
+
+		{{>block_top brand="pion-clinician" title="Sign Up"}}
+
+		<div class="block-middle">
+			<div class="form-main">
+				<form action="register-validation.html">
+					{{>input type="text" label="Email" name="email" placeholder="" txterror=txterrorEmail}}
+					{{>input type="text" label="Fullname" name="name" placeholder=""}}
+					{{>input type="text" label="Phone Number" name="phone" placeholder="" whatsapp="phone_wa"}}
+					{{>select type="select" label="Gender" name="gender" placeholder="" option="Male,Female"}}
+					{{>input type="password" label="Password" name="password" placeholder="" txterror=txterrorPsswrd}}
+					{{!>input type="text" label="Tanggal Lahir" name="birth" placeholder=(moment "id" "D MMM YYYY") txtVal=(moment "id" "D MMM YYYY") function="js-datepicker" parent="js-datepicker-container" readonly="true"}}
+					{{>input type="text" label="Date of Birth" name="birth" placeholder="" function="js-datepicker" parent="js-datepicker-container" readonly="true" txterror="You have to fill this box"}}
+					{{!>checkbox type="checkbox" label="By creating an account you have agreed to our <a htef='#'>Terms & Condition</a> and <a htef='#'>Privacy Policy</a>." name="agree" checked="true"}}
+					<hr>
+					<div class="form-hint">
+						<p>By creating an account you have agreed to our <a href="#">Terms & Condition</a> and <a href="#">Privacy Policy</a>.</p>
+					</div>
+					{{#if txterrorSystem}}
+					<div class="form-error text-center">{{txterrorSystem}}</div>
+					{{/if}}
+					{{>button type="submit" label="Create Account" class="-disabled" disabled="true"}}
+				</form>
+			</div>
+		</div>
+
+		{{!>block_footer link=true txtLink="Kembali ke KG Media ID"}}
+		
+	</div>
+
+{{>js}}
+<script>
+	// script untuk keperluan dummy saja
+	let ss = document.querySelectorAll("input[name=name]");
+	let fr = document.querySelector("input[type=submit]");
+	if(!!ss) {
+		for(let i=0;i<ss.length;i++) {
+			ss[i].addEventListener('input', cekInput);
+			ss[i].addEventListener('propertychange', cekInput); 
+		}
+	}
+	function cekInput(e) {
+		let va = e.target.value;
+		for(let i=0;i<ss.length;i++) {
+			console.log(ss[i].value);
+			if(ss[i].value!=='') {
+				fr.classList.add("-primary");
+				fr.classList.remove("-disabled");
+				fr.removeAttribute("disabled");
+			} else {
+				fr.classList.remove("-primary");
+				fr.setAttribute("disabled","disabled");
+			}
+		}
+	} 
+</script>
+</body>
+</html>

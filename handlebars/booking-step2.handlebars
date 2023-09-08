@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+			
+			<!-- booking -->
+			<section class="section board">
+
+				<div class="board-row">
+	
+					<div class="booking-block">
+
+						<h1 class="title -big">Booking Schedule <div class="title-step">Step 2 of 3</div></h1>
+						<div class="booking-body">
+
+							<div class="form-main form-booking">
+								<form action="booking-step3.html">
+									<div class="booking-row">
+										<div class="form-text">
+											Klien dewasa (Anda) adalah anak ke 
+											{{>input type="number" name="child_number" placeholder="Cth: 1" inline=true nolabel="true"}}
+											dari 
+											{{>input type="number" name="child_number" placeholder="Cth: 1" inline=true nolabel="true"}}
+											bersaudara
+										</div>
+									</div>
+									<div class="booking-row">
+										<div class="form-text">Family tree (as a child)</div>
+										<div class="form-hint">
+											<p>Tuliskan daftar urutan keluarga Anda dimana Anda sebagai anak dengan format berikut: no.1 adalah data Ayah, no.2 adalah data ibu, no.3 dst adalah data anak-anak (saudara Anda). tuliskan nama, jenis kelamin, usia, pendidikan terakhir. contoh (1. Bambang, L, 70 tahun, SMA)</p>
+										</div>
+										{{>textarea placeholder="Eg: 1. Bambang, L,70 tahun, SMA" id="family_tree_child" name="family_tree_child"}}
+									</div>
+									<div class="booking-row">
+										<div class="form-text">Family tree (as a couple/parent)</div>
+										<div class="form-hint">
+											<p>Isilah item ini jka Anda menikah dan atau berkeluarg. Tuliskan daftar urutan keluarga Anda dimana Anda sebagai pasangan / orangtua dengan format berikut: no.1 adalah data Anda, no.2 adalah data pasangan, no.3 dst adalah data anak-anak Anda. tuliskan nama, jenis kelamin, usia, pendidikan terakhir. contoh (1. Bambang, L, 70 tahun, SMA)</p>
+										</div>
+										{{>textarea placeholder="Eg: 1. Bambang, L,70 tahun, SMA" id="family_tree_parent" name="family_tree_parent"}}
+									</div>
+									<div class="booking-row">
+										<div class="form-text">Relationship status</div>
+										{{>radio label="Not married" id="relationship_not_married" name="relationship"}}
+										{{>radio label="Married" id="relationship_married" name="relationship"}}
+										{{>radio label="Divorce" id="relationship_divorce" name="relationship"}}
+										{{>radio label="Widowed" id="relationship_wodowed" name="relationship"}}
+									</div>
+									<div class="booking-row">
+										<div class="form-text">Complaints</div>
+										{{>textarea placeholder="Write down your complaints" id="complaints" name="complaints" txterror="You need to write your complaints"}}
+									</div>
+									<div class="booking-row">
+										<div class="form-text">Symptoms</div>
+										{{>textarea placeholder="Write down your symptoms" id="symptoms" name="symptoms"}}
+									</div>
+									<div class="booking-row">
+										<div class="form-text">Reason to take consultation</div>
+										{{>textarea placeholder="Write down your reason" id="reason" name="reason"}}
+									</div>
+									<div class="booking-row booking-action">
+										{{>button type="button" label="Back" class="-auto" onclick="window.history.go(-1); return false;"}}
+										{{>button type="submit" label="Next" class="-primary -disabled -auto"}}
+									</div>
+								</form>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+
+<script>
+	// script untuk keperluan dummy saja
+	let ss = document.querySelectorAll("textarea[id=family_tree_child]");
+	let fr = document.querySelector("input[type=submit]");
+	let sp = false
+	if(!!ss) {
+		for(let i=0;i<ss.length;i++) {
+			ss[i].addEventListener('input', cekInput);
+			ss[i].addEventListener('propertychange', cekInput); 
+		}
+	}
+	function cekInput(e) {
+		let va = e.target.value;
+		for(let i=0;i<ss.length;i++) {
+			if (ss[i].value!=='') {
+				sp = true
+			}
+			if(sp) {
+				fr.removeAttribute("disabled");
+				fr.classList.remove('-disabled')
+			}
+		}
+	} 
+</script>
+
+</body>
+</html>

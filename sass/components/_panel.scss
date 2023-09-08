@@ -1,0 +1,202 @@
+.panel {
+	position: relative;
+	margin-left: -1.25rem;
+	margin-right: -1.25rem;
+	margin-bottom: 1em;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	background: #fff;
+
+	&-back {
+		margin-bottom: 0;
+	}
+
+	&Nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: #f1f1f1;
+		width: 100%;
+		height: 53px;
+		box-sizing: border-box;
+		z-index: 5;
+		&-heading {
+			font-size: 16px;
+			font-weight: 700;
+			color: #36404a;
+			text-align: center;
+			padding: 15px;
+			margin: 0;
+		}
+		&-Footer {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			min-height: 86px;
+			width: 100%;
+			background: #fff;
+			flex-direction: column;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+			padding: 10px 20px;
+			@include min-responsive($screen-middle) {
+				padding: 10px calc(((100% - 500px) / 2) + 20px);
+			}
+			form {
+				width: 100%;
+			}
+			input[type="submit"],
+			a,
+			button {
+				background-color: #9f9f9f;
+				width: 100%;
+				height: 36px;
+				box-sizing: border-box;
+				color: #fff;
+				padding: 6px 12px;
+				border-radius: 8px;
+				border: none;
+				display: table;
+				text-align: center;
+				font-size: 14px;
+				&.active {
+					background-color: $color-theme;
+					border: 1px solid $color-theme;
+					color: $color-button-primary;
+					font-weight: 700;
+					box-shadow: 0px 6px 10px rgba(0, 122, 255, 0.15);
+
+					&:hover {
+						background-color: #006EE6;	
+					}
+				}
+			}
+			label {
+				padding-left: 30px;
+				font-weight: 300;
+			}
+		}
+		&-back {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			border: solid black;
+			border-width: 0 3px 3px 0;
+			display: inline-block;
+			padding: 4px;
+			transform: rotate(135deg);
+			-webkit-transform: rotate(135deg);
+			@include min-responsive($screen-middle) {
+				left: calc(((100% - 500px) / 2) + 20px);
+			}
+			&:before {
+				content: "";
+				top: -2px;
+				right: 3px;
+				position: absolute;
+				border: solid black;
+				border-width: 0px 0px 0px 3px;
+				display: inline-block;
+				padding: 10px;
+				transform: rotate(135deg);
+			}
+		}
+	}
+}
+
+.Panelcheckbox {
+	margin: 12px 0;
+	padding-left: 0;
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: baseline;
+
+	&-inline {
+		display: inline-flex;
+	}
+
+	label {
+		padding-top: 3px;
+	}
+
+	input {
+		width: 2em;
+		flex-basis: 2em;
+		margin-left: -2em;
+		position: relative;
+		vertical-align: baseline;
+	}
+
+	input:not(.reset) {
+		position: absolute;
+		left: 0;
+		margin-left: 0;
+		opacity: 0;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:focus ~ label::before {
+			border-color: #0877db;
+			box-shadow: 0 0 0 0.1875em rgba(43, 154, 255, 0.2);
+		}
+
+		&:active ~ label::before {
+			border-color: #0877db;
+		}
+
+		&:checked ~ label::before {
+			background-position: 0 0;
+		}
+	}
+
+	input:not(.reset) ~ label::before {
+		content: "";
+		box-sizing: border-box;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: inline-block;
+		vertical-align: top;
+		width: 1.6em;
+		height: 1.6em;
+		background-color: #fff;
+		background-size: 100% 100%;
+		background-position: 0 1.5em;
+		background-repeat: no-repeat;
+		box-shadow: 0 0 0 0 rgba(43, 154, 255, 0.2);
+		transition: box-shadow 0.15s, background-position 0.15s;
+	}
+	input[type="radio"]:checked + label::before {
+		border: 0.2em solid #007AFF;
+		width: 1.3em;
+		height: 1.3em;
+		top: 1px;
+	}
+	input:not(:checked) + label::before {
+		color: red;
+		border: 0.2em solid #808080;
+		width: 1.3em;
+		height: 1.3em;
+		border-radius: 2px;
+		top: 1px;
+	}
+	[type="checkbox"]:not(.reset) ~ label::before {
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMSAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yLjY2MDEyIDMuMjAxMDVIMTMuODIxMUwxMi43NzUxIDQuMzA4MDVIMi42NjAxMkMyLjQ3OTQ5IDQuMzA4MzEgMi4zMDYzMyA0LjM4MDExIDIuMTc4NTEgNC41MDc3NEMyLjA1MDcgNC42MzUzNyAxLjk3ODY1IDQuODA4NDMgMS45NzgxMiA0Ljk4OTA1VjcuMDg5MDVMMS4yNzgxMiA3LjgyNDA1QzEuMTEwMTUgOC4wMDAzMyAwLjk3MjMwOCA4LjIwMzA0IDAuODcwMTE3IDguNDI0MDVWNC45OTAwNUMwLjg3MDM4MiA0LjUxNTQ5IDEuMDU5MDkgNC4wNjA0NSAxLjM5NDc1IDMuNzI0OTdDMS43MzA0MSAzLjM4OTUgMi4xODU1NSAzLjIwMTA1IDIuNjYwMTIgMy4yMDEwNVpNMTYuODQ3MSA5LjQwMTA1VjE3LjM5MjFDMTYuODQ1OCAxNy44NjUxIDE2LjY1NzMgMTguMzE4MyAxNi4zMjI4IDE4LjY1MjhDMTUuOTg4NCAxOC45ODcyIDE1LjUzNTEgMTkuMTc1NyAxNS4wNjIxIDE5LjE3NzFIMi42NjAxMkMyLjE4NzI4IDE5LjE3NTcgMS43MzQxOCAxOC45ODc0IDEuMzk5NzQgMTguNjUzMUMxLjA2NTMgMTguMzE4OSAwLjg3NjcgMTcuODY1OSAwLjg3NTExNyAxNy4zOTMxVjEwLjM3OEwwLjkxODExNyAxMC40MjJDMS4wMzMyMiAxMC42NDU3IDEuMTg0OTkgMTAuODQ4NSAxLjM2NzEyIDExLjAyMkwxLjk3NTEyIDExLjYwMTFWMTcuNDAxQzEuOTc1MzggMTcuNTgxOCAyLjA0NzM1IDE3Ljc1NSAyLjE3NTIyIDE3Ljg4MjdDMi4zMDMwOSAxOC4wMTAzIDIuNDc2NDEgMTguMDgyIDIuNjU3MTIgMTguMDgySDE1LjA1NzFDMTUuMjM3NyAxOC4wODE4IDE1LjQxMDkgMTguMDEgMTUuNTM4NyAxNy44ODI0QzE1LjY2NjUgMTcuNzU0NyAxNS43Mzg2IDE3LjU4MTcgMTUuNzM5MSAxNy40MDFWMTAuNTY1MUwxNi44NDcxIDkuNDAxMDVaIiBmaWxsPSIjMDA3QUZGIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMy41MjYwOCA3LjI3OTAxTDIuMTk0MDggOC42ODYwMUMyLjAxMTQ1IDguODc5NjcgMS45MTI5MiA5LjEzNzc2IDEuOTIwMDQgOS40MDM4NUMxLjkyNzE2IDkuNjY5OTUgMi4wMzkzNSA5LjkyMjQgMi4yMzIwOCAxMC4xMDZMNy45MzYwOCAxNS41MTVDOC4wNzQ3NCAxNS42NDY3IDguMjQ4MjcgMTUuNzM1OSA4LjQzNjA4IDE1Ljc3MkM4LjQ5MTUzIDE1Ljc4MjQgOC41NDc3IDE1Ljc4ODQgOC42MDQwOCAxNS43OUM4LjY0NDQ3IDE1Ljc5MDUgOC42ODQ4NyAxNS43ODg5IDguNzI1MDggMTUuNzg1QzguNzQ5MDggMTUuNzg1IDguNzczMDggMTUuNzggOC43OTcwOCAxNS43NzVDOC44NDUyMSAxNS43NjY5IDguODkyNjggMTUuNzU1MiA4LjkzOTA4IDE1Ljc0TDguOTY4MDggMTUuNzNDOS4xMDcyOSAxNS42ODA1IDkuMjMzNjkgMTUuNjAwNiA5LjMzODA4IDE1LjQ5Nkw5LjM1NjA4IDE1LjQ3OEwxMC4zNDIxIDE0LjQzOUwxMC42OTAxIDE0LjA3MUwxOS41MDAxIDQuNzc5MDFDMTkuNjgyNyA0LjU4NTM2IDE5Ljc4MTIgNC4zMjcyNyAxOS43NzQxIDQuMDYxMTdDMTkuNzY3IDMuNzk1MDcgMTkuNjU0OCAzLjU0MjYyIDE5LjQ2MjEgMy4zNTkwMUwxOC4wNTUxIDIuMDI1MDFDMTcuODYxNCAxLjg0MjM4IDE3LjYwMzMgMS43NDM4NSAxNy4zMzcyIDEuNzUwOTdDMTcuMDcxMSAxLjc1ODA5IDE2LjgxODcgMS44NzAyOCAxNi42MzUxIDIuMDYzMDFMOC41MTcwOCAxMC42MjVMNC45NDcwOCA3LjI0MjAxQzQuNzUzMzkgNy4wNTkxOSA0LjQ5NTIgNi45NjA0NiA0LjIyODk1IDYuOTY3MzlDMy45NjI2OSA2Ljk3NDMyIDMuNzEgNy4wODYzNiAzLjUyNjA4IDcuMjc5MDFaIiBmaWxsPSIjMDA3QUZGIi8+Cjwvc3ZnPgo=");
+	}
+	[type="radio"]:not(.reset) ~ label::before {
+        border-radius: 100%;
+        background-image: radial-gradient(circle, #007AFF 0%, #007AFF 40%, #fff 41%, #fff 100%);
+        background-position: 50% 50%;
+        background-size: 0px 0px;
+        transition: box-shadow .15s, background-size .15s;
+    }
+    [type="radio"]:not(.reset):checked ~ label::before {
+        background-position: 50% 50%;
+        background-size: 100% 100%;
+    }
+}

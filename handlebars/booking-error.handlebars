@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+			
+			<!-- booking -->
+			<section class="section board">
+
+				<div class="board-row">
+	
+					<div class="booking-block">
+
+						<h1 class="title -big">Booking Schedule</h1>
+						<div class="booking-body">
+
+							<div class="booking-result">
+								<div class="booking-result-row">
+									<div class="booking-status">
+										<div class="booking-status-img">
+											<img src="./asset/images/dashboard/booking-error.png" alt="">
+										</div>
+										<div class="booking-status-col">
+											<div class="booking-status-title -error">Booking Failed</div>
+											<div class="booking-status-lead">Sorry, your booking can't be proceeded</div>
+										</div>
+									</div>
+								</div>
+								<div class="booking-result-row booking-grey">
+									<div class="booking-result-row">
+										<div class="booking-result-lead">Please try again your booking appointment few later or contact us to inform this message.</div>
+									</div>
+								</div>
+								<div class="booking-row booking-action -center">
+									{{>button type="link" href="index.html" label="Back to home" class="-primary -auto"}}
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+input[type=submit],
+button,
+.button {
+	&.-theme {
+		&-myvalue {
+			border: 1px solid $color-myvalue;
+			background-color: $color-myvalue;
+			color: #fff;
+			&:hover {
+				background-color: darken($color-myvalue, 5%);
+			}
+		}
+		&-facebook {
+			border: 1px solid $color-facebook;
+			background-color: $color-facebook;
+			color: #fff;
+			&:hover {
+				background-color: darken($color-facebook, 5%);
+			}
+		}
+		&-google {
+			border: 1px solid #B7C1CB;
+			background-color: #fff;
+			color: #8495A5;
+			&:hover {
+				color: #1a1a1a;
+				background-color: darken(#fff, 5%);
+			}
+		}
+		&-twitter {
+			border: 1px solid $color-twitter;
+			background-color: $color-twitter;
+			color: #fff;
+			&:hover {
+				background-color: darken($color-twitter, 5%);
+			}
+		}
+		&-apple {
+			border: 1px solid $color-apple;
+			background-color: $color-apple;
+			color: #fff;
+			&:hover {
+				background-color: lighten($color-apple, 5%);
+			}
+		}
+	}
+}

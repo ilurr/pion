@@ -1,0 +1,24 @@
+<div class="form-sosmed">
+	{{#if lead}}
+	<div class="text-center">
+		<p>{{lead}}</p>
+		<hr>
+	</div>
+	{{/if}}
+	{{#if google}}
+	{{>button type="link" label="Login dengan Google" class="-theme-google" icon_file=true icon="google"}}
+	{{/if}}
+	{{#if facebook}}
+	{{>button type="link" label="Login dengan Facebook" class="-theme-facebook" icon_file=true icon="facebook"}}
+	{{/if}}
+	{{#if twitter}}
+	{{>button type="link" label="Login dengan Twitter" class="-theme-twitter" icon_file=true icon="twitter"}}
+	{{/if}}
+	{{#if apple}}
+	{{>button type="link" label="Login dengan Apple" class="-theme-apple" icon_file=true icon="apple"}}
+	{{/if}}
+	{{#if link}}
+	{{>button type="link" label="Ubah metode login" class="-transparent"}}
+	{{/if}}
+	{{!>button type="button" label="Masuk dengan Apple" class="-theme-apple"}}
+</div>

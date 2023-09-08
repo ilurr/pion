@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="Tentang Kami"}}
+
+		<!-- media -->
+		<section class="section about">
+			<div class="board-row">
+
+				<h1 class="title -big">Profil Ahli</h1>
+				<div class="about-expert">
+					{{#each expert}}
+					<div class="about-expert-item">
+						<div class="about-expert-img">
+							<img src="./asset/images/expert/{{img}}" alt="{{name}}">
+						</div>
+						<div class="about-expert-col">
+							<div class="about-expert-name">{{name}}</div>
+							<div class="about-expert-skill">{{skill}}</div>
+							<button onclick="openModal('expertModal-{{@index}}')" class="button -auto about-expert-button">Profil {{nick}}</button>
+						</div>
+					</div>
+
+					<div class="modal-content -medium" data-modal-target="expertModal-{{@index}}">
+						<div class="modal-header">
+							<button class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
+								<i class="fa-solid fa-xmark"></i>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="about-expert-popup">
+								<div class="about-expert-name">{{name}}</div>
+								<div class="about-expert-profile">{{{profile}}}</div>
+							</div>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+
+			</div>
+		</section>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+</body>
+</html>

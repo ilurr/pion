@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true}}
+
+<body>
+
+	<!-- layout -->
+	<div class="container">
+
+		{{>block_top brand="pion-clinician" title="Create New Password" lead="Your new password has been created. You can continue by clicking button below."}}
+
+		<div class="block-middle">
+			{{>button type="link" label="Login" class="-primary" href="login.html"}}
+		</div>
+
+		{{!>block_footer link=true}}
+		
+	</div>
+
+{{>js}}
+</body>
+</html>

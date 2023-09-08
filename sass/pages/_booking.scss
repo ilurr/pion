@@ -1,0 +1,273 @@
+.booking {
+	&-block {
+		position: relative;
+		@include min-responsive($screen-small-desktop) {
+			margin: 20px 0;
+			background: #fff;
+			box-shadow: 0px 0px 14px 0px rgba(16, 24, 32, 0.14);
+			border-radius: 20px;
+			padding: 2.5rem;
+			max-width: 1100px;
+			margin: 20px auto;
+			width: 100%;
+		}
+	}
+	&-row {
+		position: relative;
+		margin: 1.75rem 0;
+		// display: flex;
+		// flex-direction: column;
+		max-width: 700px;
+		&:last-child {
+			margin: 1rem 0;
+		}
+		&.-hide {
+			display: none;
+		}
+		.form-row {
+			margin: .25rem 0;
+			&.form-input {
+				margin: 1rem 0;
+				&:last-child {
+					margin: 1rem 0 2rem;
+				}
+			}
+		}
+		@include min-responsive($screen-small-desktop) {
+			.form-select,
+			#js-datepicker-container {
+				max-width: 460px;
+			}
+		}
+	}
+	&-time {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		padding: 20px 0;
+		.form-row {
+			margin: 0;
+			flex-basis: calc((100% - 40px) / 3);
+			flex-grow: 0;
+			&.form-input {
+				margin: 0;
+				&:last-child {
+					margin: 0;
+				}
+			}
+			@include min-responsive($screen-small-desktop) {
+				flex-basis: 100px;
+			}
+		}
+		.form-radio {
+			margin: 0;
+		}
+		.form-radio label {
+			left: 0;
+			width: 100%;
+			border-radius: 8px;
+			border: 1px solid #0039D4;
+			color: #0039D4;
+			font-weight: 600;
+			position: relative;
+			align-items: center;
+			height: 40px;
+			display: flex;
+  	  justify-content: center;
+			cursor: pointer;
+		}
+		input[type=radio]:checked + label {
+			background: #0039D4;
+			color: #fff;
+		}
+		input[type=radio] {
+			opacity: 0;
+			visibility: hidden;
+		}
+		input[type=radio][disabled] + label {
+			border: 1px solid #D3DAE0;
+			cursor: default;
+		}
+	}
+	&-summary {
+		position: relative;
+		padding: 20px 0;
+		@include min-responsive($screen-small-desktop) {
+			padding: 20px 50px;
+		}
+		.title {
+			justify-content: center;
+			margin-bottom: 10px;
+		}
+	}
+	&-result {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		&-row {
+			justify-content: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 15px;
+			width: 100%;
+		}
+		&-price {
+			font-size: 2rem;
+			color: #016BB1;
+			line-height: 150%;
+			font-weight: 700;
+		}
+		&-howto {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			// align-items: center;
+			width: 100%;
+			padding: 0 0 20px;
+			// gap: 5px;
+		}
+	}
+	&-result &-row,
+	&-summary &-row {
+		border-bottom: 1px solid #D3DAE0;
+		max-width: 100%;
+		display: flex;
+		// justify-content: space-between;
+		gap: 5px;
+		padding: .5rem 0;
+		margin: 0;
+		flex-direction: column;
+    width: 100%;
+		@include min-responsive($screen-small-desktop) {
+			gap: 20px;
+			flex-direction: row;
+		}
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	&-summary &-row {
+		padding: 1.125rem 0;
+	}
+	&-action {
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+		// flex-direction: column;
+		@include min-responsive($screen-small-desktop) {
+			padding: 1rem 0;
+			justify-content: flex-start;
+			// flex-direction: row;
+			&.-center {
+				justify-content: center;
+			}
+		}
+		&.booking-row:last-child {
+			@include max-responsive($screen-tablet) {
+				margin: 0;
+			}
+		}
+		.form-row {
+			margin: 0;
+			@include max-responsive($screen-tablet) {
+				width: 100%;
+			}
+		}
+		.button.-auto {
+			padding: 0 2rem;
+			@include max-responsive($screen-tablet) {
+				width: 100%;
+			}
+		}
+	}
+	&-content,
+	&-col {
+		flex-basis: 100%;
+		@include min-responsive($screen-small-desktop) {
+			flex-basis: 35%;
+		}
+	}
+	&-content {
+		font-weight: 600;
+		@include min-responsive($screen-small-desktop) {
+			flex-basis: 65%;
+		}
+	}
+	&-status {
+		position: relative;
+		display: flex;
+		// flex-direction: column;
+		justify-content: center;
+		align-items: center;
+    max-width: fit-content;
+		margin: 20px auto;
+		gap: 20px;
+		padding: 20px 0;
+		&-img {
+			height: 70px;
+			flex-basis: 70px;
+			width: 70px;
+			flex-grow: 0;
+			position: relative;
+			@include min-responsive($screen-small-desktop) {
+				height: 89px;
+				flex-basis: 89px;
+				width: 89px;
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+		&-col {
+			position: relative;
+			flex-grow: 1;
+			flex-basis: 0;
+			display: flex;
+			gap: 5px;
+			flex-direction: column;
+		}
+		&-title {
+			color: #112639;
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 150%;
+			@include min-responsive($screen-small-desktop) {
+				font-size: 24px;
+			}
+			&.-error {
+				color: $color-error;
+			}
+		}
+		&-lead {
+			font-size: 12px;
+			@include min-responsive($screen-small-desktop) {
+				font-size: 14px;
+			}
+		}
+	}
+	&-grey {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		background: #F9F9F9;
+		padding: 1.5rem;
+    margin: 0 -20px 20px;
+    width: 100vw;
+		@include min-responsive($screen-tablet) {
+			border-radius: 12px;
+			margin: 0 0 20px;
+			width: 100%;
+		}
+		@include min-responsive($screen-small-desktop) {
+			border-radius: 24px;
+			padding: 3rem 4rem;
+			gap: 20px;
+		}
+	}
+
+}

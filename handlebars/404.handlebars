@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician"}}
+
+		<!-- 404 -->
+		<section class="section">
+			<div class="board-row">
+
+				<div class="board-404">
+					<div class="board-404-col col-basis col-40">
+						<h1 class="title -big">Error 404</h1>
+						<h3 class="title -small">Oops! Soory the page you are looking for could not be found.</h3>
+						<a href="index.html" class="button -primary -auto">Back to Homepage</a>
+					</div>
+					<div class="board-404-img col-basis col-60">
+						<img src="./asset/images/404.svg" alt="404">
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+</body>
+</html>

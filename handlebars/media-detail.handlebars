@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="Media"}}
+
+		<!-- media -->
+		<section class="section media">
+			<div class="board-row">
+
+				<div class="media-detail">
+					<h1 class="media-bigtitle">{{media.[0].title}}</h1>
+					<div class="media-credit">
+						<div class="media-date">{{media.[0].dates}}</div>
+						<div class="media-author">By: <span>{{media.[0].author}}</span></div>
+					</div>
+					<div class="media-img">
+						<img src="{{media.[0].img}}" alt="{{media.[0].title}}">
+					</div>
+					<div class="media-content">
+						{{{media.[0].content}}}
+					</div>
+					<div class="media-share">
+						<div class="media-share-count"><span>21</span> Shares</div>
+						<div class="media-share-list">
+							<a href="#" target="_blank" class="media-share-link"><i class="fa-brands fa-facebook"></i></a>
+							<a href="#" target="_blank" class="media-share-link"><i class="fa-brands fa-twitter"></i></a>
+							<a href="#" target="_blank" class="media-share-link"><i class="fa-brands fa-whatsapp"></i></a>
+							<a href="#" target="_blank" class="media-share-link"><i class="fa-brands fa-telegram"></i></a>
+						</div>
+					</div>
+					<div class="media-nav">
+						<a href="#" class="media-nav-link -prev"><span class="icon icon-back"></span> Prev</a>
+						<a href="#" class="media-nav-link -next">Next <span class="icon icon-back"></span></a>
+					</div>
+
+					<div class="media-comment">
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+</body>
+</html>

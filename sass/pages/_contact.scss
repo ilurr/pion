@@ -1,0 +1,16 @@
+.contact {
+	&-row {
+		position: relative;
+		display: flex;
+		gap: 20px;
+		flex-direction: column;
+		@include min-responsive($screen-tablet) {
+			flex-direction: row;
+		}
+	}
+	&-content {
+		hr {
+			margin: .75rem 0;
+		}
+	}
+}

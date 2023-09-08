@@ -1,0 +1,77 @@
+<header class="header">
+	<div class="header-block">
+
+		<!-- logo -->
+		<div class="header-logo">
+			<a href="index.html">
+				<img src="./asset/images/logo-{{brand}}.png" alt="{{brand}}">
+			</a>
+		</div>
+
+		<!-- navigation -->
+		<div class="header-menu">
+			<nav class="nav-header">
+				<button class="button button-burger nav-burger" title="Menu">
+					<span class="icon icon-burger"><i></i></span>
+				</button>
+				<ul class="nav-main">
+					{{#each navigation}}
+					<li class="nav-item">
+						<a href="{{link}}" class="nav-link{{#eq ../active compare=title}} -active{{/eq}}">{{title}}</a>
+						{{#if submenu}}
+						<ul class="nav-submain">
+							{{#each submenu}}
+							<li class="nav-item">
+								<a href="{{link}}" class="nav-link{{#eq ../active compare=title}} -active{{/eq}}">{{title}}</a>
+							</li>
+							{{/each}}
+						</ul>
+						{{/if}}
+					</li>
+					{{/each}}
+					<li class="nav-item">
+						<div class="nav-lang">
+							<a href="#" role="button" title="English">EN</a>
+							<a href="#" role="button" title="Bahasa Indonesia">ID</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<!-- login -->
+		<div class="header-user">
+			<div class="nav-lang">
+				<a href="#" role="button" title="English">EN</a>
+				<a href="#" role="button" title="Bahasa Indonesia">ID</a>
+			</div>
+			<div class="header-user-block">
+				{{#if logged}}
+				<a href="javascript:void(0)" role="button" class="header-user-button" title="User Menu">
+					<div class="header-user-avatar">
+						<img src="./asset/images/dummy/avatar.jpeg" alt="Alikuro">
+					</div>
+					<div class="header-user-display">alikuro@gmail.com</div>
+				</a>
+				<div class="header-user-menu">
+					<div class="nav-user-menu">
+						{{#each navdashboard}}
+						{{#eq title compare=""}}
+						{{else}}
+						<div class="nav-user-item">
+							<a href="{{link}}" class="nav-user-link"><i class="{{icon}}"></i> {{title}}</a>
+						</div>
+						{{/eq}}
+						{{/each}}
+					</div>
+				</div>
+				{{else}}
+				<a href="login.html" role="button" class="header-user-button" title="Register or Login">
+					<span class="icon icon-user"></span>
+					<div class="header-user-display">Register / Login</div>
+				</a>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</header>

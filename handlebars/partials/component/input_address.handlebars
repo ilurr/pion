@@ -1,0 +1,10 @@
+{{>input nolabel="true" type="text" label="Alamat Tempat Tinggal" name="address" placeholder="alamat jalan" txterror=txterror}}
+{{>select nolabel="true" type="select" name="province" placeholder="pilih provinsi" option="Aceh,Sumatera Utara,Sumatera Barat,Jambi,Riau,Kep. Riau,Sumatera Selatan,Bangka Belitung,Bengkulu,Lampung" txterror=txterror}}
+<div class="form-row form-flex form-flex-2">
+	<div class="form-col">
+		{{>select nolabel="true" type="select" name="city" placeholder="pilih kota" option="Jakarta Utara,Jakarta Barat,Jakarta Timur,Jakarta Pusat,Jakarta Selatan,Kep. Seribu" txterror=txterror}}
+	</div>
+	<div class="form-col">
+		{{>input nolabel="true" type="text" name="code" placeholder="kode pos" txterror=txterror}}
+	</div>
+</div>

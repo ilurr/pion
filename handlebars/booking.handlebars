@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+			
+			<!-- booking -->
+			<section class="section board">
+
+				<div class="board-row">
+	
+					<div class="booking-block">
+
+						<h1 class="title -big">Booking Schedule <div class="title-step">Step 1 of 3</div></h1>
+						<div class="booking-body">
+
+							<div class="form-main form-booking">
+								<form action="booking-step2.html">
+									<div class="booking-row">
+										<div class="form-text">Select your age</div>
+										{{>radio label="Anak (0-12 tahun)" id="age_anak" name="age"}}
+										{{>radio label="Remaja (12-18 tahun)" id="age_remaja" name="age"}}
+										{{>radio label="Dewasa (>18 tahun)" id="age_dewasa" name="age"}}
+										<!-- error message -->
+										<div class="form-error">You need to choose one of them</div>
+									</div>
+									<div class="booking-row">
+										<div class="form-text">Select type of consultation</div>
+										{{>radio label="Counseling" id="consul_type_counseling" name="consul_type"}}
+										{{>radio label="Therapy" id="consul_type_therapy" name="consul_type" disabled="true"}}
+										{{>radio label="Assesment" id="consul_type_assesment" name="consul_type" disabled="true"}}
+										<div class="form-hint">
+											<p>You need counseling session for the first timer.</p>
+										</div>
+									</div>
+									<div class="booking-row" data-form-toggle="true">
+										<div class="form-text">Consultation method</div>
+										{{>radio label="Online (with zoom)" id="method_online" name="method"}}
+										{{>radio label="To Pion Clinic" id="method_clinic" name="method" toggle="clinic-location"}}
+										{{>radio label="Client location" id="method_client" name="method" toggle="client-location"}}
+									</div>
+									<div class="booking-row -hide" data-form-toggle="true" id="clinic-location">
+										<div class="form-text">Select Pion Clinic location</div>
+										{{>radio label="Pion Jakarta, Jl. Warung Jati Barat No.3, Jati Padang, Ps. Minggu" id="clinic_loc_jkt" name="clinic_loc"}}
+										{{>radio label="Pion Bandung, Jl. Tebet Timur Dalam II No.38 C" id="clinic_loc_bdg" name="clinic_loc"}}
+									</div>
+									<div class="booking-row -hide" data-form-toggle="true" id="client-location">
+										<div class="form-text">Your location to meet</div>
+										{{>textarea placeholder="Write down your address" id="client_loc" name="client_loc"}}
+									</div>
+									<div class="booking-row booking-action">
+										{{>button type="button" label="Back" class="-auto" onclick="window.history.go(-1); return false;"}}
+										{{>button type="submit" label="Next" class="-primary -disabled -auto"}}
+									</div>
+								</form>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+
+<script>
+	// script untuk keperluan dummy saja
+	let ss = document.querySelectorAll("input[id=consul_type_counseling]");
+	let fr = document.querySelector("input[type=submit]");
+	let sp = false
+	if(!!ss) {
+		for(let i=0;i<ss.length;i++) {
+			ss[i].addEventListener('input', cekInput);
+			ss[i].addEventListener('propertychange', cekInput); 
+		}
+	}
+	function cekInput(e) {
+		let va = e.target.value;
+		for(let i=0;i<ss.length;i++) {
+			console.log(ss[i].checked);
+			if (ss[i].checked) {
+				sp = true
+			}
+			if(sp) {
+				fr.removeAttribute("disabled");
+				fr.classList.remove('-disabled')
+			}
+		}
+	} 
+</script>
+
+</body>
+</html>

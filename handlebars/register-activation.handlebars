@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true}}
+
+<body>
+
+	<div class="container container-back">
+			{{>block_back title_back="Back to Login" title_link="login.html"}}
+	</div>
+
+	<!-- layout -->
+	<div class="container">
+
+		{{>block_top brand="pion-clinician" title="OTP Code Sent!" lead="For register confirmation, check your phone and find the OTP code we sent, fill it into this form below."}}
+
+		<div class="block-middle">
+			<div class="form-main">
+				<form action="register-success.html">
+					<div class="form-row form-input">
+						<div class="form-code">
+							<input type="text" name="code1" maxlength="1" autofocus>
+							<input type="text" name="code2" maxlength="1">
+							<input type="text" name="code3" maxlength="1">
+							<input type="text" name="code4" maxlength="1">
+							<input type="text" name="code5" maxlength="1">
+							<input type="text" name="code6" maxlength="1">
+						</div>
+					</div>
+					<p>If you don't find the registration code we sent, you can re-send again to your phone. <a href="#">Resend OTP</a>. <br><br></p>
+					{{>button type="submit" label="Next" class="-disabled" disabled="true" txterror="The code you entered is incorrect, double check the code that was sent to your phone"}}
+				</form>
+			</div>
+		</div>
+
+		{{!>block_footer link=true txtLink="Kembali ke KG Media ID"}}
+		
+	</div>
+
+{{>js}}
+<script>
+	// script untuk keperluan dummy saja
+	let ss = document.querySelectorAll("input:not([type=submit])");
+	let fr = document.querySelector("input[type=submit]");
+	if(!!ss) {
+		for(let i=0;i<ss.length;i++) {
+			ss[i].addEventListener('input', cekInput);
+			ss[i].addEventListener('propertychange', cekInput); 
+		}
+	}
+	function cekInput(e) {
+		let va = e.target.value;	
+		nextField(e);
+		for(let i=0;i<ss.length;i++) {
+			console.log(ss[i].value);
+			if(ss[i].value!='') {
+				fr.classList.add("-primary");
+				fr.classList.remove("-disabled");
+				fr.removeAttribute("disabled");
+			} else {
+				fr.classList.remove("-primary");
+				fr.classList.add("-disabled");
+				fr.setAttribute("disabled","disabled");
+			}
+		}
+	} 
+	function nextField(el){
+		//console.log(el.target);
+		let myLength = el.target.value.length;
+		if (myLength >= 1) {
+			let next = el.target;
+			while (next = next.nextElementSibling) {
+				if (next == null)
+					break;
+				if (next.tagName.toLowerCase() === "input") {
+					next.focus();
+					break;
+				}
+			}
+		}
+		else if (myLength === 0) {
+			var previous = el.target;
+			while (previous = previous.previousElementSibling) {
+				if (previous == null)
+					break;
+				if (previous.tagName.toLowerCase() === "input") {
+					previous.focus();
+					break;
+				}
+			}
+		}
+	}
+</script>
+</body>
+</html>

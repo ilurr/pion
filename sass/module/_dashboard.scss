@@ -1,0 +1,46 @@
+.card {
+	position: relative;
+	border-radius: 16px;
+	background: var(--neutral-white, #FFF);
+	box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+	&-body {
+		position: relative;
+		padding: 1rem;
+	}
+}
+
+.empty {
+	&-block {
+		padding: 20px 0;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+    align-items: center;
+		width: 100%;
+		gap: 24px;
+		@include min-responsive($screen-tablet) {
+			gap: 30px;
+		}
+	}
+	&-img {
+		height: 180px;
+		@include min-responsive($screen-tablet) {
+			height: 240px;
+		}
+		img {
+			height: 100%;
+		}
+	}
+	&-lead {
+		text-align: center;
+		position: relative;
+		@include font-pack(false, 1rem, 400, 150%, #112639);
+		margin: 0 auto;
+		max-width: 500px;
+	}
+	&-button {
+		padding: 0 16px;
+		width: auto;
+	}
+}

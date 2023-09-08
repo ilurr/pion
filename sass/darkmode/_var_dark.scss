@@ -1,0 +1,16 @@
+@mixin vars-dark {
+	--btn-bg: #454545;
+	--btn-bg2: #757575;
+	--btn-br: #E2E2E2;
+	--btn-cl: #{$color-fg-dark};
+	--btn-cl2: #E2E2E2;
+}
+@mixin vars-modal-dark {
+    --bg-modal: #333333;
+    --bg-modal-header: #{$bg-dark-level-2};
+    --cl-modal-black: #{$color-fg-dark};
+    --cl-modal-dark: #{$color-fg-dark};
+    --cl-modal-gray: #{$color-fg-dark};
+    --cl-modal-btn: #{$color-fg-dark};
+    --img-modal-gray: grayscale(1) invert(1) brightness(1.2);
+}

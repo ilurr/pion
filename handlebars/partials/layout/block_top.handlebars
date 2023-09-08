@@ -1,0 +1,37 @@
+<div class="block-top">
+	{{#if brand}}
+	<div class="logo">
+		<a href="index.html">
+			<img src="./asset/images/logo-{{brand}}.png" alt="{{brand}}">
+		</a>
+	</div>
+	{{/if}}
+	{{#if title}}
+	<h1 class="title{{#if titleClass}} {{titleClass}}{{/if}}">{{{title}}}</h1>
+	{{/if}}
+	{{#if lead}}
+	{{#eq imgType compare="symbol"}}
+	{{#if img}}
+	<div class="block-img">
+		<span class="symbol-svg symbol-{{img}}"></span>
+	</div>
+	{{/if}}
+	{{else}}
+	{{#if img}}
+	<div class="block-img">
+		<img src="./asset/images/{{img}}" alt="">
+	</div>
+	{{/if}}
+	{{/eq}}
+	<p>{{{lead}}}</p>
+	{{/if}}
+	{{#if lead2}}
+	<p>{{{lead2}}}</p>
+	{{/if}}
+	{{#if kgid}}
+	<div class="profile-top">
+		<div class="profile-id">KG Media ID</div>
+		<div class="profile-email">{{kgid}}</div>
+	</div>
+	{{/if}}
+</div>

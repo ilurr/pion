@@ -1,0 +1,168 @@
+// .scrolling {
+// 	transition: height .2 ease;
+// 	// will-change: transform;
+// }
+.header {
+	box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+	background: var(--neutral-white, #fff);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	padding: 0 16px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@include min-responsive($screen-middle) {
+		height: 100px;
+		transition: all .2s ease;
+		.scrolling & {
+			height: 70px;
+		} 
+	}
+	&-block {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+		width: 100%;
+		@include min-responsive($screen-middle) {
+			gap: 24px;
+		}
+		@include min-responsive($screen-large-desktop) {
+			width: 1400px;
+			margin: 0 auto;
+		}
+	}
+	&-logo {
+		order: 2;
+		height: 40px;
+		flex-basis: auto;
+		@include min-responsive($screen-tablet) {
+			min-width: 240px;
+			height: 55px;
+			display: flex;
+			justify-content: center;
+			transition: all .2s ease;
+			.scrolling & {
+				height: 45px;
+			}
+		}
+		@include min-responsive($screen-desktop) {
+			justify-content: flex-start;
+			order: 1;
+		}
+		img {
+			height: 40px;
+			@include min-responsive($screen-tablet) {
+				height: 55px;
+				transition: all .2s ease;
+				.scrolling & {
+					height: 45px;
+				}
+			}
+		}
+	}
+	&-menu {
+		position: relative;
+		order: 1;
+		.nav-lang {
+			display: flex;
+			margin-top: 20px;
+			a {
+				width: 50px;
+				height: 30px;
+			}
+			@include min-responsive($screen-desktop) {
+				display: none;
+			}
+		}
+		@include min-responsive($screen-desktop) {
+			order: 2;
+		}
+	}
+	&-user {
+		order: 3;
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		.nav-lang {
+			display: none;
+			@include min-responsive($screen-desktop) {
+				display: flex;
+			}
+		}
+		&-block {
+			position: relative;
+			display: flex;
+		}
+		&-button {
+			position: relative;
+			display: flex;
+			align-items: center;
+			gap: 6px;
+			padding: 5px;
+			border-radius: 30px;
+			@include font-pack(false, .875rem, 600, normal, var(--grey-pion, #6A6B6A));
+			@include min-responsive($screen-tablet) {
+				padding: 8px;
+			}
+			&:hover {
+				background: rgba(#0DACDD, .1);
+				color: var(--grey-pion, #6A6B6A);
+			}
+			& > * {
+				pointer-events: none;
+			}
+			.icon {
+				width: 30px;
+				height: 30px;
+			}
+		}
+		&-display {
+			display: none;
+			@include min-responsive($screen-desktop) {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				display: block;
+				max-width: 135px;
+			}
+		}
+		&-avatar {
+			position: relative;
+			display: flex;
+			width: 30px;
+			height: 30px;
+			overflow: hidden;
+			border-radius: 15px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&-menu {
+			position: absolute;
+			top: 50px;
+			right: 0;
+			width: 240px;
+			height: auto;
+			z-index: 8;
+			visibility: hidden;
+			opacity: 0;
+			transition: all .2s ease;
+			@include min-responsive($screen-middle) {
+				top: 55px;
+				width: 260px;
+			}
+			.-active & {
+				opacity: 1;
+				visibility: visible;
+			}	
+		}
+	}
+}

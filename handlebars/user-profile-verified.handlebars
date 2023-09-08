@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+
+			<!-- side -->
+			{{>aside active="User Profile"}}
+			
+			<!-- dashboard -->
+			<section class="section board">
+
+				<div class="board-row">
+
+					<h1 class="title"><a href="my-dashboard.html" class="title-back"><span class="icon icon-back"></span></a> User Profile</h1>
+
+					<div class="setting-wrap">
+						<div class="setting-picture">
+							<div class="setting-picture-img">
+								<form action="#">
+									<button type="button" id="remove_avatar" onclick="clear_avatar(this)" class="setting-picture-remove -hide">&times</button>
+									<span>
+										<img id="preview_avatar" src="./asset/images/dummy/avatar.jpeg" alt="">
+									</span>
+									{{>input type="file" typeFile=true name="profile-picture-file" onchange="settingAvatar(this)" placeholder="Change Profile Picture"}}
+									<div class="form-row">
+										<button type="button" name="send_avatar" id="send_avatar" class="-primary -hide" onclick="dummyChange('Your profile picture has been changed')" type="button">Upload</button>
+									</div>
+								</form>
+								<p>Besar file: maksimum 10.000.000 bytes (10 Megabytes). Ekstensi file yang diperbolehkan: .JPG .JPEG .PNG</p>
+							</div>
+						</div>
+						<div class="setting-block">
+
+							<h3 class="setting-subtitle">Biodata</h3>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Full Name</div>
+									<div class="setting-info">
+										<div class="setting-content">Alikuro Hidayat</div>
+										<a class="setting-link" href="javascript:openModal('settingFullname')"><span class="icon icon-arrow-right"></span> <i>Change</i></a>
+									</div>
+								</div>
+
+								<div class="modal-content -small" data-modal-target="settingFullname">
+									<form action="#">
+									<div class="modal-header">
+										<div class="modal-title">Change Full Name</div>
+										<button class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
+											<i class="fa-solid fa-xmark"></i>
+										</button>
+									</div>
+									<div class="modal-body">
+										{{>input type="text" label="Full Name" name="fullname_old" placeholder="Current Full Name" txtVal="Alikuro Hidayat" nolabel="true" txterror=txterrorEmail}}
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="button -auto -transparent" data-modal-button="dismiss">Cancel</button>
+										<button type="button" class="button -primary -auto" onclick="dummyChange('Your full name has been changed')" type="button">Change</button>
+									</div>
+									</form>
+								</div>
+
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Date of birth</div>
+									<div class="setting-info">
+										<div class="setting-content">18 September 1990</div>
+										<a class="setting-link" href="javascript:settingBirth('modalBirth')"><span class="icon icon-arrow-right"></span> <i>Change</i></a>
+									</div>
+								</div>
+
+								<div class="modal-content -small" data-modal-target="modalBirth">
+									<form action="#">
+									<div class="modal-header">
+										<div class="modal-title">Change Date of birth</div>
+										<button class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
+											<i class="fa-solid fa-xmark"></i>
+										</button>
+									</div>
+									<div class="modal-body">
+										{{>input type="text" label="Date of Birth" name="birth" placeholder="Date of Birth" nolabel="true" function="js-edit-avatar" parent="js-avatar-parent" readonly="true"}}
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="button -auto -transparent" data-modal-button="dismiss">Cancel</button>
+										<button type="button" class="button -primary -auto" onclick="dummyChange('Your date of birth has been changed')" type="button">Change</button>
+									</div>
+									</form>
+								</div>
+
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Age</div>
+									<div class="setting-info">
+										<div class="setting-content">31 yo</div>
+									</div>
+								</div>
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Child from family</div>
+									<div class="setting-info">
+										<div class="setting-content">1 of 3</div>
+									</div>
+								</div>
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Family member</div>
+									<div class="setting-info">
+										<div class="setting-content">Ahmad Alikuro, Burhanudin Alikuro</div>
+									</div>
+								</div>
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Gender</div>
+									<div class="setting-info">
+										<div class="setting-content">Male</div>
+									</div>
+								</div>
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Marital status</div>
+									<div class="setting-info">
+										<div class="setting-content">Not married</div>
+									</div>
+								</div>
+							</div>
+
+							<h3 class="setting-subtitle">Personal Data</h3>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">KTP/SIM/Passport</div>
+									<div class="setting-info">
+										<div class="setting-content">Sudah terverifikasi 
+											<span class="setting-status-verified">
+												<i class="fa-solid fa-circle-check"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="setting-row">
+									<div class="setting-text">KTP/SIM/Passport</div>
+									<div class="setting-info">
+										<div class="setting-content">Menunggu verifikasi 
+											<span class="setting-status-pending">
+												<i class="fa-solid fa-file-circle-check"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+<script>
+	// datepicker for change profile
+	let options3 = {
+		maxDate: new Date(),
+		format: "dd MM yyyy",
+		leftArrow: '<',
+		language: 'id',
+		rightArrow: '>',
+		container: '#modal #js-avatar-parent',
+		orientation: "bottom auto",
+		defaultViewDate: twnty,
+		startView: 2, 
+		autohide: true
+	}
+
+	function settingBirth(el) {
+		// open modal
+		openModal(el)
+
+		// re-init render js datepicker inside modal
+		let inputAva = document.querySelector('#modal .js-edit-avatar');
+		if(inputAva) {
+			const datepicker2 = new Datepicker(inputAva, options3);
+		}
+	}
+
+	function clear_avatar(e) {
+		e.classList.add('-hide')
+		document.getElementById('preview_avatar').removeAttribute('src'); 
+		document.getElementById('send_avatar').classList.add('-hide')
+		document.getElementById('profile-picture-file').value = "";
+	}
+
+	function preview_img(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function(e) { 
+				document.getElementById('preview_avatar').setAttribute('src', e.target.result); 
+				document.getElementById('send_avatar').classList.remove('-hide')
+				document.getElementById('remove_avatar').classList.remove('-hide')
+			}
+			reader.readAsDataURL(input.files[0]);
+		}
+	}
+
+	function settingAvatar(el) {
+		preview_img(el)
+	}
+
+	// dummy toast 
+	function dummyChange(toastMsg) {
+		reactionToast(toastMsg)
+		closeModal()
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,452 @@
+.list {
+	position: relative;
+	&-item {
+		position: relative;
+		padding: 0.5rem 0;
+		border-bottom: 1px solid #F2F2F2;
+		&:last-child {
+			border-bottom: 1px solid transparent;
+		}
+	}
+	&-subtitle {
+		display: block;
+		// padding-bottom: 2px;
+		@include font-pack(false, 0.688rem, 700, false, false);
+	}
+	&-content {
+		@include font-pack(false, 0.875rem, false, false, false);
+		span {
+			color: rgba(#34475A, .4);
+		}
+		&.-height {
+			min-height: 4.75rem;
+		}
+	}
+	&-action {
+		position: absolute;
+		background: #fff;
+		bottom: .25rem;
+		right: -.25rem;
+		@include font-pack(false, 0.875rem, false, false, #007AFF);
+		& > a {
+			padding: .25rem;
+			display: block;
+		}
+	}
+}
+
+.note {
+	&-list {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		@include min-responsive($screen-small-desktop) {
+			gap: 0;
+			&.-rounded {
+				gap: 20px;
+			}
+		}
+	}
+	&-item {
+		position: relative;
+		box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+		border-radius: 16px;
+		@include min-responsive($screen-tablet) {
+			box-shadow: none;
+			border-radius: 0;
+			border-bottom: 1px solid #D3DAE0;
+			padding: 5px 0;
+			&:hover {
+				background: #f7f7f7;
+			}
+			.note-list.-rounded & {
+				border-radius: 16px;
+				border: 1px solid var(--neutral-grey-200, #B7C1CB);
+				background: var(--neutral-white, #FFF);
+				padding: 0;
+				&:hover {
+					background: #f7f7f7;
+				}
+				// &.-header {
+				// 	border: transparent;
+				// }
+				&.-header:hover {
+					background: transparent;
+				}
+			}
+		}
+	}
+	&-block {
+		padding: 24px 20px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		color: inherit;
+		gap: 16px;
+		@include max-responsive($screen-tablet - 1) {
+			.note-list.-cols & {
+				gap: 5px;
+			}
+		}
+		@include min-responsive($screen-tablet) {
+			padding: 10px;
+			flex-direction: row;
+			align-items: center;
+			.note-list.-rounded & {
+				padding: 15px 20px;
+			}
+			// .note-list.-rounded.-invoice & {
+			// 	padding: 10px 15px;
+			// }
+		}
+		&[data-accordion] {
+			&:after {
+				@include max-responsive($screen-tablet - 1) {
+					content: attr(data-accordion);
+					text-align: center;
+					font-weight: 700;
+					font-size: 12px;
+					padding-top: 5px;
+					margin-bottom: -10px
+				}
+			}
+		}
+	}
+	&-row {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		margin-bottom: 16px;
+		&.-showheader {
+			@include min-responsive($screen-tablet) {
+				margin-top: 20px;
+				.note-col {
+					margin-bottom: 10px;
+				}
+				.note-header {
+					display: flex;
+				}
+			}
+		}
+		&.-mixcol {
+			@include min-responsive($screen-tablet) {
+				flex-direction: row;
+				align-items: center;
+			}
+		}
+		&.-block {
+			padding: 1rem;
+			border-radius: 8px;
+			border: 1px solid var(--neutral-grey-100, #D3DAE0);
+			background: var(--neutral-white-dark-50, #F9F9F9);
+			@include min-responsive($screen-tablet) {
+				padding: .5rem 1rem;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&-col {
+		position: relative;
+		@include max-responsive($screen-tablet - 1) {
+			.note-list.-cols & {
+				display: flex;
+				// flex-direction: column;
+			}
+		}
+		&.-right {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+	&-header {
+		@include font-pack(false, 14px, 400, 150%, #112639);
+		@include max-responsive($screen-tablet - 1) {
+			.note-list.-cols & {
+				flex-basis: 40%;
+			}
+		}
+		@include min-responsive($screen-tablet) {
+			display: none;
+		}
+		&-block {
+			display: none;
+			gap: 16px;
+			background: var(--neutral-grey-50, #EEF0F2);
+			padding: 8px 10px;
+			@include min-responsive($screen-tablet) {
+				display: flex;
+				border-bottom: 1px solid #D3DAE0;
+				.note-header {
+					display: flex;
+					// font-weight: 700;
+				}
+			}
+		}
+	}
+	&-content {
+		@include font-pack(false, 14px, 600, 150%, #112639);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include min-responsive($screen-tablet) {
+			display: block;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			max-width: 148px;
+		}
+		@include min-responsive($screen-small-desktop) {
+			max-width: 138px;
+		}
+		@include min-responsive($screen-desktop) {
+			max-width: 200px;
+		}
+
+		p {
+			margin: 0 0 1rem;
+			font-weight: inherit;
+			&:last-child {
+				margin: 0;
+			}
+		}
+		@include max-responsive($screen-tablet - 1) {
+			.note-list.-cols & {
+				flex-basis: 60%;
+				justify-content: flex-end;
+				text-align: right;
+			}
+		}
+		@include min-responsive($screen-tablet) {
+			font-weight: 400;
+			&.-right {
+				justify-content: flex-end;
+				display: flex;
+				max-width: none;
+			}
+			// .note-list.-rounded & {
+			// 	gap: 10px;
+			// }
+		}
+		.note-list.-rounded & {
+			.icon {
+				width: 24px;
+				height: 24px;
+				display: inline-flex;
+				background-size: contain;
+			}
+		}
+	}
+	&-action {
+		@include font-pack(false, 14px, 600, 150%, #112639);
+		display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+	}
+	&-status {
+		color: #0D8E22;
+		font-weight: 600;
+		// max-width: calc(100% - 34px);
+		&.-download,
+		&.-done,
+		&.-disabled,
+		&.-failed,
+		&.-next,
+		&.-paid,
+		&.-pending,
+		&.-ongoing {
+			display: inline-flex;
+			// border: 1px solid #0D8E22;
+			// border: 1px solid #8495A5;
+			// color: #0D8E22;
+			padding: 5px 12px;
+			border-radius: 20px;
+			font-size: 12px;
+			line-height: 120%;
+		}
+		&.-download {
+			color: #009ACA;
+			@include min-responsive($screen-tablet) {
+				border: 1px solid #009ACA;
+			}
+		}
+		&.-done {
+			color: #0facdd;
+			border: 1px solid #0facdd;
+		}
+		&.-failed {
+			color: #b72f2f;
+			border: 1px solid #b72f2f;
+		}
+		&.-disabled {
+			color: #8495A5;
+			border: 1px solid #8495A5;
+		}
+		&.-pending {
+			color: #dca000;
+			border: 1px solid #dca000;
+		}
+		&.-ongoing {
+			color: #fff;
+			background-color: #0D8E22;
+			border: 1px solid #0D8E22;
+		}
+		&.-paid,
+		&.-next {
+			color: #0D8E22;
+			border: 1px solid #0D8E22;
+		}
+	}
+	&-method {
+		font-weight: 600;
+	}
+	&-invoice {
+		color: #0039D4;
+		font-weight: 600;
+	}
+	&-more {
+		display: none;
+		color: var(--blue-pion-1, #009ACA);
+		padding: 0 15px;
+		height: 30px;
+		justify-content: center;
+		align-items: center;
+		border-radius: 8px;
+		font-weight: 600;
+		font-size: 14px;
+		border: 1px solid var(--blue-pion-1, #009ACA);
+		&:hover {
+			background: #009ACA;
+			color: #fff;
+		}
+		@include min-responsive($screen-tablet) {
+			display: inline-flex;
+		}
+	}
+	&-arrow {
+		text-align: center;
+    position: relative;
+    // margin-top: 15px;
+    // margin-bottom: -10px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    line-height: 1;
+    padding: 5px 5px 8px;
+		cursor: pointer;
+		margin: 0 15px 20px;
+		@include min-responsive($screen-tablet) {
+			margin: 0;
+		}
+		&:before {
+			content: attr(data-accordion-expand);
+			font-weight: 700;
+			font-size: 12px;
+			padding-right: 5px;
+		}
+		@include min-responsive($screen-tablet) {
+			position: absolute;
+			right: 25px;
+			top: 12px;
+			background-color: transparent;
+			padding: 5px 6px;
+			&:hover {
+				background-color: #ddd;
+			}
+			// margin: 0;
+			&:before {
+				content: '';
+				padding-right: 0;
+			}
+		}
+		i {
+			font-size: 12px;
+			@include min-responsive($screen-tablet) {
+				font-size: 14px;
+			}
+		}
+	}
+	&-item {
+		&.-active {
+			.accordion-inline {
+				display: block;
+			}
+			.note-arrow {
+				&:before {
+					content: attr(data-accordion-collapse);
+					@include min-responsive($screen-tablet) {
+						content: ''
+					}
+				}		
+			}
+			.note-arrow i {
+				transform: rotate(180deg);
+			}
+			// .note-row.-showheader {
+			// 	margin-top: 0;
+			// }
+		}
+		&.-header {
+			overflow: hidden;
+			@include max-responsive($screen-tablet - 1) {
+				display: none;
+			}
+			.note-block {
+				background: #EEF0F2;
+				padding: 5px 20px;
+			}
+			.note-content {
+				font-weight: 700;
+			}
+		}
+	}
+	&-modal {
+		.note-content {
+			max-width: none;
+			font-weight: 600;
+			white-space: initial;
+		}
+		.note-row.-mixcol {
+			align-items: center;
+			gap: 5px;
+			@include min-responsive($screen-middle) {
+				gap: 20px;
+				align-items: flex-start;
+			}
+			& > .note-col {
+				flex-direction: column;
+				width: 100%;
+				gap: 5px;
+			}
+			& > .note-img {
+				order: 5;
+				@include min-responsive($screen-middle) {
+					order: 0;
+				}
+			}
+		}
+		.note-col img {
+			border-radius: 8px;
+			margin: 10px auto;
+			@include min-responsive($screen-middle) {
+				margin: 0;
+			}
+		}
+	}
+	// &-list.-cols {
+	// 	@include max-responsive($screen-tablet - 1) {
+	// 		.note-header {
+
+	// 		}
+	// 		& .note-row.-mixcol.-showheader .note-col {
+	// 			flex-grow: 1;
+	// 			flex-direction: column;
+	// 			width: 100%;
+	// 		}
+	// 	}
+	// }
+}

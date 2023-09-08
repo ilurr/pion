@@ -1,0 +1,43 @@
+.menu {
+    &-profile {
+        position: absolute;
+        top: 1rem;
+        right: .5rem;
+        z-index: 1;
+    }
+    &-button {
+        width: auto;
+        border: transparent;
+        background: transparent;
+        padding: 0 .625rem;
+        & > * {
+            pointer-events: none;
+        }
+    }
+    &-option {
+        position: absolute;
+        right: 1.75rem;
+        top: 1rem;
+        min-width: 150px;
+        padding: .5rem;
+        background: #fff;
+        border: 1px solid #F3F3F3;
+        box-shadow: 0px 3px 3px #00000029;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(all .2s ease);
+        &.-active {
+            visibility: visible;
+            opacity: 1;
+        }
+		a {
+			display: block;
+			padding: .688rem .5rem;
+			@include font-pack(false, 0.875rem, false, 1, #34475A);
+			&:hover {
+                color: #000;
+                background: darken(#fff, 5%);
+			}
+		}
+    }
+}

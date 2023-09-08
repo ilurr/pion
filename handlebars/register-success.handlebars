@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true}}
+
+<body>
+
+	<!-- layout -->
+	<div class="container">
+
+		{{>block_top brand="pion-clinician" title="Sign Up Success!" lead="Congratulations, your account has been successfully created."}}
+
+		<div class="block-middle">
+			{{>button type="link" label="Continue" class="-primary" href="register-error.html"}}
+		</div>
+
+		{{!>block_footer link=true}}
+		
+	</div>
+
+{{>js}}
+</body>
+</html>

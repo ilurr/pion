@@ -1,0 +1,824 @@
+{
+  "base": {
+    "title": "Pion Clinician - PT. Pranaya Mitra Insani",
+    "description": "Our mental health professionals come from a variety of backgrounds and specialties, such as: Clinical Adult Psychologists, Child Clinical Psychologists, and Educational Psychologists."
+  },
+  "profile": {
+    "avatars": [
+      {
+        "height": 200,
+        "size": "small",
+        "url": "../asset/images/dummy/avatar.jpg",
+        "width": 200
+      },
+      {
+        "height": 500,
+        "size": "medium",
+        "url": "../asset/images/dummy/avatar.jpg",
+        "width": 500
+      }
+    ],
+    "first_name": "Chelsea",
+    "bio": "Menjadi Anak tunggal kalau Ayah dan Bunda minta tolong beberes rumah. Sambat kebudayaan everyday. Author and arts researcher, (sometimes) I also do acting 👻",
+    "last_name": "Amalia",
+    "verified": 1,
+    "rewards": 2,
+    "location": "Pontianak"
+  },
+  "navigation": [
+    {
+      "title": "Beranda",
+      "icon": "",
+      "link": "index.html",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": ""
+    },
+    {
+      "title": "Tentang Kami",
+      "icon": "",
+      "link": "about.html",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": "",
+      "submenu": [
+        {
+          "title": "Profil Para Pendiri",
+          "icon": "",
+          "link": "about-founder.html",
+          "modal": "",
+          "notification": "",
+          "badge": false,
+          "login": ""    
+        },
+        {
+          "title": "Profil Ahli",
+          "icon": "",
+          "link": "about-expert.html",
+          "modal": "",
+          "notification": "",
+          "badge": false,
+          "login": ""    
+        },
+        {
+          "title": "Tentang Kami",
+          "icon": "",
+          "link": "about.html",
+          "modal": "",
+          "notification": "",
+          "badge": false,
+          "login": ""    
+        }
+      ]
+    },
+    {
+      "title": "Layanan",
+      "icon": "",
+      "link": "service.html",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": ""
+    },
+    {
+      "title": "Media",
+      "icon": "",
+      "link": "media.html",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": ""
+    },
+    {
+      "title": "FAQ",
+      "icon": "",
+      "link": "faq.html",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": ""
+    },
+    {
+      "title": "Kontak Kami",
+      "icon": "",
+      "link": "contact.html",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": ""
+    }
+  ],
+  "navdashboard": [
+    {
+      "title": "Dashboard",
+      "icon": "fa-solid fa-grip",
+      "link": "my-dashboard.html",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": ""
+    },
+    {
+      "title": "Session",
+      "icon": "fa-solid fa-clock-rotate-left",
+      "link": "my-session.html",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": ""
+    },
+    {
+      "title": "Client",
+      "icon": "fa-solid fa-users",
+      "link": "my-client.html",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": ""
+    },
+    {
+      "title": "Billing",
+      "icon": "fa-regular fa-file-lines",
+      "link": "my-invoices.html",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": ""
+    },
+    {
+      "title": "Profile",
+      "icon": "fa-regular fa-user",
+      "link": "user-profile.html",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": ""
+    },
+    {
+      "title": "",
+      "icon": "",
+      "link": "",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": ""
+    },
+    {
+      "title": "Setting",
+      "icon": "fa-solid fa-gear",
+      "link": "setting.html",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": ""
+    },
+    {
+      "title": "Logout",
+      "icon": "fa-solid fa-arrow-right-from-bracket",
+      "link": "index.html",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": ""
+    }
+  ],
+  "issue": [
+    {
+      "title": "Pertumbuhan pribadi & pemeriksaan psikologi",
+      "figure": "issue-1.svg",
+      "content": "Siapa yang bilang pergi ke psikolog itu memalukan atau lemah? Nyatanya, dengan pergi ke psikolog bisa membantu proses perkembangan dirimu sendiri. Juga, pergi ke psikolog tidak harus selalu menunggu hingga kamu memiliki masalah. Jika kamu ingin mengetahui bagaimana kondisi kesehatan mentalmu dan juga proses perkembangan dirimu. Yuk daftar langsung!"
+    },
+    {
+      "title": "Masalah kecemasan",
+      "figure": "issue-2.svg",
+      "content": "Exhale, inhale. Tenang, Teman Pion. Saat ini kamu berada di tempat yang aman. Pastinya rasa cemasmu saat mengganggu, ya? Kamu bisa lho berkonsultasi dengan salah satu psikolog kami untuk menceritakan cemas yang kamu rasakan. Silahkan langsung daftar dibawah ini ya."
+    },
+    {
+      "title": "Suasana hati & depresi",
+      "figure": "issue-3.svg",
+      "content": "Hai Teman Pion, terimakasih banyak sudah bertahan hingga saat ini. Pasti tidak mudah ya untuk bisa tetap bertahan dan melakukan kegiatan seperti biasanya bersamaan dengan rasa sedih yang terus muncul. Jangan takut, kamu bisa menceritakan masalahmu pada psikolog kami tanpa adanya penghakiman. Tidak ada stigma disini, hanya kamu dan psikologmu yang akan berfokus pada proses penyembuhanmu. Kamu bisa langsung mendaftar dibawah ini."
+    },
+    {
+      "title": "Masalah belajar & produktivitas",
+      "figure": "issue-4.svg",
+      "content": "Apakah saat ini kamu sedang merasa kesulitan dalam proses pembelajaran, Teman Pion? Atau mungkin kamu merasa tidak cukup produktif sehari-harinya terutama dalam hal belajar? Nah, kamu berada ditempat yang tepat! Bagi siapapun yang butuh konsultasi dengan psikolog mengenai hal ini, bisa langsung mendaftar dibawah ini ya."
+    },
+    {
+      "title": "Masalah hubungan",
+      "figure": "issue-5.svg",
+      "content": "Apa saat ini kamu sedang merasa memiliki masalah dengan hubunganmu dan bingung gimana cara untuk mengatasinya? Kamu bisa melakukan konsultasi dengan salah satu psikolog kami lho, Teman Pion! Bersama-sama kamu dan dampingan dari psikologmu akan menghadapi masalah dalam hubunganmu. Yuk klik tombol daftar dibawah ini untuk membuat jadwal konseling."
+    },
+    {
+      "title": "Kehilangan & Trauma",
+      "figure": "issue-6.svg",
+      "content": "Bagi kamu yang mengalami pengalaman kehilangan dan juga trauma, pasti rasanya tidak mengenakkan. mungkin kamu memerlukan waktu untuk berbagi. Kamu dapat menceritakan kisahmu kepada ahli (psikolog) PION Clinician, dan ahli dapat memberikan dukungan dan penguatan psikologis untuk kamu. Silahkan klik tombol dibawah ini untuk mendaftar ya."
+    },
+    {
+      "title": "Manajemen Amarah",
+      "figure": "issue-7.svg",
+      "content": "Tenang ya.. Nggak enak pastinya ya harus marah terus-menerus. Yuk, sini yuk. Apa sih yang membuatmu marah? Yuk ceritakan rasa marahmu pada salah satu psikolog kami agar mereda. Klik daftar dibawah ini ya agar kamu bisa menceritakan kemarahanmu pada salah satu psikolog kami."
+    },
+    {
+      "title": "Perundungan",
+      "figure": "issue-8.svg",
+      "content": "Teman Pion, ingatlah bahwa kamu berharga dan bukan barang rusak. Berat pastinya menerima dan mengetahui kenyataan bahwa kamu dibully oleh orang lain. Tapi tenang, kamu nggak sendirian kok! Akan ada psikolog kami yang siap mendampingimu dalam proses penyembuhan luka batinmu karena bullying. Yuk, segera klik daftar dibawah ini."
+    },
+    {
+      "title": "Stres Terkait Pekerjaan",
+      "figure": "issue-9.svg",
+      "content": "Hai, Teman Pion. Layanan psikologis kami juga terbuka bagi kamu yang mengalami masalah dengan pekerjaanmu nih. Jika kamu merasa burnout, stress karena kerja terus menerus, atau mengalami konflik dengan rekan kerja atau atasanmu, kamu bisa berdiskusi dengan salah satu psikolog kami. Tenang saja, dalam sesi konsultasi kamu akan aman dan ceritamu tidak akan tersebar kemanapun. Beban dikeluarkan, masalahmu akan segera selesai."
+    },
+    {
+      "title": "Kekerasan",
+      "figure": "issue-10.svg",
+      "content": "Rasanya menyakitkan pasti ya, Teman Pion? Ketahuilah bahwa kamu tidak layak untuk diperlakukan dengan tidak baik, apalagi dengan menggunakan kekerasan. Jika kamu butuh bantuan dan pendampingan, para psikolog kami siap membantu. Yuk segera klik tombol daftar dibawah ini, terimakasih banyak sudah mau berjuang ya."
+    },
+    {
+      "title": "Berkebutuhan Khusus",
+      "figure": "issue-11.svg",
+      "content": "Apakah kamu adalah caregiver dari individu-individu spesial, Teman Pion? Atau malah, kamu sendiri termasuk individu spesial? Halo! Jika kamu butuh dukungan emosional dan tempat berbagi untuk masalah-masalah yang sedang kamu alami, terutama untuk masalah-masalah spesialmu, kamu ada di tempat yang benar. Yuk silahkan klik tombol dibawah ini untuk info lebih lanjut."
+    }
+  ],
+  "testi": [
+    {
+      "cat": "Klien Individu & Keluarga",
+      "href": "#klien-individu-keluarga",
+      "list": [
+        {
+          "name": "Nama Dirahasiakan",
+          "type": "Klien dewasa",
+          "avatar": "avatar-male.png",
+          "content": "<p>Saya mendapatkan pengalaman berdiskusi yang menyenangkan. Mereka berhasil membuat saya bisa menceritakan semua masalah yang saya alami dan memberikan yang bisa langsung saya terapkan. Mereka juga mendengarkan dan membahas masalah yang saya alami dengan sangat detail tanpa ada kesan menggurui atau menjudge. So far saya sangat berkesan dengan pelayanan dari PION Clinician.</p>",
+          "rating": 5
+        },
+        {
+          "name": "Remaja 14 Tahun, Nama Dirahasiakan",
+          "type": "Orangtua Dari Klien",
+          "avatar": "avatar-female.png",
+          "content": "<p>Kami nyaman sekali dengan Pion Clinician.. sehingga baik anak kami maupun kami lepas banget untuk mengeluarkan masalah dan pendapat solusinya dengan baik.</p>",
+          "rating": 5
+        },
+        {
+          "name": "Nama Dirahasiakan",
+          "type": "Orangtua Klien Anak",
+          "avatar": "avatar-female.png",
+          "content": "<p>Selama family therapy, anak saya jadi relax dan mulai open pelan-pelan. Sekarang dia bener-bener open dan ga selalu merasa tanggung jawab di pundak dia.</p>",
+          "rating": 5
+        },
+        {
+          "name": "Nama Dirahasiakan",
+          "type": "Klien dewasa",
+          "avatar": "avatar-male.png",
+          "content": "<p>Saya di-diagnosa oleh Pion Clinician menderita peripartum depression.. yaitu depresi karna keadaan sekitar yang tiba-tiba berubah dan harus mengurus bayi 3 bulan sendirian.. dan itu sangat melelahkan buat saya.. setelah saya bertemu clinician saya diminta untuk rutin olahraga (berenang), minum vitamin seperti omega 3, refreshing (keluar rumah tanpa anak), dan terapi-terapi lain dari Pion Clincian.. dan alhamdulilah setelah beberapa bulan saya berhasil keluar dari depresi berkat Pion Clinician dan dukungan keluarga.</p>",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "cat": "Klien Perusahaan",
+      "href": "#klien-perusahaan",
+      "list": [
+        {
+          "name": "Tika Lestari",
+          "type": "Brand Marketing Guardian Indonesia",
+          "avatar": "avatar-female.png",
+          "content": "<p>Guardian Indonesia bekerja sama dengan PION Clinician dalam rangka kampanye Healthy Inside and Out. Kami senang sekali dengan kerjasama yang terjalin ini. PION Clinician sangat professional dan solutif. Response yang kami dapatkan dari kampanye ini juga sangat positive terhadap layanan konsultasi psikolog yang disediakan PION. Terimakasih untuk kerjasamanya. Sukses terus PION Clinician.</p>",
+          "rating": 5
+        },
+        {
+          "name": "Alia Dewi",
+          "type": "Corporate Secretary PT Mandom Indonesia Tbk",
+          "avatar": "avatar-female.png",
+          "content": "<p>@mandomfamily berkolaborasi dengan PION Clinician dalam kampanye #nyamansehatbahagia. Tim PION sangat supportif dan proaktif selama proses kolaborasi. Dari mulai kick off sampai pelaksanaan event, semua berjalan dengan lancar. Kami juga menerima feedback positif baik dari para karyawan yang bergabung dalam event Live IG maupun mereka yang mengikuti sesi konseling dengan Psikolog PION Clinician. Thank you PION yang sudah mendukung kami untuk bisa mewujudkan MandoMania yang #nyamansehatbahagia.</p>",
+          "rating": 5
+        },
+        {
+          "name": "Ramandita",
+          "type": "Senior People Operations Happyfresh",
+          "avatar": "avatar-female.png",
+          "content": "<p>Konseling HappyMind sangat membantu mereka yang tidak tahu harus berbicara dengan siapa. Mereka tidak menghujat perasaan yang Saya rasakan dan mereka merupakan pendengar yang sangat baik yang dapat membantu dengan memberikan umpan balik yang rasional, Saya merasa aman dan ingin melakukannya lagi lain kali.</p>",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "cat": "Institusi Pendidikan",
+      "href": "#institusi-pendidikan",
+      "list": [
+        {
+          "name": "Erika Martyala Barus",
+          "type": "HRD Sekolah Cikal",
+          "avatar": "avatar-female.png",
+          "content": "<p>Sekolah Cikal telah menggunakan beberapa program dari PION Clinician yaitu:</p>\n<ul>\n<li>Group Therapy</li>\n<li>Employee Assistance Program (EAP) melalui program konseling untuk para guru dan staf Sekolah Cikal</li>\n<li>Diagnosa kondisi mental karyawan yang bermasalah</li>\n</ul>\n<p>So far, kami merasakan sangat puas dengan layanan dari PION Clinician dengan memberikan psikolog-psikolog yang terbaik.</p><p>Thank you PION Clinician.</p>",
+          "rating": 5
+        }
+      ]
+    }
+  ],
+  "client": [
+    {
+      "title": "BRI",
+      "asset": "image_25.png"
+    },
+    {
+      "title": "Bank Syariah Indonesia",
+      "asset": "image_26.png"
+    },
+    {
+      "title": "Maybank",
+      "asset": "image_27.png"
+    },
+    {
+      "title": "Allianz",
+      "asset": "image_28.png"
+    },
+    {
+      "title": "DBS",
+      "asset": "image_29.png"
+    },
+    {
+      "title": "UN",
+      "asset": "image_30.png"
+    },
+    {
+      "title": "LPSK",
+      "asset": "image_31.png"
+    }
+  ],
+  "session": [
+    {
+      "dates": "3 Sep 2023",
+      "time": "15:30 WIB",
+      "counselor": "Dr. Rahma Paramita, M.Psi.",
+      "notes": "ongoing",
+      "client": "Sisca Saras",
+      "payment": "ongoing",
+      "method": "Zoom",
+      "city": "Bogor",
+      "age": "17",
+      "notes_code": "ongoing",
+      "invoice": "INV/20214980/5LK1",
+      "price": "Rp400.000,-",
+      "content": "<p>Dengan keseimbangan dari dalam diri Anda, ini bisa membantu Anda membangun kehidupan, karier, dan hubungan yang Anda inginkan.</p>",
+      "status": 1
+    },
+    {
+      "dates": "2 Jul 2023",
+      "time": "20:30 WIB",
+      "counselor": "Dr. Rahma Paramita, M.Psi.",
+      "notes": "up next",
+      "client": "Nadia Sahilatua",
+      "payment": "paid",
+      "method": "Zoom",
+      "city": "Tangerang Selatan",
+      "age": "19",
+      "notes_code": "next",
+      "invoice": "INV/20214980/5LK1",
+      "price": "Rp400.000,-",
+      "content": "<p>Dengan keseimbangan dari dalam diri Anda, ini bisa membantu Anda membangun kehidupan, karier, dan hubungan yang Anda inginkan.</p>",
+      "status": 2
+    },
+    {
+      "dates": "24 Sep 2023",
+      "time": "08:30 WIB",
+      "counselor": "Astrid WEN, M.Psi.",
+      "notes": "pending",
+      "client": "Ferdiansyah",
+      "payment": "pending",
+      "method": "PION, Jakarta",
+      "city": "Jakarta",
+      "age": "29",
+      "notes_code": "pending",
+      "invoice": "INV/20231232/1AR2",
+      "price": "Rp360.000,-",
+      "content": "",
+      "status": 3
+    },
+    {
+      "dates": "1 Apr 2023",
+      "time": "19:30 WIB",
+      "counselor": "Katarina Ira Puspita, M.Psi.",
+      "notes": "done",
+      "client": "Ezra Wallian",
+      "payment": "done",
+      "method": "PION, Bandung",
+      "city": "Bandung",
+      "age": "11",
+      "notes_code": "done",
+      "invoice": "INV/20765212/8CF3",
+      "price": "Rp199.000,-",
+      "content": "<p>Dengan melakukan sesi konseling atau terapi, hal ini cukup berharga untuk bisa membantu Anda memecahkan masalah, menetapkan dan mencapai tujuan, meningkatkan kemampuan berkomunikasi atau menjaga tingkat emosi dan stres Anda tetap normal. Di mana dengan keseimbangan dari dalam diri Anda, ini bisa membantu Anda membangun kehidupan, karier, dan hubungan yang Anda inginkan.</p>",
+      "status": 4
+    },
+    {
+      "dates": "13 Nov 2023",
+      "time": "10:30 WIB",
+      "counselor": "Dian Oriza, M.Psi.",
+      "notes": "done",
+      "client": "Alikuro Hidayat",
+      "payment": "done",
+      "method": "Client Location",
+      "city": "Depok",
+      "age": "21",
+      "notes_code": "done",
+      "invoice": "INV/20230427/8CF3",
+      "price": "Rp99.000,-",
+      "content": "<p>Dengan melakukan sesi konseling atau terapi, hal ini cukup berharga untuk bisa membantu Anda memecahkan masalah, menetapkan dan mencapai tujuan, meningkatkan kemampuan berkomunikasi atau menjaga tingkat emosi dan stres Anda tetap normal. Di mana dengan keseimbangan dari dalam diri Anda, ini bisa membantu Anda membangun kehidupan, karier, dan hubungan yang Anda inginkan.</p>",
+      "status": 4
+    },
+    {
+      "dates": "3 Okt 2023",
+      "time": "09:30 WIB",
+      "counselor": "Ayunda Shabriani Tyara, M.Psi.",
+      "notes": "pending",
+      "client": "Debby Susanto",
+      "payment": "pending",
+      "method": "PION, Jakarta",
+      "city": "Depok",
+      "age": "48",
+      "notes_code": "pending",
+      "invoice": "INV/20230427/8CF3",
+      "price": "Rp99.000,-",
+      "content": "<p>Dengan melakukan sesi konseling atau terapi, hal ini cukup berharga untuk bisa membantu Anda memecahkan masalah, menetapkan dan mencapai tujuan, meningkatkan kemampuan berkomunikasi atau menjaga tingkat emosi dan stres Anda tetap normal. Di mana dengan keseimbangan dari dalam diri Anda, ini bisa membantu Anda membangun kehidupan, karier, dan hubungan yang Anda inginkan.</p>",
+      "status": 3
+    },
+    {
+      "dates": "23 Agu 2023",
+      "time": "11:00 WIB",
+      "counselor": "L. Sandi Witarso, M.Psi.",
+      "notes": "canceled",
+      "client": "Heru Prayogi",
+      "payment": "failed",
+      "method": "PION, Jakarta",
+      "city": "Jakarta Barat",
+      "age": "29",
+      "notes_code": "failed",
+      "invoice": "INV/20230427/8CF3",
+      "price": "Rp99.000,-",
+      "content": "<p>Dengan melakukan sesi konseling atau terapi, hal ini cukup berharga untuk bisa membantu Anda memecahkan masalah, menetapkan dan mencapai tujuan, meningkatkan kemampuan berkomunikasi atau menjaga tingkat emosi dan stres Anda tetap normal. Di mana dengan keseimbangan dari dalam diri Anda, ini bisa membantu Anda membangun kehidupan, karier, dan hubungan yang Anda inginkan.</p>",
+      "status": 5
+    },
+    {
+      "dates": "29 Mei 2023",
+      "time": "11:00 WIB",
+      "counselor": "Maria T. Puspaningsih, M.Psi.",
+      "notes": "disabled",
+      "client": "Frans Aritonang",
+      "payment": "disabled",
+      "method": "Zoom",
+      "city": "Parung Panjang",
+      "age": "36",
+      "notes_code": "disabled",
+      "invoice": "INV/20230427/8CF3",
+      "price": "Rp99.000,-",
+      "content": "<p>Dengan melakukan sesi konseling atau terapi, hal ini cukup berharga untuk bisa membantu Anda memecahkan masalah, menetapkan dan mencapai tujuan, meningkatkan kemampuan berkomunikasi atau menjaga tingkat emosi dan stres Anda tetap normal. Di mana dengan keseimbangan dari dalam diri Anda, ini bisa membantu Anda membangun kehidupan, karier, dan hubungan yang Anda inginkan.</p>",
+      "status": 6
+    }
+  ],
+  "summary": [
+    {
+      "title": "On going appointment",
+      "dates": "Selasa, 23 Sep 2023",
+      "time": "18.30 WIB",
+      "action": "",
+      "lead": "Last appointment on 28 Aug",
+      "link": ""
+    },
+    {
+      "title": "My total duration",
+      "dates": "53 Hours",
+      "time": "",
+      "action": "",
+      "lead": "",
+      "link": ""
+    },
+    {
+      "title": "Available session",
+      "dates": "0 Hours",
+      "time": "",
+      "action": "Click to top up",
+      "lead": "",
+      "link": ""
+    }
+  ],
+  "package": [
+    {
+      "theme": "green",
+      "asset": "card-1.svg",
+      "title": "Individual & Family Services",
+      "lead": "Konsultasikan tumbuh kembang pendidikan anak Anda, untuk menjadi yang terbaik di kelasnya",
+      "link": "service.html",
+      "list": [
+        "Layanan psikologi anak",
+        "Layanan psikologi remaja",
+        "Layanan psikologi dewasa",
+        "Layanan psikologi khusus"
+      ]
+    },
+    {
+      "theme": "blue",
+      "asset": "card-2.svg",
+      "title": "Pion Edu",
+      "lead": "Konsultasikan tumbuh kembang pendidikan anak Anda, untuk menjadi yang terbaik di kelasnya",
+      "link": "service.html",
+      "list": [
+        "Asesmen psikologi siswa",
+        "Layanan dan intervensi psikologis",
+        "Teacher & staff assesment",
+        "Psikoedukasi untuk siswa dan/atau orang tua"
+      ]
+    },
+    {
+      "theme": "yellow",
+      "asset": "card-3.svg",
+      "title": "Corporate Service",
+      "lead": "Bersama team HR internal membentuk sumber daya manusia yang kompeten di perusahaan Anda",
+      "link": "service.html",
+      "list": [
+        "Konseling dengan psikolog",
+        "Webinar",
+        "Teacher & staff assesment",
+        "Psikoedukasi untuk siswa dan/atau orang tua"
+      ]
+    }
+  ],
+  "expert": [
+    {
+      "name": "Rahma Paramita, M.Psi., Psikolog",
+      "nick": "Mita",
+      "skill": "Meditasi, EMDR, Keluarga, Theraplay",
+      "profile": "<p>Psikolog Anak dan Keluarga & Praktisi Theraplay yang memiliki minat & pengalaman di dunia pendidikan. Ia mengambil 2 master yaitu magister profesi Psikologi Anak dari Universitas Indonesia pada tahun 2004 dan magister Manajemen Bisnis dari Prasetya Mulya pada tahun 2014. Mita aktif bekerja dan berkontribusi selama lebih dari 10 tahun dalam bidang Pendidikan dan Kurikulum untuk Anak dan Remaja. Pada tahun 2014 ia mulai mengambil Theraplay sebagai spesialisasinya dan saat ini sedang mengerjakan sertifikasi penuh sebagai Theraplay Therapist dari The Theraplay Institute, Chicago. Bersama dengan teman-temannya, ia mendirikan PION Clinician dan Theraplay Indonesia.</p>",
+      "img": "mita.png"
+    },
+    {
+      "name": "Dian Oriza, M.Psi., Psikolog",
+      "nick": "Dian",
+      "skill": "Acceptance Commitment Therapy",
+      "profile": "<p>Dian lulus dari Fakultas Psikologi Universitas Indonesia sebagai psikolog klinis. Dia telah menyelesaikan gelar doktoral dan memiliki karir 16 tahun yang sangat memuaskan sebagai psikolog klinis, mengajar, konseling, mengawasi dan mengelola. Selain sebagai psikolog, Dian bekerja sebagai dosen di universitas ternama dan menikmati perannya dalam mengajar dan menjadi dosen mahasiswa psikologi.</p><p>Dia mengajar Psikologi Abnormal, Psikologi Klinis, dan Metode Observasional dan Wawancara, serta Psikologi Gender. Dian terdaftar di Ikatan Psikologi Klinis – IPK (Asosiasi Psikologi Klinis) dan merupakan anggota penuh dari Masyarakat Psikologi Indonesia (Himpunan Psikologi Indonesia – HIMPSI).</p><p>Dian memiliki pengalaman dengan berbagai klien di berbagai bidang seperti depresi, kecemasan, trauma, kesedihan dan masalah perilaku pada orang tua. Selain itu, ia memiliki pengalaman bekerja dengan pasangan yang mengalami kesulitan hubungan. Dia lebih suka menggunakan intervensi berbasis bukti seperti terapi penerimaan dan komitmen (ACT), serta paradigma lain (seperti terapi skema dan pendekatan transpersonal) yang terbukti mempromosikan manfaat dalam fungsi, kepercayaan, dan kesejahteraan seseorang.</p><p>Dian berupaya menciptakan hubungan terapeutik yang kuat dengan klien dengan tujuan membantu mereka mencapai kehidupan yang kaya dan bermakna.</p>",
+      "img": "dian.png"
+    },
+    {
+      "name": "Tri Swasono Hadi, M.Psi., Psikolog",
+      "nick": "Tri",
+      "skill": "Masalah Hubungan, Emosi, Masalah Kepribadian atau Klinis lainnya, dan EMDR",
+      "profile": "<p>Tri merupakan lulusan dari universitas indonesia sebagai Psikolog Klinis Dewasa. Tri menghabiskan hari-hari awal kariernya membangun bisnisnya sendiri dan menjadi penasihat di beberapa perusahaan dan lembaga sambil terus mengambil berbagai pelatihan dan kursus untuk memperkaya pengetahuan dan keterampilannya dalam psikologi.</p><p>Di klinik Pion Clinician, Tri adalah salah satu ahli yang berpengalaman dalam menangani hubungan orang dewasa yang meliputi kemarahan pasangan atau manajemen ego dan masalah kekerasan dalam rumah tangga. Pengalamannya yang luas, pengetahuan dan keterampilan dalam konseling pasangan membuatnya sering menjadi pembicara untuk memimpin sesi Psikologi Pra-Pernikahan</p>",
+      "img": "tri.png"
+    },
+    {
+      "name": "Astrid WEN, M.Psi., Psikolog",
+      "nick": "Astrid",
+      "skill": "Theraplay, Interaksi Antar Keluarga, Kelekatan",
+      "profile": "<p>Astrid Wen adalah seorang Psikolog Anak dan Keluarga yang spesialisasinya melakukan Theraplay. Ia diundang International Theraplay Conference di Chicago, 2016 untuk mempresentasikan “Theraplay Development in Indonesia” dan mendapatkan julukan “Mother of Theraplay Indonesia” dari Tabloid Nakita.</p>",
+      "img": "astrid.png"
+    },
+    {
+      "name": "Katarina Ira Puspita, M.Psi., Psikolog",
+      "nick": "Karin",
+      "skill": "CBT, Social Skill Training, Keluarga, Cemas Pada Anak & Remaja",
+      "profile": "-",
+      "img": "katarina.png"
+    },
+    {
+      "name": "Maria T. Puspaningsih, M.Psi., Psikolog",
+      "nick": "Maria",
+      "skill": "Relaprofilesi (keluarga, pernikahan, pasangan, pertemanan), Komunikasi Efektif & Asertif, Self-Development, Life Skills Development, Permasalahan Remaja dan Orang Dewasa, Dukungan Psikologis Awal, Psikoterapis Klinis",
+      "img": "maria.png"
+    },
+    {
+      "name": "Ayunda Shabriani Tyara, M.Psi., Psikolog",
+      "nick": "Tyara",
+      "skill": "Masalah Anak (Kesulitan Belajar, Gangguan Perkembangan Klinis, Hubungan Keluarga), Parenting",
+      "profile": "-",
+      "img": "tyara.png"
+    },
+    {
+      "name": "L. Sandi Witarso, M.Psi., Psikolog",
+      "nick": "Sandi",
+      "skill": "Masalah Orang Dewasa, Skizofrenia, Psikoterapi Klinis",
+      "profile": "-",
+      "img": "lsandi.png"
+    }
+  ],
+  "stat": [
+    {
+      "icon": "people",
+      "amount": "11367",
+      "lead": "Orang bahagia yang terdampak"
+    },
+    {
+      "icon": "calendar",
+      "amount": "9027",
+      "lead": "Jam konseling yang efektif"
+    },
+    {
+      "icon": "client",
+      "amount": "6235",
+      "lead": "Klien individu yang telah puas"
+    }
+  ],
+  "media": [
+    {
+      "title": "Apakah Kamu Melakukan Toxic Positivity? Begini Cara Mengeceknya",
+      "dates": "12 September 2023, 15:00 WIB",
+      "img": "https://i0.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-89.png?resize=700%2C450&ssl=1",
+      "link": "",
+      "author": "Ezra Walian",
+      "content": "<p>Ah,&nbsp;<em>toxic positivity&nbsp;</em>&mdash;kamu berkali-kali mendengar tentang hal ini di percakapan teman dan&nbsp;<a href=\"https://www.limone.id/?s=media+sosial\" target=\"_blank\" rel=\"noreferrer noopener\">media sosial</a>. Bahkan mungkin terlibat secara emosi dan intens saat membaca sebuah utasan di Twitter tentang sesuatu yang sepertinya positif, tapi juga terkesan negatif ini. Seandainya kamu masih bingung dengan artinya, menurut psikolog Amerika,&nbsp;<a href=\"https://www.lukincenter.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Konstantin Lukin</a>,&nbsp;<em>toxic positivity</em>&nbsp;adalah adanya fokus dan obsesi berlebihan pada hal-hal positif sehingga kita menolak apa pun yang dapat memicu emosi atau perasaan negatif.</p>\n<p>Efeknya? &ldquo;Ketika kita menyangkal atau menghindari emosi yang tidak menyenangkan, kita membuat intensitas emosi tersebut menjadi lebih besar. Ketika kita terjebak dalam siklus ini, emosi ini menjadi lebih berat untuk dikelola. Sehingga, emosi tersebut tidak berhasil diproses dengan efektif, melainkan hanyalah dipendam atau diabaikan saja,&rdquo; jelas&nbsp;<a href=\"https://instagram.com/sarahsitahendry?igshid=6cjepmvyx2pt\" target=\"_blank\" rel=\"noreferrer noopener\">Sarahsita Hendrianti, M.Psi., Psikolog</a>, seorang psikolog klinis dewasa dari&nbsp;<a href=\"http://pionindonesia.com/\">Pion Clinician</a>, Cilandak, Jakarta Selatan, kepada&nbsp;<em><strong>LIMONE</strong></em>.</p>\n<p>Ingin tahu lebih jelas tentang efek&nbsp;<em>toxic positivity</em>&nbsp;bagi kehidupan sehari, dan bagaimana menjadi positif, tapi tidak&nbsp;<em>toxic</em>? Baca artikel ini sampai habis.</p>\n<p><strong>Daftar Isi</strong></p>\n<ol><li><a href=\"https:/www.limone.id/toxic-positivity-adalah/#bagaimana-toxic-positivity-bisa-terjadi\" aria-invalid=\"true\">Bagaimana Toxic Positivity Bisa Terjadi?</a></li><li><a href=\"https:/www.limone.id/toxic-positivity-adalah/#apa-tanda-tanda-toxic-positivity\" aria-invalid=\"true\">Apa Tanda-Tanda Toxic Positivity?</a></li><li><a href=\"https:/www.limone.id/toxic-positivity-adalah/#apa-dampak-sikap-positif-yang-toxic-ini\" aria-invalid=\"true\">Apa Dampak Sikap Positif yang Toxic Ini?</a></li><li><a href=\"https:/www.limone.id/toxic-positivity-adalah/#bagaimana-jika-toxic-positivity-dibarengi-niat-baik\" aria-invalid=\"true\">Bagaimana Jika Toxic Positivity Dibarengi Niat Baik?</a></li><li><a href=\"https:/www.limone.id/toxic-positivity-adalah/#bagaimana-membedakan-positif-yang-sehat-dengan-toxic-positivity\" aria-invalid=\"true\">Bagaimana Membedakan Positif yang Sehat dengan Toxic Positivity?</a></li><li><a href=\"https:/www.limone.id/toxic-positivity-adalah/#bagaimana-mengurangi-sikap-positif-yang-toxic-ini\" aria-invalid=\"true\">Bagaimana Mengurangi Sikap Positif yang Toxic Ini?</a></li></ol>\n<h2 class=\"wp-block-heading\"><strong>Bagaimana <em>Toxic Positivity</em> Bisa Terjadi?</strong></h2>\n<figure class=\"wp-block-image size-large\"><img class=\"wp-image-2480\" src=\"https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-90.png?resize=1024%2C576&amp;ssl=1\" sizes=\"(max-width: 1024px) 100vw, 1024px\" srcset=\"https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-90.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-90.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-90.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-90.png?w=1200&amp;ssl=1 1200w\" alt=\"\" width=\"1024\" height=\"576\" loading=\"lazy\" data-recalc-dims=\"1\" />\n<figcaption><em>Foto: www.freepik.com</em></figcaption>\n</figure>\n<p>Jika kamu pernah mendengar pernyataan seperti &ldquo;kamu harus bersabar setiap saat&hellip; &rdquo; atau &ldquo;<em>positive vibes only</em>&hellip;&rdquo;, atau &ldquo;berbahagialah setiap saat,&rdquo;&mdash;<em>breakingnews</em>: ini adalah sejumlah contoh&nbsp;<em>toxic</em>&nbsp;positif.</p>\n<p>&ldquo;Secara&nbsp;<em>superficial</em>, pernyataan tersebut tentu saja terdengar menyenangkan, namun pada hakikatnya seseorang hanya bisa berkembang dan menjadi dewasa dan matang dari pengalaman-pengalaman subjektif, yang mungkin sebagian besarnya adalah pengalaman atau emosi yang tidak menyenangkan,&rdquo; terang Sarahsita.</p>\n<p>&ldquo;Seseorang akan belajar memaknai, menghargai hidupnya dengan mendalam dari kesalahan serta perasaan yang tidak menyenangkan,&rdquo; tambahnya.</p>\n<p>Dengan kata lain, adalah sesuatu yang normal jika kita merasa kecewa, sedih dan marah saat gagal&mdash;jadi, tidak perlu ditekan atau dihapus.</p>\n<p>Mengapa kita mengucapkan hal-hal yang adalah&nbsp;<em>toxic positivity</em>&nbsp;(mungkin secara tidak sadar)?</p>\n<p>&ldquo;Hal ini biasanya disebabkan karena kita sering merasa tidak berdaya atau tidak nyaman ketika berhadapan dengan rasa sakit serta emosi negatif orang lain. Tanpa kita sadari, kita ingin mem-<em>block&nbsp;</em>emosi negatif tersebut,&rdquo; jelasnya.</p>\n<p>Padahal, super penting untuk diingat: Seberat apapun kita menyaksikan seseorang yang sedang bersedih, penting untuk tidak &lsquo;menggagalkan&rsquo; perasaan mereka dengan sikap (<em>toxic</em>)&nbsp;<em>positive</em>.</p>\n<p>&ldquo;Perilaku yang jauh lebih bermanfaat dan valid adalah mendengarkan mereka, dengan niat yang tulus untuk memahami, bukan semata-mata untuk memecahkan masalah saja. Biarkan orang itu tahu bahwa tidak apa-apa bagi mereka untuk merasakan apapun yang mereka rasakan,&rdquo; tegasnya.</p>\n<p>Mengutip sebuah mantra yang sering diulang-ulang di masa&nbsp;<a href=\"https://www.limone.id/?s=pandemik\" target=\"_blank\" rel=\"noreferrer noopener\">pandemik</a>&nbsp;ini (dan kebetulan menjadi drama Korea yang sedang heboh):&nbsp;<em>it&rsquo;s okay to be not okay</em>.</p>\n<p>Dan menurut Sarahsita, ada kekeliruan persepsi tentang&nbsp;<em>toxic positivity</em>&nbsp;ini. &ldquo;<em>Positivity</em>&nbsp;dianggap sebagai &lsquo;obat&rsquo; yang mujarab untuk segala permasalahan hidup. Padahal, tidak selalu demikian. Menghindari emosi negatif hanya akan menunda proses pengolahan emosi itu sendiri. Ketika yang kita hadapi adalah pengalaman traumatis,&nbsp;<em>toxic positivity</em>&nbsp;hanya akan menunda pemulihan kita pasca kejadian traumatis tersebut,&rdquo; dia mengingatkan.</p>\n<h2 class=\"wp-block-heading\"><strong>Apa Tanda-Tanda <em>Toxic Positivity</em>?</strong></h2>\n<figure class=\"wp-block-image size-large\"><img class=\"wp-image-2483\" src=\"https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-93.png?resize=1024%2C576&amp;ssl=1\" sizes=\"(max-width: 1024px) 100vw, 1024px\" srcset=\"https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-93.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-93.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-93.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-93.png?w=1200&amp;ssl=1 1200w\" alt=\"\" width=\"1024\" height=\"576\" loading=\"lazy\" data-recalc-dims=\"1\" />\n<figcaption><em>Foto: www.freepik.com</em></figcaption>\n</figure>\n<p>Mungkin awalnya sulit dideteksi, terutama jika toxic positivity seperti menjadi kode etik percakapan di sekitarmu. Namun, dari sekarang, kamu bisa mengetahuinya dengan memperhatikan beberapa perilaku dan ekspresi umum di bawah ini. Menurut Sarahsita,<em>&nbsp;toxic positivity</em>&nbsp;adalah cenderung:</p>\n<ul>\n<li>Menyembunyikan/ menutupi/ menyangkal perasaanmu yang sebenarnya.</li>\n<li>Mencoba &ldquo;<em>move on</em>&rdquo; dengan menjejali diri dengan hal-hal yang positif.</li>\n<li>Berusaha untuk mengalihkan/ memendam/ &lsquo;menghilangkan&rsquo; emosi atau perasaan yang tidak menyenangkan.</li>\n<li>Merasa bersalah karena merasakan apa yang kita sedang rasakan. Misalnya, malu karena menangis, merasa cengeng, menganggap diri &lsquo;<em>baperan</em>&rsquo; karena tersinggung dengan ucapan teman yang menyakiti.</li>\n<li>Meminimalisir/ mengurangi/ menggagalkan emosi atau perasaan negatif orang lain dengan kalimat dukungan seperti, &ldquo;jangan sedih&hellip;&rdquo;, &ldquo;ayo semangat&hellip;&rdquo;, atau &ldquo;<em>nggak</em>&nbsp;boleh nangis&hellip;&rdquo;</li>\n<li>Mencoba memberikan perspektif kepada seseorang. Misalnya dengan mengatakan, &ldquo;untung saja kamu tidak mati&rdquo;, atau &ldquo;kamu harus bersyukur karena masih punya pekerjaan&rdquo;&mdash;alih-alih memvalidasi pengalaman emosional mereka.</li>\n<li>Mempermalukan atau menghukum orang lain karena mengekspresikan emosi negatif mereka, misalnya dengan bilang, &ldquo;ah cengeng kamu! atau, &ldquo;<em>gimana</em>, sih? Masa cowok nangis?&rdquo;</li>\n</ul>\n<h2 class=\"wp-block-heading\"><strong>Apa Dampak<em> </em>Sikap<em> </em>Positif yang <em>Toxic</em> Ini?</strong></h2>\n<figure class=\"wp-block-image size-large\"><img class=\"wp-image-2482\" src=\"https://i0.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-92.png?resize=1024%2C576&amp;ssl=1\" sizes=\"(max-width: 1024px) 100vw, 1024px\" srcset=\"https://i0.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-92.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-92.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-92.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-92.png?w=1200&amp;ssl=1 1200w\" alt=\"\" width=\"1024\" height=\"576\" loading=\"lazy\" data-recalc-dims=\"1\" />\n<figcaption><em>Foto: www.unsplash.com</em></figcaption>\n</figure>\n<p>Sarahsita menegaskan bahwa dengan menghindari emosi atau perasaan negatif, bisa menyebabkan kita akan mungkin kehilangan informasi berharga.</p>\n<p>Contoh dalam kehidupan sehari-hari: ketika kita sedang merasa takut, berarti saat itu emosi kita hendak memberi tahu kita untuk waspada, bahwa ada sesuatu yang mengancam akan terjadi. Dengan kata lain, &ldquo;emosi itu sendiri pada dasarnya adalah sebuah informasi dan memberikan gambaran tentang apa yang terjadi pada saat tertentu,&rdquo; jelasnya.</p>\n<p>Walaupun demikian, penting diingat bahwa emosi-emosi kita tersebut bukan menjadi kendali utama kita dalam melakukan hal tertentu.</p>\n<p>&ldquo;Misalnya, jika saya takut pada seekor anjing dan saya melihat seekor anjing di depan di trotoar, itu tidak berarti saya harus menyeberang jalan atau berlari. Melainkan hanya berarti bahwa saya menganggap anjing sebagai potensi ancaman,&rdquo; ujarnya memberikan contoh.</p>\n<p>Entah memilih untuk berlari atau tetap berjalan melewati anjing tersebut, &ldquo;sepenuhnya ada di bawah keputusan saya. Intinya, ketika seseorang mengidentifikasi emosi, dia sendiri yang memutuskan apakah ia ingin menghindari ancaman tersebut, atau menghadapinya,&rdquo; imbuhnya.</p>\n<p>Perasaan pada anjing&mdash;atau pada hal lain&mdash;tersebut, tidak perlu disangkal. Pasalnya, dengan menyangkal emosi dan perasaan kita, kita seperti sedang menyangkal sebuah kebenaran serta kejujuran diri.</p>\n<p>&ldquo;Kita kehilangan koneksi dengan diri kita sendiri, sehingga sulit bagi orang lain untuk terhubung dan berhubungan dengan kita. Kita mungkin terlihat kuat dari luar, tetapi di dalam diri kita penuh dengan rasa takut, rasa terancam, bahkan rasa tidak puas dengan diri sendiri. Teman-teman kita mungkin menjadi tidak nyaman untuk mencurahkan isi hatinya, mengutarakan tentang pengalaman gelapnya secara mendalam,&rdquo; tambahnya.</p>\n<h2 class=\"wp-block-heading\"><strong>Bagaimana Jika <em>Toxic Positivity</em> Dibarengi Niat Baik?</strong></h2>\n<figure class=\"wp-block-image size-large\"><img class=\"wp-image-2484\" src=\"https://i0.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-94.png?resize=1024%2C576&amp;ssl=1\" sizes=\"(max-width: 1024px) 100vw, 1024px\" srcset=\"https://i0.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-94.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-94.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-94.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-94.png?w=1200&amp;ssl=1 1200w\" alt=\"\" width=\"1024\" height=\"576\" loading=\"lazy\" data-recalc-dims=\"1\" />\n<figcaption><em>Foto: www.rawpixel.com</em></figcaption>\n</figure>\n<p>&ldquo;Meskipun niat kita baik, tetapi pada kenyataannya, secara tidak sadar kita mengirimkan pesan kepada mereka bahwa, &lsquo;saya hanya mengizinkan kamu untuk membagi perasaan yang baik-baik saja,&rsquo;&rdquo; ujarnya.</p>\n<p>Akibatnya, seperti yang sudah disinggung di atas, orang lain akan sangat sulit untuk mengekspresikan apapun selain &ldquo;<em>positive vibes</em>&rdquo; ketika mereka sedang bersama kita. Otomatis, kemungkinan besar orang lain itu akan mengikuti &lsquo;aturan&rsquo; yang kita terapkan, yakni dilarang menjadi diri sendiri.</p>\n<p>Jika&nbsp;<em>toxic positivity</em>&nbsp;dijadikan pedoman hidup, &ldquo;konsekuensi jangka panjangnya adalah kita akan sulit untuk menjalin hubungan yang suportif dan hangat dengan orang lain. Kita akan sulit untuk membangun percakapan yang intim dengan orang lain,&rdquo; paparnya.</p>\n<p>Sarahsita menyinggung bahwa hubungan dengan diri sendiri, seringkali tercermin dalam hubungan yang kita jalin dengan orang lain.</p>\n<p>Maksudnya?</p>\n<p>&ldquo;Jika kita tidak bisa jujur ​​tentang perasaan kita sendiri, bagaimana kita bisa memberikan ruang bagi orang lain untuk mengungkapkan perasaan mereka di hadapan kita? Dengan menciptakan &lsquo;dunia&rsquo; emosional &lsquo;palsu&rsquo;, kita seperti menarik lebih banyak kepalsuan yang kemudian akan menghasilkan keintiman &lsquo;palsu&rsquo; dan persahabatan yang dangkal,&rdquo; ujarnya.</p>\n<h2 class=\"wp-block-heading\"><strong>Bagaimana Membedakan Positif yang Sehat dengan <em>Toxic Positivity</em>?</strong></h2>\n<figure class=\"wp-block-image size-large\"><img class=\"wp-image-2481\" src=\"https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-91.png?resize=1024%2C576&amp;ssl=1\" sizes=\"(max-width: 1024px) 100vw, 1024px\" srcset=\"https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-91.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-91.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-91.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-91.png?w=1200&amp;ssl=1 1200w\" alt=\"\" width=\"1024\" height=\"576\" loading=\"lazy\" data-recalc-dims=\"1\" />\n<figcaption><em>Foto: www.unsplash.com</em></figcaption>\n</figure>\n<p>Ini bukan berarti kamu dilarang untuk menjadi positif. Namun, memang ada perbedaan antara positif yang sehat dengan&nbsp;<em>toxic positivity</em>&nbsp;yang cenderung negatif.</p>\n<p>&ldquo;Cara membedakan yang paling mudah adalah dengan menjadi individu yang realistis,&rdquo; tuturnya.</p>\n<p>&ldquo;Realistis berarti kita menyadari bahwa setiap hal yang kita alami pastinya memiliki dua sisi, positif dan negatif. Kita tidak perlu melihat dunia melalui kacamata positif setiap saat, tetapi bangun rasa percaya bahwa menikmati hal-hal kecil dalam hidup memudahkan kita untuk melewati hal-hal buruk,&rdquo; ujarnya.</p>\n<p>Sebuah penelitian terbaru mendukung hal ini, bahwa&nbsp;<a href=\"https://www.limone.id/realistis-adalah-lebih-baik/\" target=\"_blank\" rel=\"noreferrer noopener\">sikap realistis adalah cara terbaik menghadapi hidup</a>. Bukan terlalu optimis atau pesimis.</p>\n<p>&ldquo;Penting diingat bahwa tidak semua hal atau perasaan negatif yang kita alami dan rasakan murni karena kesalahan kita saja. Maka dari itu, kita punya hak untuk meminta dukungan, baik berupa solusi maupun dukungan emosi,&rdquo; tambahnya.</p>\n<p>Jadi, apakah terkadang kamu merasa hidupmu terasa menyebalkan? Itu hal yang alami. &ldquo;Kita tidak perlu bahagia, ceria setiap detik setiap hari. Adalah hal yang manusiawi dan normal untuk mengalami rasa menderita, terluka, merasa marah dan kecewa. Mengakui, menerima emosi negatif jauh lebih bermanfaat daripada menyangkalnya,&rdquo; tegasnya.</p>\n<h2 class=\"wp-block-heading\"><strong>Bagaimana Mengurangi Sikap Positif yang <em>Toxic</em> Ini? </strong></h2>\n<figure class=\"wp-block-image size-large\"><img class=\"wp-image-2485\" src=\"https://i2.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-95.png?resize=1024%2C576&amp;ssl=1\" sizes=\"(max-width: 1024px) 100vw, 1024px\" srcset=\"https://i2.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-95.png?resize=1024%2C576&amp;ssl=1 1024w, https://i2.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-95.png?resize=300%2C169&amp;ssl=1 300w, https://i2.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-95.png?resize=768%2C432&amp;ssl=1 768w, https://i2.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-95.png?w=1200&amp;ssl=1 1200w\" alt=\"\" width=\"1024\" height=\"576\" loading=\"lazy\" data-recalc-dims=\"1\" />\n<figcaption><em>Foto: www.freepik.com</em></figcaption>\n</figure>\n<p>Bukan bermaksud untuk bersikap&nbsp;<em>toxic positivity</em>, tapi kabar baiknya: ada cara-cara yang bisa kamu lakukan untuk mengurangi perilaku ini demi menyeimbangkan hidup.</p>\n<h5 class=\"wp-block-heading\"><strong>Untuk diri sendiri:</strong></h5>\n<ul>\n<li><strong>Hindari mengusir perasaan negatif</strong></li>\n</ul>\n<p>Merasa sedih, marah, frustrasi dan putus asa ketika kesulitan melanda adalah hal yang sangat manusiawi. &ldquo;Seperti yang sudah dijelaskan, &nbsp;menghindari emosi yang menyakitkan akan membuat emosi tersebut semakin berat untuk dikelola. Hal yang terpenting adalah adanya keseimbangan antara emosi negatif dan positif yang sudah diperhitungkan dengan matang. Triknya adalah dengan menghadapinya dengan lebih efektif, sehingga kamu tidak terjebak dalam spiral negatif,&rdquo; saran Sarahsita.</p>\n<ul>\n<li><strong>Pelajari perbedaan antara hal-hal yang dapat dan tidak dapat kamu ubah</strong></li>\n</ul>\n<p>Bangun keberanian dan keterampilan memecahkan masalah, buatlah daftar solusi yang mungkin bisa diambil dan mulailah mengerjakannya. &ldquo;Tetapi perlu dipahami bahwa tidak setiap masalah dapat diselesaikan dalam semalam. Mempelajari cara menerima hal-hal yang tidak dapat kita ubah bukanlah proses yang mudah atau cepat,&rdquo; dia mengingatkan.</p>\n<ul>\n<li><strong>Identifikasi dan koreksi kesalahan berpikir kamu</strong></li>\n</ul>\n<p>Seandainya kamu perlu diingatkan: sangat normal untuk memiliki pikiran negatif sesekali, &ldquo;tetapi kadang-kadang, pikiran negatif tersebut tidak bisa memberikan sesuatu yang positif pada diri kita,&rdquo; jelasnya.</p>\n<p>Apakah kamu penganut paham&nbsp;<em>half-glass empty</em>&nbsp;dan selalu memikirkan skenario terburuk ketika sesuatu tidak berjalan sesuai rencana (<em>worst case scenario</em>)? &ldquo;Kritisi dulu, apakah yang kamu pikirkan sesuai dengan kenyataannya? Apakah hal tersebut bisa membuatmu lebih antisipatif, atau justru malah memperparah rasa takutmu?&rdquo; tegasnya.</p>\n<ul>\n<li><strong>Bangun jarak aman dengan penganut&nbsp;<em>toxic positivity</em></strong></li>\n</ul>\n<p>&ldquo;Ketika kita mendapati teman atau keluarga kita memiliki sikap tersebut, bangun jarak (<em>boundaries</em>) yang aman agar&nbsp;<em>toxic positivity</em>&nbsp;tersebut tidak menghambat proses pengembangan diri kamu secara keseluruhan,&rdquo; sarannya.</p>\n<p>Dan ketika kamu merasa kurang didengar dan dipahami oleh keluarga dan teman-temanmu, cobalah untuk mengekspresikan emosimu dengan cara yang konstruktif.</p>\n<p>Oh,&nbsp;<em>satu lagi yang tidak kalah penting</em>: &ldquo;Cari bantuan profesional jika kamu membutuhkannya,&rdquo; katanya.</p>\n<h5 class=\"wp-block-heading\"><strong>Untuk hubungan dengan orang lain:</strong></h5>\n<p>Tidak hanya terhadap diri sendiri, kamu juga bisa mulai mengurangi kebiasaan&nbsp;<em>toxic positivity</em>&nbsp;ini.</p>\n<p>Caranya?</p>\n<p>&ldquo;Ketika orang yang kita cintai mencurahkan perasaan mereka, yang perlu diingat adalah bahwa perasaan mereka tersebut adalah nyata. Normal bagi mereka untuk merasa sedih, marah, frustrasi dan tidak berdaya,&rdquo; katanya.</p>\n<p>Dan mungkin kmau sudah sering mendengar bahwa, terkadang teman atau orang lain&nbsp;<em>curhat</em>&nbsp;karena mereka hanya ingin didengar dan dipahami.</p>\n<p>Sama seperti dengan yang sering kamu alami dan rasakan, seseorang ingin membicarakan masalah mereka karena hal tersebut akan membantu menjernihkan dan meluruskan pikiran mereka. Jadi, dengarkan mereka.</p>\n<p>&ldquo;Dukungan kamu akan mendorong mereka untuk menjadi kuat dalam mengatasi masalah mereka, bahkan ketika kamu tidak memberikan ceramah apapun kepada mereka. Tahan diri untuk memberikan saran atau menawarkan kiat &mdash;kecuali temanmu secara khusus memang memintanya,&rdquo; sarannya.</p>\n<p>Bingung harus mengatakan apa? Menurut Sarahshita, berikut adalah beberapa ungkapan yang bisa kamu katakan.</p>\n<ul>\n<li>&ldquo;Aku ikut berempati mendengar apa yang sedang kamu alami. Apa yang bisa kubantu?&rdquo;</li>\n<li>&ldquo;Aku tahu kamu sedang mengalami masa-masa sulit. Tapi aku juga tahu kamu kuat.&rdquo;</li>\n<li>&ldquo;Wajar banget kalau kamu merasa kewalahan dan bingung dalam situasimu saat ini.&rdquo;</li>\n<li>&ldquo;Aku tidak tahu harus berkata apa, tapi aku di sini untukmu, ya.&rdquo;</li>\n<li>&ldquo;Berat rasanya, ya. Adakah yang bisa kamu lakukan hari ini untuk membuatmu merasa sedikit lebih baik?&rdquo;</li>\n<li>&ldquo;Kamu tidak salah jika merasa marah, dan tidak ada yang menyalahkanmu.&rdquo;</li>\n<li>&ldquo;Saya tahu ini sulit, tetapi kamu sudah melakukan hal yang efektif dalam menangani ini.&rdquo;</li>\n<li>&ldquo;Wah, itu pasti menyebalkan banget, ya. Apa yang aku bisa bantu?&rdquo;</li>\n</ul>"
+    },
+    {
+      "title": "Trauma Masa Kecil dan Kesehatan Mental Masa Dewasa",
+      "dates": "2 April 2023, 07:34 WIB",
+      "img": "https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-86.png?resize=700%2C450&ssl=1",
+      "link": ""
+    },
+    {
+      "title": "Ajarkan dan Bekali 4 Kata Ajaib Ini Pada Anak Anda Menurut Katarina Ira Puspita, M.Psi",
+      "dates": "4 Januari 2023, 07:34 WIB",
+      "img": "https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-63.png?resize=400%2C266&ssl=1",
+      "link": ""
+    },
+    {
+      "title": "Ajarkan Anak Mengalah Pada Orang Lain",
+      "dates": "14 Mei 2023, 07:34 WIB",
+      "img": "https://i2.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-16.png?resize=700%2C400&ssl=1",
+      "link": ""
+    },
+    {
+      "title": "Psikolog Nurul Annisa M. Psi: Cara Menggunakan Gadget Dan Media Sosial Yang Benar Untuk Wanita",
+      "dates": "24 November 2023, 07:34 WIB",
+      "img": "https://i2.wp.com/pionindonesia.com/wp-content/uploads/2023/03/viktor-talashuk-pq8YByqaheY-unsplash-scaled.jpg?resize=700%2C450&ssl=1",
+      "link": ""
+    },
+    {
+      "title": "3 Langkah Jitu Untuk Stimulasi Tumbuh Kembang Anak",
+      "dates": "24 Juni 2023, 07:34 WIB",
+      "img": "https://i2.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-13.png?resize=700%2C450&ssl=1",
+      "link": ""
+    },
+    {
+      "title": "Pandemi Bikin Jomblo Kesepian, Psikolog: Tetap Terkoneksi meski dengan Teman Virtual",
+      "dates": "24 Juni 2023, 07:34 WIB",
+      "img": "https://i1.wp.com/pionindonesia.com/wp-content/uploads/2023/03/image-82.png?resize=700%2C425&ssl=1",
+      "link": ""
+    }
+  ],
+  "static": {
+    "about": {
+      "title": "About",
+      "icon": "",
+      "link": "static-about.html",
+      "notification": "",
+      "badge": false,
+      "content": "<p><strong>Aplikasi Lengkap tentang Kalimantan</strong></p>\n<p>Borneopedia hadir sebagai aplikasi interaksi sosial (percakapan) khusus membahas tentang Kalimantan. Siapa pun Anda penduduk asli Kalimantan atau yang lahir, besar, dan tinggal di Kalimantan atau punya ketertarikan terhadap Kalimantan, dapat memanfaatkan aplikasi ini secara optimal. Borneopedia mempersembahkan fitur interaksi antar anggota, berbagi informasi, opini, dan percakapan lainnya dalam arti positif untuk kebaikan setiap anggota. Aplikasi ini juga menyediakan informasi yang lengkap tentang Kalimantan, mulai dari sejarah, budaya, lingkungan, kesenian, politik, ekonomi, sosial, bisnis, pendidikan, para tokoh, dan seluruh aspek kehidupan lainnya. Apa pun tentang Kalimantan, ada di Borneopedia.</p>\n<p> </p>\n<p><strong>Fitur Khas Borneopedia</strong></p>\n<p><em><strong>NEOBLOG</strong></em></p>\n<p>Setiap pengguna Borneopedia dapat menuliskan apa saja khususnya terkait Kalimantan, baik informasi maupun opini di NEOBLOG. Anda juga dapat memperkaya tulisan dengan foto atau gambar bahkan video. Borneopedia menyediakan ruang yang cukup bagi Anda dalam berekspresi. Setiap tulisan Anda akan dilihat oleh pengguna lain Borneopedia, khususnya antar anggota yang sudah saling mengikuti (<em>follow</em>). NEOBLOG menjadi sarana interaksi sosial (pertemanan &ndash; <em>networking</em>) antar pengguna Borneopedia. Kami yakin, &lsquo;orang&rsquo; Kalimantan dapat saling tersambung secara positif dalam menjalin persaudaraan dan pertemanan untuk masa depan yang lebih baik. Isu-isu tentang Kalimantan dapat dikupas dan dibahas secara berkualitas di Borneopedia.</p>\n<p> </p>\n<p><strong><em>Q/A</em></strong></p>\n<p>Fitur tanya jawab apa saja tentang Kalimantan. Pengguna Borneopedia yang membutuhkan informasi terkait Kalimantan, dapat menanyakan hal tersebut di fitur Q/A (<em>Question/Answer</em>). Borneopedia menyediakan para ahli, tokoh publik, dan pakar lainnya yang siap menjawab pertanyaan apa pun tentang Kalimantan. Anda bebas bertanya apa saja tentang Kalimantan, Borneopedia menyediakan jawabannya. Selain itu, Borneopedia juga memberikan kesempatan kepada setiap pengguna untuk berpartisipasi dalam menjawab pertanyaan yang diajukan oleh pengguna lainnya. Dari Anda dan untuk Anda.</p>\n<p> </p>\n<p><em><strong>FIGURE/PROFILE</strong></em></p>\n<p>Borneopedia menyediakan informasi lengkap tentang profil dan atau figur tokoh, organisasi, lembaga, perusahaan, perguruan tinggi, dan bahkan tempat-tempat (kota/kabupaten, pulau, dll) yang ada di Kalimantan. Kami sajikan dengan khas yang hanya akan Anda temukan di Borneopedia dan media afiliasinya. Jika Anda membutuhkan informasi lengkap tentang figur dan atau profil tentang Kalimantan, Borneopedia menyediakan semuanya.</p>\n<p> </p>\n<p><em><strong>JOBS</strong></em></p>\n<p>Aplikasi Borneopedia juga menyediakan fitur yang tidak dimiliki oleh aplikasi interaksi sosial sejenis. Fitur JOBS atau lowongan pekerjaan. Kami sediakan spesial untuk pengguna khususnya yang membutuhkan informasi lowongan pekerjaan di Kalimantan. Ya, hanya di Kalimantan. Kami berikan informasi lengkap tentang lowongan pekerjaan di perusahaan-perusahaan yang beroperasi di Kalimantan. Anda, pencari kerja, dapat memanfaatkan fitur ini secara optimal. Anda, perusahaan yang beroperasi di Kalimantan, juga dapat menggunakan aplikasi ini untuk mendapatkan tenaga kerja berkualitas.</p>\n<p> </p>\n<p><em><strong>STORE</strong></em></p>\n<p>Aplikasi Borneopedia makin lengkap dengan hadirnya fitur STORE (<em>Marketplace</em>) sebagai tempat jual beli produk khusus dari Kalimantan. Seluruh produk asli Kalimantan hadir di STORE. Anda pengguna Borneopedia dapat memanfaatkan fitur ini untuk memasarkan produk Anda ke seluruh dunia. Pengguna Borneopedia memiliki keterikatan psikologis dengan Kalimantan, sehingga produk asli atau dari Kalimantan akan lebih mudah terserap pasar.</p>\n<p> </p>\n<p><em><strong>NEWS</strong></em></p>\n<p>Kami paham dengan kebutuhan pengguna akan informasi penting yang hadir setiap waktu. Borneopedia menyediakan informasi khusus tentang Kalimantan, detik demi detik dan menit demi menit. Anda tidak akan pernah ketinggalan informasi penting dan menarik di berbagai bidang terkait Kalimantan. Mulai dari politik, ekonomi, bisnis, sosial, budaya, hiburan, dan lain-lain. Borneopedia bekerja sama dengan penyedia jasa informasi terkemuka baik skala nasional maupun internasional.  </p>"
+    },
+    "faq": {
+      "title": "FAQ",
+      "icon": "",
+      "link": "static-faq.html",
+      "notification": "",
+      "badge": false,
+      "content": [
+        {
+          "topic": "Walk in Appointment",
+          "ask": "Apakah kami dapat langsung mendatangi klinik untuk meminta pemeriksaan psikologis?",
+          "content": "Saat ini semua layanan dilakukan dengan perjanjian terlebih dahulu. Anda dapat mengisi pendaftaran dan melalui perjanjian 2 hari sebelumnya."
+        },
+        {
+          "topic": "Cara Melakukan Perjanjian",
+          "ask": "Jika saya ingin membuat janji dengan Ahli di Pion, bagaimana prosedurnya?",
+          "content": "Untuk membuat janji dengan Ahli di Pion, Anda dapat menghubungi nomor WhatsApp kami di 081339999007. Lalu, kami akan memberikan tautan formulir pendaftaran klien untuk Anda isi. Setelah selesai mengisi formulir pendaftaran klien, Anda akan langsung mendapatkan beberapa pilihan jadwal temu muka dengan Ahli."
+        },
+        {
+          "topic": "Jenis Layanan yang Diberikan",
+          "ask": "Klinik Pion terlalu jauh dengan rumah saya apakah Pion memiliki layanan untuk bertemu Psikolog di luar klinik?",
+          "content": "Pion memiliki layanan kunjungan rumah, kunjungan sekolah, dan ke tempat kerja. Anda dapat membuat janji dengan Ahli di luar klinik sesuai dengan kesepakatan antara dua belah pihak. Tempat yang dipilih wajib di tempat umum dan aman bagi kedua belah pihak."
+        },
+        {
+          "topic": "Biaya layanan",
+          "ask": "Berapakah biaya yang harus dikeluarkan untuk sekali konsultasi di Pion?",
+          "content": "Untuk biaya konsultasi di Pion Clinician beragam, mulai dari Rp 300.000,-. Biaya tergantung dengan pada keahlian dan pengalaman dari para ahli."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy",
+      "icon": "",
+      "link": "static-privacy.html",
+      "notification": "",
+      "badge": false,
+      "content": "<div class=\"bs-meta\"><span class=\"bs-cat\">DISCLAIMER</span></div>\n<h1>Policy Privacy</h1>\n<div class=\"bs-content\">\n<ol>\n<li>Borneopedia adalah aplikasi interaksi sosial (percakapan) yang terbuka untuk umum. Siapa pun Anda, khususnya penduduk asli Kalimantan, lahir, besar, dan tinggal di Kalimantan, atau punya ketertarikan terhadap Kalimantan, dapat menggunakan aplikasi ini.</li>\n<li>Siapa pun dapat membuat satu akun sebagai pengguna Borneopedia dengan mencantumkan nama asli sesuai Kartu Tanda Penduduk (KTP), mengisi profil singkat, menyertakan alamat email aktif, dan melampirkan foto diri.</li>\n<li>Akun Borneopedia adalah identitas kepemilikan pengguna di aplikasi ini. Setiap akun memiliki halaman profil berisi data diri dan riwayat tulisan yang dapat diakses oleh pengguna lain yang saling mengikuti (<em>follow</em>).</li>\n<li>Tulisan merupakan karya sendiri, bukan hasil plagiasi atau menyalin karya orang lain, ditulis dalam bahasa Indonesia yang baik dan menyenangkan atau bahasa lain yang dapat dimengerti pengguna lain.</li>\n<li>Hak cipta dan merek dagang Borneopedia dimiliki oleh PT. Borneopedia Digital Indonesia.</li>\n<li>Setiap tulisan, gambar, dan video yang tayang di Borneopedia merupakan hak milik penulisnya masing-masing (pengguna).</li>\n<li>Tulisan, gambar, dan video tidak boleh mempertentangkan SARA (suku, agama, ras, dan antargolongan), tidak mengandung pornografi, tidak merendahkan pihak lain, tidak berisi fitnah, perjudian, prostitusi, dan dusta (hoaks), informasi bohong (<em>fake news</em>), serta ujaran kebencian (<em>hate speech</em>).</li>\n<li>Pengelola Borneopedia berhak melakukan tindakan seperlunya terhadap pengguna yang menyalahi aturan pada poin 6.</li>\n<li>Pengelola Borneopedia akan mengingatkan, menghapus konten yang tidak sesuai ketentuan bahkan memblokir akun yang tidak bertanggung jawab.</li>\n</ol>\n</div>"
+    },
+    "terms": {
+      "title": "Terms",
+      "icon": "",
+      "link": "static-terms.html",
+      "notification": "",
+      "badge": false,
+      "content": "<ul>\n<li><strong>Ketentuan Mendasar</strong><br /> Anda bertanggung jawab atas penggunaan Layanan, untuk setiap Konten yang Anda posting ke Layanan, dan untuk segala konsekuensinya. Materi yang Anda serahkan, pos, atau tampilan akan dapat dilihat oleh pengguna Layanan baik yang terdaftar dan / atau tidak-terdaftar dan melalui layanan pihak ketiga dan situs web. Anda hanya dapat menyediakan konten yang nyaman untuk Anda berbagi dengan orang lain berdasarkan Ketentuan. Layanan yang Borneopedia sediakan selalu berkembang dan bentuk dan sifat dari Layanan yang Borneopedia sediakan dapat berubah dari waktu ke waktu tanpa pemberitahuan sebelumnya kepada Anda. Selain itu, Borneopedia dapat memberhentikan (secara permanen maupun sementara) penyediaan Layanan (atau fitur apapun dalam Layanan) kepada Anda atau pengguna pada umumnya dan mungkin tidak dapat menyediakan Anda dengan pemberitahuan sebelumnya. Kami juga mempertahankan hak untuk membatasi penggunaan dan penyimpanan menurut kebijakan kami kapanpun tanpa pemberitahuan sebelumnya kepada Anda. Layanan dapat mencakup iklan, yang mungkin ditargetkan untuk Konten atau informasi pada Layanan, permintaan yang dilakukan melalui Layanan, atau informasi lainnya. Jenis iklan oleh Borneopedia pada Layanan dapat berubah. Dalam pertimbangan bahwa Borneopedia memberikan akses dan penggunaan Layanan, Anda setuju bahwa Borneopedia dan setiap penyedia pihak ketiga dan mitra dapat menempatkan iklan tersebut pada Layanan atau yang berhubungan dengan tampilan Konten atau informasi dari Layanan yang diposting oleh Anda atau orang lain. Layanan secara sistem merupakan jaringan terbatas / tertutup yang diselenggarakan oleh Penyelenggara Infrastruktur, dan oleh karena itu setiap Pengguna yang menggunakan Layanan secara otomatis merupakan anggota dari sistem terbatas/tertutup atau intranet ini.<br /><br /></li>\n<li><strong>Data Pendaftaran, Privasi dan Kata Sandi</strong><br /> Untuk mengakses beberapa Layanan, Anda akan diminta untuk menggunakan akun dan kata sandi yang dapat diperoleh dengan mengisi formulir pendaftaran online kami, yang meminta informasi tertentu dan data (\"Data Pendaftaran\"), dan untuk memelihara dan untuk memperbarui Data Pendaftaran Anda sebagaimana diperlukan. Dengan mendaftar, Anda setuju bahwa semua informasi yang diberikan dalam Data Pendaftaran adalah benar dan akurat dan bahwa Anda akan mempertahankan dan memperbarui informasi ini sebagaimana diharuskan untuk menjaganya agar tetap terbaru, lengkap, dan akurat. Kegagalan untuk melakukannya merupakan pelanggaran terhadap Ketentuan, yang dapat mengakibatkan penghentian segera akun Anda. Anda dilarang untuk (i) memilih atau menggunakan akun dengan nama orang lain dengan maksud untuk menirukan orang tersebut; (ii) memilih atau menggunakan akun yang menyerupai nama orang dan/atau institusi lain (iii) menggunakan nama akun yang tunduk pada hak pihak lain selain Anda tanpa izin yang sesuai; atau (iv) menggunakan nama akun yang ofensif, vulgar atau cabul. Borneopedia berhak untuk menolak pendaftaran, membatalkan akun, memberikan akun yang sudah dibatalkan kepada pihak lain menurut kebijakannya. Borneopedia berhak untuk membatalkan akun yang tidak aktif selama 3 bulan, sehingga akun tersebut dapat didaftarkan/dipakai/digunakan oleh pihak/pendaftar lain. Anda juga memberikan kepada kami hak untuk mengungkapkan Data Pendaftaran Anda kepada pihak ketiga.<br /> Setiap informasi yang Anda berikan kepada Borneopedia tunduk pada Kebijakan Privasi kami, yang mengatur pengumpulan dan penggunaan informasi Anda. Anda mengerti bahwa melalui penggunaan Layanan Anda setuju atas pengumpulan dan penggunaan (sebagaimana diatur dalam Kebijakan Privasi) dari informasi ini, termasuk pemindahan informasi ini untuk penyimpanan, pengolahan dan penggunaan oleh Borneopedia. Sebagai bagian dari menyediakan Layanan kepada Anda, kami mungkin perlu untuk memberikan Anda komunikasi tertentu, misalnya pengumuman menyangkut layanan dan pesan administratif. Komunikasi ini dianggap sebagai bagian dari Layanan dan akun Anda, yang mungkin tidak dapat Anda pilih untuk tidak menerima.<br /> Anda bertanggung jawab untuk menjaga kata sandi yang Anda gunakan untuk mengakses Layanan dan untuk setiap kegiatan atau tindakan dengan kata sandi. Kami mendorong Anda untuk menggunakan kata sandi yang \"kuat\" (kata sandi yang menggunakan kombinasi huruf besar dan huruf kecil, angka dan simbol) untuk akun Anda. Borneopedia tidak dapat dan tidak akan bertanggung jawab atas kerugian atau kerusakan yang timbul dari kegagalan Anda untuk mematuhi hal diatas.<br /><br /></li>\n<li><strong>Konten dalam Layanan </strong><br /> Semua Konten, baik yang diposting publik atau dikirim secara pribadi, sepenuhnya merupakan tanggung jawab dari orang dimana Konten tersebut berasal. Kita mungkin tidak memantau atau mengontrol Konten yang dipasang lewat Layanan, dan kita tidak dapat bertanggung jawab atas Konten tersebut. Setiap penggunaan atau ketergantungan pada setiap Konten atau materi yang diposting melalui Layanan atau diperoleh oleh Anda melalui Layanan adalah risiko Anda sendiri. Kami tidak mendukung, mewakili atau menjamin kelengkapan, kebenaran, akurasi, dan keandalan dari setiap Konten atau komunikasi yang diposting melalui Layanan atau mendukung pendapat tertentu yang diekspresikan melalui Layanan. Anda memahami bahwa dengan menggunakan Layanan, Anda mungkin akan menemukan Konten yang mungkin ofensif, berbahaya, tidak akurat atau tidak pantas, atau dalam beberapa kasus, posting yang telah disalahartikan atau menipu. Dalam kondisi apa pun Borneopedia tidak bertanggung jawab dengan cara apapun atas Konten apapun, termasuk, namun tidak terbatas pada, kesalahan atau kelalaian dalam Konten, atau atas kehilangan atau kerusakan apapun yang timbul sebagai akibat dari penggunaan Konten yang dipasang, dikirim lewat email, dikirimkan atau disediakan melalui Layanan atau disiarkan di tempat lain.<br /> Anda mempertahankan hak Anda untuk setiap Konten yang Anda serahkan, posting atau tampilkan pada atau melalui Layanan. Dengan menyerahkan, memposting, atau menampilkan Konten pada atau melalui Layanan, Anda memberikan kami lisensi secara global, non-eksklusif, bebas royalti (dengan hak untuk mensublisensikan) untuk menggunakan, menyalin, mereproduksi, proses, menyesuaikan, memodifikasi, mempublikasikan, mengirimkan, menampilkan dan mendistribusikan Konten tersebut dalam setiap dan semua media atau metode distribusi (sekarang dikenal atau yang kemudian dikembangkan). Anda setuju bahwa lisensi ini mencakup hak untuk Borneopedia untuk memberikan, mempromosikan, dan meningkatkan layanan dan untuk membuat Konten yang dikirimkan ke atau melalui Layanan yang tersedia untuk perusahaan lain, organisasi atau individu yang bermitra dengan Borneopedia untuk sindikasi, penyiaran, distribusi atau publikasi Konten tersebut pada media dan layanan lainnya, dengan tunduk pada syarat dan ketentuan untuk penggunaan Konten tersebut.<br /> Penggunaan tambahan tersebut oleh Borneopedia, atau perusahaan lain, organisasi atau individu yang bermitra dengan Borneopedia, dapat dilakukan tanpa kompensasi yang dibayarkan kepada Anda sehubungan dengan Konten yang Anda serahkan, posting, kirimkan, atau buat tersedia melalui Layanan.<br /> Kami dapat mengubah atau menyesuaikan Konten Anda untuk mengirimkan, menampilkan atau mendistribusikannya melalui jaringan komputer dan di berbagai media dan / atau membuat perubahan pada Konten Anda sebagaimana yang diperlukan agar sesuai dengan dan menyesuaikan Konten untuk setiap persyaratan atau keterbatasan jaringan apapun, perangkat, layanan atau media.<br /> Anda bertanggung jawab atas penggunaan Anda terhadap Layanan, untuk setiap Konten yang Anda berikan, dan untuk setiap konsekuensinya, termasuk penggunaan Konten Anda oleh pengguna lain dan mitra pihak ketiga kami. Anda memahami bahwa Konten Anda dapat dibuat sindikasi, disiarkan, didistribusikan, atau diterbitkan oleh mitra kami dan jika Anda tidak memiliki hak untuk mengirimkan Konten untuk penggunaan tersebut, hal tersebut dapat membuat Anda memiliki pertanggung jawaban. Borneopedia tidak akan bertanggung jawab atau berkewajiban atas setiap penggunaan Konten Anda dengan Borneopedia sesuai dengan Ketentuan ini. Anda mewakili dan menjamin bahwa Anda memiliki semua hak; kekuasaan dan otoritas yang diperlukan untuk memberikan hak-hak di sini terhadap Konten apapun yang Anda kirimkan.<br /><br /></li>\n<li><strong>Pembatasan Konten, Penggunaan dan Perilaku pada Layanan</strong><br /> Kami berhak kapanpun (tapi tidak akan memiliki kewajiban) untuk menghapus atau menolak mendistribusikan Konten pada Layanan, untuk menangguhkan atau mengakhiri pengguna, dan untuk merebut kembali nama pengguna dan / atau akun tanpa kewajiban kepada Anda. Kami juga berhak untuk mengakses, membaca, mempertahankan, dan memberikan informasi jika kami yakin sewajarnya diperlukan untuk (i) mematuhi hukum yang berlaku, peraturan, proses hukum atau permintaan pemerintah, (ii) menegakkan Ketentuan, termasuk penyelidikan potensi pelanggaran Ketentuan, (iii) mendeteksi, mencegah, atau mengatasi penipuan, masalah keamanan atau teknis, (iv) menanggapi permintaan bantuan dari pengguna, atau (v) melindungi hak, properti, atau keamanan Borneopedia, pengguna, dan masyarakat umum.<br /> Anda tidak dapat melakukan hal-hal berikut saat mengakses atau menggunakan Layanan: (i) mengakses, mengutak-atik, atau menggunakan area non-publik dari Layanan, sistem komputer Borneopedia, atau sistem pengiriman teknis penyedia Borneopedia; (ii) pemeriksaan, memindai, atau menguji kerentanan sistem atau jaringan atau melanggar atau menghindari tindakan keamanan atau otentikasi; (iii) mengakses atau melakukan pencarian atau mencoba untuk mengakses atau mencari Layanan dengan cara apapun (otomatis atau sebaliknya) selain melalui antarmuka yang saat ini disediakan oleh Borneopedia (dan hanya sesuai dengan syarat dan ketentuan); (iv) membentuk TCP / IP packet header atau bagian manapun dari information header dalam email atau posting, atau dengan cara apapun menggunakan Layanan untuk mengirim informasi yang mengidentifikasi sumber yang telah diubah, menipu atau salah; atau (v) mengganggu (atau mencoba untuk melakukannya), akses dari setiap pengguna, host atau jaringan, termasuk, tanpa batasan, mengirimkan virus, overloading, membanjiri, spamming, mail-bombing Layanan, atau dengan cara membuat Konten sedemikian rupa untuk mengganggu atau membuat beban yang tidak semestinya pada Layanan.<br /> Penggunaan Anda atas Layanan tunduk pada semua hukum dan peraturan yang berlaku, dan Anda bertanggung jawab atas substansi Konten melalui Layanan. Dengan memposting informasi di dalam atau menggunakan layanan komunikasi, saluran, ruangan mengobrol, atau layanan interaktif lainnya yang mungkin tersedia untuk Anda pada atau melalui Layanan, Anda setuju bahwa Anda tidak akan mengunggah, berbagi, posting, atau mendistribusikan atau memfasilitasi distribusi Konten apapun, termasuk (tapi tidak terbatas kepada) teks, komunikasi, perangkat lunak, gambar, suara, data, atau informasi lainnya, yang (i) melanggar hukum, mengancam, kasar, melecehkan, defamasi, memfitnah, menipu, curang, invasif terhadap privasi pihak lain, menyakitkan, berisi tindakat seksual yang eksplisit atau grafis (termasuk namun tidak terbatas pada bahasa seksual yang bersifat kekerasan atau mengancam diarahkan pada individu atau kelompok individu lain), atau melanggar Ketentuan; (ii) mengorbankan, melecehkan, merendahkan, atau mengintimidasi individu atau grup individu berdasarkan agama, jenis kelamin, orientasi seksual, ras, etnis, usia, atau cacat; (iii) melanggar hak paten, merek dagang, rahasia dagang, hak cipta, hak publisitas, atau hak milik lainnya dari pihak manapun; (iv) merupakan iklan yang tidak sah atau tidak diminta, email sampah atau email massal (juga dikenal sebagai \"spam\"), surat berantai, bentuk lain dari ajakan yang tidak sah, atau segala bentuk lotere atau perjudian; (v) mengandung virus atau kode komputer lainnya, file atau program yang dirancang atau dimaksudkan untuk mengganggu, merusak, atau membatasi fungsi dari perangkat lunak, peralatan hardware, atau telekomunikasi atau merusak atau mendapatkan akses tidak sah ke data atau informasi lain dari pihak ketiga; dan / atau (vi) menerikan orang atau badan, termasuk karyawan kami atau perwakilan (\"Konten Meragukan\").<br /> Kami tidak mendukung atau bertanggung jawab atas isi dari materi yang diunggah atau diserahkan oleh pengguna terdaftar dan tidak-terdaftar dari Layanan. Pengguna dimungkinkan untuk menandai atau melaporan Konten yang mereka anggap sebagai Konten Meragukan. Kami akan meninjau tanda atau laporan oleh pengguna mengenai Konten Meragukan, atas dasar usaha terbaik dalam waktu 24 jam dan menentukan apakah Konten tersebut dianggap sebagai Konten Meragukan atau tidak berdasarkan pertimbangan kami sendiri. Kami tidak melakukan pengencekan awal, memonitor, atau mengedit konten yang diposting oleh pengguna layanan komunikasi, ruang obrolan, papan pesan, grup berita, perpustakaan perangkat lunak, atau layanan interaktif lainnya yang mungkin tersedia pada atau melalui Layanan. Namun, kami memiliki hak atas kebijakan kami untuk menghapus segala bentuk Konten yang, menurut penilaian kami, tidak sesuai dengan Ketentuan ini, atau berbahaya, tidak pantas, atau tidak akurat. Kami tidak bertanggung jawab atas kegagalan atau keterlambatan dalam menghapus Konten Meragukan tersebut. Anda dengan ini menyetujui penghapusan tersebut dan melepaskan segala tuntutan terhadap kami yang timbul dari penghapusan Konten Meragukan.<br /> Kami tidak bertanggung jawab atas penyelesaian perselisihan yang timbul dikarenakan Konten tertentu yang dipasang pada Layanan melanggar hak paten, merek dagang, rahasia dagang, hak cipta, hak publisitas, atau hak milik lainnya dari pihak manapun. Ini adalah tanggung jawab dari pengguna yang relevan. Kami berhak untuk menghapus Konten yang diduga melanggar tanpa pemberitahuan sebelumnya, atas kebijakan kami, dan tanpa kewajiban kepada Anda. Dalam kondisi yang tepat, Borneopedia juga akan mengakhiri akun pengguna jika pengguna dianggap melakukan pelanggaran berulang.<br /> Selain itu, Anda tidak boleh menggunakan akun Anda untuk melakukan pelanggaran keamanan akun lain atau mencoba untuk mendapatkan akses tidak sah ke jaringan atau server lain. Tidak semua area Layanan mungkin tersedia bagi Anda atau pengguna lain yang berwenang dari Layanan. Anda tidak akan mengganggu orang lain untuk menggunakan dan menikmati Layanan. Pengguna yang melanggar sistem atau keamanan jaringan dapat dikenakan tanggung jawab pidana atau perdata. Anda setuju bahwa kami dapat setiap saat, dan atas kebijakan kami, mengakhiri keanggotaan Anda, akun, atau afiliasi lainnya dengan Layanan kami tanpa pemberitahuan sebelumnya kepada Anda atas pelanggaran salah satu ketentuan di atas. Selain itu, Anda mengakui bahwa kami akan bekerja sama sepenuhnya dengan penyelidikan pelanggaran keamanan sistem atau jaringan di situs lain, termasuk bekerja sama dengan pihak penegak hukum dalam menyelidiki dugaan pelanggaran pidana.<br /><br /></li>\n<li><strong>Penyangkalan, Batasan Tanggung Jawab, and Ganti Rugi</strong><br /> Bagian ini membatasi kewajiban Penyedia Infrastruktur dan pemegang saham, anak perusahaan, afiliasi, perusahaan terkait, pejabat, direktur, karyawan, agen, perwakilan, mitra, pemberi lisensi, sponsor, dan pengiklan, dan termasuk (tapi tidak terbatas kepada) semua pihak yang terlibat dalam menciptakan, memproduksi, dan / atau memberikan layanan dan / atau isinya (secara kolektif, \"Entitas Penyedia Infrastruktur\").</li>\n<ol>\n<li>Layanan tersedia \"SEBAGAIMANA ADANYA\"<br /> Anda mengakses kepada dan menggunakan Layanan atau Konten dengan risiko Anda sendiri. Anda mengerti dan setuju bahwa Layanan (termasuk informasi statistik/data/laporan dan/atau respon pengguna lain yang tersedia untuk entitas tertentu) disediakan untuk Anda pada \"SEBAGAIMANA ADANYA\" dan \"SEBAGAIMANA TERSEDIA\". Tanpa mengabaikan ketentuan di atas, sampai batas maksimal yang diizinkan oleh hukum yang berlaku, Penyedia Infrastruktur menyangkal semua jaminan dan kondisi, baik tersurat maupun tersirat, termasuk, namun tidak terbatas pada, jaminan tersirat tentang kemampuan perdagangan, kesesuaian untuk tujuan tertentu, atau garansi atas tidak melakukan pelanggaran.<br /> Entitas Penyedia Infrastruktur tidak membuat garansi dan menyangkal semua tanggung jawab dan kewajiban untuk: (i) kelengkapan, akurasi, ketersediaan, ketepatan waktu, keamanan atau keandalan Layanan atau Konten; (ii) kerugian apapun ke sistem komputer Anda, kehilangan data, atau kerusakan lain yang dihasilkan dari akses Anda dalam atau penggunaan Layanan atau Konten; (iii) penghapusan, atau kegagalan untuk menyimpan atau mengirimkan, Konten atau bentuk komunikasi lain oleh Layanan; dan (iv) apakah Layanan akan memenuhi kebutuhan Anda atau tersedia tanpa terganggu, aman, atau bebas dari kesalahan.<br /> Dalam Layanan mungkin terdapat kesalahan teknis atau kesalahan lainnya, ketidakakuratan atau kesalahan ketik. Kami mungkin akan membuat perubahan terhadap Layanan, termasuk harga dan deskripsi dari setiap produk yang tercantum di Layanan, setiap saat tanpa pemberitahuan. Layanan dapat sudah kadarluarsa, dan kami tidak membuat komitmen untuk memperbaharui Layanan tersebut. Penggunaan Layanan atau tindakan pengunduhan atau akuisisi material lainnya melalui Layanan dilakukan pada kebijaksanaan dan risiko Anda sendiri dan dengan persetujuan Anda bahwa Anda akan bertanggung jawab atas segala kerusakan pada sistem komputer Anda atau hilangnya data yang dihasilkan dari kegiatan tersebut. Tidak ada saran atau informasi, baik lisan maupun tulisan, yang diperoleh dari Penyedia Infrastruktur atau melalui Layanan, akan menciptakan jaminan yang tidak secara tegas ditulis di Ketentuan ini.<br /> Konten yang tersedia melalui Layanan seringkali mewakili pendapat dan penilaian dari penyedia informasi, pengguna Layanan, atau orang atau badan lainnya yang tidak berhubungan dengan kami. Kami tidak mendukung, tidak pula kita bertanggung jawab atas keakuratan atau keandalan, pendapat apapun, saran, atau pernyataan yang dibuat oleh orang atau badan lain tidak terhubung dengan kami. Anda mengerti dan setuju bahwa interupsi sementara layanan yang tersedia melalui Layanan dapat terjadi sebagai peristiwa biasa. Anda juga memahami dan menyetujui bahwa kami tidak memiliki kontrol atas jaringan pihak ketiga yang Anda akses untuk menggunakan Layanan, dan karena itu, penundaan dan gangguan transmisi jaringan lainnya benar-benar di luar kendali kita. Anda mengerti dan setuju bahwa layanan yang tersedia pada Layanan disediakan \"SEBAGAIMANA ADANYA\" dan bahwa kita tidak bertanggung jawab untuk ketepatan waktu, penghapusan, kesalahan pengiriman atau kegagalan untuk menyimpan komunikasi atau setelan pribadi.</li>\n<li>Tautan<br /> Layanan dapat berisi tautan ke situs web atau sumber pihak ketiga. Anda mengakui dan menyetujui bahwa Entitas Penyedia Infrastruktur tidak bertanggung jawab atau berkewajiban atas: (i) ketersediaan atau akurasi situs web atau sumber tersebut; atau (ii) konten, produk, atau layanan pada atau tersedia dari situs web atau sumber tersebut. Tautan ke situs web atau sumber tersebut tidak menyiratkan dukungan oleh Entitas Penyedia Infrastruktur atas situs web atau sumber atau konten, produk, atau layanan yang tersedia dari situs web atau sumber daya tersebut. Anda mengakui tanggung jawab untuk dan menanggung semua risiko yang timbul dari penggunaan Anda atas situs web atau sumber daya tersebut.</li>\n<li>Batasan Tanggung Jawab<br /> Entitas Penyedia Infrastruktur tidak bertanggung jawab atas kerusakan tidak langsung, insidental, khusus, konsekuensial atau hukuman, atau kehilangan keuntungan atau pendapatan, baik yang timbul secara langsung atau tidak langsung, atau kehilangan data, penggunaan, goodwill, atau kerugian tidak berwujud lainnya, yang diakibatkan oleh (i) akses Anda atau penggunaan atau ketidakmampuan untuk mengakses atau menggunakan Layanan; (ii) setiap perilaku atau konten dari pihak ketiga manapun alaman Layanan, termasuk tanpa batasan, yang bersifat menghina, menyinggung atau ilegal dari pengguna lain atau pihak ketiga; (iii) setiap Konten yang diperoleh dari Layanan; atau (iv) akses yang tidak sah, penggunaan atau perubahan transmisi atau Konten. Pembatasan ayat ini berlaku untuk segala kewajiban teoritis, apakah berdasarkan garansi, kontrak, undang-undang, kerugian (termasuk kelalaian) atau sebaliknya, dan apakah Entitas Penyedia Infrastruktur telah diberitahu tentang kemungkinan kerusakan tersebut, dan bahkan jika suatu penyelesaian yang telah ditetapkan di sini tidak dapat mencapai tujuan essensialnya. Selanjutnya, kami tidak akan bertanggung jawab dengan cara apapun atas barang dan jasa dan barang dan jasa pihak ketiga yang ditawarkan melalui Layanan atau bantuan dalam melakukan transaksi komersial melalui Layanan, termasuk namun tidak terbatas pada proses pemesanan.</li>\n<li>Ganti Rugi<br /> Anda akan mengganti kerugian dan membebaskan Entitas Penyedia Infrastruktur dari kewajiban, kerusakan atau biaya (termasuk biaya dan tagihan kuasa hukum) dari (i) setiap klaim atau permintaan yang dibuat oleh pihak ketiga dan / atau pengguna lain yang ada atau timbul dari (tidak terbatas kepada) Konten Anda dalam Layanan, penggunaan Layanan, pelanggaran terhadap Ketentuan oleh Anda, dan / atau pelanggaran oleh Anda, dan / atau pihak ketiga yang menggunakan akun Anda, dari hak kekayaan intelektual atau hak lain yang dimiliki orang atau badan hukum. Entitas Penyedia Infrastruktur berhak untuk (tidak terbatas kepada) menggugat dan / atau klaim kepada Anda atas perselisihan antara Anda dan pengguna lain dan atau orang pihak ketiga atau badan hukum yang mengakibatkan klaim apapun atau permintaan yang dibuat oleh pihak ketiga dan / atau pengguna lain.<br /><br /></li>\n</ol>\n<li><strong>Penghentian Penggunaan</strong><br /> Anda setuju bahwa kami dapat, atas pertimbangan kami sendiri, menghentikan atau menangguhkan akses Anda ke semua atau sebagian dari Layanan dengan atau tanpa pemberitahuan dan alasan apapun, termasuk, tanpa batasan, pelanggaran dari Ketentuan ini. Apa saja yang dicurigai sebagai perbuatan curang, kasar atau ilegal dapat menjadi dasar untuk mengakhiri hubungan Anda dan dapat diserahkan kepada penegak hukum yang sesuai. Pada saat pengakhiran atau suspensi, terlepas dari alasannya, hak Anda untuk menggunakan layanan yang tersedia pada Layanan segera berhenti, dan Anda mengakui dan menyetujui bahwa kami dapat dengan segera menghentikan atau menghapus akun Anda dan semua informasi terkait dan file dalam akun Anda dan / atau setiap akses lebih lanjut ke file tersebut atau Layanan. Kami tidak bertanggung jawab kepada Anda atau pihak ketiga atas setiap klaim atau kerusakan yang timbul dari penghentian atau penangguhan atau tindakan lain yang diambil oleh kami sehubungan dengan penghentian atau penangguhan tersebut. Jika Anda ingin mengakhiri akun Anda, Anda hanya perlu menghentikan penggunaan Layanan. Semua syarat dalam Ketentuan, yang menurut sifatnya harus bertahan ketika ada penghentian penggunaan, akan tetap berlaku, termasuk, tanpa batasan, penyangkalan garansi, batasan tanggung jawab dan ganti rugi.<br /><br /></li>\n<li><strong>Ketentuan Umum</strong><br /> Tidak ada keagenan, kemitraan, kongsi, atau ketenagakerjaan yang terbuat sebagai akibat dari Ketentuan dan Anda tidak memiliki otoritas apapun untuk mengikat Penyedia Infrastruktur dalam aspek apa pun. Kegagalan Penyedia Infrastruktur untuk menggunakan hak dalam Ketentuan ini tidak akan dianggap sebagai pengecualian penggunaan hak dalam Ketentuan ini. Dalam hal suatu persyaratan dalam Ketentuan ini yang dianggap tidak sah atau tidak dapat dilaksanakan, maka persyaratan tersebut akan dibatasi atau dieliminasi sampai sebatas minimum yang diperlukan, dan persyaratan lainnya dalam Ketentuan ini akan tetap berlaku sepenuhnya. Ketentuan ini tidak dapat dialihkan, dipindahkan atau disublisensikan oleh Anda kecuali dengan persetujuan tertulis terlebih dahulu Penyedia Infrastruktur. Penyedia Infrastruktur dapat mentransfer, mengalihkan atau mendelegasikan Ketentuan dan hak dan kewajibannya tanpa perlu meminta persetujuan Anda. Ketentuan akan diatur oleh dan ditafsirkan sesuai dengan hukum Republik Indonesia. Ketentuan ini, dan Kebijakan Privasi kami adalah kesepakanan keseluruhan dan eksklusif antara Penyedia Infrastruktur dengan Anda mengenai Layanan (tidak termasuk layanan apapun yang Anda memiliki perjanjian terpisah dengan Penyedia Infrastruktur yang secara eksplisit adalah tambahan atau pengganti Ketentuan ini), dan Ketentuan ini menggantikan dan menggantikan setiap perjanjian sebelumnya antara Penyedia Infrastruktur dan Anda mengenai Layanan. Jika Anda memiliki pertanyaan tentang Ketentuan ini, silahkan hubungi kami.</li>\n</ul>"
+    },
+    "contact": {
+      "title": "Contact",
+      "icon": "",
+      "link": "static-contact.html",
+      "notification": "",
+      "badge": false,
+      "content": "<div style=\"margin: 1rem 0;\">\n<strong>PT BORNEOPEDIA DIGITAL INDONESIA</strong><br>\nGedung Office 8, Lantai 18 Unit A, SCBD Lot.28<br>\nJl. Jendral Sudirman Kav.52-53, Senayan, Kebayoran Baru,<br>\nJakarta 12190<br>\n+62 21 29608059\n</div>"
+    }
+  },
+  "setting": [
+    {
+      "title": "Account",
+      "list": [
+        {
+          "title": "Change Email",
+          "link": "setting-email.html",
+          "toggle": false,
+          "toggle_value": false
+        },
+        {
+          "title": "Change Password",
+          "link": "setting-password.html",
+          "toggle": false,
+          "toggle_value": false
+        },
+        {
+          "title": "Request Verification",
+          "link": "setting-verify.html",
+          "toggle": false,
+          "toggle_value": false
+        },
+        {
+          "title": "Private Account",
+          "link": "",
+          "toggle": true,
+          "toggle_value": false
+        }
+      ]
+    },
+    {
+      "title": "Setting",
+      "list": [
+        {
+          "title": "Push Notification",
+          "link": "",
+          "toggle": true,
+          "toggle_value": true
+        },
+        {
+          "title": "Email Notification",
+          "link": "",
+          "toggle": true,
+          "toggle_value": true
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "list": [
+        {
+          "title": "Terms & Conditions",
+          "link": "static-term.html",
+          "toggle": false,
+          "toggle_value": false
+        },
+        {
+          "title": "Policy Privacy",
+          "link": "static-policy.html",
+          "toggle": false,
+          "toggle_value": false
+        },
+        {
+          "title": "About",
+          "link": "static-about.html",
+          "toggle": false,
+          "toggle_value": false
+        },
+        {
+          "title": "FAQ",
+          "link": "static-faq.html",
+          "toggle": false,
+          "toggle_value": false
+        },
+        {
+          "title": "Version",
+          "link": "static-about.html",
+          "toggle": false,
+          "toggle_value": false
+        },
+        {
+          "title": "Logout",
+          "link": "index-wp.html",
+          "toggle": false,
+          "toggle_value": false
+        },
+        {
+          "title": "Delete Account",
+          "link": "setting-account-remove.html",
+          "toggle": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+			
+			<!-- booking -->
+			<section class="section board">
+
+				<div class="board-row">
+	
+					<div class="booking-block">
+
+						<h1 class="title -big">Booking Schedule <div class="title-step">Step 3 of 3</div></h1>
+						<div class="booking-body">
+
+							<div class="form-main form-booking">
+								<form action="booking-step4.html">
+									<div class="booking-row">
+										<div class="form-text">Attending date schedule</div>
+										{{>input type="text" name="attending_date" placeholder="Select date" nolabel="true" function="js-datepicker-booking" parent="js-datepicker-container" readonly="true"}}
+									</div>
+									<div class="booking-row">
+										<div class="form-text">Time to attend</div>
+										<div class="booking-time">
+											{{>radio label="10.00" id="time_1000" name="book_time" disabled="true"}}
+											{{>radio label="10.30" id="time_1030" name="book_time"}}
+											{{>radio label="11.00" id="time_1100" name="book_time"}}
+											{{>radio label="11.30" id="time_1130" name="book_time"}}
+											{{>radio label="12.00" id="time_1200" name="book_time" disabled="true"}}
+											{{>radio label="12.30" id="time_1230" name="book_time" disabled="true"}}
+											{{>radio label="13.00" id="time_1300" name="book_time"}}
+											{{>radio label="13.30" id="time_1330" name="book_time"}}
+											{{>radio label="14.00" id="time_1400" name="book_time"}}
+											{{>radio label="14.30" id="time_1430" name="book_time"}}
+											{{>radio label="15.00" id="time_1500" name="book_time" disabled="true"}}
+											{{>radio label="15.30" id="time_1530" name="book_time"}}
+											{{>radio label="16.00" id="time_1600" name="book_time"}}
+											{{>radio label="16.30" id="time_1630" name="book_time"}}
+											{{>radio label="17.00" id="time_1700" name="book_time"}}
+											{{>radio label="17.30" id="time_1730" name="book_time"}}
+											{{>radio label="18.00" id="time_1800" name="book_time"}}
+										</div>
+									</div>
+									<div class="booking-row">
+										<div class="form-text">Your psychiatrist</div>
+										{{>select type="select" name="psychiatrist" placeholder="Select  your psychiatrist" nolabel="true" option="Dian Oriza M.Psi.,Katarina Ira Puspita M.Psi.,Astrid WEN M.Psi.,Dr. Rahma Paramita M.Psi."}}
+									</div>
+									<div class="booking-row booking-action">
+										{{>button type="button" label="Back" class="-auto" onclick="window.history.go(-1); return false;"}}
+										{{>button type="submit" label="Next" class="-primary -auto"}}
+									</div>
+								</form>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+
+</body>
+</html>

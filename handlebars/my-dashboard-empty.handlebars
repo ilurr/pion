@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+
+			<!-- side -->
+			{{>aside active="Dashboard"}}
+			
+			<!-- dashboard -->
+			<section class="section board">
+
+				<div class="board-row">
+
+					<h1 class="title"><span class="fa-solid fa-grip"></span> Dashboard</h1>
+
+					{{>summary}}
+
+				</div>
+
+				<div class="board-row">
+
+					<h2 class="title -small"><span class="fa-solid fa-clock-rotate-left"></span> Sessions</h2>
+
+					{{>list empty=true}}
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+</body>
+</html>

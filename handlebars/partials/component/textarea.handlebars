@@ -1,0 +1,14 @@
+<div class="form-row{{#if txterror}} form-error{{/if}}"{{#if parent}} id="{{parent}}"{{/if}}>
+	{{#if label}}
+	<label for="{{name}}">{{label}}</label>
+	{{/if}}
+	{{#if txterror}}
+	<div class="form-error">{{{txterror}}}</div>
+	{{/if}}
+	<div class="form-textarea">
+		<textarea name="{{name}}" id="{{name}}" class="textarea{{#if txterror}} -error{{/if}}{{#if function}} {{function}}{{/if}}" placeholder="{{placeholder}}"{{#eq required compare="true"}} required="required"{{/eq}}{{#eq disabled compare="true"}} disabled="disabled"{{/eq}}{{#eq readonly compare="true"}} readonly="readonly"{{/eq}}>{{#if txtVal}}{{txtVal}}{{/if}}</textarea>
+	</div>
+	{{#if txthint}}
+	<div class="form-hint">{{{txthint}}}</div>
+	{{/if}}
+</div>

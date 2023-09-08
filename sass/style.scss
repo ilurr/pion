@@ -1,0 +1,84 @@
+// default
+@import 'default/vars';
+@import 'mixin/grid';
+@import 'mixin/grid-framework';
+@import 'mixin/mixin';
+
+// base project
+@import 'base/vars';
+
+// darkmode
+@import 'darkmode/setting';
+@import 'darkmode/var_light';
+@import 'darkmode/var_dark';
+@import 'darkmode/root_light';
+
+// global
+@import 'layout/global';
+@import 'layout/grid';
+
+// plugin
+@import 'plugin/datepicker';
+@import 'plugin/swiper';
+
+// base components
+@import 'components/icon';
+@import 'components/form';
+@import 'components/button';
+@import 'components/button_theme';
+@import 'components/label';
+@import 'components/menu';
+
+// main module
+@import 'module/header';
+@import 'module/nav';
+@import 'module/footer';
+
+// main components
+@import 'components/title';
+@import 'components/toast';
+@import 'components/accordion';
+// @import 'components/panel';
+// @import 'components/profile';
+@import 'components/block';
+@import 'components/list';
+@import 'components/tile';
+@import 'components/paging';
+@import 'components/modal';
+
+// pages
+@import 'pages/cover';
+@import 'pages/about';
+@import 'pages/media';
+@import 'pages/faq';
+@import 'pages/contact';
+
+// dashboard
+@import 'module/dashboard';
+@import 'pages/booking';
+@import 'pages/setting';
+
+// utility
+@import 'module/helper';
+@import 'layout/override';
+
+// page
+body.main {
+	& {
+		background: #fff;
+	}
+	.root {
+		position: relative;
+		padding-top: 60px;
+		@include min-responsive($screen-middle) {
+			padding-top: 100px;
+		}
+	}
+	.container {
+		@include min-responsive($screen-middle) {
+			width: 100%;
+			margin: 0;
+			min-height: 100vh;
+		}
+	}
+}

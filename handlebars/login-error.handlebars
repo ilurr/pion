@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true}}
+
+<body>
+
+	<div class="container container-back">
+			{{>block_back title_back="Back to Home" title_link="index.html"}}
+	</div>
+
+	<!-- layout -->
+	<div class="container">
+
+		{{>block_top brand="pion-clinician"}}
+
+		<div class="block-middle">
+			{{>form_login action="my-dashboard.html" register=true txterrorEmail="Invalid email or your phone" txterrorPsswrd="Wrong password"}}
+			
+			<div class="form-hr"><span>atau</span></div>
+			
+			{{>form_sosmed lead="Login dengan menggunakan akun ini" google=true facebook=true apple=true twitter=true}}
+		</div>
+
+		{{!>block_footer network=true terms=true}}
+		
+	</div>
+
+{{!-->kgmedia_popup type="full" hide="hide" page="complete"--}}
+{{>js}}
+</body>
+</html>

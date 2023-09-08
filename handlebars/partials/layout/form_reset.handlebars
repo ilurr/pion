@@ -1,0 +1,14 @@
+<div class="form-main">
+	<form action="{{action}}">
+		{{>input type="password" label="Password baru" name="password" placeholder="harus diisi" txterror=txterrorPsswrd}}
+		{{>input type="password" label="Ulangi password" name="password2" placeholder="ulangi password baru" txterror=txterrorPsswrd2}}
+		<div class="form-hint">
+			<p>Panjang password setidaknya 8 karakter, mengandung angka, huruf kapital, dan huruf kecil.</p>
+		</div>
+		<hr>
+		{{#if txterrorSystem}}
+		<div class="form-error text-center">{{txterrorSystem}}</div>
+		{{/if}}
+		{{>button name="forget" type="submit" label="Reset Password" class="-disabled" disabled="true"}}
+	</form>
+</div>
