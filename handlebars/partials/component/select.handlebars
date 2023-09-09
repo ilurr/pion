@@ -1,4 +1,4 @@
-<div class="form-row{{#eq nolabel compare="true"}}{{else}} form-input{{/eq}}">
+<div class="form-row{{#eq nolabel compare="true"}}{{else}} form-input{{/eq}}{{#if inline}} form-inline{{/if}}{{#if cols}} form-cols-{{cols}}{{/if}}">
 	{{#eq nolabel compare="true"}}
 	{{else}}
 	<label for="{{name}}">{{label}}</label>

@@ -1,4 +1,4 @@
-<div class="form-row{{#eq nolabel compare="true"}}{{else}} form-input{{/eq}}{{#if inline}} form-inline{{/if}}{{#if typeFile}} form-file{{/if}}"{{#if parent}} id="{{parent}}"{{/if}}{{#if typeFile}} data-placeholder="{{placeholder}}"{{/if}}>
+<div class="form-row{{#eq nolabel compare="true"}}{{else}} form-input{{/eq}}{{#if inline}} form-inline{{/if}}{{#if typeFile}} form-file{{/if}}{{#if cols}} form-cols-{{cols}}{{/if}}"{{#if parent}} id="{{parent}}"{{/if}}{{#if typeFile}} data-placeholder="{{placeholder}}"{{/if}}>
 	{{#eq nolabel compare="true"}}
 	{{else}}
 	<label for="{{name}}">{{label}}</label>

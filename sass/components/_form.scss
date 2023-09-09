@@ -31,13 +31,27 @@
 		width: auto;
 		display: inline-flex;
     margin: 0;
+		.datepicker {
+			min-width: 300px;
+		}
+		.form-select {
+			width: 100px;
+		}
+		.form-select,
 		input {
 			max-width: 100px;
 			height: 45px;
 			margin: .5rem 0;
 			@include min-responsive($screen-tablet) {
-				margin: 0 .25rem;
+				margin: 0;
+				// margin: 0 .25rem;
 			}
+		}
+		.button {
+			margin: .5rem 0;
+			@include min-responsive($screen-tablet) {
+				margin: 0;
+			}			
 		}
 		&-footnote {
 			display: inline-flex;
@@ -187,6 +201,7 @@
 				position: absolute;
 				z-index: 1;
 				font-size: .875rem;
+				line-height: 1;
 				width: calc(100% - 0.50rem);
 				left: 0.250rem;
 				padding: 0 0.500rem;
@@ -197,7 +212,8 @@
 				align-items: center;
 				pointer-events: none;
 				// color: lighten($color-text-primary, 40%);
-				color: #112639;
+				// color: #112639;
+				color: #ccc;
 			}
 		}
 
@@ -534,4 +550,74 @@
 			margin-top: 0;
 		}
 	}
+
+	&-cols {
+		position: relative;
+		display: flex;
+		gap: 5px;
+		padding: 0;
+		@include max-responsive($screen-tablet) {
+			gap: 0 5px;
+			padding: .5rem 0;
+			flex-wrap: wrap;
+		}
+		.button,
+		.form-select {
+			margin: 0;
+		}
+		.form-inline {
+			input {
+				margin: 0;
+			}
+		}
+		.form-select,
+		select,
+		input {
+			width: 100%;
+			max-width: 100%;
+		}
+		&-10 {
+			flex-basis: 10%;
+			@include max-responsive($screen-tablet) {
+				flex-basis: calc(15% - 5px);
+			}
+		}
+		&-15 {
+			flex-basis: 15%;
+			@include max-responsive($screen-tablet) {
+				flex-basis: calc(50% - (5px / 2));
+			}
+		}
+		&-20 {
+			flex-basis: 20%;
+			@include max-responsive($screen-tablet) {
+				flex-basis: 85%;
+			}
+		}
+		&-25 {
+			flex-basis: 25%;
+			@include max-responsive($screen-tablet) {
+				flex-basis: calc(50% - (5px / 2));
+			}
+		}
+		&-30 {
+			flex-basis: 30%;
+			@include max-responsive($screen-tablet) {
+				flex-basis: 100%;
+			}
+		}
+		&-35 {
+			flex-basis: 35%;
+		}
+		&-40 {
+			flex-basis: 40%;
+		}
+		&-45 {
+			flex-basis: 45%;
+		}
+		&-50 {
+			flex-basis: 50%;
+		}
+	}
+
 }

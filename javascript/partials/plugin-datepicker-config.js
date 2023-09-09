@@ -55,3 +55,30 @@ if(!!elem.length>0) {
 	// 	elem.value = datepicker.getDate();
 	// });
 }
+
+document.addEventListener('click', function(e){
+	if (e.target.matches('.js-datepicker-now')) {
+		let options = {
+			maxDate: new Date(),
+			format: "dd MM yyyy",
+			leftArrow: '<',
+			language: 'id',
+			rightArrow: '>',
+			container: '#'+e.target.parentElement.getAttribute('id'),
+			orientation: "bottom auto",
+			defaultViewDate: twnty,
+			startView: 2, 
+			autohide: true
+		}
+		let nsd = e.target.nextElementSibling
+		if(!nsd) {
+			let datepicker = new Datepicker(e.target, options);
+			datepicker.show()
+		// } else {
+		// 	console.log(nsd)
+		// 	if(nsd.classList.contains('datepicker')) {
+		// 		datepicker.show()
+		// 	}
+		}
+	}
+})

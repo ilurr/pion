@@ -97,15 +97,15 @@ button,
 		}
 	}
 	&.-danger {
-		background-color: #EA2323;
-		border: 1px solid #EA2323;;
+		background-color: #c00808;
+		border: 1px solid #c00808;;
 		color: var(--btn-bg);
 		font-weight: 700;
 
 		&:hover {
-			color: #EA2323;
-			background-color: var(--btn-bg2);
-			border: 1px solid var(--btn-br);
+			color: var(--btn-bg);
+			background-color: darken(#c00808, 5%);
+			border: 1px solid darken(#c00808, 5%);
 		}
 	}
 	&.-hide {
