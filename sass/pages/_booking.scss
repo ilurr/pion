@@ -36,7 +36,7 @@
 		@include min-responsive($screen-small-desktop) {
 			.form-select,
 			#js-datepicker-container {
-				max-width: 460px;
+				max-width: 350px;
 			}
 		}
 	}

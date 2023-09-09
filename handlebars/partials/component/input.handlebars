@@ -11,7 +11,7 @@
 		<img src="" alt="">
 	</span> --}}
 	{{/eq}}
-	<input type="{{type}}" id="{{name}}" name="{{name}}" class="{{#if txterror}}error{{/if}}{{#if function}} {{function}}{{/if}}" placeholder="{{placeholder}}"{{#eq required compare="true"}} required="required"{{/eq}}{{#eq disabled compare="true"}} disabled="disabled"{{/eq}}{{#eq readonly compare="true"}} readonly="readonly"{{/eq}}{{#if txtVal}} value="{{txtVal}}"{{/if}}{{#if onchange}} onchange="{{onchange}}"{{/if}}>
+	<input type="{{type}}" id="{{name}}" name="{{name}}" class="{{#if txterror}}error{{/if}}{{#if function}} {{function}}{{/if}}" placeholder="{{placeholder}}"{{#eq required compare="true"}} required="required"{{/eq}}{{#if autocomplete}} autocomplete="{{autocomplete}}"{{/if}}{{#eq disabled compare="true"}} disabled="disabled"{{/eq}}{{#eq readonly compare="true"}} readonly="readonly"{{/eq}}{{#if txtVal}} value="{{txtVal}}"{{/if}}{{#if onchange}} onchange="{{onchange}}"{{/if}}>
 	{{#if whatsapp}}
 	<div class="form-inline-footnote">
 		<input type="checkbox" id="{{whatsapp}}" name="{{whatsapp}}" value=""> <label for="{{whatsapp}}">Send OTP via <span class="color-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</span></label>

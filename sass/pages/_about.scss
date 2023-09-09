@@ -175,5 +175,65 @@
         padding: 0 1rem;
       }
     }
+    &.-result {
+      flex-direction: column;
+      position: absolute;
+      gap: 10px;
+      width: 100%;
+      z-index: 1;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 2px 2px 5px 0 rgba(16, 24, 32, 0.14);
+      padding: 10px;
+      &[hidden] {
+        display: none;
+      }
+      .no_result {
+        padding: 10px 15px;
+      }
+      .about-expert-img {
+        flex-basis: 80px;
+        height: auto;
+        @include max-responsive($screen-tablet) {
+          flex-basis: 50px;
+        }
+      }
+      .about-expert-item {
+        gap: 5px;
+        flex-basis: 100%;
+        width: 100%;
+      }
+      .about-expert-col {
+        gap: 0;
+        flex-basis: calc(100% - 90px);
+        max-width: calc(100% - 90px);
+        @include max-responsive($screen-tablet) {
+          flex-basis: calc(100% - 60px);
+          max-width: calc(100% - 60px);
+        }
+      }
+      .about-expert-name {
+        font-size: 14px;
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: calc(100% - 15px);
+        @include max-responsive($screen-tablet) {
+          max-width: calc(100vw - 125px);
+        }
+      }
+      .about-expert-skill {
+        font-size: 12px;
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: calc(100% - 15px);
+        @include max-responsive($screen-tablet) {
+          max-width: calc(100vw - 125px);
+        }
+      }
+    }
   }
 }
