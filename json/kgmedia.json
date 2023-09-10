@@ -121,9 +121,18 @@
       "login": ""
     },
     {
-      "title": "Session",
+      "title": "Session (user)",
       "icon": "fa-solid fa-clock-rotate-left",
       "link": "my-session.html",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": ""
+    },
+    {
+      "title": "Session (expert)",
+      "icon": "fa-solid fa-clock-rotate-left",
+      "link": "my-session-expert.html",
       "modal": "",
       "notification": "",
       "badge": false,

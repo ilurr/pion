@@ -144,4 +144,12 @@ button,
 			visibility: hidden;
 		} 
 	}
+	& > span {
+		white-space: nowrap;
+		&[data-count] {
+			display: inline-block;
+			min-width: 18px;
+			text-align: right;
+		}
+	}
 }

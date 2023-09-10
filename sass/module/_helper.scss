@@ -15,6 +15,9 @@ hr {
 		text-align: center;
 	}
 }
+div[role=button] {
+	cursor: pointer;
+}
 .desktop-only {
 	@include max-responsive($screen-tablet) {
 		display: none !important;

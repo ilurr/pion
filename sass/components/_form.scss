@@ -551,6 +551,26 @@
 		}
 	}
 
+	&-medium {
+		.modal-body &.form-row {
+			margin: 0;
+		}
+		.form-select {
+			margin: 0;
+			select {
+				padding: 0 2.5rem 0 .75rem;
+			}
+		}
+		.button {
+			margin: 0;
+		}
+		.button,
+		.form-select,
+		input {
+			height: 36px;
+		}
+	}
+
 	&-cols {
 		position: relative;
 		display: flex;

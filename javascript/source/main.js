@@ -48,6 +48,7 @@ var mswiper3 = new Swiper(".swiper-media", {
 	slidesPerView: "auto",
 	spaceBetween: 15,
 	freeMode: true,
+	loop: true,
 	navigation: {
 		nextEl: ".media-arrow-next",
 		prevEl: ".media-arrow-prev",

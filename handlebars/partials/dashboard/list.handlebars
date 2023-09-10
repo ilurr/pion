@@ -70,7 +70,7 @@
 			<div class="modal-body">
 
 				<div class="note-modal">
-					<div class="note-row -mixcol">
+					<div class="note-row -mixcol -line">
 						<div class="note-col col-basis col-15">
 							<div class="note-header">Tanggal</div>
 							<div class="note-content">{{dates}}</div>
@@ -89,7 +89,7 @@
 						</div>
 						<div class="note-col col-basis col-10">
 							<div class="note-header">Status</div>
-							<div class="note-content">
+							<div class="note-content -right">
 								<span class="note-status -{{lowercase notes_code}}">{{notes}}</span>
 							</div>
 						</div>
@@ -188,7 +188,7 @@
 			<div class="modal-body">
 
 				<div class="note-modal">
-					<div class="note-row -mixcol">
+					<div class="note-row -mixcol -line">
 						<div class="note-col col-basis col-15">
 							<div class="note-header">Tanggal</div>
 							<div class="note-content">{{dates}}</div>
@@ -207,12 +207,12 @@
 						</div>
 						<div class="note-col col-basis col-15">
 							<div class="note-header">Status</div>
-							<div class="note-content">
+							<div class="note-content -right">
 								<span class="note-status -{{lowercase notes_code}}">{{notes}}</span>
 							</div>
 						</div>
-
 					</div>
+
 					<div class="note-row -showheader">
 						<div class="note-col col-basis">
 							<div class="note-header">Counselor</div>
@@ -267,9 +267,15 @@
 			<div class="note-col col-basis col-20">
 				<div class="note-content">Location</div>
 			</div>
+			{{#if as_expert}}
 			<div class="note-col col-basis col-30">
 				<div class="note-content">Client</div>
 			</div>
+			{{else}}
+			<div class="note-col col-basis col-30">
+				<div class="note-content">Expert</div>
+			</div>
+			{{/if}}
 			<div class="note-col col-basis col-20">
 				<div class="note-content -right">Status</div>
 			</div>
@@ -294,9 +300,171 @@
 				<div class="note-header">Location</div>
 				<div class="note-content"><span class="note-method">{{method}}</span></div>
 			</div>
+			{{#if ../as_expert}}
 			<div class="note-col col-basis col-30">
 				<div class="note-header">Client</div>
 				<div class="note-content"><strong>{{client}}</strong></div>
+			</div>
+			{{else}}
+			<div class="note-col col-basis col-30">
+				<div class="note-header">Expert</div>
+				<div class="note-content"><strong>{{counselor}}</strong></div>
+			</div>
+			{{/if}}
+			<div class="note-col col-basis col-20">
+				<div class="note-header">Status</div>
+				<div class="note-content -right">
+					<span class="note-status -{{lowercase notes_code}}">{{notes}}</span>
+					{{!-- <span class="icon icon-arrow-down"></span> --}}
+				</div>
+			</div>
+		</a>
+
+		<!-- modals -->
+		<div class="modal-content" data-modal-target="sessionModal-{{@index}}">
+			<div class="modal-header">
+				<button class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+			</div>
+			<div class="modal-body">
+
+				<div class="note-modal">
+					<div class="note-row -mixcol -line">
+						<div class="note-col col-basis col-15">
+							<div class="note-header">Tanggal</div>
+							<div class="note-content">{{dates}}</div>
+						</div>
+						<div class="note-col col-basis col-10">
+							<div class="note-header">Waktu</div>
+							<div class="note-content">{{time}}</div>
+						</div>
+						<div class="note-col col-basis col-20">
+							<div class="note-header">Location</div>
+							<div class="note-content"><span class="note-method">{{method}}</span></div>
+						</div>
+						{{#if ../as_expert}}
+						<div class="note-col col-basis col-40">
+							<div class="note-header">Client</div>
+							<div class="note-content"><strong>{{client}}</strong></div>
+						</div>
+						{{else}}
+						<div class="note-col col-basis col-40">
+							<div class="note-header">Expert</div>
+							<div class="note-content"><strong>Assesment with {{counselor}}</strong></div>
+						</div>
+						{{/if}}
+						<div class="note-col col-basis col-15">
+							<div class="note-header">Status</div>
+							<div class="note-content -right">
+								<span class="note-status -{{lowercase notes_code}}">{{notes}}</span>
+							</div>
+						</div>
+
+					</div>
+
+					{{#if ../as_expert}}
+					<div class="note-row -showheader">
+						<div class="note-col col-basis">
+							<div class="note-header">Symptoms</div>
+							<div class="note-content">sulit tidur, cemas, khawatir, ketakutan, depresi, sedih, dan kehilangan semangat</div>
+						</div>
+						<div class="note-col col-basis">
+							<div class="note-header">Reason</div>
+							<div class="note-content">Beban belajar, ulangan atau bertambahnya pekerjaan rumah seiring waktu</div>
+						</div>
+						<div class="note-col col-basis">
+							<div class="note-header">Additional</div>
+							<div class="note-content">o Psychological test form</div>
+							<div class="note-content">o Psychological test form 2</div>
+						</div>
+					</div>
+					<div class="note-row">
+						<div class="note-col col-basis -right">
+							<a href="my-session-detail.html" class="button -gray -auto"><i class="fa-solid fa-folder"></i> Detail</a>
+						</div>
+					</div>
+					{{else}}
+					<div class="note-row -showheader">
+						<div class="note-col col-basis">
+							<div class="note-header">Counselor</div>
+							<div class="note-content">{{counselor}}</div>
+						</div>
+						<div class="note-col col-basis">
+							<div class="note-header">Counseling Note:</div>
+							<div class="note-content">{{{content}}}</div>
+						</div>
+					</div>
+					<div class="note-row -mixcol -showheader -block">
+						<div class="note-col col-basis col-85">
+							<div class="note-header">Additional</div>
+							<div class="note-content">Psychological test form</div>
+						</div>
+						<div class="note-col col-basis col-15 -right">
+							{{#eq notes compare="Done"}}
+							<a href="#" class="button -secondary -auto -disabled">Paid</a>
+							{{else}}
+							<a href="#" class="button -secondary -auto">Settle Bill</a>
+							{{/eq}}
+						</div>
+					</div>
+					{{/if}}
+					{{#eq notes compare="Done"}}
+					<div class="note-row">
+						<div class="note-col col-basis -right">
+							<a href="#" class="button -secondary -auto"><i class="fa-regular fa-file-lines"></i> Download Receipt</a>
+						</div>
+					</div>
+					{{/eq}}
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	{{/gte}}
+	{{else}}
+	{{/gte}}
+	{{/each}}
+</div>
+{{/if}}
+{{#if mysession_client}}
+<div class="note-list -rounded -cols">
+	{{#if header}}
+	<div class="note-item -header desktop-only">
+		<div class="note-block">
+			<div class="note-col col-basis col-15">
+				<div class="note-content">Tanggal</div>
+			</div>
+			<div class="note-col col-basis col-15">
+				<div class="note-content">Waktu</div>
+			</div>
+			<div class="note-col col-basis col-50">
+				<div class="note-content">Location</div>
+			</div>
+			<div class="note-col col-basis col-20">
+				<div class="note-content -right">Status</div>
+			</div>
+		</div>
+	</div>
+	{{/if}}
+	{{#each session}}
+	{{#gte @index compare=../index_start}}
+	{{#gte @index compare=../index_end}}
+	{{else}}
+	<div class="note-item">
+		<a href="javascript:openModal('sessionModal-{{@index}}')" class="note-block">
+			<div class="note-col col-basis col-15">
+				<div class="note-header">Tanggal</div>
+				<div class="note-content">{{dates}}</div>
+			</div>
+			<div class="note-col col-basis col-15">
+				<div class="note-header">Waktu</div>
+				<div class="note-content">{{time}}</div>
+			</div>
+			<div class="note-col col-basis col-50">
+				<div class="note-header">Location</div>
+				<div class="note-content"><span class="note-method">{{method}}</span></div>
 			</div>
 			<div class="note-col col-basis col-20">
 				<div class="note-header">Status</div>
@@ -317,7 +485,7 @@
 			<div class="modal-body">
 
 				<div class="note-modal">
-					<div class="note-row -mixcol">
+					<div class="note-row -mixcol -line">
 						<div class="note-col col-basis col-15">
 							<div class="note-header">Tanggal</div>
 							<div class="note-content">{{dates}}</div>
@@ -410,7 +578,7 @@
 	{{#each session}}
 	{{#unlessEq status compare=../status}}
 	<div class="note-item">
-		<a href="javascript:void(0)" class="note-block">
+		<a href="my-client-detail.html" class="note-block">
 			<div class="note-col col-basis col-30">
 				<div class="note-header">Nama</div>
 				<div class="note-content"><strong>{{client}}</strong></div>
@@ -480,6 +648,64 @@
 	</div>
 	{{/unlessEq}}
 	{{/each}}
+</div>
+{{/if}}
+{{#if myfamily}}
+<div class="note-list -rounded -arrow-right">
+	<div class="note-item">
+		<div role="button" onclick="toggleAccordion('clientCollapse-1')" class="note-block">
+			<div class="note-col col-basis">
+				<div class="note-content"><strong>Child Family Tree</strong></div>
+			</div>
+		</div>
+
+		<!-- accordion -->
+		<div class="accordion-inline" data-accordion-target="clientCollapse-1">
+
+			<div class="note-modal -row mt1 mb2">
+				<div class="note-row">
+						{{!-- <div class="note-col col-basis">
+							<div class="note-header">Family tree (as a child)</div>
+						</div> --}}
+						<div class="note-col col-basis">
+							<div class="note-content">Ratna Sarum, 23yrs (Female) Employee</div>
+						</div>
+						<div class="note-col col-basis">
+							<div class="note-content">Sujiwo Tejo, 46yrs (Male) Actress</div>
+						</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div onclick="javascript:toggleAccordion('clientCollapse-1')" class="note-arrow" data-accordion-expand="More" data-accordion-collapse="Less"><i class="fa-solid fa-chevron-down"></i></div>
+	</div>
+
+	<div class="note-item">
+		<div role="button" onclick="toggleAccordion('clientCollapse-2')" class="note-block">
+			<div class="note-col col-basis">
+				<div class="note-content"><strong>Parent Family Tree</strong></div>
+			</div>
+		</div>
+
+		<!-- accordion -->
+		<div class="accordion-inline" data-accordion-target="clientCollapse-2">
+
+			<div class="note-modal -row mt1 mb2">
+				<div class="note-row">
+						<div class="note-col col-basis">
+							<div class="note-content">Ratna Sarum, 23yrs (Female) Employee</div>
+						</div>
+						<div class="note-col col-basis">
+							<div class="note-content">Sujiwo Tejo, 46yrs (Male) Actress</div>
+						</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div onclick="javascript:toggleAccordion('clientCollapse-2')" class="note-arrow" data-accordion-expand="More" data-accordion-collapse="Less"><i class="fa-solid fa-chevron-down"></i></div>
+	</div>
 </div>
 {{/if}}
 {{#if medialist}}

@@ -32,6 +32,15 @@ function openModal(el) {
 			// add body class and clone element
 			document.body.classList.add(active);
 			let ox = tar.cloneNode(true);
+
+			// cek form manipulate
+			let sq = ox.querySelectorAll('.form-select')
+			if(sq) {
+				sq.forEach(function(item){
+					selectInit(item);
+				})
+			}
+
 			fc.appendChild(ox);
 		} else {
 			console.log('unknown modal target');

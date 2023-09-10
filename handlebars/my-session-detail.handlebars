@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+
+			<!-- side -->
+			{{>aside active="Session"}}
+			
+			<!-- dashboard -->
+			<section class="section board">
+
+				<div class="board-row">
+
+					<h1 class="title">
+						{{!-- <a href="my-dashboard.html" class="title-back"><span class="icon icon-back"></span></a>  --}}
+						<span class="fa-solid fa-clock-rotate-left"></span>
+						Sessions 
+						{{!-- <a class="title-link" href="booking.html">+ Buat janji</a> --}}
+					</h1>
+
+					<!-- profil -->
+					<div class="setting-wrap">
+						<div class="setting-picture">
+							<div class="setting-picture-img">
+								<span>
+									<img id="preview_avatar" src="http://aset-pionindonesia.modetes.com/images/dummy/avatar.jpeg" alt="">
+								</span>
+							</div>
+						</div>
+						<div class="setting-block">
+
+							{{!-- <h3 class="setting-subtitle">Biodata</h3> --}}
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Full Name</div>
+									<div class="setting-info">
+										<div class="setting-content">Alikuro Hidayat</div>
+									</div>
+								</div>
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Date of birth</div>
+									<div class="setting-info">
+										<div class="setting-content">18 September 1990</div>
+									</div>
+								</div>
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Age</div>
+									<div class="setting-info">
+										<div class="setting-content">31 yo</div>
+									</div>
+								</div>
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Child from family</div>
+									<div class="setting-info">
+										<div class="setting-content">1 of 3</div>
+									</div>
+								</div>
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Gender</div>
+									<div class="setting-info">
+										<div class="setting-content">Male</div>
+									</div>
+								</div>
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Marital status</div>
+									<div class="setting-info">
+										<div class="setting-content">Not married</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<!-- family tree -->
+					{{>list myfamily=true}}
+
+					<!-- detail -->
+					<div class="note-detail">
+						<form action="my-session-expert.html">
+							<div class="note-row -showheader">
+								<div class="note-col col-basis">
+									<div class="note-header">Tanggal</div>
+									<div class="note-content">03 Sep 2023, 15:30 WIB</div>
+								</div>
+								<div class="note-col col-basis">
+									<div class="note-header">Location</div>
+									<div class="note-content">PION Jakarta</div>
+								</div>
+								<div class="note-col col-basis">
+									<div class="note-header">Status</div>
+									<div class="note-content">
+										<span class="note-status -ongoing">Occur</span>
+									</div>
+								</div>
+								<div class="note-col col-basis">
+									<div class="note-header">Symptoms</div>
+									<div class="note-content">sulit tidur, cemas, khawatir, ketakutan, depresi, sedih, dan kehilangan semangat</div>
+								</div>
+								<div class="note-col col-basis">
+									<div class="note-header">Reason</div>
+									<div class="note-content">Beban belajar, ulangan atau bertambahnya pekerjaan rumah seiring waktu</div>
+								</div>
+								<div class="note-col col-basis">
+									<div class="note-header">Session Note:</div>
+									<div class="note-content">
+										{{>textarea placeholder="Write down note for this session" id="session_notes" name="session_notes"}}
+									</div>
+								</div>
+								<div class="note-col col-basis">
+									<div class="note-header">Counseling Note:</div>
+									<div class="note-content">
+										{{>textarea placeholder="Write down response to client" id="counseling_notes" name="counseling_notes"}}
+									</div>
+								</div>
+								<div class="note-col col-basis">
+									<div class="note-header">Additional</div>
+									<div class="note-content">o Psychological test form</div>
+									<div class="note-content">o Psychological test form 2</div>
+								</div>
+								<div class="note-col col-basis -right">
+									<div class="note-action">
+										<button type="button" class="button -auto" onclick="openModal('toppingModal-1')"><i class="fa-regular fa-plus"></i> Additional</button>
+										<button type="submit" class="button -secondary -auto"><i class="fa-solid fa-right-from-bracket"></i> Close</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<!-- modals -->
+					<div class="modal-content" data-modal-target="toppingModal-1">
+						<div class="modal-header">
+							<div class="modal-title">New Invoice</div>
+							<button class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
+								<i class="fa-solid fa-xmark"></i>
+							</button>
+						</div>
+						<div class="modal-body">
+
+							<div class="note-modal">
+								<div class="note-row -mixcol -mixrow -showheader -line">
+									<div class="note-col col-basis col-60">
+										<div class="note-header">Session Time:</div>
+										<div class="note-content">
+											<div class="form-row form-inline form-medium">
+												<button type="button" class="button -auto -disabled" data-count="min" onclick="countIt(this, -1)"><i class="fa-solid fa-minus"></i></button>
+												<button type="button" class="button -auto -transparent button-action-span"><span data-count="result">0</span><span>x 15 menit</span></button>
+												<button type="button" class="button -auto" data-count="plus" onclick="countIt(this, 1)"><i class="fa-regular fa-plus"></i></button>
+												<input type="hidden" name="count_sesi" id="count_sesi">
+											</div>
+										</div>
+									</div>
+									<div class="note-col col-basis col-40 -right">
+										<div class="note-header">Tools:</div>
+										<div class="note-content">
+											{{>select type="select" name="session_tools" placeholder="Tools" medium=true nolabel="true" option="SP 2 Child 3 - 14 (Sensory Profile),SP 2  Adult >14 (Sensory Profile),CBCL  1.1/2 - 5 (Child Behavior Check List),CBCL 6 - 18 (Child Behavior Check List),YSR 11 - 18 (Youth Self Report)"}}
+										</div>
+									</div>
+								</div>
+								<div class="note-row -line">
+									<div class="note-row -fixcol -showheader">
+										<div class="note-col col-basis col-80">
+											<div class="note-header">Session Time</div>
+											<div class="note-content desktop-only"><span class="medium">Click how many minutes do you need</span></div>
+										</div>
+										<div class="note-col col-basis col-20">
+											<div class="note-content -right"><span id="addSesi">Rp 00,00</span></div>
+										</div>
+									</div>
+									<div class="note-row -fixcol -showheader">
+										<div class="note-col col-basis col-80">
+											<div class="note-header">Tools</div>
+											<div class="note-content desktop-only"><span class="medium">Select tools you need</span></div>
+										</div>
+										<div class="note-col col-basis col-20">
+											<div class="note-content -right">Rp 100.000,00</div>
+										</div>
+									</div>
+								</div>
+								<div class="note-row">
+									<div class="note-row -fixcol">
+										<div class="note-col col-basis col-80">
+											<div class="note-content -right">Total</div>
+										</div>
+										<div class="note-col col-basis col-20">
+											<div class="note-content -right"><span id="addTotal">Rp 00,00</span></div>
+										</div>
+									</div>
+								</div>
+								<div class="note-row -showheader">
+									<div class="note-col col-basis -right">
+										<div class="note-action">
+											<button type="button" class="button -secondary -auto" onclick="dummyChange('Your additional invoice request has been added')"><i class="fa-solid fa-file-invoice"></i> Request</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+<script>
+	// dummy toast 
+	function dummyChange(toastMsg) {
+		reactionToast(toastMsg)
+		closeModal()
+	}
+
+</script>
+</body>
+</html>

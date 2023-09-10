@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+
+			<!-- side -->
+			{{>aside active="Client"}}
+			
+			<!-- dashboard -->
+			<section class="section board">
+
+				<div class="board-row">
+
+					<h1 class="title">
+						<span class="fa-solid fa-users"></span>
+						Clients 
+					</h1>
+
+					<div class="setting-wrap">
+						<div class="setting-picture">
+							<div class="setting-picture-img">
+								<span>
+									<img id="preview_avatar" src="http://aset-pionindonesia.modetes.com/images/dummy/avatar.jpeg" alt="">
+								</span>
+							</div>
+						</div>
+						<div class="setting-block">
+
+							{{!-- <h3 class="setting-subtitle">Biodata</h3> --}}
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Full Name</div>
+									<div class="setting-info">
+										<div class="setting-content">Alikuro Hidayat</div>
+									</div>
+								</div>
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Date of birth</div>
+									<div class="setting-info">
+										<div class="setting-content">18 September 1990</div>
+									</div>
+								</div>
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Age</div>
+									<div class="setting-info">
+										<div class="setting-content">31 yo</div>
+									</div>
+								</div>
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Child from family</div>
+									<div class="setting-info">
+										<div class="setting-content">1 of 3</div>
+									</div>
+								</div>
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Gender</div>
+									<div class="setting-info">
+										<div class="setting-content">Male</div>
+									</div>
+								</div>
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<div class="setting-text">Marital status</div>
+									<div class="setting-info">
+										<div class="setting-content">Not married</div>
+									</div>
+								</div>
+							</div>
+							<div class="setting-item">
+								<div class="setting-row">
+									<a href="#" data-dropdown="order" class="button -auto">Undang pertemuan</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<hr>
+
+					<h2 class="title -small"><span class="fa-solid fa-clock-rotate-left"></span> Sessions</h2>
+
+					{{>list mysession_client=true index_start=0 index_end=3}}
+
+					<div class="board-more">
+						<button class="button -primary -auto">Load more</button>
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+</body>
+</html>

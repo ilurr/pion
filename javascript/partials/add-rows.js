@@ -1,10 +1,31 @@
-// let tree = document.querySelectorAll('.form-tree')
+function countIt(el, val) {
+	let spn = document.querySelectorAll('[data-count=result]')
+	if(spn) {
+		spn.forEach(function(item){
+			// parent
+			let psp = item.closest('.form-row')
 
-// if(!!tree) {
-// 	tree.forEach(function(item){
-// 		let i
-// 	})
-// }
+			// display
+			let src = parseInt(item.textContent)
+			src = src + Number(val)
+			item.innerHTML = src
+
+			// button
+			let btnMin = psp.querySelector('[data-count=min]')
+			if(btnMin && src<1) {
+				btnMin.classList.add('-disabled')
+			} else {
+				btnMin.classList.remove('-disabled')
+			}
+
+			// form input hidden
+			let fps = psp.querySelector('input[name=count_sesi')
+			if(fps) {
+				fps.value = src
+			}
+		})
+	}
+}
 
 function addTreeRows(el) {
 	// get parent

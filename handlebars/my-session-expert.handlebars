@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+
+			<!-- side -->
+			{{>aside active="Session"}}
+			
+			<!-- dashboard -->
+			<section class="section board">
+
+				<div class="board-row">
+
+					<h1 class="title">
+						{{!-- <a href="my-dashboard.html" class="title-back"><span class="icon icon-back"></span></a>  --}}
+						<span class="fa-solid fa-clock-rotate-left"></span>
+						Sessions 
+						{{!-- <a class="title-link" href="booking.html">+ Buat janji</a> --}}
+					</h1>
+
+					{{!-- <a href="booking.html" class="button -primary title-button">+ Buat janji kunjungan</a> --}}
+
+					{{>list mysession=true as_expert=true header=true index_start=0 index_end=13}}
+
+					<div class="board-more">
+						<button class="button -primary -auto">Load more</button>
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+</body>
+</html>
