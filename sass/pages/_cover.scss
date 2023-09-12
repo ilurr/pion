@@ -426,6 +426,18 @@
 			}
 		}
 	}
+	&-footer {
+		padding: 0 20px;
+		position: relative;
+		margin: 20px 0;
+		flex-direction: column;
+    align-items: center;
+		display: flex;
+		gap: 15px;
+		&-lead {
+			text-align: center;
+		}
+	}
 }
 
 .issue {

@@ -28,14 +28,25 @@ button,
 	align-items: center;
 	gap: 8px;
 
-	&.-medium {
-		height: 36px;
-	}
-
 	&.-auto {
 		@include min-responsive($screen-tablet) {
 			width: fit-content;
 			padding: 0 .875rem;
+		}
+	}
+
+	&.-medium {
+		height: 36px;
+	}
+
+	&.-big {
+		padding: 0 2rem;
+		border-radius: 12px;
+		font-size: 1rem;
+		height: 46px;
+		@include min-responsive($screen-small-desktop) {
+			height: 56px;
+			font-size: 1.25rem;
 		}
 	}
 
