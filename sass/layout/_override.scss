@@ -38,10 +38,12 @@
 
 // client's request override
 .nav-header {
-    &:hover {
-        .nav-main {
-            opacity: 1;
-            visibility: visible;
+    @include min-responsive($screen-small-desktop) {
+        &:hover {
+            .nav-main {
+                opacity: 1;
+                visibility: visible;
+            }
         }
     }
 }
@@ -60,10 +62,12 @@
     }
 }
 .header-user-block {
-    &:hover {
-        .header-user-menu {
-            opacity: 1;
-            visibility: visible;
+    @include min-responsive($screen-small-desktop) {
+        &:hover {
+            .header-user-menu {
+                opacity: 1;
+                visibility: visible;
+            }
         }
     }
 }

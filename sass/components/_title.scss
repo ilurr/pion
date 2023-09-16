@@ -43,10 +43,13 @@
 		order: 2;
 		@include min-responsive($screen-tablet) {
 			order: -1;
-			margin-bottom: -35px;
+			margin-bottom: -50px;
 			width: fit-content;
 			display: inline-flex;
 			align-self: flex-end;
+			& ~ .title .title-link {
+				display: none;
+			}
 		}
 	}
 	&-step {
@@ -83,11 +86,11 @@
 		font-size: 1.125rem;
 		line-height: 20px;
 		font-weight: 600;
-		& ~ .title-button {
-			@include min-responsive($screen-tablet) {
-				margin-bottom: -50px;
-			}
-		}
+		// & ~ .title-button {
+		// 	@include min-responsive($screen-tablet) {
+		// 		margin-bottom: -50px;
+		// 	}
+		// }
 	}
 }
 .logo {

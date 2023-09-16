@@ -191,68 +191,30 @@ function reactionAutoDismiss(el, sec) {
 	}, 200);
 }
 
-//popup setting article
-function reactionMeatball(el) {
-	elem = el.nextElementSibling;
-	elemActive = elem.classList.contains('-active');
-
-	//hide other popup
-	hideMeatball()
-	if (elemActive == false) {
-		elem.classList.toggle('-active');
-	}
-}
-//hide popup setting article
-function hideMeatball() {
-	var pop = document.querySelectorAll('.listPop');
-	pop.forEach((item) => {
-		item.classList.remove('-active');
-	})
-}
-
-//stop showing recommendation article/ tidak tertarik
-function hideThisArt(el) {
-	elem = el.parentElement.parentElement.parentElement.querySelector('.wSpec-stop');
-
-	elem.classList.add('-active');
-}
-//show recommendation article/ tertarik
-function showThisArt(el) {
-	elem = el.parentElement;
-
-	elem.classList.remove('-active');
-}
-
 // toggle dropdown
 let tdd = document.querySelectorAll('[data-dropdown]')
 if(!!tdd) {
 	tdd.forEach((el) => {
-		el.addEventListener('click', function(e){
-			e.preventDefault()
-			el.parentElement.classList.toggle('-active')
-		})
-		document.addEventListener("click", function(e){
-			// console.log(e.target)
-			if(el.contains(e.target)) {
-				// console.log(tdd)
-			} else {
-				el.parentElement.classList.remove('-active')
-			}
-		});
+		let ddm = el.getAttribute('data-mobile-only')
+		if(!ddm) {
+			el.addEventListener('click', function(e){
+				e.preventDefault()
+				el.parentElement.classList.toggle('-active')
+			})
+			document.addEventListener("click", function(e){
+				// console.log(e.target)
+				if(el.contains(e.target)) {
+					// console.log(tdd)
+				} else {
+					el.parentElement.classList.remove('-active')
+				}
+			});
+		}
 	});
 }
 
-
-function toggleOthers(e) {
-    var ls = e.nextElementSibling;
-    var lq = document.querySelectorAll('.cReport__other');
-    //console.log(lq);
-    lq.forEach(function(item){
-        item.classList.remove('show');
-    });
-    if(!!ls) {
-        ls.classList.add('show');
-        ls.children[0].focus();
-        //console.log(ls.children);
-    }
+function mobileOnly() {
+	if (window.innerWidth < 990) {
+		return true
+	}
 }

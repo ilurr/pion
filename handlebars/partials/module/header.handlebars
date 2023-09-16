@@ -11,7 +11,7 @@
 		<!-- navigation -->
 		<div class="header-menu">
 			<nav class="nav-header">
-				<button class="button button-burger nav-burger" title="Menu">
+				<button class="button button-burger nav-burger" data-dropdown="menu" data-mobile-only="true" title="Menu">
 					<span class="icon icon-burger"><i></i></span>
 				</button>
 				<ul class="nav-main">
@@ -47,7 +47,7 @@
 			</div>
 			<div class="header-user-block">
 				{{#if logged}}
-				<a href="javascript:void(0)" role="button" class="header-user-button" title="User Menu">
+				<a href="javascript:void(0)" role="button" class="header-user-button" data-dropdown="user-menu" data-mobile-only="true" title="User Menu">
 					<div class="header-user-avatar">
 						<img src="./asset/images/dummy/avatar.jpeg" alt="Alikuro">
 					</div>
