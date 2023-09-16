@@ -47,6 +47,7 @@
 			width: fit-content;
 			display: inline-flex;
 			align-self: flex-end;
+			z-index: 1;
 			& ~ .title .title-link {
 				display: none;
 			}

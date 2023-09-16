@@ -3,7 +3,7 @@
 // 	// will-change: transform;
 // }
 .header {
-	box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+	box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
 	background: var(--neutral-white, #fff);
 	position: fixed;
 	top: 0;
@@ -19,6 +19,7 @@
 		transition: all .2s ease;
 		.scrolling & {
 			height: 70px;
+			box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.1);
 		} 
 	}
 	&-block {
@@ -130,6 +131,7 @@
 				overflow: hidden;
 				display: block;
 				max-width: 135px;
+				min-width: 60px;
 			}
 		}
 		&-avatar {
