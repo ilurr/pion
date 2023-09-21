@@ -197,18 +197,25 @@ if(!!tdd) {
 	tdd.forEach((el) => {
 		let ddm = el.getAttribute('data-mobile-only')
 		if(!ddm) {
-			el.addEventListener('click', function(e){
-				e.preventDefault()
-				el.parentElement.classList.toggle('-active')
-			})
-			document.addEventListener("click", function(e){
-				// console.log(e.target)
-				if(el.contains(e.target)) {
-					// console.log(tdd)
-				} else {
-					el.parentElement.classList.remove('-active')
-				}
-			});
+			toggleDropdown(el)
+		}
+		if(ddm && mobileOnly()) {
+			toggleDropdown(el)
+		}
+	});
+}
+
+function toggleDropdown(el) {
+	el.addEventListener('click', function(e){
+		e.preventDefault()
+		el.parentElement.classList.toggle('-active')
+	})
+	document.addEventListener("click", function(e){
+		// console.log(e.target)
+		if(el.contains(e.target)) {
+			// console.log(tdd)
+		} else {
+			el.parentElement.classList.remove('-active')
 		}
 	});
 }
@@ -217,4 +224,5 @@ function mobileOnly() {
 	if (window.innerWidth < 990) {
 		return true
 	}
+	return false
 }
