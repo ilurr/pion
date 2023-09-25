@@ -26,41 +26,64 @@
 
 							<div class="form-main form-booking">
 								<form action="booking-step4.html">
-									<div class="booking-row">
-										<div class="form-text">Attending date schedule</div>
-										{{>input type="text" name="attending_date" placeholder="Select date" nolabel="true" function="js-datepicker-booking" parent="js-datepicker-container" readonly="true"}}
+									<div class="booking-row" data-form-toggle="true">
+										<div class="form-text">Select your Expert by:</div>
+										{{>radio label="Availability" id="expert_availability" name="expert_book_type" toggle="expert-sorting" sorting="date"}}
+										{{>radio label="Specialist" id="expert_specialist" name="expert_book_type" toggle="expert-sorting" sorting="expert"}}
 									</div>
-									<div class="booking-row">
-										<div class="form-text">Time to attend</div>
-										<div class="booking-time">
-											{{>radio label="10.00" id="time_1000" name="book_time" disabled="true"}}
-											{{>radio label="10.30" id="time_1030" name="book_time"}}
-											{{>radio label="11.00" id="time_1100" name="book_time"}}
-											{{>radio label="11.30" id="time_1130" name="book_time"}}
-											{{>radio label="12.00" id="time_1200" name="book_time" disabled="true"}}
-											{{>radio label="12.30" id="time_1230" name="book_time" disabled="true"}}
-											{{>radio label="13.00" id="time_1300" name="book_time"}}
-											{{>radio label="13.30" id="time_1330" name="book_time"}}
-											{{>radio label="14.00" id="time_1400" name="book_time"}}
-											{{>radio label="14.30" id="time_1430" name="book_time"}}
-											{{>radio label="15.00" id="time_1500" name="book_time" disabled="true"}}
-											{{>radio label="15.30" id="time_1530" name="book_time"}}
-											{{>radio label="16.00" id="time_1600" name="book_time"}}
-											{{>radio label="16.30" id="time_1630" name="book_time"}}
-											{{>radio label="17.00" id="time_1700" name="book_time"}}
-											{{>radio label="17.30" id="time_1730" name="book_time"}}
-											{{>radio label="18.00" id="time_1800" name="book_time"}}
+									<div class="booking-row booking-sorting -hide" id="expert-sorting">
+										<div class="booking-row" data-sort-name="date">
+											<div class="form-text">Attending date schedule</div>
+											{{>input type="text" name="attending_date" placeholder="Select date" nolabel="true" function="js-datepicker-booking" parent="js-datepicker-container" readonly="true"}}
 										</div>
-									</div>
-									<div class="booking-row">
-										<div class="form-text">Your expert</div>
-										{{>input type="text" name="attending_expert_display" placeholder="Search your expert" autocomplete="off" nolabel="true" function="js-autocomplete-expert"}}
-										<input type="hidden" name="attending_expert" id="attending_expert">
-										{{!>select type="select" name="psychiatrist" placeholder="Select  your psychiatrist" nolabel="true" option="Dian Oriza M.Psi.,Katarina Ira Puspita M.Psi.,Astrid WEN M.Psi.,Dr. Rahma Paramita M.Psi."}}
+										<div class="booking-row" data-sort-name="time">
+											<div class="form-text">Time to attend</div>
+											<div class="booking-time">
+												{{>radio label="10.00" id="time_1000" name="book_time" disabled="true"}}
+												{{>radio label="10.30" id="time_1030" name="book_time"}}
+												{{>radio label="11.00" id="time_1100" name="book_time"}}
+												{{>radio label="11.30" id="time_1130" name="book_time"}}
+												{{>radio label="12.00" id="time_1200" name="book_time" disabled="true"}}
+												{{>radio label="12.30" id="time_1230" name="book_time" disabled="true"}}
+												{{>radio label="13.00" id="time_1300" name="book_time"}}
+												{{>radio label="13.30" id="time_1330" name="book_time"}}
+												{{>radio label="14.00" id="time_1400" name="book_time"}}
+												{{>radio label="14.30" id="time_1430" name="book_time"}}
+												{{>radio label="15.00" id="time_1500" name="book_time" disabled="true"}}
+												{{>radio label="15.30" id="time_1530" name="book_time"}}
+												{{>radio label="16.00" id="time_1600" name="book_time"}}
+												{{>radio label="16.30" id="time_1630" name="book_time"}}
+												{{>radio label="17.00" id="time_1700" name="book_time"}}
+												{{>radio label="17.30" id="time_1730" name="book_time"}}
+												{{>radio label="18.00" id="time_1800" name="book_time"}}
+											</div>
+										</div>
+										<div class="booking-row" data-sort-name="expert">
+											<div class="form-text">Your expert</div>
+											{{>input type="text" name="attending_expert_display" placeholder="Search your expert" autocomplete="off" nolabel="true" function="js-autocomplete-expert" attribute="data-expert-display"}}
+											<input type="hidden" name="attending_expert_id" id="attending_expert" data-expert-id="true">
+											{{!>select type="select" name="psychiatrist" placeholder="Select  your psychiatrist" nolabel="true" option="Dian Oriza M.Psi.,Katarina Ira Puspita M.Psi.,Astrid WEN M.Psi.,Dr. Rahma Paramita M.Psi."}}
+											<div id="expertList" class="about-expert -list">
+												{{#each expert}}
+												<div class="about-expert-item">
+													<div class="about-expert-img">
+														<img src="./asset/images/expert/{{img}}" alt="{{name}}">
+													</div>
+													<div class="about-expert-col">
+														<div class="about-expert-name">{{name}}</div>
+														<div class="about-expert-skill">{{skill}}</div>
+														<button type="button" onclick="selectExpert(this, '{{id}}', '{{name}}')" class="button" data-expert-id="{{@index}}" data-expert-select="false" data-text="Select"><i class="fa-solid fa-plus"></i></button>
+													</div>
+												</div>
+												{{/each}}
+												<div class="more-loading" id="about-more-trigger"></div>
+											</div>
+											<div class="about-expert-gradient"></div>
+										</div>
 									</div>
 									<div class="booking-row booking-action">
 										{{>button type="button" label="Back" class="-auto" onclick="window.history.go(-1); return false;"}}
-										{{>button type="submit" label="Next" class="-primary -auto"}}
+										{{>button type="submit" label="Next" class="-primary -auto -disabled" disabled="disabled"}}
 									</div>
 								</form>
 							</div>
@@ -95,48 +118,56 @@
 			data: {
 				src: [
 					{
+						"id": "0",
 						"name": "Rahma Paramita, M.Psi., Psikolog",
 						"nick": "Mita",
 						"skill": "Meditasi, EMDR, Keluarga, Theraplay",
 						"img": "mita.png"
 					},
 					{
+						"id": "1",
 						"name": "Dian Oriza, M.Psi., Psikolog",
 						"nick": "Dian",
 						"skill": "Acceptance Commitment Therapy",
 						"img": "dian.png"
 					},
 					{
+						"id": "2",
 						"name": "Tri Swasono Hadi, M.Psi., Psikolog",
 						"nick": "Tri",
 						"skill": "Masalah Hubungan, Emosi, Masalah Kepribadian atau Klinis lainnya, dan EMDR",
 						"img": "tri.png"
 					},
 					{
+						"id": "3",
 						"name": "Astrid WEN, M.Psi., Psikolog",
 						"nick": "Astrid",
 						"skill": "Theraplay, Interaksi Antar Keluarga, Kelekatan",
 						"img": "astrid.png"
 					},
 					{
+						"id": "4",
 						"name": "Katarina Ira Puspita, M.Psi., Psikolog",
 						"nick": "Karin",
 						"skill": "CBT, Social Skill Training, Keluarga, Cemas Pada Anak & Remaja",
 						"img": "katarina.png"
 					},
 					{
+						"id": "5",
 						"name": "Maria T. Puspaningsih, M.Psi., Psikolog",
 						"nick": "Maria",
 						"skill": "Relaprofilesi (keluarga, pernikahan, pasangan, pertemanan), Komunikasi Efektif & Asertif, Self-Development, Life Skills Development, Permasalahan Remaja dan Orang Dewasa, Dukungan Psikologis Awal, Psikoterapis Klinis",
 						"img": "maria.png"
 					},
 					{
+						"id": "6",
 						"name": "Ayunda Shabriani Tyara, M.Psi., Psikolog",
 						"nick": "Tyara",
 						"skill": "Masalah Anak (Kesulitan Belajar, Gangguan Perkembangan Klinis, Hubungan Keluarga), Parenting",
 						"img": "tyara.png"
 					},
 					{
+						"id": "7",
 						"name": "L. Sandi Witarso, M.Psi., Psikolog",
 						"nick": "Sandi",
 						"skill": "Masalah Orang Dewasa, Skizofrenia, Psikoterapi Klinis",
@@ -147,6 +178,8 @@
 				keys: ["name"]
 			},
 			resultsList: {
+				destination: "#expertList",
+				position: "beforeend",
 				class: "about-expert -result",
 				element: (list, data) => {
 					if (!data.results.length) {
@@ -169,6 +202,10 @@
 				element: (item, data) => {
 				// Modify Results Item Content
 				console.log(data)
+				let selected = 'false'
+				if(document.querySelector('[data-expert-id]').value==data.value.id) {
+					selected = 'true'
+				}
 				item.innerHTML = `
 					<div class="about-expert-img">
 						<img src="./asset/images/expert/${data.value.img}" alt="${data.value.name}">
@@ -176,6 +213,7 @@
 					<div class="about-expert-col">
 						<div class="about-expert-name">${data.match}</div>
 						<div class="about-expert-skill">${data.value.skill}</div>
+						<button type="button" onclick="selectExpert(this, '${data.value.id}', '${data.value.name}')" class="button -auto" data-expert-id="" data-expert-select="${selected}" data-text="Select"><i class="fa-solid fa-plus"></i></button>
 					</div>
 				`;
 				},
@@ -186,7 +224,7 @@
 					selection: (event) => {
 						const selection = event.detail.selection.value;
 						autoCompleteJS.input.value = selection.name;
-						expert_value.value = selection.nick;
+						expert_value.value = selection.id;
 						console.log(event)
 					}
 				}

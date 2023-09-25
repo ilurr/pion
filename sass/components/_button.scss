@@ -163,4 +163,32 @@ button,
 			text-align: right;
 		}
 	}
+	&[data-expert-select] {
+		width: fit-content;
+		min-width: 80px;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 1;
+		height: 34px;
+		.fa-solid {
+			display: none;
+		}
+		&:after {
+			content: attr(data-text);
+		}
+	}
+	&[data-expert-select=true] {
+		background-color: $color-theme;
+		border: 1px solid $color-theme;
+		color: $color-button-primary;
+		.fa-solid {
+			display: block;
+			&:before {
+				content: "\f00c";
+			}
+		}
+		&:after {
+			content: none;
+		}
+	}
 }

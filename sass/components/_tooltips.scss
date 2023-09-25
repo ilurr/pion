@@ -6,11 +6,11 @@
 	color: #fff;
 	font-size: 12px;
 	line-height: normal;
-	// white-space: nowrap;
-	z-index: 1000;
+	white-space: nowrap;
+	z-index: 13;
 	pointer-events: none;
 	opacity: 1;
-	max-width: 200px;
+	// max-width: 200px;
 	&:before {
 		content: '';
 		width: 10px;

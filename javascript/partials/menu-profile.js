@@ -1,3 +1,43 @@
+// select expert
+function selectExpert(el, xid, name) {
+	// set value input hidden
+	let vk = document.querySelector('[data-expert-id]')
+	let vn = document.querySelector('[data-expert-display]')
+	
+	// all element node to array 
+	let se = [...document.querySelectorAll('[data-expert-select]')]
+
+	// filter except this element
+	let os = se.filter(function(e) {
+		return e !== el;
+	});
+	
+	// reset all
+	if(os) {
+		os.forEach(function(item) {
+			item.setAttribute('data-expert-select', 'false')
+		})
+	}
+
+	// toggle
+	let attr = el.getAttribute('data-expert-select')
+	if(attr=='false') {
+		el.setAttribute('data-expert-select', 'true')
+		if(vk) {
+			vk.value = xid
+			vn.value = name
+		}
+	} else {
+		el.setAttribute('data-expert-select', 'false')
+		if(vk) {
+			vk.value = ''
+			vn.value = ''
+		}
+	}
+
+}
+
+// toggle radio button
 let mk = document.querySelectorAll('[data-form-toggle]');
 let h = '-hide'
 if(!!mk) {
@@ -8,6 +48,7 @@ if(!!mk) {
 			sl.forEach(function(i2){
 				i2.addEventListener('change', function(e){
 					let pe = e.target.getAttribute('data-target')
+					let ps = e.target.getAttribute('data-sort')
 					
 					// reset : hide all
 					mk.forEach(function(i){
@@ -16,6 +57,13 @@ if(!!mk) {
 							i.classList.add(h)
 						}
 					})
+					// reset: sorting reset
+					let ks = document.querySelectorAll('[data-sort-name]')
+					if(ks) {
+						ks.forEach(function(j){
+							j.classList.remove('--first')
+						})
+					}
 
 					// dont hide me
 					item.classList.remove(h)
@@ -30,6 +78,15 @@ if(!!mk) {
 					if(!!pe) {
 						let wo = document.getElementById(pe)
 						if(!!wo) {
+							
+							// sort element first
+							if(!!ps) {
+								let fst = wo.querySelector('[data-sort-name='+ps+']')
+								if(fst) {
+									fst.classList.add('--first')
+								}
+							}
+
 							wo.classList.remove(h)
 						}
 					}

@@ -40,6 +40,28 @@
 			}
 		}
 	}
+	&-sorting {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 1.75rem;
+		padding-top: .5rem;
+		[data-sort-name] {
+			order: 1;
+			margin: 0;
+			&.--first {
+				order: 0;
+			}	
+		}
+	}
+	&-expert {
+		&-list {
+			position: relative;
+			height: 50vh;
+			overflow: auto;
+			display: flex;
+		}
+	}
 	&-time {
 		position: relative;
 		width: 100%;
@@ -79,7 +101,8 @@
 			cursor: pointer;
 		}
 		input[type=radio]:checked + label {
-			background: #0039D4;
+			border: 1px solid $color-theme;
+			background: $color-theme;
 			color: #fff;
 		}
 		input[type=radio] {

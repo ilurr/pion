@@ -1,0 +1,120 @@
+.logged {
+	&-block {
+		position: relative;
+		display: flex;
+		height: calc(100vh + 0px);
+		background: #f9f9f9;
+		margin-top: -60px;
+		flex-direction: column;
+		@include min-responsive($screen-middle) {
+			margin-top: -100px;
+		}
+		@include min-responsive($screen-small-desktop) {
+			flex-direction: row;
+		}
+	}
+	&-col {
+		position: relative;
+	}
+	&-flex {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		// @include max-responsive($screen-tablet) {
+		// 	min-height: 60vh;
+		// }
+	}
+	&-card {
+		position: relative;
+		width: 100%;
+    min-height: 100%;
+    // padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+		flex-direction: column;
+		z-index: 1;
+		&.card {
+			border-radius: 25px 25px 0 0;
+			@include min-responsive($screen-small-desktop) {
+				border-radius: 0;
+			}
+		}
+	}
+	&-box {
+		position: relative;
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 0 20px;
+		z-index: 2;
+		margin-bottom: 20vh;
+		width: 100%;
+		@include min-responsive($screen-tablet) {
+			margin-bottom: 25vh;
+		}
+		@include min-responsive($screen-small-desktop) {
+			width: 460px;
+			margin-bottom: 45vh;
+		}
+		@include min-responsive($screen-large-desktop) {
+			width: 600px;
+		}
+	}
+	&-title {
+		font-size: 1.2rem;
+		font-weight: 700;
+		text-align: center;
+		@include min-responsive($screen-tablet) {
+			font-size: 1.25rem;
+		}
+	}
+	&-lead {
+		text-align: center;
+		font-size: 14px;
+		display: none;
+		@include min-responsive($screen-tablet) {
+			display: block;
+		}
+	}
+	&-logo {
+		height: 50px;
+		img {
+			height: 50px;
+		}
+	}
+	&-bg {
+		width: 100%;
+		position: absolute;
+		bottom: -20px;
+		height: 25vh;
+    text-align: center;
+		z-index: 1;
+		pointer-events: none;
+		@include min-responsive($screen-tablet) {
+			height: 30vh;
+			bottom: 0;
+		}
+		@include min-responsive($screen-small-desktop) {
+			height: 50vh;
+		}
+		img {
+			height: 100%;
+		}
+	}
+}
+.form {
+	&-login {
+		width: 100%;
+		padding: 2rem 1.5rem;
+		@include min-responsive($screen-middle) {
+			padding: 0;
+			width: 400px;
+		}
+	}
+	&-login &-row {
+		margin: .5rem 0;
+	}
+}

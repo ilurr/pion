@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+
+		<div class="logged-block">
+			<div class="logged-col col-basis col-50 logged-flex">
+				<div class="logged-box">
+					<div class="logged-logo">
+						<a href="index.html">
+							<img src="./asset/images/logo-pion-clinician.png" alt="pion-clinician">
+						</a>
+					</div>
+					<div class="logged-title">Yuk! Login untuk buat janji dengan para expert!</div>
+					<div class="logged-lead">Kamu bisa memasukkan email atau nomor handphone terdaftar sebelumnya.</div>
+				</div>
+				<div class="logged-bg">
+					<img src="./asset/images/index/login.svg" alt="Login">
+				</div>
+			</div>
+			<div class="logged-col col-basis col-50 logged-flex">
+				<div class="logged-card card">
+					<div class="form-main form-login">
+						<h2 class="title">Login</h2>
+						<form action="{{action}}">
+							{{>input type="text" label="Email / Phone Number" name="email" placeholder="Email / Phone Number" nolabel="true" txterror=txterrorEmail}}
+							{{>input type="password" label="Password" name="password" placeholder="Password" icon="view" nolabel="true" function="js-viewTxt" txterror=txterrorPsswrd}}
+							{{#if txterrorSystem}}
+							<div class="form-error text-center">{{txterrorSystem}}</div>
+							{{/if}}
+							{{>button type="submit" label="Login" class="-primary"}}
+							<div class="block-login">
+								<p><a href="register.html">Register Pion</a> or <a href="forget.html">Forget password?</a></p>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+{{>js}}
+</body>
+</html>
