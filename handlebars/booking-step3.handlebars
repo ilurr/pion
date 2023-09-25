@@ -60,8 +60,10 @@
 										</div>
 										<div class="booking-row" data-sort-name="expert">
 											<div class="form-text">Your expert</div>
-											{{>input type="text" name="attending_expert_display" placeholder="Search your expert" autocomplete="off" nolabel="true" function="js-autocomplete-expert" attribute="data-expert-display"}}
-											<input type="hidden" name="attending_expert_id" id="attending_expert" data-expert-id="true">
+											<!-- textbox for display result only || searching box-->
+											<input type="text" id="attending_expert_display" name="attending_expert_display" class="js-autocomplete-expert" placeholder="Search your expert" autocomplete="off" data-expert-display="true">
+											<!-- textbox for form submiting -->
+											<input type="hidden" name="attending_expert_id" id="attending_expert_id" data-expert-id="true">
 											{{!>select type="select" name="psychiatrist" placeholder="Select  your psychiatrist" nolabel="true" option="Dian Oriza M.Psi.,Katarina Ira Puspita M.Psi.,Astrid WEN M.Psi.,Dr. Rahma Paramita M.Psi."}}
 											<div id="expertList" class="about-expert -list">
 												{{#each expert}}
@@ -108,12 +110,12 @@
 <script>
 		
 		// plugin docs: https://tarekraafat.github.io/autoComplete.js/
-		let expert_value = document.getElementById('attending_expert')
 
 		// autocomplete
 		const autoCompleteJS = new autoComplete({
 			selector: ".js-autocomplete-expert",
 			threshold: 2,
+			wrapper: false,
 			placeHolder: "Search your expert",
 			data: {
 				src: [
@@ -179,8 +181,8 @@
 			},
 			resultsList: {
 				destination: "#expertList",
-				position: "beforeend",
-				class: "about-expert -result",
+				position: "beforebegin",
+				class: "about-expert -list",
 				element: (list, data) => {
 					if (!data.results.length) {
 						// Create "No Results" message element
@@ -201,7 +203,7 @@
 				class: "about-expert-item",
 				element: (item, data) => {
 				// Modify Results Item Content
-				console.log(data)
+				//console.log(data)
 				let selected = 'false'
 				if(document.querySelector('[data-expert-id]').value==data.value.id) {
 					selected = 'true'
@@ -213,7 +215,7 @@
 					<div class="about-expert-col">
 						<div class="about-expert-name">${data.match}</div>
 						<div class="about-expert-skill">${data.value.skill}</div>
-						<button type="button" onclick="selectExpert(this, '${data.value.id}', '${data.value.name}')" class="button -auto" data-expert-id="" data-expert-select="${selected}" data-text="Select"><i class="fa-solid fa-plus"></i></button>
+						<button type="button" onclick="selectExpert(this, '${data.value.id}', '${data.value.name}', 'search')" class="button -auto" data-expert-id="" data-expert-select="${selected}" data-text="Select"><i class="fa-solid fa-plus"></i></button>
 					</div>
 				`;
 				},
@@ -222,10 +224,10 @@
 			events: {
 				input: {
 					selection: (event) => {
-						const selection = event.detail.selection.value;
-						autoCompleteJS.input.value = selection.name;
-						expert_value.value = selection.id;
-						console.log(event)
+						//const selection = event.detail.selection.value;
+						//autoCompleteJS.input.value = selection.name;
+						//expert_value.value = selection.id;
+						//console.log(event)
 					}
 				}
 			}

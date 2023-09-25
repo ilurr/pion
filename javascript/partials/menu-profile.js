@@ -1,5 +1,5 @@
 // select expert
-function selectExpert(el, xid, name) {
+function selectExpert(el, xid, xname, search) {
 	// set value input hidden
 	let vk = document.querySelector('[data-expert-id]')
 	let vn = document.querySelector('[data-expert-display]')
@@ -23,16 +23,35 @@ function selectExpert(el, xid, name) {
 	let attr = el.getAttribute('data-expert-select')
 	if(attr=='false') {
 		el.setAttribute('data-expert-select', 'true')
-		if(vk) {
+		if(vk && vn) {
 			vk.value = xid
-			vn.value = name
+			vn.value = xname
+			if(search) {
+				syncExpert(xid, 'true')
+			}
 		}
 	} else {
 		el.setAttribute('data-expert-select', 'false')
-		if(vk) {
+		if(vk && vn) {
 			vk.value = ''
 			vn.value = ''
+			if(search) {
+				syncExpert(xid, 'false')
+			}
 		}
+	}
+
+}
+
+function syncExpert(xid, val) {
+	let lm = document.querySelectorAll('[data-expert-select]')
+	if(lm) {
+		lm.forEach(function(item){
+			let go = item.getAttribute('data-expert-id')
+			if(go==xid) {
+				item.setAttribute('data-expert-select', val)
+			}
+		})
 	}
 
 }
