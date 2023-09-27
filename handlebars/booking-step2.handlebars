@@ -28,17 +28,17 @@
 								<form action="booking-step3.html">
 									<div class="booking-row">
 										<div class="form-text">
-											Klien dewasa (Anda) adalah anak ke 
+											You are the  
 											{{>input type="number" name="child_number" placeholder="Cth: 1" inline=true nolabel="true"}}
-											dari 
+											of 
 											{{>input type="number" name="child_number" placeholder="Cth: 1" inline=true nolabel="true"}}
-											bersaudara
+											siblings
 										</div>
 									</div>
 									<div class="booking-row">
 										<div class="form-text">Family tree (as a child)</div>
 										<div class="form-hint">
-											<p>Tuliskan daftar urutan keluarga Anda dimana Anda sebagai anak dengan format berikut: no.1 adalah data Ayah, no.2 adalah data ibu, no.3 dst adalah data anak-anak (saudara Anda). tuliskan nama, jenis kelamin, usia, pendidikan terakhir. contoh (1. Bambang, L, 70 tahun, SMA)</p>
+											<p>Start with the 1st child.</p>
 										</div>
 										<div id="childRows_0" class="form-text form-cols form-tree">
 											{{>input cols="30" type="text" name="childName_0" placeholder="Full Name" inline=true nolabel="true"}}
@@ -59,7 +59,7 @@
 									<div class="booking-row">
 										<div class="form-text">Family tree (as a couple/parent)</div>
 										<div class="form-hint">
-											<p>Isilah item ini jka Anda menikah dan atau berkeluarg. Tuliskan daftar urutan keluarga Anda dimana Anda sebagai pasangan / orangtua dengan format berikut: no.1 adalah data Anda, no.2 adalah data pasangan, no.3 dst adalah data anak-anak Anda. tuliskan nama, jenis kelamin, usia, pendidikan terakhir. contoh (1. Bambang, L, 70 tahun, SMA)</p>
+											<p>Start with the father</p>
 										</div>
 										<div id="parentRows_0" class="form-text form-cols form-tree">
 											{{>input cols="30" type="text" name="parentName_0" placeholder="Full Name" inline=true nolabel="true"}}
@@ -85,16 +85,12 @@
 										{{>radio label="Widowed" id="relationship_wodowed" name="relationship"}}
 									</div>
 									<div class="booking-row">
-										<div class="form-text">Complaints</div>
-										{{>textarea placeholder="Write down your complaints" id="complaints" name="complaints" txterror="You need to write your complaints"}}
+										<div class="form-text">Problems</div>
+										{{>textarea placeholder="Write down your problems" id="complaints" name="complaints" txterror="You need to write your complaints"}}
 									</div>
 									<div class="booking-row">
-										<div class="form-text">Symptoms</div>
-										{{>textarea placeholder="Write down your symptoms" id="symptoms" name="symptoms"}}
-									</div>
-									<div class="booking-row">
-										<div class="form-text">Reason to take consultation</div>
-										{{>textarea placeholder="Write down your reason" id="reason" name="reason"}}
+										<div class="form-text">Your objectives</div>
+										{{>textarea placeholder="Write down your objectives" id="symptoms" name="symptoms"}}
 									</div>
 									<div class="booking-row booking-action">
 										{{>button type="button" label="Back" class="-auto" onclick="window.history.go(-1); return false;"}}

@@ -27,26 +27,28 @@
 							<div class="form-main form-booking">
 								<form action="booking-step2.html">
 									<div class="booking-row">
-										<div class="form-text">Select your age</div>
-										{{>radio label="Anak (0-12 tahun)" id="age_anak" name="age"}}
-										{{>radio label="Remaja (12-18 tahun)" id="age_remaja" name="age"}}
-										{{>radio label="Dewasa (>18 tahun)" id="age_dewasa" name="age"}}
+										<div class="form-text">Client age</div>
+										{{>radio label="Child (0-12 yrs)" id="child" name="category" value="child"}}
+										{{>radio label="Teenager (12-18 yrs)" id="teenager" name="category" value="teenager"}}
+										{{>radio label="Adult (>18 yrs)" id="adult" name="category" value="adult"}}
 										<!-- error message -->
 										<div class="form-error">You need to choose one of them</div>
 									</div>
 									<div class="booking-row">
-										<div class="form-text">Select type of consultation</div>
-										{{>radio label="Counseling" id="consul_type_counseling" name="consul_type"}}
-										{{>radio label="Therapy" id="consul_type_therapy" name="consul_type" disabled="true"}}
-										{{>radio label="Assesment" id="consul_type_assesment" name="consul_type" disabled="true"}}
+										<div class="form-text">Select session</div>
+										{{>radio label="Session with a Psychologist" id="psychology" name="type"}}
+										{{>radio label="Session with a Life Coach" id="life_coach" name="type" disabled="true"}}
+										{{>radio label="Session with a Financial Planner" id="financial_planner" name="type" disabled="true"}}
+										{{>radio label="Session with an Occupational Therapist" id="occupation_therapy" name="type" disabled="true"}}
+										{{>radio label="Assesment Package" id="assessment" name="type" disabled="true"}}
 										<div class="form-hint">
 											<p>You need counseling session for the first timer.</p>
 										</div>
 									</div>
 									<div class="booking-row" data-form-toggle="true">
-										<div class="form-text">Consultation method</div>
-										{{>radio label="Online (with zoom)" id="method_online" name="method"}}
-										{{>radio label="To Pion Clinic" id="method_clinic" name="method" toggle="clinic-location"}}
+										<div class="form-text">Location</div>
+										{{>radio label="Online" id="method_online" name="method"}}
+										{{>radio label="In-person" id="method_clinic" name="method" toggle="clinic-location"}}
 										{{>radio label="Client location" id="method_client" name="method" toggle="client-location"}}
 									</div>
 									<div class="booking-row -hide" data-form-toggle="true" id="clinic-location">
@@ -84,7 +86,7 @@
 
 <script>
 	// script untuk keperluan dummy saja
-	let ss = document.querySelectorAll("input[id=consul_type_counseling]");
+	let ss = document.querySelectorAll("input[name=type]");
 	let fr = document.querySelector("input[type=submit]");
 	let sp = false
 	if(!!ss) {

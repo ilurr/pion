@@ -116,13 +116,13 @@
 	}
 	&-summary {
 		position: relative;
-		padding: 20px 0;
+		margin: 25px 0;
 		@include min-responsive($screen-small-desktop) {
 			padding: 20px 50px;
 		}
 		.title {
-			justify-content: center;
-			margin-bottom: 10px;
+			// justify-content: center;
+			margin: 10px 0;
 		}
 	}
 	&-result {
@@ -173,7 +173,7 @@
 		}
 	}
 	&-summary &-row {
-		padding: 1.125rem 0;
+		padding: 1rem 0;
 	}
 	&-action {
 		display: flex;
