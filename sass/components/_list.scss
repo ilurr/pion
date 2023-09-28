@@ -50,7 +50,10 @@
 		}
 		&.-invoice {
 			margin: 1rem 0;
-			gap: 5px;
+			gap: 10px;
+			@include min-responsive($screen-tablet) {
+				gap: 5px;
+			}
 		}
 	}
 	&-item {
@@ -82,7 +85,7 @@
 			}
 		}
 		.note-list.-invoice & {
-			box-shadow: none;
+			// box-shadow: none;
 			border-bottom: 1px solid transparent;
 			&:hover {
 				background: transparent;
@@ -125,7 +128,17 @@
 			}
 		}
 		.note-list.-invoice & {
-			padding: 5px 0;
+			padding: 15px;
+			@include min-responsive($screen-tablet) {
+				padding: 2px 0;
+				align-items: flex-start;
+			}
+		}
+		.note-list.-invoice .note-item.-footer & {
+			padding: 5px 15px;
+			@include min-responsive($screen-tablet) {
+				padding: 5px 0;
+			}
 		}
 	}
 	&-row {
@@ -243,6 +256,12 @@
 			overflow: hidden;
 			.note-list & {
 				max-width: 148px;
+			}
+			.note-list.-invoice & {
+				max-width: none;
+				white-space: normal;
+				overflow: initial;
+				text-overflow: initial;
 			}
 		}
 		@include min-responsive($screen-small-desktop) {
@@ -366,6 +385,10 @@
 	&-invoice {
 		color: #0039D4;
 		font-weight: 600;
+	}
+	&-total {
+		font-size: 1rem;
+		font-weight: 700;
 	}
 	&-more {
 		display: none;
@@ -497,6 +520,13 @@
 				font-weight: 700;
 			}
 		}
+		&.-footer {
+			padding: 10px 0;
+			@include min-responsive($screen-tablet) {
+				border-top: 1px solid #D3DAE0;
+				padding: 15px 0 5px;
+			}
+		}
 	}
 	&-modal {
 		.note-content {
@@ -568,7 +598,7 @@
 	&-quest {
 		display: inline-flex;
 		position: relative;
-		padding-left: 5px;
+		margin-left: 5px;
 		& > i {
 			pointer-events: none;
 		}
