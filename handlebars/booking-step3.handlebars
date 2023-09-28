@@ -78,7 +78,9 @@
 													</div>
 												</div>
 												{{/each}}
-												<div class="more-loading" id="about-more-trigger"></div>
+												<div class="more-loading" id="about-more-trigger" data-more-url="./asset/dummy-expert.json" style="display: none">
+													<div class="more-loading-circle"></div>
+												</div>
 											</div>
 											<div class="about-expert-gradient"></div>
 										</div>
@@ -118,64 +120,19 @@
 			wrapper: false,
 			placeHolder: "Search your expert",
 			data: {
-				src: [
-					{
-						"id": "0",
-						"name": "Rahma Paramita, M.Psi., Psikolog",
-						"nick": "Mita",
-						"skill": "Meditasi, EMDR, Keluarga, Theraplay",
-						"img": "mita.png"
-					},
-					{
-						"id": "1",
-						"name": "Dian Oriza, M.Psi., Psikolog",
-						"nick": "Dian",
-						"skill": "Acceptance Commitment Therapy",
-						"img": "dian.png"
-					},
-					{
-						"id": "2",
-						"name": "Tri Swasono Hadi, M.Psi., Psikolog",
-						"nick": "Tri",
-						"skill": "Masalah Hubungan, Emosi, Masalah Kepribadian atau Klinis lainnya, dan EMDR",
-						"img": "tri.png"
-					},
-					{
-						"id": "3",
-						"name": "Astrid WEN, M.Psi., Psikolog",
-						"nick": "Astrid",
-						"skill": "Theraplay, Interaksi Antar Keluarga, Kelekatan",
-						"img": "astrid.png"
-					},
-					{
-						"id": "4",
-						"name": "Katarina Ira Puspita, M.Psi., Psikolog",
-						"nick": "Karin",
-						"skill": "CBT, Social Skill Training, Keluarga, Cemas Pada Anak & Remaja",
-						"img": "katarina.png"
-					},
-					{
-						"id": "5",
-						"name": "Maria T. Puspaningsih, M.Psi., Psikolog",
-						"nick": "Maria",
-						"skill": "Relaprofilesi (keluarga, pernikahan, pasangan, pertemanan), Komunikasi Efektif & Asertif, Self-Development, Life Skills Development, Permasalahan Remaja dan Orang Dewasa, Dukungan Psikologis Awal, Psikoterapis Klinis",
-						"img": "maria.png"
-					},
-					{
-						"id": "6",
-						"name": "Ayunda Shabriani Tyara, M.Psi., Psikolog",
-						"nick": "Tyara",
-						"skill": "Masalah Anak (Kesulitan Belajar, Gangguan Perkembangan Klinis, Hubungan Keluarga), Parenting",
-						"img": "tyara.png"
-					},
-					{
-						"id": "7",
-						"name": "L. Sandi Witarso, M.Psi., Psikolog",
-						"nick": "Sandi",
-						"skill": "Masalah Orang Dewasa, Skizofrenia, Psikoterapi Klinis",
-						"img": "lsandi.png"
+				src: async (query) => {
+					try {
+						// Fetch Data from external Source
+						const source = await fetch(`./asset/dummy-expert.json`);
+						// Data should be an array of `Objects` or `Strings`
+						const data = await source.json();
+						//data = JSON.parse(data)
+						return data.expert;
+					} catch (error) {
+						console.log(error)
+						return error;
 					}
-				],
+				},
 				cache: true,
 				keys: ["name"]
 			},
@@ -232,6 +189,61 @@
 				}
 			}
 	});
+
+
+// load more expert
+let isLoading = false
+const elWrap = document.getElementById('expertList')
+const elLoadMore = document.getElementById('about-more-trigger')
+
+if (!!elWrap && !!elLoadMore) {
+		elWrap.addEventListener('scroll', async function(e) {
+				const { 
+						scrollHeight,
+						scrollTop,
+						clientHeight
+				} = elWrap;
+
+				if (Math.ceil(scrollTop + clientHeight) == scrollHeight) {   
+						if (isLoading) { return; }       
+						
+						isLoading = true
+						elLoadMore.style.display = 'flex'
+						let loadMore = await fetch(elLoadMore.dataset.moreUrl)
+						let response = await loadMore.json()
+						if (response.status) {
+								console.log(response.expert)
+								isLoading = false
+								elLoadMore.style.display = 'none'
+								//elLoadMore.dataset.moreUrl = response.urlNext // page 2
+								let moreLayout = ``
+								let resExp = response.expert
+								if(resExp) {
+									resExp.forEach(function(item){
+										moreLayout += `
+										<div class="about-expert-item">
+											<div class="about-expert-img">
+												<img src="./asset/images/expert/${item.img}" alt="${item.name}">
+											</div>
+											<div class="about-expert-col">
+												<div class="about-expert-name">${item.name}</div>
+												<div class="about-expert-skill">${item.skill}</div>
+												<button type="button" onclick="selectExpert(this, '${item.id}', '${item.name}', 'search')" class="button -auto" data-expert-id="" data-expert-select="false" data-text="Select"><i class="fa-solid fa-plus"></i></button>
+											</div>
+										</div>
+										`
+									})
+								}
+								elLoadMore.insertAdjacentHTML('beforebegin', moreLayout)                    
+						} else {
+								setTimeout(function() {
+										elLoadMore.style.display = 'none'
+								}, 3000)
+						}
+				}
+		})
+}
+
 </script>
 </body>
 </html>
