@@ -56,7 +56,7 @@
 		&-footnote {
 			display: inline-flex;
 			gap: 5px;
-			align-items: center;
+			align-items: flex-start;
 			input {
 				margin: 0;
 				height: auto;
@@ -65,7 +65,7 @@
 			}
 			label {
 				font-size: .75rem;
-				line-height: 1;
+				// line-height: 1;
 			}
 		}
 	}
@@ -171,7 +171,7 @@
 		display: inline-block;
 		position: relative;
 		width: 100%;
-		height: 56px;
+		height: 50px;
 		margin: 0.250rem 0;
 		padding: 0;
 		border-radius: 6px;

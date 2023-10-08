@@ -44,39 +44,44 @@
 	&-box {
 		position: relative;
 		display: flex;
-		gap: 20px;
+		gap: 10px;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
 		padding: 0 20px;
 		z-index: 2;
-		margin-bottom: 20vh;
+		margin: 20px 0 25vh;
 		width: 100%;
 		@include min-responsive($screen-tablet) {
-			margin-bottom: 25vh;
+			gap: 20px;
+			margin: 20px 0 30vh;
 		}
 		@include min-responsive($screen-small-desktop) {
 			width: 460px;
-			margin-bottom: 45vh;
+			margin: 0 0 45vh;
 		}
 		@include min-responsive($screen-large-desktop) {
 			width: 600px;
 		}
 	}
 	&-title {
-		font-size: 1.2rem;
+		font-size: 1.125rem;
 		font-weight: 700;
 		text-align: center;
 		@include min-responsive($screen-tablet) {
 			font-size: 1.25rem;
 		}
+		&.-error {
+			color: $color-error;
+		}
 	}
 	&-lead {
 		text-align: center;
-		font-size: 14px;
-		display: none;
+		font-size: .75rem;
+		// display: none;
 		@include min-responsive($screen-tablet) {
 			display: block;
+			font-size: .875rem;
 		}
 	}
 	&-logo {
@@ -105,7 +110,25 @@
 		}
 	}
 }
-.form {
+.logged-card {
+	.title {
+		font-size: 1rem;
+		@include min-responsive($screen-tablet) {
+			font-size: 1.25rem;
+		}
+	}
+	.block-login p {
+		font-size: .875rem;
+	}
+	.footer-socmed {
+		justify-content: center;
+		a {
+			color: #8495A5;
+		}
+	}
+}
+.logged-card .form {
+	&-register,
 	&-login {
 		width: 100%;
 		padding: 2rem 1.5rem;
@@ -114,7 +137,27 @@
 			width: 400px;
 		}
 	}
-	&-login &-row {
+	&-register .form-row,
+	&-login .form-row {
 		margin: .5rem 0;
+	}
+	&-main {
+		display: flex;
+		flex-direction: column;
+		// gap: 5px;
+		@include min-responsive($screen-middle) {
+			gap: 10px;
+			height: auto;
+			overflow: auto;
+			width: 100%;
+			padding: 5vh calc((100% - 500px) / 2);
+		}
+		@include min-responsive($screen-small-desktop) {
+			padding: 10vh calc((100% - 400px) / 2);
+			height: 100vh;
+		}
+	}
+	&-main.form-login {
+		justify-content: center;
 	}
 }

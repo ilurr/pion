@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+
+		<div class="logged-block">
+			<div class="logged-col col-basis col-55 logged-flex">
+				<div class="logged-box">
+					<div class="logged-logo">
+						<a href="index.html">
+							<img src="./asset/images/logo-pion-clinician.png" alt="pion-clinician">
+						</a>
+					</div>
+					<div class="logged-title">Buat akun untuk bikin janji dengan para expert.</div>
+					<div class="logged-lead">Kamu bisa isi form berikut ini untuk bikin akun baru.</div>
+				</div>
+				<div class="logged-bg">
+					<img src="./asset/images/index/register.svg" alt="Register">
+				</div>
+			</div>
+			<div class="logged-col col-basis col-45 logged-flex">
+				<div class="logged-card card">
+					<div class="form-main form-login">
+						<h2 class="title">Daftar berhasil</h2>
+						<div class="form-hint">
+							<p>Selamat! akun kamu berhasil dibuat. Kamu bisa masuk untuk mulai bikin janji dengan expert.</p>
+						</div>
+						{{>button type="link" label="Kembali ke Halaman Utama" class="-primary" href="register-error-v2.html"}}
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+{{>js}}
+</body>
+</html>
