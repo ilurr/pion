@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+
+		<div class="logged-block">
+			<div class="logged-col col-basis col-55 logged-flex">
+				<div class="logged-box">
+					<div class="logged-logo">
+						<a href="index.html">
+							<img src="./asset/images/logo-pion-clinician.png" alt="pion-clinician">
+						</a>
+					</div>
+					<div class="logged-title">Buat akun untuk bikin janji dengan para expert.</div>
+					<div class="logged-lead">Kamu bisa isi form berikut ini untuk bikin akun baru.</div>
+				</div>
+				<div class="logged-bg">
+					<img src="./asset/images/index/register.svg" alt="Register">
+				</div>
+			</div>
+			<div class="logged-col col-basis col-45 logged-flex">
+				<div class="logged-card card">
+					<div class="form-main form-register">
+						<h2 class="title">Daftar</h2>
+						<form action="register-success-v2.html">
+							{{>input type="text" label="Email" name="email" placeholder="" txterror=txterrorEmail}}
+							{{>input type="text" label="Fullname" name="name" placeholder=""}}
+							{{>input type="text" label="Phone Number" name="phone" placeholder="" whatsapp="phone_wa"}}
+							{{>select type="select" label="Gender" name="gender" placeholder="" option="Male,Female"}}
+							{{>input type="password" label="Password" name="password" placeholder="" txterror=txterrorPsswrd}}
+							{{!>input type="text" label="Tanggal Lahir" name="birth" placeholder=(moment "id" "D MMM YYYY") txtVal=(moment "id" "D MMM YYYY") function="js-datepicker" parent="js-datepicker-container" readonly="true"}}
+							{{>input type="text" label="Date of Birth" name="birth" placeholder="" function="js-datepicker" parent="js-datepicker-container" readonly="true" txterror="You have to fill this box"}}
+							{{!>checkbox type="checkbox" label="By creating an account you have agreed to our <a htef='#'>Terms & Condition</a> and <a htef='#'>Privacy Policy</a>." name="agree" checked="true"}}
+							<div class="form-row form-input">
+								<div class="form-inline-footnote">
+									<input type="checkbox" id="is_company" name="is_company" value="1"> 
+									<label for="is_company">Saya adalah badan usaha, <span style="font-weight: 500; color: #0DACDD !important;">daftarkan saya sebagai perusahaan</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-hint">
+								<p>Dengan membuat akun, Anda setuju dengan  <a href="#">Ketentuan layanan</a> dan <a href="#">Kebijakan privasi</a> kami.</p>
+							</div>
+							{{#if txterrorSystem}}
+							<div class="form-error text-center">{{txterrorSystem}}</div>
+							{{/if}}
+							{{>button type="submit" label="Create Account" class="-disabled" disabled="true"}}
+							<div class="block-login">
+								<p>Sudah punya akun? <a href="login-v2.html">Masuk di sini</a></p>
+								<p><a href="index.html">Kembali ke halaman utama</a></p>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+{{>js}}
+<script>
+	// script untuk keperluan dummy saja
+	let ss = document.querySelectorAll("input[name=name]");
+	let fr = document.querySelector("input[type=submit]");
+	if(!!ss) {
+		for(let i=0;i<ss.length;i++) {
+			ss[i].addEventListener('input', cekInput);
+			ss[i].addEventListener('propertychange', cekInput); 
+		}
+	}
+	function cekInput(e) {
+		let va = e.target.value;
+		for(let i=0;i<ss.length;i++) {
+			console.log(ss[i].value);
+			if(ss[i].value!=='') {
+				fr.classList.add("-primary");
+				fr.classList.remove("-disabled");
+				fr.removeAttribute("disabled");
+			} else {
+				fr.classList.remove("-primary");
+				fr.setAttribute("disabled","disabled");
+			}
+		}
+	} 
+</script>
+</body>
+</html>

@@ -17,7 +17,7 @@ button,
 	text-align: center;
 	border: 1px solid $color-theme;
 	cursor: pointer;
-	@include font-pack(false, .875rem, 600, false, $color-text-theme);
+	@include font-pack(false, .875rem, 700, false, $color-text-theme);
 	
 	&:hover {
 		background-color: darken(#fff, 5%);

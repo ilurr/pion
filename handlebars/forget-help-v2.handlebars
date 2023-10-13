@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+
+		<div class="logged-block">
+			<div class="logged-col col-basis col-55 logged-flex">
+				<div class="logged-box">
+					<div class="logged-logo">
+						<a href="index.html">
+							<img src="./asset/images/logo-pion-clinician.png" alt="pion-clinician">
+						</a>
+					</div>
+					<div class="logged-title">Lupa kata sandi kamu?</div>
+					<div class="logged-lead">Segera atur ulang kata sandi sebelum akun kamu hilang.</div>
+				</div>
+				<div class="logged-bg">
+					<img src="./asset/images/index/forget.svg" alt="Reset Password">
+				</div>
+			</div>
+			<div class="logged-col col-basis col-45 logged-flex">
+				<div class="logged-card card">
+					<div class="form-main form-login">
+						<h2 class="title">Atur ulang kata sandi</h2>
+						<div class="form-hint">
+							<p>Kami sudah kirimin kamu email. Cek inbox kamu dan segera ikuti instruksi selanjutnya.</p>
+						</div>
+						{{>button type="link" label="Kembali ke Halaman Utama" class="-primary" href="index.html"}}
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+{{>js}}
+</body>
+</html>
