@@ -512,10 +512,21 @@
     flex-direction: column;
 		gap: 10px;
 		@include min-responsive($screen-small-desktop) {
-			gap: 36px;
+			gap: 18px;
 			width: auto;
 			flex-basis: 0;
 			flex-grow: 1;
+		}
+		.form-row {
+			margin: 0;
+			.button {
+				font-size: 1rem;
+				height: 46px;
+				@include min-responsive($screen-small-desktop) {
+					height: 56px;
+					font-size: 1.25rem;
+				}
+			}
 		}
 	}
 	&-title {
@@ -574,6 +585,8 @@
 			}
 		}
 	}
+
+	// page
 	&-page &-title {
 		text-align: center;
 	}
@@ -719,8 +732,9 @@
 				background: #E3EAF1;
 			}
 			&.-active {
-				color: #fff;
-				background: #009ACA;
+				color: #009ACA;
+				border: 1px solid #009ACA;
+				// background: #009ACA;
 			}
 		}
 	}
