@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+
+			<!-- side -->
+			{{>aside active="User Profile"}}
+			
+			<!-- dashboard -->
+			<section class="section board">
+
+				<div class="board-row">
+
+					<h1 class="title"><a href="my-dashboard.html" class="title-back"><span class="icon icon-back"></span></a> Add Member</h1>
+
+					<div class="form-main form-user">
+						<form action="user-profile.html">
+							{{>input type="text" label="Child's Full Name" name="child_name" placeholder=""}}
+							{{>input type="text" label="Child's Nick Name" name="child_nick" placeholder=""}}
+							{{>input type="text" name="child_birth" label="Child's Birth Date" placeholder="" function="js-datepicker-now" parent="js-datepicker-container" readonly="true"}}
+							<div class="form-row form-radio-wrap">
+								<div class="form-text">Sex</div>
+								{{>radio label="Male" id="child_male" name="child_gender" value="male"}}
+								{{>radio label="Female" id="child_female" name="child_gender" value="female"}}
+							</div>
+							<div class="form-row form-radio-wrap">
+								<div class="form-text">
+									You are the  
+									{{>input type="number" name="child_number" placeholder="Cth: 1" inline=true nolabel="true"}}
+									of 
+									{{>input type="number" name="child_number" placeholder="Cth: 1" inline=true nolabel="true"}}
+									siblings
+								</div>
+							</div>
+							{{>button type="submit" label="Save" class="-auto -disabled" disabled="true"}}
+
+						</form>
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+<script>
+	// script untuk keperluan dummy saja
+	let ss = document.querySelectorAll("input[name=child_name]");
+	let fr = document.querySelector("input[type=submit]");
+	if(!!ss) {
+		for(let i=0;i<ss.length;i++) {
+			ss[i].addEventListener('input', cekInput);
+			ss[i].addEventListener('propertychange', cekInput); 
+		}
+	}
+	function cekInput(e) {
+		let va = e.target.value;
+		for(let i=0;i<ss.length;i++) {
+			console.log(ss[i].value);
+			if(ss[i].value!=='') {
+				fr.classList.add("-primary");
+				fr.classList.remove("-disabled");
+				fr.removeAttribute("disabled");
+			} else {
+				fr.classList.remove("-primary");
+				fr.setAttribute("disabled","disabled");
+			}
+		}
+	} 
+</script>
+</body>
+</html>

@@ -81,6 +81,14 @@ aside {
 	@include min-responsive($screen-large-desktop) {
 		border-left: 1px solid var(--neutral-grey-100, #D3DAE0);
 	}
+	& ~ .board {
+		@include min-responsive($screen-tablet) {
+			max-width: 100%;
+		}
+		@include min-responsive($screen-small-desktop) {
+			max-width: 80%;
+		}
+	}
 }
 
 .board {
@@ -178,67 +186,130 @@ aside {
 	&-basis {
 		flex-grow: 0;
 		flex-basis: 100%;
+		@include min-responsive($screen-tablet) {
+			flex-shrink: 0;
+		}
 	}
-	@include min-responsive($screen-small-desktop) {
+	@include min-responsive($screen-tablet) {
 		&-5 {
 			flex-basis: 5%;
+			&.note-col {
+				max-width: 5%;
+			}
 		}
 		&-10 {
 			flex-basis: 10%;
+			&.note-col {
+				max-width: 10%;
+			}
 		}
 		&-15 {
 			flex-basis: 15%;
+			&.note-col {
+				max-width: 15%;
+			}
 		}
 		&-20 {
 			flex-basis: 20%;
+			&.note-col {
+				max-width: 20%;
+			}
 		}
 		&-25 {
 			flex-basis: 25%;
+			&.note-col {
+				max-width: 25%;
+			}
 		}
 		&-30 {
 			flex-basis: 30%;
+			&.note-col {
+				max-width: 30%;
+			}
 		}
 		&-35 {
 			flex-basis: 35%;
+			&.note-col {
+				max-width: 35%;
+			}
 		}
 		&-40 {
 			flex-basis: 40%;
+			&.note-col {
+				max-width: 40%;
+			}
 		}
 		&-45 {
 			flex-basis: 45%;
+			&.note-col {
+				max-width: 45%;
+			}
 		}
 		&-50 {
 			flex-basis: 50%;
+			&.note-col {
+				max-width: 50%;
+			}
 		}
 		&-55 {
 			flex-basis: 55%;
+			&.note-col {
+				max-width: 55%;
+			}
 		}
 		&-60 {
 			flex-basis: 60%;
+			&.note-col {
+				max-width: 60%;
+			}
 		}
 		&-65 {
 			flex-basis: 65%;
+			&.note-col {
+				max-width: 65%;
+			}
 		}
 		&-70 {
 			flex-basis: 70%;
+			&.note-col {
+				max-width: 70%;
+			}
 		}
 		&-75 {
 			flex-basis: 75%;
+			&.note-col {
+				max-width: 75%;
+			}
 		}
 		&-80 {
 			flex-basis: 80%;
+			&.note-col {
+				max-width: 80%;
+			}
 		}
 		&-85 {
 			flex-basis: 85%;
+			&.note-col {
+				max-width: 85%;
+			}
 		}
 		&-90 {
 			flex-basis: 90%;
+			&.note-col {
+				max-width: 90%;
+			}
 		}
 		&-95 {
 			flex-basis: 95%;
+			&.note-col {
+				max-width: 95%;
+			}
 		}
 		&-100 {
 			flex-basis: 100%;
+			&.note-col {
+				max-width: 100%;
+			}
 		}
 	}
 }

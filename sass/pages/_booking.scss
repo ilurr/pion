@@ -180,12 +180,13 @@
 		justify-content: center;
 		gap: 10px;
 		// flex-direction: column;
-		@include min-responsive($screen-small-desktop) {
+		@include min-responsive($screen-tablet) {
 			padding: 1rem 0;
 			justify-content: flex-start;
-			// flex-direction: row;
 			&.-center {
 				justify-content: center;
+				flex-direction: row;
+				gap: 20px;
 			}
 		}
 		&.booking-row:last-child {

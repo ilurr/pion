@@ -74,15 +74,19 @@
 		height: 34px;
 		border: none;
 		margin: 0;
+		background-color: transparent;
 		color: #000;
 		font-size: 18px;
 		position: absolute;
     right: -12px;
     top: -12px;
     z-index: 1;
+		&:hover {
+			background-color: transparent;
+		}
 		@include min-responsive($screen-tablet) {
-			right: -20px;
-			top: -20px;
+			right: -30px;
+			top: -30px;
 		}
 		& > * {
 			pointer-events: none;
@@ -95,7 +99,7 @@
 		align-items: center;
 		gap: 10px;
 		z-index: 1;
-		min-height: 25px;
+		// min-height: 25px;
 		padding-bottom: 5px;
 	} 
 	& &-parent &-content {

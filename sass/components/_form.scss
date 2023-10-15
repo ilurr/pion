@@ -329,7 +329,7 @@
 			@include transform(translate(-50%, -50%));
 			text-indent: 0;
 			cursor: pointer;
-			width: 98%;
+			width: 97%;
 			text-align: center;
 			padding: 0 0.25rem;
 			pointer-events: none;
@@ -388,6 +388,10 @@
 	// 		}
 	// 	}
 	// }
+
+	&-text {
+		color: #34475A;
+	}
 
 	&-error {
 		position: relative;
@@ -566,8 +570,23 @@
 		}
 		.button,
 		.form-select,
-		input {
+		input:not([type=checkbox]),
+		input:not([type=radio]) {
 			height: 36px;
+		}
+	}
+
+	&-user {
+		max-width: 400px;
+		margin-top: -.75rem;
+		.form-radio-wrap {
+			padding-bottom: .5rem;
+			& > .form-row {
+				margin: .125rem 0;
+			}
+			.form-radio {
+				margin: 0;
+			}
 		}
 	}
 

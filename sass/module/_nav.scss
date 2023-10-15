@@ -251,4 +251,21 @@
 			}
 		}
 	}
+	&-aside-item &-primary {
+		margin: -5px 20px 10px;
+		width: calc(100% - 40px);
+		max-width: 160px;
+	}
+	&-primary {
+		background: #ffda00;
+		border: 2px solid #36404A;
+    color: #36404A;
+    border-radius: 30px;
+    height: 45px;
+    line-height: 1;
+		&:hover {
+			background: darken(#ffda00, 2%);
+			color: #000;
+		}
+	}
 }

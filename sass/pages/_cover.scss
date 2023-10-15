@@ -65,27 +65,30 @@
     background-size: auto 100%;
 		background-position: calc(100% + 105px) center;
 		background-repeat: no-repeat;
-		&.-b2 {
-			background-position: calc(100% + 80px) center;
-		}
-		&.-b3 {
-			background-position: calc(100% + 100px) center;
-			@include min-responsive($screen-tablet) {
-				background-position: calc(100% + 370px) center;
-			}
-			@include min-responsive($screen-small-desktop) {
-				background-position: calc(100% + 200px) center;
-			}
+		// &.-b2 {
+		// 	background-position: calc(100% + 80px) center;
+		// }
+		// &.-b3 {
+		// 	background-position: calc(100% + 100px) center;
+		// 	@include min-responsive($screen-tablet) {
+		// 		background-position: calc(100% + 370px) center;
+		// 	}
+		// 	@include min-responsive($screen-small-desktop) {
+		// 		background-position: calc(100% + 200px) center;
+		// 	}
+		// }
+		@include min-responsive($screen-middle) {
+			background-position: calc(100% + 105px) center;
 		}
 		@include min-responsive($screen-tablet) {
 			height: 70vh;
 			background-position: calc(100% + 250px) center;
 		}
-		@include min-responsive($screen-small-desktop) {
+		@include min-responsive($screen-small-desktop - 1) {
 			height: 100%;
 			background-position: calc(100% + 200px) center;
 		}
-		@media (min-width: $screen-small-desktop) and (max-height: 700px) {
+		@media (min-width: ($screen-small-desktop + 1)) and (max-height: 700px) {
 			background-position: calc(100% + 0px) center;	
 		}
 		// @include min-responsive($screen-desktop) {
@@ -245,6 +248,10 @@
 		transition: all .2s cubic-bezier(0.68,-0.55,0.27,1.55);
 		padding: 24px 18px;
 		gap: 16px;
+		// @include min-responsive($screen-middle) {
+		// 	width: calc(100% / 2);
+		// 	margin: 0 auto;
+		// }
 		@include min-responsive($screen-tablet) {
 			width: calc(100% / 3);
 			padding: 36px 24px;
@@ -437,6 +444,16 @@
 		&-lead {
 			text-align: center;
 		}
+		.button {
+			background: #ffda00;
+			border: 2px solid #36404A;
+			color: #36404A;
+			border-radius: 30px;
+			&:hover {
+				background: darken(#ffda00, 2%);
+				color: #000;	
+			}	
+		}
 	}
 }
 
@@ -522,6 +539,14 @@
 			.button {
 				font-size: 1rem;
 				height: 46px;
+				background: #ffda00;
+				border: 2px solid #36404A;
+				color: #36404A;
+				border-radius: 30px;
+				&:hover {
+					background: darken(#ffda00, 2%);
+					color: #000;		
+				}
 				@include min-responsive($screen-small-desktop) {
 					height: 56px;
 					font-size: 1.25rem;
@@ -561,8 +586,11 @@
 		gap: 20px;
 		@include font-pack(false, 16px, 400, 150%, #112639);
 		@include min-responsive($screen-tablet) {
-			padding: 20px 0;
+			padding: 14px 0;
 			font-size: 20px;
+		}
+		@include min-responsive($screen-desktop) {
+			padding: 20px 0;
 		}
 		& > span {
 			flex-grow: 1;
@@ -701,7 +729,7 @@
 		display: flex;
 		flex-wrap: nowrap;
 		gap: 10px;
-		@include max-responsive($screen-middle) {
+		@include max-responsive($screen-tablet - 1) {
 			width: 100vw;
 			overflow-x: auto;
 			margin: 0 -20px -15px;
@@ -712,7 +740,7 @@
 		}
 		&-item {
 			position: relative;
-			@include max-responsive($screen-middle) {
+			@include max-responsive($screen-tablet - 1) {
 				&:first-child {
 					margin-left: 15px;
 				}

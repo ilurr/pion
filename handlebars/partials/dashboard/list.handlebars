@@ -290,7 +290,7 @@
 		<a href="javascript:openModal('sessionModal-{{@index}}')" class="note-block">
 			<div class="note-col col-basis col-15">
 				<div class="note-header">Tanggal</div>
-				<div class="note-content">{{dates}}</div>
+				<div class="note-content">{{day}}, {{dates}}</div>
 			</div>
 			<div class="note-col col-basis col-15">
 				<div class="note-header">Waktu</div>
@@ -298,7 +298,7 @@
 			</div>
 			<div class="note-col col-basis col-20">
 				<div class="note-header">Location</div>
-				<div class="note-content"><span class="note-method">{{method}}</span></div>
+				<div class="note-content"><span class="note-method">{{{method}}}</span></div>
 			</div>
 			{{#if ../as_expert}}
 			<div class="note-col col-basis col-30">
@@ -341,7 +341,7 @@
 						</div>
 						<div class="note-col col-basis col-20">
 							<div class="note-header">Location</div>
-							<div class="note-content"><span class="note-method">{{method}}</span></div>
+							<div class="note-content"><span class="note-method">{{{method}}}</span></div>
 						</div>
 						{{#if ../as_expert}}
 						<div class="note-col col-basis col-40">
@@ -464,7 +464,7 @@
 			</div>
 			<div class="note-col col-basis col-50">
 				<div class="note-header">Location</div>
-				<div class="note-content"><span class="note-method">{{method}}</span></div>
+				<div class="note-content"><span class="note-method">{{{method}}}</span></div>
 			</div>
 			<div class="note-col col-basis col-20">
 				<div class="note-header">Status</div>

@@ -24,20 +24,26 @@
 		gap: 10px;
 		label & {
 			justify-content: space-between;
+			align-items: center;
 			@include min-responsive($screen-middle) {
 				justify-content: flex-start;
+				align-items: initial;
 			}
 		}
 		&.-inline {
 			align-items: center;
 			.form-row {
-				width: 100%;
-				@include min-responsive($screen-middle) {
-					width: 150px;
-				}
+				width: auto;
+				// @include min-responsive($screen-middle) {
+				// 	width: 150px;
+				// }
 				input[type=file],
 				button {
 					height: 40px;
+					@include min-responsive($screen-tablet) {
+						max-width: 150px;
+						margin: 0;
+					}
 				}
 			}
 			@include min-responsive($screen-middle) {
@@ -58,10 +64,11 @@
 		padding-right: 20px;
 		flex-basis: 60%;
 		flex-grow: 0;
+		flex-wrap: wrap;
 		@include min-responsive($screen-middle) {
 			flex-grow: 1;
 			padding-right: 0;
-			gap: 20px;
+			gap: 5px 20px;
 			display: flex;
 			flex-basis: min-content;
 			justify-content: flex-start;
@@ -100,21 +107,24 @@
 		text-transform: inherit;
 		@include font-pack(inherit, 0.75rem, 500, inherit, #000);
 		@include transition(all .2s ease);
-		label & {
-			flex-basis: auto;
-			@include min-responsive($screen-middle) {
-				flex-basis: 200px;
-			}
-			@include min-responsive($screen-small-desktop) {
-				flex-basis: 230px;
-			}
-		}
+		// label & {
+		// 	flex-basis: auto;
+		// 	@include min-responsive($screen-middle) {
+		// 		flex-basis: 200px;
+		// 	}
+		// 	@include min-responsive($screen-small-desktop) {
+		// 		flex-basis: 230px;
+		// 	}
+		// }
 		@include min-responsive($screen-middle) {
 			flex-basis: 200px;
 			flex-grow: 0;
 			font-size: .875rem;
 		}
 		@include min-responsive($screen-small-desktop) {
+			flex-basis: 40%;
+		}
+		@include min-responsive($screen-desktop) {
 			flex-basis: 230px;
 		}
 	}
@@ -191,8 +201,11 @@
 		flex-wrap: wrap;
 		align-items: flex-start;
 		@include min-responsive($screen-tablet) {
-			gap: 30px;
+			gap: 20px;
 			flex-wrap: nowrap;
+		}
+		@include min-responsive($screen-desktop) {
+			gap: 30px;
 		}
 		& > .setting-block {
 			flex-grow: 1;
@@ -211,6 +224,9 @@
 		@include min-responsive($screen-tablet) {
 			border: 1px solid #D3DAE0;
 			flex-basis: 250px;
+		}
+		@include min-responsive($screen-small-desktop) {
+			flex-basis: 220px;
 		}
 		@include min-responsive($screen-desktop) {
 			flex-basis: 300px;

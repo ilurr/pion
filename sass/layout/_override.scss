@@ -75,6 +75,10 @@
     @include max-responsive($screen-desktop - 1) {
         right: initial;
         left: -8px;
+        .section & {
+            left: initial;
+            right: 0;
+        }
     }
     top: 45px;
     padding-top: 10px;

@@ -359,12 +359,13 @@
   "session": [
     {
       "dates": "3 Sep 2023",
+      "day": "Mon",
       "time": "15:30 WIB",
       "counselor": "Dr. Rahma Paramita, M.Psi.",
       "notes": "ongoing",
       "client": "Sisca Saras",
       "payment": "ongoing",
-      "method": "Zoom",
+      "method": "<i class=\"fa-solid fa-link\"></i> Zoom meeting",
       "city": "Bogor",
       "age": "17",
       "notes_code": "ongoing",
@@ -375,12 +376,13 @@
     },
     {
       "dates": "2 Jul 2023",
+      "day": "Thu",
       "time": "20:30 WIB",
       "counselor": "Dr. Rahma Paramita, M.Psi.",
       "notes": "up next",
       "client": "Nadia Sahilatua",
       "payment": "paid",
-      "method": "Zoom",
+      "method": "<i class=\"fa-solid fa-link\"></i> Zoom meeting",
       "city": "Tangerang Selatan",
       "age": "19",
       "notes_code": "next",
@@ -391,6 +393,7 @@
     },
     {
       "dates": "24 Sep 2023",
+      "day": "Tue",
       "time": "08:30 WIB",
       "counselor": "Astrid WEN, M.Psi.",
       "notes": "pending",
@@ -407,6 +410,7 @@
     },
     {
       "dates": "1 Apr 2023",
+      "day": "Sun",
       "time": "19:30 WIB",
       "counselor": "Katarina Ira Puspita, M.Psi.",
       "notes": "done",
@@ -423,6 +427,7 @@
     },
     {
       "dates": "13 Nov 2023",
+      "day": "Fri",
       "time": "10:30 WIB",
       "counselor": "Dian Oriza, M.Psi.",
       "notes": "done",
@@ -439,6 +444,7 @@
     },
     {
       "dates": "3 Okt 2023",
+      "day": "Web",
       "time": "09:30 WIB",
       "counselor": "Ayunda Shabriani Tyara, M.Psi.",
       "notes": "pending",
@@ -455,6 +461,7 @@
     },
     {
       "dates": "23 Agu 2023",
+      "day": "Mon",
       "time": "11:00 WIB",
       "counselor": "L. Sandi Witarso, M.Psi.",
       "notes": "canceled",
@@ -471,12 +478,13 @@
     },
     {
       "dates": "29 Mei 2023",
+      "day": "Sat",
       "time": "11:00 WIB",
       "counselor": "Maria T. Puspaningsih, M.Psi.",
       "notes": "disabled",
       "client": "Frans Aritonang",
       "payment": "disabled",
-      "method": "Zoom",
+      "method": "<i class=\"fa-solid fa-link\"></i> Zoom meeting",
       "city": "Parung Panjang",
       "age": "36",
       "notes_code": "disabled",
