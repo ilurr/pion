@@ -11,12 +11,13 @@ button,
 	margin: 0.250rem 0;
 	// padding: 0.563rem 0.750rem;
 	padding: 0 .5rem;
-	border-radius: 8px;
+	border-radius: 12px;
 	background-color: #fff;
 	background-position: center center;
 	text-align: center;
 	border: 1px solid $color-theme;
 	cursor: pointer;
+	box-shadow: 2px 6px 10px rgba(0,0,0, .1);
 	@include font-pack(false, .875rem, 700, false, $color-text-theme);
 	
 	&:hover {
@@ -31,6 +32,9 @@ button,
 	&.-auto {
 		@include min-responsive($screen-tablet) {
 			width: fit-content;
+			padding: 0 1.25rem;
+		}
+		.form-medium & {
 			padding: 0 .875rem;
 		}
 	}
@@ -55,7 +59,7 @@ button,
 		border: 1px solid $color-theme;
 		color: $color-button-primary;
 		font-weight: 700;
-		// box-shadow: 0px 6px 10px rgba(0, 122, 255, 0.15);
+		box-shadow: 2px 6px 10px rgba($color-theme, .25);
 
 		&:hover {
 			background-color: darken($color-theme, 5%);
@@ -66,7 +70,7 @@ button,
 		border: 1px solid #0D8E22;
 		color: $color-button-primary;
 		font-weight: 700;
-		// box-shadow: 0px 6px 10px rgba(0, 122, 255, 0.15);
+		box-shadow: 2px 6px 10px rgba(#0D8E22, .15);
 
 		&:hover {
 			background-color: darken(#0D8E22, 5%);
@@ -80,6 +84,7 @@ button,
 		border: 1px solid var(--btn-br);
 		color: var(--btn-cl);
 		font-weight: 700;
+		box-shadow: 2px 6px 10px rgba(var(--btn-br), .15);
 
 		&:hover {
 			// color: #006EE6;
@@ -93,6 +98,7 @@ button,
 		border: 1px solid var(--btn-br);
 		color: #333333;
 		font-weight: 700;
+		box-shadow: 2px 6px 10px rgba(var(--btn-br), .15);
 
 		&:hover {
 			background-color: #E3E3E3;
@@ -102,6 +108,7 @@ button,
 		background-color: transparent;
 		border: 1px solid transparent;
 		color: var(--btn-cl);
+		box-shadow: none;
 		&:hover {
 			background-color: var(--btn-bg2);
 			color: var(--btn-cl);
@@ -109,7 +116,8 @@ button,
 	}
 	&.-danger {
 		background-color: #c00808;
-		border: 1px solid #c00808;;
+		border: 1px solid #c00808;
+		box-shadow: 2px 6px 10px rgba(#c00808, .15);
 		color: var(--btn-bg);
 		font-weight: 700;
 
@@ -127,6 +135,7 @@ button,
 		border: 1px solid transparent;
 		color: #090909;
 		// font-weight: 700;
+		box-shadow: none;
 		&:hover {
 			background-color: #fff;	
 		}
@@ -137,6 +146,7 @@ button,
 		color: #9A9A9A;
 		cursor: not-allowed;
 		pointer-events: none;
+		box-shadow: 2px 6px 10px rgba(#E2E2E2, .9);
 
 		// &.-secondary,
 		// &.-primary {
@@ -160,7 +170,8 @@ button,
 		&[data-count] {
 			display: inline-block;
 			min-width: 18px;
-			text-align: right;
+			text-align: center;
+			// margin-right: -2px;
 		}
 	}
 	&[data-expert-select] {

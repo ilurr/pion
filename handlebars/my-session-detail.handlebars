@@ -136,8 +136,8 @@
 								</div>
 								<div class="note-col col-basis">
 									<div class="note-header">Additional</div>
-									<div class="note-content">o Psychological test form</div>
-									<div class="note-content">o Psychological test form 2</div>
+									<div class="note-content">o Additional time: 2x15 minutes</div>
+									<div class="note-content">o Assesment: CBCL  1.1/2 - 5 (Child Behavior Check List)</div>
 								</div>
 								<div class="note-col col-basis -right">
 									<div class="note-action">
@@ -150,7 +150,7 @@
 					</div>
 
 					<!-- modals -->
-					<div class="modal-content" data-modal-target="toppingModal-1">
+					<div class="modal-content" data-modal-target="toppingModal-1" data-modal-bgclick="true">
 						<div class="modal-header">
 							<div class="modal-title">New Invoice</div>
 							<button class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
@@ -160,52 +160,103 @@
 						<div class="modal-body">
 
 							<div class="note-modal">
-								<div class="note-row -mixcol -mixrow -showheader -line">
-									<div class="note-col col-basis col-60">
-										<div class="note-header">Session Time:</div>
+								<div class="note-row -mixcol -mixrow -showheader">
+									<div class="note-col col-basis">
+										<div class="note-header">Session Time</div>
+									</div>
+								</div>
+								<div class="note-row -mixcol -mixrow">
+									<div class="note-col col-basis col-50">
+										<div class="note-content">Existing Time:</div>
+									</div>
+									<div class="note-col col-basis col-30">
+										<div class="note-content">1 Hour</div>
+									</div>
+									<div class="note-col col-basis col-20">
+										<div class="note-content -right">Rp 200.000,00</div>
+									</div>
+								</div>
+								<div class="note-row -mixcol -mixrow">
+									<div class="note-col col-basis col-50">
+										<div class="note-content">Additional time per 15 minutes</div>
+									</div>
+									<div class="note-col col-basis col-30">
 										<div class="note-content">
 											<div class="form-row form-inline form-medium">
 												<button type="button" class="button -auto -disabled" data-count="min" onclick="countIt(this, -1)"><i class="fa-solid fa-minus"></i></button>
-												<button type="button" class="button -auto -transparent button-action-span"><span data-count="result">0</span><span>x 15 menit</span></button>
+												<button type="button" class="button -auto -transparent button-action-span"><span data-count="result">0</span></button>
 												<button type="button" class="button -auto" data-count="plus" onclick="countIt(this, 1)"><i class="fa-regular fa-plus"></i></button>
 												<input type="hidden" name="count_sesi" id="count_sesi">
 											</div>
 										</div>
 									</div>
-									<div class="note-col col-basis col-40 -right">
-										<div class="note-header">Tools:</div>
-										<div class="note-content">
-											{{>select type="select" name="session_tools" placeholder="Tools" medium=true nolabel="true" option="SP 2 Child 3 - 14 (Sensory Profile),SP 2  Adult >14 (Sensory Profile),CBCL  1.1/2 - 5 (Child Behavior Check List),CBCL 6 - 18 (Child Behavior Check List),YSR 11 - 18 (Youth Self Report)"}}
-										</div>
+									<div class="note-col col-basis col-20">
+										<div class="note-content -right">Rp 99.900,00</div>
 									</div>
 								</div>
-								<div class="note-row -line">
-									<div class="note-row -fixcol -showheader">
-										<div class="note-col col-basis col-80">
-											<div class="note-header">Session Time</div>
-											<div class="note-content desktop-only"><span class="medium">Click how many minutes do you need</span></div>
-										</div>
-										<div class="note-col col-basis col-20">
-											<div class="note-content -right"><span id="addSesi">Rp 00,00</span></div>
+								<div class="note-row -mixcol -mixrow -line">
+									<div class="note-col col-basis col-50">
+										<div class="note-content">Discount (%)</div>
+									</div>
+									<div class="note-col col-basis col-30">
+										<div class="note-content">
+											<div class="form-row form-inline form-medium">
+												<input type="text" name="disc">
+											</div>
 										</div>
 									</div>
-									<div class="note-row -fixcol -showheader">
-										<div class="note-col col-basis col-80">
-											<div class="note-header">Tools</div>
-											<div class="note-content desktop-only"><span class="medium">Select tools you need</span></div>
+									<div class="note-col col-basis col-20">
+										<div class="note-content -right">Rp 20.000,00</div>
+									</div>
+								</div>
+								<div class="note-row -mixcol -mixrow -showheader">
+									<div class="note-col col-basis">
+										<div class="note-header">Assesment</div>
+									</div>
+								</div>
+								<div class="note-row -mixcol -mixrow -line">
+									<div class="note-col col-basis col-50">
+										<div class="note-content note-assesment">
+											{{>select type="select" name="session_tools" placeholder="Tools" medium=true nolabel="true" option="SP 2 Child 3 - 14 (Sensory Profile),SP 2  Adult >14 (Sensory Profile),CBCL  1.1/2 - 5 (Child Behavior Check List),CBCL 6 - 18 (Child Behavior Check List),YSR 11 - 18 (Youth Self Report)"}}
+											<span id="tools_txt"></span>
+											<div id="tools_reset" class="form-row form-inline form-medium" style="display: none;">
+												<button type="button" class="button button-assesment" onclick="RemoveAssesment(this)">×</button>
+											</div>
 										</div>
-										<div class="note-col col-basis col-20">
-											<div class="note-content -right">Rp 100.000,00</div>
+									</div>
+									<div class="note-col col-basis col-30">
+										<div class="note-content">
+											<span id="tools_hour"></span>
+										</div>
+									</div>
+									<div class="note-col col-basis col-20">
+										<div class="note-content -right"><span id="tools_amount"></span></div>
+									</div>
+								</div>
+								<div class="note-row -mixcol -mixrow -showheader">
+									<div class="note-col col-basis">
+										<div class="note-header">Note for admin</div>
+									</div>
+								</div>
+								<div class="note-row -mixcol -mixrow -line">
+									<div class="note-col col-basis col-70">
+										<div class="note-content">
+											{{!-- <div class="form-text">Note for admin</div> --}}
+											<div class="form-row form-medium">
+												<div class="form-textarea">
+													<textarea name="note_admin" id="note_admin" class="textarea" placeholder=""></textarea>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 								<div class="note-row">
 									<div class="note-row -fixcol">
 										<div class="note-col col-basis col-80">
-											<div class="note-content -right">Total</div>
+											<div class="note-content -right"><strong>Total</strong></div>
 										</div>
 										<div class="note-col col-basis col-20">
-											<div class="note-content -right"><span id="addTotal">Rp 00,00</span></div>
+											<div class="note-content -right"><span id="addTotal"><strong>Rp 00,00</strong></span></div>
 										</div>
 									</div>
 								</div>
@@ -240,6 +291,59 @@
 		closeModal()
 	}
 
+	document.addEventListener('click', function(e){
+		if(e.target.matches('#session_tools')) {
+			selectAssesment(e.target)
+		}
+	})
+
+	function RemoveAssesment(el) {
+		let select = document.querySelector('#modal #session_tools')
+		if(select) {
+			el.parentElement.style.display = 'none'
+			select.parentElement.parentElement.removeAttribute('style')
+			select.parentElement.classList.add('init')
+			select.selectedIndex = 0
+
+			let fTarget = el.closest('.note-row')
+			if(fTarget) {
+				// assign value
+				assignAssesment(fTarget, '', '', '')
+			}
+		}
+	}
+	
+	function selectAssesment(el) {
+		el.onchange = function() {
+			let fTarget = el.closest('.note-row')
+
+			if(fTarget) {
+				// assign value
+				assignAssesment(fTarget, el.value, '1 Hour', 'Rp 200.000,00')
+
+				let tRemove = fTarget.querySelector('#tools_reset')
+				tRemove.removeAttribute('style')
+				el.parentElement.parentElement.style.display = 'none'
+			}
+		}
+	}
+
+	function assignAssesment(el, tools, hour, amount) {
+		if(el) {			
+			let tText = el.querySelector('span#tools_txt')
+			let tHour = el.querySelector('span#tools_hour')
+			let tAmount = el.querySelector('span#tools_amount')
+			if(tText) {
+				tText.innerHTML = tools
+			}
+			if(tHour) {
+				tHour.innerHTML = hour
+			}
+			if(tAmount) {
+				tAmount.innerHTML = amount
+			}
+		}
+	}
 </script>
 </body>
 </html>

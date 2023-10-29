@@ -7,9 +7,9 @@
 	z-index: 11;
 	visibility: hidden;
 	opacity: 0;
-	padding: 12px 15px;
+	padding: 12px 20px;
 	@include transition(all .2s ease);
-	border-radius: 8px;
+	border-radius: 24px;
 	gap: 20px;
 	display: flex;
 	align-items: center;
@@ -50,10 +50,14 @@
 		flex-basis: auto;
 		width: auto;
 		text-align: center;
-		@include font-pack(false, 14px, 700, false, #0DACDD);
+		@include font-pack(false, 14px, 700, 1, #fff);
+		background: #4d4d4d;
+    padding: 10px;
+		margin: -10px -15px -10px 0;
+		border-radius: 24px;
 		.contentArticle &,
 		&:hover {
-			color: #0DACDD;
+			color: #fff;
 		}
 	}
 }

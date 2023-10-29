@@ -220,6 +220,14 @@
 			display: flex;
 			justify-content: flex-end;
 		}
+		.note-list.-invoice & {
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+		}
 	}
 	&-header {
 		@include font-pack(false, 14px, 600, 150%, #112639);
@@ -317,12 +325,41 @@
 			width: 100%;
 		}
 	}
+	&-assesment {
+		position: relative;
+		min-height: 36px;
+    align-items: center;
+		@include min-responsive($screen-tablet) {
+			display: flex;
+		}
+		.note-modal &.note-content {
+			width: auto;
+			padding-right: 30px;
+		}
+		#tools_reset {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: auto;	
+			.button {
+				width: 25px;
+				height: 25px;
+				min-width: 25px;
+				border-radius: 25px;
+				padding: 0;
+				border: none;
+				background: #000;
+				color: #fff;
+				font-size: 22px;
+			}
+		}
+	}
 	&-action {
 		@include font-pack(false, 14px, 600, 150%, #112639);
 		display: flex;
     justify-content: flex-start;
 		gap: 10px;
-		@include max-responsive($screen-tablet) {
+		@include max-responsive($screen-tablet - 1) {
 			width: 100%;
 		}
 		.note-list & {
@@ -537,6 +574,7 @@
 			max-width: none;
 			// font-weight: 600;
 			white-space: initial;
+			width: 100%;
 		}
 		.note-col {
 			flex-shrink: 1;
@@ -554,10 +592,16 @@
 				flex-direction: column;
 				width: 100%;
 				gap: 5px;
+				&:first-child {
+					padding-left: 0;
+				}
+				&:last-child {
+					padding-right: 0;
+				}
 			}
 			& > .note-img {
 				order: 5;
-				@include min-responsive($screen-middle) {
+				@include min-responsive($screen-tablet) {
 					order: 0;
 				}
 			}
@@ -578,12 +622,18 @@
 				@include min-responsive($screen-middle) {
 					justify-content: flex-start;
 				}	
+				&.-right {
+					justify-content: flex-end;
+				}
 			}
+		}
+		.note-row.-mixcol.-mixrow.-showheader {
+			margin: 5px 0 10px;
 		}
 		.note-col img {
 			border-radius: 8px;
 			margin: 10px auto;
-			@include min-responsive($screen-middle) {
+			@include min-responsive($screen-tablet) {
 				margin: 0;
 			}
 		}
@@ -592,7 +642,7 @@
 		position: relative;
 		padding: 15px 5px;
 		@include min-responsive($screen-tablet) {
-			padding: 0 20px;
+			padding: 0 15px;
 		}
 		.note-row {
 			gap: 16px;
@@ -609,6 +659,16 @@
 		& > i {
 			pointer-events: none;
 		}
+	}
+	&-chart {
+		gap: 36px;
+		flex-direction: column;
+		margin: 0 0 16px;
+		@include min-responsive($screen-tablet) {
+			gap: 0;
+			flex-direction: row;
+			margin: 0 -8px 16px;
+    }
 	}
 	// &-list.-cols {
 	// 	@include max-responsive($screen-tablet - 1) {

@@ -114,6 +114,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		box-shadow: none;
 		& > * {
 			pointer-events: none;
 		}
@@ -187,16 +188,23 @@
 		display: flex;
     flex-direction: column;
 		gap: 5px;
+		transition: all .2s ease;
+		.scrolling & {
+			top: 70px;
+		}
 		&-item {
 			position: relative;
 		}
 		&-link {
 			display: flex;
-			padding: 0 30px;
+			padding: 0 15px;
 			align-items: center;
 			gap: 12px;	
 			height: 40px;
 			@include font-pack(false, 1rem, 400, normal, var(--grey-pion, #112639));
+			@include min-responsive($screen-desktop) {
+				padding: 0 30px;
+			}
 			& > i {
 				display: flex;
 				width: 12px;
@@ -252,20 +260,24 @@
 		}
 	}
 	&-aside-item &-primary {
-		margin: -5px 20px 10px;
-		width: calc(100% - 40px);
-		max-width: 160px;
+		margin: -10px 10px 15px;
+    width: calc(100% - 20px);
+    max-width: 180px;
+		@include min-responsive($screen-desktop) {
+			margin: -10px 20px 15px;
+			width: calc(100% - 40px);
+		}
 	}
 	&-primary {
 		background: #ffda00;
-		border: 2px solid #36404A;
-    color: #36404A;
+		border: 2px solid $color-theme;
+    color: $color-theme;
     border-radius: 30px;
     height: 45px;
     line-height: 1;
 		&:hover {
 			background: darken(#ffda00, 2%);
-			color: #000;
+			// color: #000;
 		}
 	}
 }

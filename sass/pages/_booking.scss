@@ -100,15 +100,21 @@
   	  justify-content: center;
 			cursor: pointer;
 		}
+		input[type=checkbox]:checked + label:before {
+			content: none;
+		}
+		input[type=checkbox]:checked + label,
 		input[type=radio]:checked + label {
 			border: 1px solid $color-theme;
 			background: $color-theme;
 			color: #fff;
 		}
+		input[type=checkbox],
 		input[type=radio] {
 			opacity: 0;
 			visibility: hidden;
 		}
+		input[type=checkbox][disabled] + label,
 		input[type=radio][disabled] + label {
 			border: 1px solid #D3DAE0;
 			cursor: default;

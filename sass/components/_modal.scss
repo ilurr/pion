@@ -29,6 +29,13 @@
 	&-body {
 		max-height: calc(100vh - 40px - 2rem - 24px);
 		overflow: auto;
+		padding-right: 10px;
+		margin-right: -10px;
+		@include min-responsive($screen-tablet) {
+			padding-right: 20px;
+			margin-right: -20px;
+			max-height: 70vh;
+		}
 		.form-row {
 			margin: 0.25rem 0;
 		}
@@ -75,6 +82,7 @@
 		border: none;
 		margin: 0;
 		background-color: transparent;
+		box-shadow: none;
 		color: #000;
 		font-size: 18px;
 		position: absolute;

@@ -1,63 +1,74 @@
 .tooltip {
 	position: absolute;
-	background: #000;
+	background: #fff;
+	border: 1px solid #0039D4;
 	padding: 8px 10px;
 	border-radius: 5px;
-	color: #fff;
+	color: #112639;
 	font-size: 12px;
 	line-height: normal;
-	white-space: nowrap;
+	// white-space: nowrap;
 	z-index: 13;
 	pointer-events: none;
 	opacity: 1;
-	// max-width: 200px;
+	width: max-content;
+	max-width: 250px;
+	box-shadow: 3px 3px 10px rgba(0,0,0, .25);
 	&:before {
 		content: '';
 		width: 10px;
 		height: 10px;
-		background-color: #000;
+		background-color: #fff;
 		transform: rotate(45deg);
 		display: block;
 		position: absolute;
 		z-index: -1;
 	}
 	&.-right {
-		left: calc(100% + 5px);
+		left: calc(100% + 10px);
 		top: 50%;
 		transform: translateY(-50%);
 		&:before {
-			left: -4px;
+			left: -6px;
 			top: calc(50% - 5px);
+			border-left: 1px solid #0039D4;
+			border-bottom: 1px solid #0039D4;
 		}
 	}
 	&.-left {
-		right: calc(100% + 5px);
+		right: calc(100% + 10px);
 		top: 50%;
 		transform: translateY(-50%);
 		text-align: right;
 		&:before {
-			right: -4px;
+			right: -6px;
 			top: calc(50% - 5px);
+			border-right: 1px solid #0039D4;
+			border-top: 1px solid #0039D4;
 		}
 	}
 	&.-bottom {
-		top: calc(100% + 5px);
+		top: calc(100% + 10px);
 		left: 50%;
 		transform: translateX(-50%);
 		text-align: center;
 		&:before {
-			top: -4px;
+			top: -6px;
 			left: calc(50% - 5px);
+			border-top: 1px solid #0039D4;
+			border-left: 1px solid #0039D4;
 		}
 	}
 	&.-top {
-		bottom: calc(100% + 5px);
+		bottom: calc(100% + 10px);
 		left: 50%;
 		transform: translateX(-50%);
 		text-align: center;
 		&:before {
-			bottom: -4px;
+			bottom: -6px;
 			left: calc(50% - 5px);
+			border-bottom: 1px solid #0039D4;
+			border-right: 1px solid #0039D4;
 		}
 	}
 }

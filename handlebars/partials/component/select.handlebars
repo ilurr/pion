@@ -7,7 +7,7 @@
 	<div class="form-error">{{txterror}}</div>
 	{{/if}}
 	<div class="form-select" data-placeholder="{{placeholder}}">
-		<select id="{{name}}" name="{{name}}" class="{{#if txterror}}error{{/if}}{{#if function}} {{function}}{{/if}} "{{#eq required compare="true"}} required="required"{{/eq}}{{#eq disabled compare="true"}} disabled="disabled"{{/eq}}>
+		<select id="{{name}}" name="{{name}}" class="{{#if txterror}}error{{/if}}{{#if function}} {{function}}{{/if}} "{{#eq required compare="true"}} required="required"{{/eq}}{{#eq disabled compare="true"}} disabled="disabled"{{/eq}}{{#if onchange}} onchange="{{{onchange}}}"{{/if}}>
 			<option value="0" selected="selected" disabled="disabled">{{placeholder}}</option>
 			{{#each (split option ",") as |item|}}
 			<option value="{{item}}">{{item}}</option>

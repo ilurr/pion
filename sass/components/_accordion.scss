@@ -57,6 +57,9 @@
 		position: relative;
 		padding: 0 20px 10px;
 		font-size: 14px;
+		@include min-responsive($screen-tablet) {
+			padding: 0 0 10px;
+		}
 	}
 }
 

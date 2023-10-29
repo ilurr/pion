@@ -39,23 +39,23 @@
 										<div class="booking-row" data-sort-name="time">
 											<div class="form-text">Time to attend</div>
 											<div class="booking-time">
-												{{>radio label="10.00" id="time_1000" name="book_time" disabled="true"}}
-												{{>radio label="10.30" id="time_1030" name="book_time"}}
-												{{>radio label="11.00" id="time_1100" name="book_time"}}
-												{{>radio label="11.30" id="time_1130" name="book_time"}}
-												{{>radio label="12.00" id="time_1200" name="book_time" disabled="true"}}
-												{{>radio label="12.30" id="time_1230" name="book_time" disabled="true"}}
-												{{>radio label="13.00" id="time_1300" name="book_time"}}
-												{{>radio label="13.30" id="time_1330" name="book_time"}}
-												{{>radio label="14.00" id="time_1400" name="book_time"}}
-												{{>radio label="14.30" id="time_1430" name="book_time"}}
-												{{>radio label="15.00" id="time_1500" name="book_time" disabled="true"}}
-												{{>radio label="15.30" id="time_1530" name="book_time"}}
-												{{>radio label="16.00" id="time_1600" name="book_time"}}
-												{{>radio label="16.30" id="time_1630" name="book_time"}}
-												{{>radio label="17.00" id="time_1700" name="book_time"}}
-												{{>radio label="17.30" id="time_1730" name="book_time"}}
-												{{>radio label="18.00" id="time_1800" name="book_time"}}
+												{{>radio multiple=true label="10.00" id="time_1000" name="book_time" disabled="true" tooltip_dir="right" tooltip="The displayed duration is per 30-minute. Please click on the time duration you need. Example: If you need one hour, please click on two time slots (e.g., 10:30 and 11:00)."}}
+												{{>radio multiple=true label="10.30" id="time_1030" name="book_time" tooltip_dir="top" tooltip="The displayed duration is per 30-minute. Please click on the time duration you need. Example: If you need one hour, please click on two time slots (e.g., 10:30 and 11:00)."}}
+												{{>radio multiple=true label="11.00" id="time_1100" name="book_time" tooltip_dir="bottom" tooltip="The displayed duration is per 30-minute. Please click on the time duration you need. Example: If you need one hour, please click on two time slots (e.g., 10:30 and 11:00)."}}
+												{{>radio multiple=true label="11.30" id="time_1130" name="book_time"}}
+												{{>radio multiple=true label="12.00" id="time_1200" name="book_time" disabled="true"}}
+												{{>radio multiple=true label="12.30" id="time_1230" name="book_time" disabled="true"}}
+												{{>radio multiple=true label="13.00" id="time_1300" name="book_time"}}
+												{{>radio multiple=true label="13.30" id="time_1330" name="book_time"}}
+												{{>radio multiple=true label="14.00" id="time_1400" name="book_time"}}
+												{{>radio multiple=true label="14.30" id="time_1430" name="book_time"}}
+												{{>radio multiple=true label="15.00" id="time_1500" name="book_time" disabled="true"}}
+												{{>radio multiple=true label="15.30" id="time_1530" name="book_time"}}
+												{{>radio multiple=true label="16.00" id="time_1600" name="book_time"}}
+												{{>radio multiple=true label="16.30" id="time_1630" name="book_time"}}
+												{{>radio multiple=true label="17.00" id="time_1700" name="book_time"}}
+												{{>radio multiple=true label="17.30" id="time_1730" name="book_time"}}
+												{{>radio multiple=true label="18.00" id="time_1800" name="book_time"}}
 											</div>
 										</div>
 										<div class="booking-row" data-sort-name="expert">

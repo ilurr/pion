@@ -512,6 +512,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		box-shadow: none;
 
 		.icon,
 		img {
@@ -565,8 +566,10 @@
 				padding: 0 2.5rem 0 .75rem;
 			}
 		}
+		.button.-disabled,
 		.button {
 			margin: 0;
+			box-shadow: none;
 		}
 		.button,
 		.form-select,
@@ -574,10 +577,13 @@
 		input:not([type=radio]) {
 			height: 36px;
 		}
+		textarea {
+			margin: 0;
+		} 
 	}
 
 	&-user {
-		max-width: 400px;
+		max-width: 500px;
 		margin-top: -.75rem;
 		.form-radio-wrap {
 			padding-bottom: .5rem;

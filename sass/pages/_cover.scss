@@ -446,12 +446,12 @@
 		}
 		.button {
 			background: #ffda00;
-			border: 2px solid #36404A;
-			color: #36404A;
+			border: 2px solid $color-theme;
+			color: $color-theme;
 			border-radius: 30px;
 			&:hover {
 				background: darken(#ffda00, 2%);
-				color: #000;	
+				// color: #000;	
 			}	
 		}
 	}
@@ -540,16 +540,17 @@
 				font-size: 1rem;
 				height: 46px;
 				background: #ffda00;
-				border: 2px solid #36404A;
-				color: #36404A;
+				border: 2px solid $color-theme;
+				color: $color-theme;
 				border-radius: 30px;
 				&:hover {
 					background: darken(#ffda00, 2%);
-					color: #000;		
+					// color: #000;		
 				}
 				@include min-responsive($screen-small-desktop) {
 					height: 56px;
-					font-size: 1.25rem;
+					font-size: 1.125rem;
+					padding: 0 1.125rem;
 				}
 			}
 		}

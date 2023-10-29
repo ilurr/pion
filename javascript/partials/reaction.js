@@ -22,6 +22,7 @@ function clearModalsContent(el) {
 function openModal(el) {
 	let active = 'modal'
 	let tar = document.querySelector('[data-modal-target=' + el + ']')
+	let bgcl = document.querySelector('[data-modal-bgclick]')
 	let mdl = document.getElementById('modal');
 	if (!!mdl) {
 		if (!!tar) {
@@ -45,6 +46,15 @@ function openModal(el) {
 		} else {
 			console.log('unknown modal target');
 			return;
+		}
+
+		// bgclick
+		if(bgcl) {
+			document.addEventListener('click', function(e){
+				if (e.target.matches('#modal') || e.target.matches('.modal-parent')) {
+					closeModal();
+				}
+			}) 
 		}
 
 		// dismiss modals
