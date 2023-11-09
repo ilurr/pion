@@ -44,3 +44,12 @@
 		width: auto;
 	}
 }
+
+.ads {
+	&-top {
+		position: relative;
+		margin-top: 20px;
+		min-height: 90px;
+		background-color: #f5f5f5;
+	}
+}
