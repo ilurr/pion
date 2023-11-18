@@ -7,6 +7,9 @@
 		position: relative;
 		max-width: 100%;
 		margin: 0 auto;
+		@include max-responsive($screen-tablet) {
+			width: auto;
+		}
 		th {
 			background-color: #8ecff4;
 		}

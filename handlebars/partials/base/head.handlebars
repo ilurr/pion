@@ -29,20 +29,25 @@
 
 	<link href="./asset/css/style.css" rel="stylesheet" type="text/css">
 	<style type="text/css">
-			.m0{ margin: 0 !important; } .m1 { margin: .5rem; } .m3 { margin: .5rem; } .m3 { margin: .5rem; }
+			.form-sosmed { width: 100%; padding: 2rem 1.5rem; }
+			.title.-centering { display:block; text-align:center; }
+
+			.m0{ margin: 0 !important; } .m1 { margin: .5rem; } .m3 { margin: 1rem; } .m3 { margin: 1.5rem; }
 			.ml0 { margin-left: 0 !important; } .ml1 { margin-left: .5rem; } .ml2 { margin-left: 1rem; } .ml3 { margin-left: 1.5rem; }
 			.mr0 { margin-right: 0 !important; } .mr1 { margin-right: .5rem; } .mr2 { margin-right: 1rem; } .mr3 { margin-right: 1.5rem; }
-			.mt0 { margin-top: 0 !important; } .mt1 { margin-top: .5rem; } .mt2 { margin-top: 1rem; } .mt3 { margin-top: 1.5rem; }
+			.mt0 { margin-top: 0 !important; } .mt1 { margin-top: .5rem; } .mt2 { margin-top: 1rem; } .mt3 { margin-top: 1.5rem; } .mt6 { margin-top: 12vh; }
 			.mb0 { margin-bottom: 0 !important; } .mb1 { margin-bottom: .5rem; } .mb2 { margin-bottom: 1rem; } .mb3 { margin-bottom: 1.5rem; }
 
-			.p0 { padding: 0 !important; } .p1 { padding: .5rem; } .p2 { padding: .5rem; } .p3 { padding: .5rem; }
+			.p0 { padding: 0 !important; } .p1 { padding: .5rem; } .p2 { padding: 1rem; } .p3 { padding: 1.5rem; }
 			.pl0 { padding-left: 0 !important; } .pl1 { padding-left: .5rem; } .pl2 { padding-left: 1rem; } .pl3 { padding-left: 1.5rem; }
 			.pr0 { padding-right: 0 !important; } .pr1 { padding-right: .5rem; } .pr2 { padding-right: 1rem; } .pr3 { padding-right: 1.5rem; }
 			.pt0 { padding-top: 0 !important; } .pt1 { padding-top: .5rem; } .pt2 { padding-top: 1rem; } .pt3 { padding-top: 1.5rem; }
 			.pb0 { padding-bottom: 0 !important; } .pb1 { padding-bottom: .5rem; } .pb2 { padding-bottom: 1rem; } .pb3 { padding-bottom: 1.5rem; }
 
 			.nav-aside .nav-aside-item .nav-aside-devider { border-top: 1px solid #d3dae0; margin: .25rem 1rem; }
-			.modal-content.-extra-small { max-width: 350px; }
+			.nav-aside .nav-book { margin: 0 30px; padding: 0 1.5rem; width: fit-content; border-radius: 20px; }
+			.modal-header { min-height: unset !important; }
+			.modal-content.-extra-small { max-width: 400px; }
 			.modal-content { border-radius: 16px !important; }
 			.modal-content.-row { margin: 1rem 2.5rem 1rem; }
 			.modal-body::-webkit-scrollbar { width: 4px; }
@@ -53,6 +58,7 @@
 
 			button.-gray, .button.-gray { background-color: #fff; border: 1px solid #6a6b6a; color: #6a6b6a; font-weight: 700; }
 			button.-gray:hover, .button.-gray:hover { background-color: #f2f2f2; border: 1px solid #000; color: #000; }
+			button.-transparent.-hover:hover { background-color: #f2f2f2; }
 
 			h1.title .header-attribute { position: absolute; right:0; font-weight: 500; display: flex; gap: .5rem; }
 			.drop-down-attr { display: inline-block; position: relative; }
@@ -61,6 +67,100 @@
 
 			.board-row h1.title:first-of-type { margin-top: 1rem; }
 			.board-row .title .title-back { margin-left: .25rem; margin-right: .75rem }
+
+			.col-slider-flkty { display: grid; gap: 24px; }
+			.col-quote { font-size: 12px; font-weight: 400; text-align: center; color: #112639; }
+			.col-quote .quote-row { font-size: 22px; font-weight: 800; text-align: center; color: #10addd; }
+			.-muted { color: gray; }
+
+			.booking-cab { width: 100%; display: flex; flex-direction: column; gap: 24px; }
+			.booking-cl { width: 100%; display: flex; flex-direction: column; }
+
+			.tooltip { background: #fff; background-color: #fff; border: 1px solid #0039D4; padding: .75rem; color: #112639; font-weight: 300; font-size: 12px; border-radius: 12px; }
+			/*.tooltip:before { background-color: unset; }*/
+			/*.tooltip { background-color: #0139d4; word-wrap: break-word; text-align: left; white-space: pre-line; }*/
+
+			.form-input.-flat label { font-size: 16px !important; font-weight: 500 !important; }
+
+			.booking-time input[type=checkbox]:checked + label { border: 1px solid #0DACDD; background: #0DACDD; color: #fff; }
+			.booking-time input[type=checkbox] { opacity: 0; visibility: hidden; }
+			.booking-time input[type=checkbox][disabled] + label { border: 1px solid #D3DAE0; cursor: default; }
+			.booking-time input[type=checkbox]:checked + label:before { content: ''; border-bottom: unset; border-right: unset;}
+
+			.members-item.-add { align-self: unset; }
+			.members-item.-add .members-img { height: 100%; }
+
+			.note-list.-plain:hover, .note-item.-plain:hover {
+					background: #fff !important;
+			}
+
+			.note-item.-no-border {
+					border: 0 !important;
+			}
+
+			#tools_reset {
+					height: 100%;
+					align-items: center;
+			}
+			.note-assesment #tools_reset .button {
+					width: 18px;
+					height: 18px;
+						min-width: 18px; 
+					border-radius: 25px;
+					padding: 0;
+					border: none;
+					background: #ffda00;
+					color: #fff;
+					font-size: 18px;
+			}
+
+			.note-row.-mixpad { padding: 0; }
+
+			.-fontmd .note-header, .-fontmd .note-content {
+					font-size: 14px !important;
+			}
+
+			.-fontlg .note-header, .-fontlg .note-content {
+					font-size: 16px !important;
+			}
+
+			a.nav-title-link { color: inherit; }
+			a.nav-title-link.-active { color: #0DACDD; }
+
+			@media (min-width: 500px) {
+					.form-sosmed { padding: 0; width: 400px; }
+					.booking-block.-set-plan { padding: 2.5rem; }
+			}
+
+			@media (min-width: 768px) {
+					.note-row.-mixpad { padding: 0 8px; }
+
+					.-fontmd .note-header, .-fontmd .note-content {
+							font-size: 16px !important;
+					}
+
+					.-fontlg .note-header, .-fontlg .note-content {
+							font-size: 18px !important;
+					}
+			}
+
+			@media (min-width: 900px) {
+					.booking-cab { flex-direction: row; }
+
+					.booking-block.-set-plan { padding: 2.5rem 12rem; }
+					.booking-block.-set-family { padding: 2.5rem 6rem; }
+
+					.inp-w1 { max-width: 350px !important; }
+					.inp-w2 { max-width: 450px !important; }
+			}
+
+			.-only-xl { display: none; }
+			@media (min-width: 1200px) {
+					.-only-xl { display: inherit; }
+			}
+
+			[x-cloak] { display: none !important; }
+
 	</style>
 
 </head>

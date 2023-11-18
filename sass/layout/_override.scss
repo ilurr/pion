@@ -21,6 +21,7 @@
         display: block;
     }
 }
+[data-modal-target=modalRange],
 [data-modal-target=modalBirth] {
     .modal-body {
         max-height: none;
@@ -115,5 +116,21 @@
 .header-user {
     @include max-responsive($screen-desktop - 1) {
         order: 1
+    }
+}
+
+h2.title .header-attribute { position: absolute; right:0; font-weight: 500; display: flex; gap: .5rem; }
+.drop-down-attr .-attr-range {
+    width: 200px;
+}
+
+.range-filter-form {
+    display: flex;
+    .form-row:not(.-range) {
+        width: 100%;
+        &.form-inline input {
+            width: 100%;
+            max-width: 100%;
+        }
     }
 }

@@ -36,9 +36,9 @@ $dp-cell-selected-font-weight: 600 !default;
 $dp-cell-today-background-color: hsl(171, 100%, 41%) !default;  // turquoise (primary)
 $dp-cell-today-color: #fff !default;  // turquoise-invert
 $dp-cell-highlighted-background-color: $light !default;
-$dp-range-start-end-background-color: $grey-light !default;
-$dp-range-start-end-color: $dp-cell-selected-color !default;
-$dp-range-background-color: $grey-lighter !default;
+$dp-range-start-end-background-color: $link !default;
+$dp-range-start-end-color: #fff !default;
+$dp-range-background-color: #d5d5d5 !default;
 $dp-range-today-background-color: $dp-cell-today-background-color !default;
 $dp-week-color: $grey-light !default;
 
