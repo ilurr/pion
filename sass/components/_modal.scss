@@ -14,9 +14,9 @@
 		z-index: 11;
 		transition: all 0.2s ease; 
 		background-color: rgba(0, 0, 0, 0.35);
-    background-blend-mode: soft-light;
-    -webkit-backdrop-filter: blur(7.5px);
-    backdrop-filter: blur(7.5px);
+    // background-blend-mode: soft-light;
+    // -webkit-backdrop-filter: blur(7.5px);
+    // backdrop-filter: blur(7.5px);
 	}
 	&-parent {
 		position: relative;
