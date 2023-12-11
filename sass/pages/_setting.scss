@@ -162,7 +162,7 @@
 		& > i {
 			font-style: normal;
 			display: none;
-			color: #0D8E22;
+			color: $color-theme;
 			font-size: .875rem;
 			@include min-responsive($screen-middle) {
 				display: inline-flex;

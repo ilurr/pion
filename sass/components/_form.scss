@@ -31,6 +31,7 @@
 		width: auto;
 		display: inline-flex;
     margin: 0;
+		flex-direction: column;
 		.datepicker {
 			min-width: 300px;
 		}
@@ -153,8 +154,8 @@
 			right: 0;
 			top: 0;
 			&:checked + span {
-				border: 1px solid #327AB7;
-				background: #327AB7;
+				border: 1px solid $color-theme;
+				background: $color-theme;
 				&:before {
 					// left: calc(50% - (5px / 2));
 					left: calc(100% - 20px - (3px / 2));
@@ -399,6 +400,7 @@
 		text-align: left;
 		@include font-pack(false, 0.688rem, false, 1.2, $color-text-error);
 
+		&.form-inline,
 		&:empty {
 			padding: 0;
 		}
@@ -538,6 +540,10 @@
 	&-hint {
 		font-size: 0.750rem;
 		padding: 0.250rem 0;
+
+		&:empty {
+			padding: 0;
+		}
 		
 		p {
 			// display: inline-block;
@@ -598,6 +604,7 @@
 
 	&-cols {
 		position: relative;
+		width: 100%;
 		display: flex;
 		gap: 5px;
 		padding: 0;
@@ -662,6 +669,18 @@
 		}
 		&-50 {
 			flex-basis: 50%;
+		}
+		&-60 {
+			flex-basis: 60%;
+			@include max-responsive($screen-tablet) {
+				flex-basis: 100%;
+			}
+		}
+		&-70 {
+			flex-basis: 70%;
+			@include max-responsive($screen-tablet) {
+				flex-basis: 100%;
+			}
 		}
 	}
 

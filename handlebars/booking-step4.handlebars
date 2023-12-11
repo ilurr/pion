@@ -47,6 +47,25 @@
 									<div class="booking-content">Pion Jakarta, Jl. Warung Jati Barat No.3, Jati Padang, Ps. Minggu</div>
 								</div>
 							</div>
+
+							<div class="booking-promo">
+								<h2 class="title">Kode Voucher</h2>
+								<div class="booking-row">
+									<div class="form-hint"><p>Masukkan kode voucher Anda di sini</p></div>
+									<div class="form-cols">
+										<div class="form-row form-inline form-cols-70">
+											<input type="text" id="kode_voucher" name="kode_voucher" class="" placeholder="Cth: GEBYARPION20">
+											<div class="form-hint"></div>
+										</div>
+										<div class="form-row form-inline form-cols-30">
+											<button type="button" class="button -primary -auto" onclick="checkPromo(this)">
+												Gunakan
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
 							<div class="booking-summary">
 								<h2 class="title">Payment Details</h2>
 								<div class="note-list -invoice -cols">
@@ -158,6 +177,23 @@
 	</div>
 
 {{>js}}
+<script>
+	function checkPromo(t) {
+		let kv = document.getElementById('kode_voucher')
+		if(kv) {
+			let pkv = kv.parentElement
+			let dv = pkv.querySelector('.form-hint')
+			console.log(dv)
+			pkv.classList.remove('form-error')
+			if(!kv.value) {
+				pkv.classList.add('form-error')
+				dv.innerHTML = "Voucher Anda tidak bisa digunakan";
+			} else {
+				dv.innerHTML = "Voucher Anda berhasil digunakan";
+			}
+		}
+	}
+</script>
 
 </body>
 </html>

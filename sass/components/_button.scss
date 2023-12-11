@@ -31,8 +31,17 @@ button,
 
 	&.-auto {
 		@include min-responsive($screen-tablet) {
+			// width: fit-content;
 			width: fit-content;
+			min-width: 160px;
+			max-width: 100%;
 			padding: 0 1.25rem;
+			.form-inline &,
+			.col-5 &,
+			.col-10 &,
+			.col-15 & {
+				min-width: auto;
+			}
 		}
 		.form-medium & {
 			padding: 0 .875rem;
@@ -131,13 +140,15 @@ button,
 		display: none;
 	}
 	&.-transparent {
-		background-color: #fff;
-		border: 1px solid transparent;
-		color: #090909;
-		// font-weight: 700;
-		box-shadow: none;
-		&:hover {
-			background-color: #fff;	
+		.form-inline & {
+			background-color: #fff;
+			border: 1px solid transparent;
+			color: #090909;
+			// font-weight: 700;
+			box-shadow: none;
+			&:hover {
+				background-color: #fff;	
+			}
 		}
 	}
 	&.-disabled {

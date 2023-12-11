@@ -131,6 +131,26 @@
 			margin: 10px 0;
 		}
 	}
+	&-promo {
+		position: relative;
+		margin: 0;
+		@include min-responsive($screen-small-desktop) {
+			padding: 0 50px;
+		}
+		.title {
+			// justify-content: center;
+			margin: 0;
+		}
+		.booking-row {
+			margin: .125rem 0;
+		}
+		.form-cols-30 {
+			flex-basis: calc(30% - (5px / 2));
+		}
+		.form-cols-70 {
+			flex-basis: calc(70% - (5px / 2));
+		}
+	}
 	&-result {
 		position: relative;
 		display: flex;
@@ -207,9 +227,13 @@
 			}
 		}
 		.button.-auto {
-			padding: 0 2rem;
 			@include max-responsive($screen-tablet) {
 				width: 100%;
+			}
+		}
+		&.-center .button.-auto {
+			@include min-responsive($screen-tablet) {
+				min-width: 210px;
 			}
 		}
 	}
