@@ -638,6 +638,28 @@
 			}
 		}
 	}
+	&-wrap {
+		position: relative;
+		display: flex;
+		gap: 10px;
+		flex-wrap: wrap;
+		margin: 1rem 0 .5rem;
+		.form-radio {
+			margin: 0;
+			label {
+				padding: 0 .5rem;
+			}
+			input[type=checkbox] + label {				
+				@include max-responsive($screen-middle) {
+					padding: 0.5rem;
+					height: auto;
+				}
+			}
+		}
+		.form-row {
+			width: auto;
+		}
+	}
 	&-detail {
 		position: relative;
 		padding: 15px 5px;

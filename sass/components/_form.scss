@@ -31,7 +31,7 @@
 		width: auto;
 		display: inline-flex;
     margin: 0;
-		flex-direction: column;
+		// flex-direction: column;
 		.datepicker {
 			min-width: 300px;
 		}
@@ -310,6 +310,64 @@
 			left: 1.75rem;
 			width: calc(100% - 1.75rem);	
 			font-weight: 700;	
+		}
+		// override radio
+		input[type=checkbox]:checked + label:before {
+			content: none;
+		}
+		input[type=checkbox]:checked + label {
+			border: 1px solid $color-theme;
+			background: $color-theme;
+			color: #fff;
+			.-blue & {
+				border: 1px solid $color-theme;
+				background: $color-theme;
+				color: #fff;
+			}
+			.-red & {
+				border: 1px solid #ff6969;
+				background: #ff6969;
+				color: #fff;
+			}
+			.-yellow & {
+				border: 1px solid #ffaa00;
+				background: #ffaa00;
+				color: #fff;
+			}
+		}
+		input[type=checkbox] {
+			opacity: 0;
+			visibility: hidden;
+		}
+		input[type=checkbox][disabled] + label {
+			border: 1px solid #D3DAE0;
+			cursor: default;
+		}
+		input[type=checkbox] + label {
+			left: 0;
+			width: 100%;
+			border-radius: 8px;
+			border: 1px solid #0039D4;
+			color: #0039D4;
+			font-weight: 600;
+			position: relative;
+			align-items: center;
+			height: 40px;
+			display: flex;
+  	  justify-content: center;
+			cursor: pointer;
+			.-blue & {
+				border: 1px solid $color-theme;
+				color: $color-theme;
+			}
+			.-red & {
+				border: 1px solid #ff6969;
+				color: #ff6969;
+			}
+			.-yellow & {
+				border: 1px solid #ffaa00;
+				color: #ffaa00;
+			}
 		}
 	}
 
