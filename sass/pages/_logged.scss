@@ -38,7 +38,7 @@
 		&.card {
 			border-radius: 25px 25px 0 0;
 			@include min-responsive($screen-small-desktop) {
-				border-radius: 0;
+				border-radius: 25px 0 0 25px;
 			}
 		}
 	}
@@ -51,18 +51,18 @@
 		flex-direction: column;
 		padding: 0 20px;
 		z-index: 2;
-		margin: 20px 0 25vh;
+		margin: 20px 0 30vh;
 		width: 100%;
 		@include min-responsive($screen-tablet) {
 			gap: 20px;
 			margin: 20px 0 30vh;
 		}
 		@include min-responsive($screen-small-desktop) {
-			width: 460px;
+			width: 100%;
 			margin: 0 0 45vh;
 		}
 		@include min-responsive($screen-large-desktop) {
-			width: 600px;
+			width: 750px;
 		}
 	}
 	&-title {
@@ -70,7 +70,7 @@
 		font-weight: 700;
 		text-align: center;
 		@include min-responsive($screen-tablet) {
-			font-size: 1.25rem;
+			font-size: 1.5rem;
 		}
 		&.-error {
 			color: $color-error;
@@ -95,19 +95,90 @@
 		width: 100%;
 		position: absolute;
 		bottom: -20px;
-		height: 25vh;
+		height: 30vh;
     text-align: center;
 		z-index: 1;
 		pointer-events: none;
 		@include min-responsive($screen-tablet) {
-			height: 30vh;
+			// height: 30vh;
 			bottom: 0;
 		}
 		@include min-responsive($screen-small-desktop) {
+			height: 35vh;
+		}
+		@include min-responsive($screen-desktop) {
 			height: 50vh;
 		}
 		img {
 			height: 100%;
+			object-position: bottom;
+	    object-fit: contain;
+		}
+	}
+	&-blue {
+		background: $color-theme;
+		border-radius: 0 0 25px 25px;
+		@include min-responsive($screen-small-desktop) {
+			border-radius: 0 25px 25px 0;
+		}
+		.logged-logo {
+			filter: brightness(0) invert(1);
+		}
+		.logged-lead,
+		.logged-title {
+			color: #fff;
+		}
+		& ~ .logged-flex .logged-box {
+			@include max-responsive($screen-tablet) {
+				margin: 40px 0 25vh;
+			}
+		}
+	}
+	&-pre {
+		@include max-responsive($screen-small-desktop) {
+			height: auto;
+		}
+		.logged-title {
+			@include min-responsive($screen-tablet) {
+				font-size: 1.65rem;
+			}	
+		}
+		.logged-logo {
+			margin: 25px 0 20px;
+			@include min-responsive($screen-small-desktop) {
+				margin: 0;
+				position: fixed;
+				z-index: 1;
+				top: 20px;
+				left: 20px;
+			}		
+		}
+		.logged-bg {
+			bottom: -5px;
+			@include min-responsive($screen-tablet) {
+				height: 25vh;
+			}
+			@include min-responsive($screen-small-desktop) {
+				height: 30vh;
+			}
+			@include min-responsive($screen-desktop) {
+				height: 40vh;
+			}
+		}
+		.logged-flex {
+			overflow: hidden;
+		}
+		.logged-box {
+			margin: 20px 0 30vh;
+			// @include min-responsive($screen-tablet) {
+			// 	margin: 20px 0 30vh;
+			// }
+			@include min-responsive($screen-small-desktop) {
+				margin: 10vh 0 35vh;
+			}	
+		}
+		.button.-auto {
+			min-width: 200px;
 		}
 	}
 }
@@ -152,7 +223,7 @@
 			height: auto;
 			overflow: auto;
 			padding: 5vh 20px;
-			padding: 10vh calc((100% - 360px) / 2);
+			padding: 10vh calc((100% - 400px) / 2);
 		}
 		@include min-responsive($screen-small-desktop) {
 			height: 100vh;
