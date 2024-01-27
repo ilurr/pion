@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+
+			<!-- side -->
+			{{>aside active="Schedule"}}
+			
+			<!-- dashboard -->
+			<section class="section board">
+
+				<div class="board-row">
+	
+					<h1 class="title">
+						<span class="fa-regular fa-calendar-check"></span>
+						Off Schedule 
+					</h1>
+
+					<div class="tile-list">
+						<div class="card tile-card">
+							<div class="card-body tile-body">
+								<div class="card-calender" id="expertDate"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal-content -medium" data-modal-target="modalSchedule">
+						<form action="#">
+						<div class="modal-header">
+							<div class="modal-title">Edit Schedule</div>
+							<button type="button" class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
+								<i class="fa-solid fa-xmark"></i>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="modal-row">
+								<div class="form-text">Date to abstain</div>
+								{{>input type="text" label="Date" name="date-schedule" placeholder="Date" nolabel="true" function="js-schedule-edit" parent="js-schedule-parent" readonly="true"}}
+							</div>
+							<div class="modal-row">
+								<div class="form-text">Time to attend or abstain</div>
+								<div class="form-row">
+									<div class="form-grid holiday-toggle">
+										{{>radio multiple=true label="10.00" id="time_1000" name="book_time" checked="true"}}
+										{{>radio multiple=true label="10.30" id="time_1030" name="book_time" checked="true"}}
+										{{>radio multiple=true label="11.00" id="time_1100" name="book_time"}}
+										{{>radio multiple=true label="11.30" id="time_1130" name="book_time"}}
+										{{>radio multiple=true label="12.00" id="time_1200" name="book_time"}}
+										{{>radio multiple=true label="12.30" id="time_1230" name="book_time"}}
+										{{>radio multiple=true label="13.00" id="time_1300" name="book_time"}}
+										{{>radio multiple=true label="13.30" id="time_1330" name="book_time"}}
+										{{>radio multiple=true label="14.00" id="time_1400" name="book_time"}}
+										{{>radio multiple=true label="14.30" id="time_1430" name="book_time"}}
+										{{>radio multiple=true label="15.00" id="time_1500" name="book_time"}}
+										{{>radio multiple=true label="15.30" id="time_1530" name="book_time"}}
+										{{>radio multiple=true label="16.00" id="time_1600" name="book_time"}}
+										{{>radio multiple=true label="16.30" id="time_1630" name="book_time"}}
+										{{>radio multiple=true label="17.00" id="time_1700" name="book_time"}}
+										{{>radio multiple=true label="17.30" id="time_1730" name="book_time"}}
+										{{>radio multiple=true label="18.00" id="time_1800" name="book_time"}}
+									</div>
+								</div>
+							</div>
+							<div class="modal-row">
+								<div class="form-text">Reason</div>
+								{{>input type="text" label="Reason" name="reason" placeholder="Reason" nolabel="true"}}
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="button -auto -transparent" data-modal-button="dismiss">Cancel</button>
+							<button type="button" class="button -primary -auto" onclick="dummyChange('Your schedule has been updated')" type="button">Save</button>
+						</div>
+						</form>
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+<script>
+		let myHoliday = [
+			{
+				date: "2024/1/2",
+				holiday: [
+					{
+						"time": "11.00",
+						"reason": "Liburan ya"
+					}
+				]
+			},
+			{
+				date: "2024/1/5",
+				holiday: [
+					{
+						"time": "11.00",
+						"reason": "Ada meeting"
+					},
+					{
+						"time": "11.30",
+						"reason": "Ada meeting"
+					}
+				]
+			},
+			{
+				date: "2024/1/26",
+				holiday: [
+					{
+						"time": "11.00",
+						"reason": "Meeting di SCBD"
+					}
+				]
+			},
+			{
+				date: "2024/2/2",
+				holiday: [
+					{
+						"time": "11.00",
+						"reason": "Family time"
+					},
+					{
+						"time": "11.30",
+						"reason": "Family time"
+					},
+					{
+						"time": "12.00",
+						"reason": "Family time"
+					},
+					{
+						"time": "12.30",
+						"reason": "Family time"
+					}
+				]
+			}
+		]
+		let options_sch = {
+		//minDate: new Date(),
+		format: "dd MM yyyy",
+		leftArrow: '<',
+		language: 'id',
+		rightArrow: '>',
+		startView: 0,
+		maxView: 0,
+		beforeShowDay(date) {
+			//console.log(date.getDate("dd MM yyyy"))
+			let list = ''
+			let here = date.getFullYear()+"/"+(date.getMonth()+1)+"/"+date.getDate()
+			list = "<div class=\"holiday-list\">"
+			myHoliday.forEach(function(item){
+				if(here == item.date) {
+					//console.log(item)
+					item.holiday.forEach(function(item2){
+						list += "<div class=\"holiday-item\">"+item2.time+"<span>"+item2.reason+"</span></div>"
+					})
+				}
+			})
+			list += "</div>"
+			return {
+					content: "<span>"+date.getDate()+"</span>"+list,
+			};
+		}
+
+	}
+
+	const elem_sch = document.getElementById('expertDate');
+	const datepicker_sch = new Datepicker(elem_sch, options_sch); 
+	datepicker_sch.element.addEventListener('changeDate', (date) => {
+    console.log(datepicker_sch.getDate("dd MM yyyy"))
+		let mo = document.querySelector('[data-modal-target=modalSchedule] .js-schedule-edit')
+		if(mo) {
+			mo.value = datepicker_sch.getDate("dd MM yyyy")
+			openModal('modalSchedule')
+		}
+  })
+
+	// dummy toast 
+	function dummyChange(toastMsg) {
+		reactionToast(toastMsg)
+		closeModal()
+	}
+
+</script>
+</body>
+</html>

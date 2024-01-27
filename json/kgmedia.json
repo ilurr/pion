@@ -157,6 +157,15 @@
       "login": ""
     },
     {
+      "title": "Schedule",
+      "icon": "fa-regular fa-calendar-check",
+      "link": "my-schedule.html",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": ""
+    },
+    {
       "title": "Profile",
       "icon": "fa-regular fa-user",
       "link": "user-profile.html",

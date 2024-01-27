@@ -1,0 +1,134 @@
+.holiday {
+	&-list {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 100%;
+    padding: 40px 5px 5px;
+		gap: 5px;
+	}
+	&-item {
+		position: relative;
+		display: flex;
+		gap: 8px;
+		text-align: right;
+		flex-direction: column;
+		align-items: center;
+    font-size: 10px;
+    line-height: 120%;
+    color: #f00;
+		background-color: #f0f0f0;
+		padding: 2px;
+		font-weight: 700;
+		border-radius: 5px;
+		@include min-responsive($screen-tablet) {
+			padding: 4px;
+			flex-direction: row;
+			font-size: 12px;
+		}
+		@include range-responsive($screen-tablet, $screen-desktop) {
+			flex-direction: column;
+		}
+		span {
+			display: none;
+			text-align: right;
+			font-weight: 500;
+			@include min-responsive($screen-tablet) {
+				display: block;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				max-width: 100%;
+			}
+			@include range-responsive($screen-tablet, $screen-desktop) {
+				text-align: center;
+			}	
+		}
+	}
+	&-toggle {
+		position: relative;
+		.form-radio input[type=checkbox] + label {
+			border: 1px solid #8bc34a;
+			color: #fff;
+			background: #8bc34a;
+		}
+		.form-radio input[type=checkbox]:checked + label {
+			border: 1px solid #f00;
+			background: #f00;
+		}
+	}
+}
+.card-calender {
+	width: 100%;
+	.datepicker-header .datepicker-controls {
+		padding: 0;
+		gap: 5px;
+		.prev-button {
+			order: 2;
+			background-color: #0c99c5;
+			color: #fff;
+		}
+		.view-switch {
+			order: 1;
+		}
+		.next-button {
+			order: 3;
+			color: #fff;
+			background-color: #0c99c5;
+		}
+	}
+	.datepicker-header {
+		// border-bottom: 1px solid var(--neutral-grey-100, #D3DAE0);
+		margin-bottom: 10px;
+		@include min-responsive($screen-tablet) {
+			padding: 10px 0;
+		}
+	}
+	.datepicker-view .dow, 
+	.datepicker-view .days .datepicker-cell {
+		border-right: 1px solid #D3DAE0;
+    border-bottom: 1px solid #D3DAE0;
+	}
+	.datepicker-view .dow {
+		padding: 5px 0;
+		height: auto;
+	}
+	.datepicker-view .days .datepicker-cell {
+		height: auto;
+		min-height: 4rem;
+		// padding-top: calc(100% / 10);
+    display: flex;
+    position: relative;
+		@include min-responsive($screen-tablet) {
+			min-height: 6.5rem;
+		}
+		& > span {
+			height: auto;
+			line-height: 1;
+			font-weight: 500;
+			display: flex;
+			position: absolute;
+			z-index: 1;
+			right: 10px;
+			top: 10px;
+		}
+	}
+	.datepicker-view {
+		.days {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			border-radius: 4px;
+			border-top: 1px solid #D3DAE0;
+			border-left: 1px solid #D3DAE0;
+		}
+	}
+	.datepicker-cell.selected, 
+	.datepicker-cell.selected:hover,
+	.datepicker-cell.focused:not(.selected) {
+		background-color: #ffeea6;
+		color: #333;
+	}
+}
