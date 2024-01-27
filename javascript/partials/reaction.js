@@ -3,12 +3,20 @@ function reactionShare(el) {
 }
 
 function closeModal() {
-	let mdl = document.getElementById('modal');
+	let mdl = document.querySelector('body.modal');
+	//console.log(mdl)
 	if (!!mdl) {
 		document.body.classList.remove('modal');
-		let fc = mdl.firstElementChild;
-		while (fc.firstChild) {
-			fc.removeChild(fc.firstChild);
+		// let fc = mdl.firstElementChild;
+		// while (fc.firstChild) {
+		// 	fc.removeChild(fc.firstChild);
+		// }
+
+		let ksc = document.querySelectorAll('[data-modal-target]')
+		if(ksc) {
+			ksc.forEach(function(item){
+				item.classList.remove('-active')
+			})
 		}
 	}
 }
@@ -23,26 +31,29 @@ function openModal(el) {
 	let active = 'modal'
 	let tar = document.querySelector('[data-modal-target=' + el + ']')
 	let bgcl = document.querySelector('[data-modal-bgclick]')
-	let mdl = document.getElementById('modal');
+	let mdl = document.querySelector('body');
 	if (!!mdl) {
 		if (!!tar) {
 			// clear first
-			let fc = mdl.firstElementChild;
-			clearModalsContent(fc);
+			// let fc = mdl.firstElementChild;
+			// clearModalsContent(fc);
 
-			// add body class and clone element
+			// // add body class and clone element
 			document.body.classList.add(active);
-			let ox = tar.cloneNode(true);
+			// let ox = tar.cloneNode(true);
 
-			// cek form manipulate
-			let sq = ox.querySelectorAll('.form-select')
-			if(sq) {
-				sq.forEach(function(item){
-					selectInit(item);
-				})
-			}
+			// // cek form manipulate
+			// let sq = ox.querySelectorAll('.form-select')
+			// if(sq) {
+			// 	sq.forEach(function(item){
+			// 		selectInit(item);
+			// 	})
+			// }
 
-			fc.appendChild(ox);
+			// fc.appendChild(ox);
+
+			// baru
+			tar.classList.add('-active')
 		} else {
 			console.log('unknown modal target');
 			return;
@@ -51,7 +62,7 @@ function openModal(el) {
 		// bgclick
 		if(bgcl) {
 			document.addEventListener('click', function(e){
-				if (e.target.matches('#modal') || e.target.matches('.modal-parent')) {
+				if (e.target.matches('#modal') || e.target.matches('.modal-parent') || e.target.matches('body.modal')) {
 					closeModal();
 				}
 			}) 
@@ -61,6 +72,8 @@ function openModal(el) {
 		mdl.addEventListener('click', function (e) {
 			// console.log(e)
 			if (e.target.matches('[data-modal-button=dismiss]')) {
+				//console.log(e.target)
+				e.preventDefault()
 				closeModal();
 			}
 
