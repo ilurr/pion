@@ -56,6 +56,22 @@ function syncExpert(xid, val) {
 
 }
 
+// checklist 
+function toggleServiceDay(el) {
+	let cl = el.closest('[data-checkbox-parent]')
+	if(cl) {
+		let clq = cl.querySelectorAll('.form-radio input[type=checkbox]')
+		clq.forEach(function(item){
+			if(el.checked == true){
+				console.log(item)
+				item.disabled = false;
+			} else {
+				item.disabled = true;
+			}
+		})
+	}
+}
+
 // toggle radio button
 let mk = document.querySelectorAll('[data-form-toggle]');
 let h = '-hide'

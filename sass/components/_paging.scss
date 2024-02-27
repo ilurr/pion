@@ -5,7 +5,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+    flex-wrap: wrap;
+    @include min-responsive($screen-tablet) {
+      gap: 10px;
+    }
   }
   &-link {
     min-width: 40px;
@@ -21,6 +25,9 @@
     &:hover {
       color: #000;
       background-color: rgba(13, 172, 221, 0.1);
+    }
+    &.-dot {
+      border: transparent;
     }
     &.-disabled {
       background-color: $color-disabled;

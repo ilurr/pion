@@ -5,45 +5,40 @@
 		flex-direction: column;
 		width: 100%;
 		max-width: 100%;
-    padding: 40px 5px 5px;
-		gap: 5px;
+    padding: 0;
+		gap: 1px;
+		border-radius: 5px;
+		overflow: hidden;
 	}
 	&-item {
 		position: relative;
 		display: flex;
-		gap: 8px;
-		text-align: right;
-		flex-direction: column;
-		align-items: center;
-    font-size: 10px;
+		gap: 10px;
+		// text-align: right;
+		// flex-direction: column;
+		align-items: baseline;
+    font-size: 14px;
     line-height: 120%;
     color: #f00;
 		background-color: #f0f0f0;
-		padding: 2px;
 		font-weight: 700;
-		border-radius: 5px;
-		@include min-responsive($screen-tablet) {
-			padding: 4px;
-			flex-direction: row;
-			font-size: 12px;
-		}
-		@include range-responsive($screen-tablet, $screen-desktop) {
-			flex-direction: column;
-		}
+		padding: 8px 10px;
+		//@include min-responsive($screen-tablet) {
+			// flex-direction: row;
+			// font-size: 12px;
+		//}
+		// @include range-responsive($screen-tablet, $screen-desktop) {
+		// 	flex-direction: column;
+		// }
 		span {
-			display: none;
-			text-align: right;
 			font-weight: 500;
+			display: block;
 			@include min-responsive($screen-tablet) {
-				display: block;
-				white-space: nowrap;
+				// white-space: nowrap;
 				text-overflow: ellipsis;
 				overflow: hidden;
 				max-width: 100%;
 			}
-			@include range-responsive($screen-tablet, $screen-desktop) {
-				text-align: center;
-			}	
 		}
 	}
 	&-toggle {
@@ -57,6 +52,52 @@
 			border: 1px solid #f00;
 			background: #f00;
 		}
+		.form-radio input[type=checkbox]:disabled + label,
+		.form-radio input[type=checkbox]:disabled:checked + label {
+			background: #F1F1F1;
+			border: 1px solid #E2E2E2;
+			color: #9A9A9A;
+		}
+	}
+	&-block {
+		position: relative;
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		gap: 20px;
+	}
+	&-date {
+		font-weight: 700;
+		// text-align: center;
+	}
+	&-header {
+		position: relative;
+		// display: none;
+		// &.-show {
+		// 	display: flex;
+		// }
+		button {
+			margin: 0;
+		}
+	}
+	&-content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+}
+.tile-list {
+	&.-schedule {
+		& > .tile-card {
+			order: 1;
+			&.-small {
+				order: 0;
+				@include min-responsive($screen-tablet) {
+					order: 2;
+				}
+			}
+		}
 	}
 }
 .card-calender {
@@ -66,24 +107,33 @@
 		gap: 5px;
 		.prev-button {
 			order: 2;
-			background-color: #0c99c5;
+			background-color: #0DACDD;
+			box-shadow: 2px 6px 10px rgba(13, 172, 221, 0.25);
+			border-radius: 12px;
+			height: 44px;
+			width: 50px;
 			color: #fff;
 		}
 		.view-switch {
 			order: 1;
+			height: 44px;
 		}
 		.next-button {
 			order: 3;
 			color: #fff;
-			background-color: #0c99c5;
+			background-color: #0DACDD;
+			box-shadow: 2px 6px 10px rgba(13, 172, 221, 0.25);
+			border-radius: 12px;
+			height: 44px;
+			width: 50px;
 		}
 	}
 	.datepicker-header {
 		// border-bottom: 1px solid var(--neutral-grey-100, #D3DAE0);
 		margin-bottom: 10px;
-		@include min-responsive($screen-tablet) {
-			padding: 10px 0;
-		}
+		// @include min-responsive($screen-tablet) {
+		// 	padding: 10px 0;
+		// }
 	}
 	.datepicker-view .dow, 
 	.datepicker-view .days .datepicker-cell {
@@ -96,12 +146,12 @@
 	}
 	.datepicker-view .days .datepicker-cell {
 		height: auto;
-		min-height: 4rem;
+		min-height: 3rem;
 		// padding-top: calc(100% / 10);
     display: flex;
     position: relative;
 		@include min-responsive($screen-tablet) {
-			min-height: 6.5rem;
+			min-height: 5rem;
 		}
 		& > span {
 			height: auto;
@@ -112,6 +162,9 @@
 			z-index: 1;
 			right: 10px;
 			top: 10px;
+		}
+		&.-holiday {
+			background-color: #ffbeb9;
 		}
 	}
 	.datepicker-view {
@@ -125,9 +178,21 @@
 			border-left: 1px solid #D3DAE0;
 		}
 	}
+	.datepicker-cell.prev:not(.disabled), 
+	.datepicker-cell.next:not(.disabled) {
+		color: #D3DAE0;
+		&.-holiday {
+			background-color: #ffedec;
+		}
+	}
 	.datepicker-cell.selected, 
 	.datepicker-cell.selected:hover,
 	.datepicker-cell.focused:not(.selected) {
+		background-color: #ffeea6;
+		color: #333;
+	}
+	.datepicker-cell.today:not(.selected),
+	.datepicker-cell.today.focused:not(.selected) {
 		background-color: #ffeea6;
 		color: #333;
 	}

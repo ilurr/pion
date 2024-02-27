@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head fontless=true main=true}}
+
+<body class="main">
+
+	<!-- layout -->
+	<div class="root">		
+		
+		<!-- header -->
+		{{>header brand="pion-clinician" active="" logged=true}}
+
+		<!-- mainboard -->
+		<main class="main">
+
+			<!-- side -->
+			{{>aside active="Service"}}
+			
+			<!-- dashboard -->
+			<section class="section board">
+
+				<div class="board-row">
+	
+					<h1 class="title">
+						<span class="fa-solid fa-clipboard-user"></span>
+						Service
+					</h1>
+
+					<div class="tile-list -service">
+						<div class="card tile-card -small">
+							<div class="card-body tile-body">
+
+								<div class="service-tab">
+									{{#each service}}
+									<div class="service-tab-item" data-tab="menu">
+										<button data-href="{{href}}" class="service-tab-button{{#eq @index compare=0}} -active{{/eq}}">
+											{{cat}}
+										</button>
+									</div>
+									{{/each}}
+								</div>
+
+							</div>
+						</div>
+
+						<div class="card tile-card">
+							<div class="card-body tile-body">
+
+								<div class="service-body">
+									{{#each service}}
+									<div id="{{href}}" class="service-content{{#eq @index compare=0}} -active{{/eq}}" data-tab="content">
+										<form action="#">
+										<div class="service-row">
+											<label for="service-{{@index}}">
+												<div class="form-toggle">
+													<input name="service-{{@index}}" id="service-{{@index}}" type="checkbox" autocomplete="off"{{#if status}} checked="checked"{{/if}} onchange="reactionToast('Your service has been active')">
+													<span></span>
+												</div>
+												<div class="service-text">{{cat}}</div>
+											</label>
+										</div>
+										<div class="service-row">
+												<div class="service-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+										</div>
+										<div class="service-row -inline" data-checkbox-parent="true">
+											<div class="service-col">
+												<div class="form-row form-input">
+													<div class="form-inline-footnote">
+														<input type="checkbox" onchange="toggleServiceDay(this)" id="service-sunday-{{@index}}" name="service-sunday-{{@index}}" value="{{@index}}" checked="true"> 
+														<label for="service-sunday-{{@index}}">Sunday</label>
+													</div>
+												</div>
+											</div>
+											<div class="service-col">
+												<div class="form-nowrap holiday-toggle">
+													{{>radio multiple=true label="08.00" id="time_sun_0800" name="time_sun" checked="true"}}
+													{{>radio multiple=true label="09.00" id="time_sun_0900" name="time_sun"}}
+													{{>radio multiple=true label="10.00" id="time_sun_1000" name="time_sun"}}
+													{{>radio multiple=true label="11.00" id="time_sun_1100" name="time_sun"}}
+													{{>radio multiple=true label="12.00" id="time_sun_1200" name="time_sun"}}
+													{{>radio multiple=true label="13.00" id="time_sun_1300" name="time_sun"}}
+													{{>radio multiple=true label="14.00" id="time_sun_1400" name="time_sun"}}
+													{{>radio multiple=true label="15.00" id="time_sun_1500" name="time_sun"}}
+													{{>radio multiple=true label="16.00" id="time_sun_1600" name="time_sun"}}
+													{{>radio multiple=true label="17.00" id="time_sun_1700" name="time_sun"}}
+													{{>radio multiple=true label="18.00" id="time_sun_1800" name="time_sun"}}
+												</div>
+											</div>
+										</div>
+										<div class="service-row -inline" data-checkbox-parent="true">
+											<div class="service-col">
+												<div class="form-row form-input">
+													<div class="form-inline-footnote">
+														<input type="checkbox" onchange="toggleServiceDay(this)" id="service-monday-{{@index}}" name="service-monday-{{@index}}" value="{{@index}}"> 
+														<label for="service-monday-{{@index}}">Monday</label>
+													</div>
+												</div>
+											</div>
+											<div class="service-col">
+												<div class="form-nowrap holiday-toggle">
+													{{>radio multiple=true label="08.00" id="time_mon_0800" name="time_mon" disabled="true"}}
+													{{>radio multiple=true label="09.00" id="time_mon_0900" name="time_mon" disabled="true"}}
+													{{>radio multiple=true label="10.00" id="time_mon_1000" name="time_mon" disabled="true"}}
+													{{>radio multiple=true label="11.00" id="time_mon_1100" name="time_mon" disabled="true"}}
+													{{>radio multiple=true label="12.00" id="time_mon_1200" name="time_mon" disabled="true"}}
+													{{>radio multiple=true label="13.00" id="time_mon_1300" name="time_mon" disabled="true"}}
+													{{>radio multiple=true label="14.00" id="time_mon_1400" name="time_mon" disabled="true"}}
+													{{>radio multiple=true label="15.00" id="time_mon_1500" name="time_mon" disabled="true"}}
+													{{>radio multiple=true label="16.00" id="time_mon_1600" name="time_mon" disabled="true"}}
+													{{>radio multiple=true label="17.00" id="time_mon_1700" name="time_mon" disabled="true"}}
+													{{>radio multiple=true label="18.00" id="time_mon_1800" name="time_mon" disabled="true"}}
+												</div>
+											</div>
+										</div>
+										<div class="service-row -inline" data-checkbox-parent="true">
+											<div class="service-col">
+												<div class="form-row form-input">
+													<div class="form-inline-footnote">
+														<input type="checkbox" onchange="toggleServiceDay(this)" id="service-tuesday-{{@index}}" name="service-tuesday-{{@index}}" value="{{@index}}"> 
+														<label for="service-tuesday-{{@index}}">Tuesday</label>
+													</div>
+												</div>
+											</div>
+											<div class="service-col">
+												<div class="form-nowrap holiday-toggle">
+													{{>radio multiple=true label="08.00" id="time_tue_0800" name="time_tue" disabled="true"}}
+													{{>radio multiple=true label="09.00" id="time_tue_0900" name="time_tue" disabled="true"}}
+													{{>radio multiple=true label="10.00" id="time_tue_1000" name="time_tue" disabled="true"}}
+													{{>radio multiple=true label="11.00" id="time_tue_1100" name="time_tue" disabled="true"}}
+													{{>radio multiple=true label="12.00" id="time_tue_1200" name="time_tue" disabled="true"}}
+													{{>radio multiple=true label="13.00" id="time_tue_1300" name="time_tue" disabled="true"}}
+													{{>radio multiple=true label="14.00" id="time_tue_1400" name="time_tue" disabled="true"}}
+													{{>radio multiple=true label="15.00" id="time_tue_1500" name="time_tue" disabled="true"}}
+													{{>radio multiple=true label="16.00" id="time_tue_1600" name="time_tue" disabled="true"}}
+													{{>radio multiple=true label="17.00" id="time_tue_1700" name="time_tue" disabled="true"}}
+													{{>radio multiple=true label="18.00" id="time_tue_1800" name="time_tue" disabled="true"}}
+												</div>
+											</div>
+										</div>
+										<div class="service-row -inline" data-checkbox-parent="true">
+											<div class="service-col">
+												<div class="form-row form-input">
+													<div class="form-inline-footnote">
+														<input type="checkbox" onchange="toggleServiceDay(this)" id="service-wednesday-{{@index}}" name="service-wednesday-{{@index}}" value="{{@index}}"> 
+														<label for="service-wednesday-{{@index}}">Wednesday</label>
+													</div>
+												</div>
+											</div>
+											<div class="service-col">
+												<div class="form-nowrap holiday-toggle">
+													{{>radio multiple=true label="08.00" id="time_wed_0800" name="time_wed" disabled="true"}}
+													{{>radio multiple=true label="09.00" id="time_wed_0900" name="time_wed" disabled="true"}}
+													{{>radio multiple=true label="10.00" id="time_wed_1000" name="time_wed" disabled="true"}}
+													{{>radio multiple=true label="11.00" id="time_wed_1100" name="time_wed" disabled="true"}}
+													{{>radio multiple=true label="12.00" id="time_wed_1200" name="time_wed" disabled="true"}}
+													{{>radio multiple=true label="13.00" id="time_wed_1300" name="time_wed" disabled="true"}}
+													{{>radio multiple=true label="14.00" id="time_wed_1400" name="time_wed" disabled="true"}}
+													{{>radio multiple=true label="15.00" id="time_wed_1500" name="time_wed" disabled="true"}}
+													{{>radio multiple=true label="16.00" id="time_wed_1600" name="time_wed" disabled="true"}}
+													{{>radio multiple=true label="17.00" id="time_wed_1700" name="time_wed" disabled="true"}}
+													{{>radio multiple=true label="18.00" id="time_wed_1800" name="time_wed" disabled="true"}}
+												</div>
+											</div>
+										</div>
+										<div class="service-row -inline" data-checkbox-parent="true">
+											<div class="service-col">
+												<div class="form-row form-input">
+													<div class="form-inline-footnote">
+														<input type="checkbox" onchange="toggleServiceDay(this)" id="service-thursday-{{@index}}" name="service-thursday-{{@index}}" value="{{@index}}"> 
+														<label for="service-thursday-{{@index}}">Thursday</label>
+													</div>
+												</div>
+											</div>
+											<div class="service-col">
+												<div class="form-nowrap holiday-toggle">
+													{{>radio multiple=true label="08.00" id="time_thu_0800" name="time_thu" disabled="true"}}
+													{{>radio multiple=true label="09.00" id="time_thu_0900" name="time_thu" disabled="true"}}
+													{{>radio multiple=true label="10.00" id="time_thu_1000" name="time_thu" disabled="true"}}
+													{{>radio multiple=true label="11.00" id="time_thu_1100" name="time_thu" disabled="true"}}
+													{{>radio multiple=true label="12.00" id="time_thu_1200" name="time_thu" disabled="true"}}
+													{{>radio multiple=true label="13.00" id="time_thu_1300" name="time_thu" disabled="true"}}
+													{{>radio multiple=true label="14.00" id="time_thu_1400" name="time_thu" disabled="true"}}
+													{{>radio multiple=true label="15.00" id="time_thu_1500" name="time_thu" disabled="true"}}
+													{{>radio multiple=true label="16.00" id="time_thu_1600" name="time_thu" disabled="true"}}
+													{{>radio multiple=true label="17.00" id="time_thu_1700" name="time_thu" disabled="true"}}
+													{{>radio multiple=true label="18.00" id="time_thu_1800" name="time_thu" disabled="true"}}
+												</div>
+											</div>
+										</div>
+										<div class="service-row -inline" data-checkbox-parent="true">
+											<div class="service-col">
+												<div class="form-row form-input">
+													<div class="form-inline-footnote">
+														<input type="checkbox" onchange="toggleServiceDay(this)" id="service-friday-{{@index}}" name="service-friday-{{@index}}" value="{{@index}}"> 
+														<label for="service-friday-{{@index}}">Friday</label>
+													</div>
+												</div>
+											</div>
+											<div class="service-col">
+												<div class="form-nowrap holiday-toggle">
+													{{>radio multiple=true label="08.00" id="time_fri_0800" name="time_fri" disabled="true"}}
+													{{>radio multiple=true label="09.00" id="time_fri_0900" name="time_fri" disabled="true"}}
+													{{>radio multiple=true label="10.00" id="time_fri_1000" name="time_fri" disabled="true"}}
+													{{>radio multiple=true label="11.00" id="time_fri_1100" name="time_fri" disabled="true"}}
+													{{>radio multiple=true label="12.00" id="time_fri_1200" name="time_fri" disabled="true"}}
+													{{>radio multiple=true label="13.00" id="time_fri_1300" name="time_fri" disabled="true"}}
+													{{>radio multiple=true label="14.00" id="time_fri_1400" name="time_fri" disabled="true"}}
+													{{>radio multiple=true label="15.00" id="time_fri_1500" name="time_fri" disabled="true"}}
+													{{>radio multiple=true label="16.00" id="time_fri_1600" name="time_fri" disabled="true"}}
+													{{>radio multiple=true label="17.00" id="time_fri_1700" name="time_fri" disabled="true"}}
+													{{>radio multiple=true label="18.00" id="time_fri_1800" name="time_fri" disabled="true"}}
+												</div>
+											</div>
+										</div>
+										<div class="service-row -inline" data-checkbox-parent="true">
+											<div class="service-col">
+												<div class="form-row form-input">
+													<div class="form-inline-footnote">
+														<input type="checkbox" onchange="toggleServiceDay(this)" id="service-saturday-{{@index}}" name="service-saturday-{{@index}}" value="{{@index}}"> 
+														<label for="service-saturday-{{@index}}">Saturday</label>
+													</div>
+												</div>
+											</div>
+											<div class="service-col">
+												<div class="form-nowrap holiday-toggle">
+													{{>radio multiple=true label="08.00" id="time_sat_0800" name="time_sat" disabled="true"}}
+													{{>radio multiple=true label="09.00" id="time_sat_0900" name="time_sat" disabled="true"}}
+													{{>radio multiple=true label="10.00" id="time_sat_1000" name="time_sat" disabled="true"}}
+													{{>radio multiple=true label="11.00" id="time_sat_1100" name="time_sat" disabled="true"}}
+													{{>radio multiple=true label="12.00" id="time_sat_1200" name="time_sat" disabled="true"}}
+													{{>radio multiple=true label="13.00" id="time_sat_1300" name="time_sat" disabled="true"}}
+													{{>radio multiple=true label="14.00" id="time_sat_1400" name="time_sat" disabled="true"}}
+													{{>radio multiple=true label="15.00" id="time_sat_1500" name="time_sat" disabled="true"}}
+													{{>radio multiple=true label="16.00" id="time_sat_1600" name="time_sat" disabled="true"}}
+													{{>radio multiple=true label="17.00" id="time_sat_1700" name="time_sat" disabled="true"}}
+													{{>radio multiple=true label="18.00" id="time_sat_1800" name="time_sat" disabled="true"}}
+												</div>
+											</div>
+										</div>
+										<div class="service-row">
+											<div class="service-action">
+												<button type="button" class="button -primary -auto" onclick="dummyChange('Your changes has been saved')"><i class="fa-solid fa-floppy-disk"></i> Save</button>
+											</div>
+										</div>
+										</form>
+									</div>
+									{{/each}}
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- footer -->
+		{{>footer brand="pion-clinician"}}
+
+	</div>
+
+{{>js}}
+<script>
+
+	// dummy toast 
+	function dummyChange(toastMsg) {
+		reactionToast(toastMsg)
+		closeModal()
+	}
+
+</script>
+</body>
+</html>

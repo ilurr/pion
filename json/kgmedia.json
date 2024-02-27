@@ -166,6 +166,15 @@
       "login": ""
     },
     {
+      "title": "Service",
+      "icon": "fa-solid fa-clipboard-user",
+      "link": "my-service.html",
+      "modal": "",
+      "notification": "",
+      "badge": false,
+      "login": ""
+    },
+    {
       "title": "Profile",
       "icon": "fa-regular fa-user",
       "link": "user-profile.html",
@@ -257,6 +266,33 @@
       "title": "Berkebutuhan Khusus",
       "figure": "issue-11.svg",
       "content": "Apakah kamu adalah caregiver dari individu-individu spesial, Teman Pion? Atau malah, kamu sendiri termasuk individu spesial? Halo! Jika kamu butuh dukungan emosional dan tempat berbagi untuk masalah-masalah yang sedang kamu alami, terutama untuk masalah-masalah spesialmu, kamu ada di tempat yang benar. Yuk silahkan klik tombol dibawah ini untuk info lebih lanjut."
+    }
+  ],
+  "service": [
+    {
+      "cat": "Session with a Psychologist",
+      "status": true,
+      "href": "#service-psychologist"
+    },
+    {
+      "cat": "Session with a Life Coach",
+      "status": false,
+      "href": "#service-life-coach"
+    },
+    {
+      "cat": "Session with a Financial Planner",
+      "status": false,
+      "href": "#service-financial-planner"
+    },
+    {
+      "cat": "Session with an Occupational Therapist",
+      "status": false,
+      "href": "#service-occupational-therapist"
+    },
+    {
+      "cat": "Assesment Package",
+      "status": false,
+      "href": "#service-assesment-package"
     }
   ],
   "testi": [

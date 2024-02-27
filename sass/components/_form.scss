@@ -15,6 +15,23 @@
 		margin: 0 0.250em;
 	}
 
+	&-nowrap {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		gap: 5px;
+		@include min-responsive($screen-tablet) {
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			gap: 0;
+		}
+		.form-row,
+		.form-radio {
+			margin: 0;
+		}
+	}
+
 	&-grid {
 		position: relative;
 		width: 100%;

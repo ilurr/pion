@@ -15,7 +15,7 @@
 		<main class="main">
 
 			<!-- side -->
-			{{>aside active="Schedule"}}
+			{{>aside active="Services"}}
 			
 			<!-- dashboard -->
 			<section class="section board">
@@ -23,25 +23,37 @@
 				<div class="board-row">
 	
 					<h1 class="title">
-						<span class="fa-regular fa-calendar-check"></span>
-						Holiday Date 
+						<span class="fa-solid fa-clipboard-user"></span>
+						My Services
 					</h1>
 
-					<div class="tile-list -schedule">
+					<div class="tile-list -service">
 						<div class="card tile-card">
 							<div class="card-body tile-body">
-								<div class="card-calender" id="expertDate"></div>
+								<a href="#service-01" class="service-expand-button accordion-toggle -active">
+									<i class="fa-solid fa-user-tag"></i> Session with a Psychologist
+									<div class="icon icon-arrow-down"></div>
+								</a>
+								<div class="service-expand-content accordion-content -active" id="service-01">
+									<div class="service-content">
+										<div class="service-toggle form-toggle">
+											<label for="setting-service-01">
+												<input name="setting-service-01" id="setting-service-01" type="checkbox" autocomplete="off" checked="checked" onchange="reactionToast('Session with a Psychologist is active now')">
+												<span>Session with a Psychologist</span>
+											</label>
+										</div>
+										<div class="service-date-list"></div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="card tile-card -small">
+						<div class="card tile-card">
 							<div class="card-body tile-body">
-								<div class="holiday-block">
-									<div class="holiday-header">
-										<button type="button" class="-primary -disabled" onclick="openModal('modalSchedule')">Add New Holiday Date</button>
-									</div>
-									<div class="holiday-content">
-										Select a date first 
-									</div>
+								<a href="#service-02" class="service-expand-button accordion-toggle">
+									<i class="fa-solid fa-user-tag"></i> Session with a Life Coach
+									<div class="icon icon-arrow-down"></div>
+								</a>
+								<div class="service-expand-content accordion-content" id="service-02">
 								</div>
 							</div>
 						</div>
@@ -109,130 +121,6 @@
 
 {{>js}}
 <script>
-		let myHoliday = [
-			{
-				date: "2024/2/2",
-				holiday: [
-					{
-						"time": "11.00",
-						"reason": "Liburan ya"
-					}
-				]
-			},
-			{
-				date: "2024/2/5",
-				holiday: [
-					{
-						"time": "11.00",
-						"reason": "Ada meeting"
-					},
-					{
-						"time": "11.30",
-						"reason": "Ada meeting"
-					}
-				]
-			},
-			{
-				date: "2024/2/27",
-				holiday: [
-					{
-						"time": "11.00",
-						"reason": "Meeting di SCBD"
-					}
-				]
-			},
-			{
-				date: "2024/3/2",
-				holiday: [
-					{
-						"time": "11.00",
-						"reason": "Family time"
-					},
-					{
-						"time": "11.30",
-						"reason": "Family time"
-					},
-					{
-						"time": "12.00",
-						"reason": "Family time"
-					},
-					{
-						"time": "12.30",
-						"reason": "Family time"
-					}
-				]
-			}
-		]
-		let options_sch = {
-		//minDate: new Date(),
-		todayHighlight: true, 
-		format: "dd MM yyyy",
-		leftArrow: '<',
-		language: 'id',
-		rightArrow: '>',
-		startView: 0,
-		maxView: 0,
-		beforeShowDay(date) {
-			//console.log(date.getDate("dd MM yyyy"))
-			//let list = ''
-			let mark = false
-			let here = date.getFullYear()+"/"+(date.getMonth()+1)+"/"+date.getDate()
-			//list = "<div class=\"holiday-list\">"
-			myHoliday.forEach(function(item){
-				if(here == item.date) {
-					mark = true
-					//console.log(item)
-					//item.holiday.forEach(function(item2){
-					//	list += "<div class=\"holiday-item\">"+item2.time+"<span>"+item2.reason+"</span></div>"
-					//})
-				}
-			})
-			//list += "</div>"
-			return {
-					classes: (mark?"-holiday":""),
-					content: "<span>"+date.getDate()+"</span>",
-			};
-		}
-
-	}
-
-	const elem_sch = document.getElementById('expertDate');
-	const datepicker_sch = new Datepicker(elem_sch, options_sch); 
-	datepicker_sch.element.addEventListener('changeDate', (date) => {
-		let dh = document.querySelector('.holiday-header button')
-		if(dh) {
-			dh.classList.remove('-disabled')
-		}
-    
-		console.log(datepicker_sch.getDate("yyyy/m/d"))
-		
-		let mo = document.querySelector('[data-modal-target=modalSchedule] .js-schedule-edit')
-		if(mo) {
-			mo.value = datepicker_sch.getDate("dd MM yyyy")
-			//openModal('modalSchedule')
-		}
-
-		let list = ''
-		let empt = '-'
-		list = "<div class=\"holiday-date\">"+datepicker_sch.getDate("dd MM yyyy")+"</div>"
-		list += "<div class=\"holiday-list\">"
-		myHoliday.forEach(function(item){
-			if(datepicker_sch.getDate("yyyy/m/d") == item.date) {
-				empt = ''
-				item.holiday.forEach(function(item2){
-					list += "<div class=\"holiday-item\">"+item2.time+"<span>"+item2.reason+"</span></div>"
-				})
-			}
-		})
-		list += empt
-		list += "</div>"
-
-		let hc = document.querySelector('.holiday-content')
-		if(hc) {
-			hc.innerHTML = list
-		}
-
-  })
 
 	// dummy toast 
 	function dummyChange(toastMsg) {

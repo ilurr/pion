@@ -31,6 +31,18 @@
     @include min-responsive($screen-desktop) {
       flex-basis: calc((100% - 64px) / 3);
     }
+    &.-small {
+      flex-basis: 100%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      @include min-responsive($screen-desktop) {
+        flex-basis: 35%;
+        align-self: flex-start;
+      }
+      & ~ .tile-card {
+        flex-basis: auto;
+      }
+    }
     &.-medium {
       flex-basis: 100%;
       flex-grow: 0;

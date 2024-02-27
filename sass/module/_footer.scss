@@ -67,6 +67,9 @@
 		}
 	}
 	&-lead {
+		// display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
 		@include font-pack(false, 16px, 400, 150%, #fff);
 		text-align: center;
 		@include min-responsive($screen-tablet) {
@@ -74,16 +77,29 @@
 		}
 	}
 	&-contact {
-		display: inline-flex;
-		align-items: center;
+		// position: relative;
+		// display: inline-block;
+		// display: inline-flex;
+		// align-items: center;
+		display: block;
+		// margin: 10px 0;
 		@include font-pack(false, 16px, 400, normal, #fff);
-		vertical-align: text-top;
-		gap: 6px;
+		// vertical-align: text-top;
+		// gap: 6px;
+		// padding-left: 25px;
+		margin-bottom: -15px;
+		// @include min-responsive($screen-tablet) {
+		// 	margin-bottom: 0;
+		// }
 		& > .icon {
-			display: block;
+			display: inline-block;
+			vertical-align: middle;
 			width: 16px;
 			height: 16px;
+			margin-right: 2px;
 			filter: brightness(0) invert(1);
+			// position: absolute;
+			// left: 0;
 		}
 		&:hover {
 			text-decoration: underline;

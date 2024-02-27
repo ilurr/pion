@@ -1,0 +1,150 @@
+.service {
+	&-toggle {
+		position: relative;
+	}
+	&-expand {
+		&-button {
+			padding: 5px 10px;
+			width: 100%;
+			justify-content: flex-start;
+			gap: 10px;
+			font-size: 14px;
+			&.accordion-toggle .icon {
+				position: absolute;
+				right: 20px;
+			}
+		}
+	}
+
+	&-tab {
+		position: relative;
+		display: flex;
+		// border-bottom: 1px solid #f0f0f0;
+		align-items: stretch;
+		gap: 5px;
+		@include min-responsive($screen-desktop) {
+			flex-direction: column;
+		}
+		@include max-responsive($screen-tablet) {
+			width: calc(100vw - 72px);
+			overflow-x: auto;
+			height: 34px;
+		}
+		&-item {
+			position: relative;
+		}
+		&-button {
+			border: transparent;
+			border-radius: 8px;
+			box-shadow: none;
+			text-align: center;
+			justify-content: flex-start;
+			margin: 0;
+			font-size: 12px;
+			height: auto;
+			padding: .538rem .5rem;
+			@include min-responsive($screen-desktop) {
+				text-align: left;
+			}
+			@include max-responsive($screen-tablet) {
+				white-space: nowrap;
+			}
+			&.-active {
+				color: #fff;
+				background-color: #0DACDD;
+			}
+		}
+	}
+	&-body {
+		position: relative;
+		display: flex;
+		width: 100%;
+	}
+	&-content {
+		display: none;
+		width: 100%;
+		flex-direction: column;
+		&.-active {
+			display: flex;
+		}
+	}
+	&-col {
+		position: relative;
+		flex-grow: 1;
+		.form-row {
+			margin: 0;
+		}
+		&:first-child {
+			flex-basis: 100px;
+			flex-grow: 0;
+		}
+	}
+	&-text {
+		font-size: 14px;
+	}
+	&-row {
+		position: relative;
+		margin: .75rem 0;
+		width: 100%;
+		// display: flex;
+		// justify-content: stretch;
+		& > label {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+		}
+		.form-radio input[type=checkbox] + label {
+			padding: 0 .25rem;
+			height: 34px;
+		}
+		&.-inline {
+			display: flex;
+			align-items: center;
+			margin: .5rem 0;
+			gap: 10px;
+			@include min-responsive($screen-tablet) {
+				flex-wrap: nowrap;
+				gap: 0;
+			}
+		}
+		.form-inline-footnote {
+			display: flex;
+			align-items: center;
+			input {
+				min-width: 1rem;
+				min-height: 1rem;
+			}
+			// label {
+			// 	font-size: 0.875rem;
+			// }
+			input[type=checkbox]:checked + label:before {
+				transform: rotate(45deg) scale(1.25);
+			}
+		}
+	}
+	&-action {
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+.-service {
+	&.tile-list {
+		// flex-direction: column;
+		gap: 15px;
+		// flex-wrap: initial;
+		// @include min-responsive($screen-tablet) {
+		// }
+		.tile-card {
+			min-height: auto;
+			@include min-responsive($screen-desktop) {
+				flex-basis: 300px;
+			}
+		}
+		.tile-body {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+		} 
+	}
+}
