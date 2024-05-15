@@ -70,4 +70,16 @@ var mswiper3 = new Swiper(".swiper-media", {
 	}
 });
 
+var mswiper4 = new Swiper(".swiper-cover", {
+	slidesPerView: 1,
+	loop: true,
+	autoplay: {
+		delay: 8000,
+		disableOnInteraction: false,
+	},
+	pagination: {
+		el: ".swiper-pagination",
+	}
+});
+
 

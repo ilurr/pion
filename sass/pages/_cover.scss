@@ -2,6 +2,7 @@
 	position: relative;
 	background: #F0F1F5;
 	height: calc(85vh - 60px);
+	overflow: hidden;
 	@include min-responsive($screen-middle) {
 		height: calc(100vh - 100px);
 	}
