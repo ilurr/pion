@@ -1,10 +1,13 @@
 .cover {
 	position: relative;
 	background: #F0F1F5;
-	height: calc(85vh - 60px);
+	height: calc(2/2 * 100vw);
 	overflow: hidden;
-	@include min-responsive($screen-middle) {
-		height: calc(100vh - 100px);
+	@include min-responsive($screen-tablet) {
+		height: calc(3/2 * 500px);
+	}
+	@include min-responsive($screen-small-desktop) {
+		height: calc(1168/2880 * 100vw);
 	}
 	&-block {
 		position: relative;
@@ -17,7 +20,7 @@
 		@include min-responsive($screen-small-desktop) {
 			padding-top: 0;
 			align-items: center;
-			padding-bottom: 100px;
+			padding-bottom: 75px;
 		}
 		@include min-responsive($screen-large-desktop) {
 			width: 1400px;
@@ -61,11 +64,12 @@
     bottom: 0;
     width: 100%;
     pointer-events: none;
-    height: 330px;
+    height: 100%;
     z-index: 1;
-    background-size: auto 100%;
-		background-position: calc(100% + 105px) center;
+    background-size: cover;
+		// background-position: calc(100% + 105px) center;
 		background-repeat: no-repeat;
+		background-position: center center;
 		// &.-b2 {
 		// 	background-position: calc(100% + 80px) center;
 		// }
@@ -78,20 +82,20 @@
 		// 		background-position: calc(100% + 200px) center;
 		// 	}
 		// }
-		@include min-responsive($screen-middle) {
-			background-position: calc(100% + 105px) center;
-		}
+		// @include min-responsive($screen-middle) {
+		// 	background-position: calc(100% + 105px) center;
+		// }
 		@include min-responsive($screen-tablet) {
-			height: 70vh;
-			background-position: calc(100% + 250px) center;
-		}
-		@include min-responsive($screen-small-desktop - 1) {
 			height: 100%;
-			background-position: calc(100% + 200px) center;
+		// 	background-position: calc(100% + 250px) center;
 		}
-		@media (min-width: ($screen-small-desktop + 1)) and (max-height: 700px) {
-			background-position: calc(100% + 0px) center;	
-		}
+		// @include min-responsive($screen-small-desktop - 1) {
+			// hei ght: 100%;
+		// 	background-position: calc(100% + 200px) center;
+		// }
+		// @media (min-width: ($screen-small-desktop + 1)) and (max-height: 700px) {
+		// 	background-position: calc(100% + 0px) center;	
+		// }
 		// @include min-responsive($screen-desktop) {
 		// 	background-position: calc(100% + 100px) center;
 		// }
@@ -109,7 +113,7 @@
 	padding-top: 50px;
 	padding-bottom: 50px;
 	@include min-responsive($screen-tablet) {
-		margin-top: -125px;
+		margin-top: -75px;
 		padding-top: 10px;
 	}
 	@include min-responsive($screen-small-desktop) {
@@ -127,7 +131,7 @@
 		background: #fff;
 		@include min-responsive($screen-tablet) {
 			height: 150px;
-			top: 70px;
+			top: 10px;
 		}
 	}
 	&-block {
