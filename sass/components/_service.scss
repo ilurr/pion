@@ -22,7 +22,7 @@
 		// border-bottom: 1px solid #f0f0f0;
 		align-items: stretch;
 		gap: 5px;
-		@include min-responsive($screen-desktop) {
+		@include min-responsive($screen-large-desktop) {
 			flex-direction: column;
 		}
 		@include max-responsive($screen-tablet) {
@@ -43,8 +43,10 @@
 			font-size: 12px;
 			height: auto;
 			padding: .538rem .5rem;
-			@include min-responsive($screen-desktop) {
+			background: #fafafa;
+			@include min-responsive($screen-large-desktop) {
 				text-align: left;
+				background: transparent;
 			}
 			@include max-responsive($screen-tablet) {
 				white-space: nowrap;
@@ -71,6 +73,7 @@
 	&-col {
 		position: relative;
 		flex-grow: 1;
+		flex-basis: 0;
 		.form-row {
 			margin: 0;
 		}
@@ -99,12 +102,12 @@
 		}
 		&.-inline {
 			display: flex;
-			align-items: center;
-			margin: .5rem 0;
+			align-items: baseline;
+			margin: .75rem 0;
 			gap: 10px;
 			@include min-responsive($screen-tablet) {
 				flex-wrap: nowrap;
-				gap: 0;
+				// gap: 0;
 			}
 		}
 		.form-inline-footnote {
@@ -127,6 +130,70 @@
 		display: flex;
 		justify-content: flex-end;
 	}
+
+	// 
+	&-cover.cover {
+		padding: .5rem .5rem 0;
+		height: auto;
+		@include min-responsive($screen-small-desktop) {
+			padding: 1rem 1rem 0;
+		}
+	}
+	&-slider {
+		position: relative;
+		height: calc((442/1091 * 100vw) + 30px);
+		overflow: hidden;
+		padding-bottom: 30px;
+		.cover-block {
+			padding-bottom: 20px;
+			align-items: flex-end;
+			@include min-responsive($screen-tablet) {
+				padding-bottom: 40px;
+			}
+			@include min-responsive($screen-small-desktop) {
+				padding-bottom: 60px;
+			}
+			@include min-responsive($screen-large-desktop) {
+				padding-bottom: 100px;
+				width: 100%;
+			}
+		}
+		.cover-content-inline {
+			position: relative;
+			display: flex;
+			height: 20px;
+	    gap: 0;
+			@include min-responsive($screen-tablet) {
+				height: 30px;
+			}
+			@include min-responsive($screen-small-desktop) {
+				height: 55px;
+				gap: 10px;
+			}
+			@include min-responsive($screen-large-desktop) {				
+				height: 70px;
+				padding: 0 2rem;
+			}
+			img {
+				height: 100%;
+			}
+		}
+		.cover-asset {
+			border-radius: 12px;
+			@include min-responsive($screen-small-desktop) {
+				border-radius: 30px;
+			}
+			// top: 50%; 
+			// left: 50%; 
+			// transform: translate(-50%, -50%); 
+			// width: calc(100% - 40px); 
+			// height: calc(100% - 40px);
+		}
+		.swiper-horizontal > .swiper-pagination-bullets, 
+		.swiper-pagination-bullets.swiper-pagination-horizontal {
+			bottom: 5px;
+		}
+	}
 }
 .-service {
 	&.tile-list {
@@ -137,7 +204,18 @@
 		// }
 		.tile-card {
 			min-height: auto;
-			@include min-responsive($screen-desktop) {
+			@include min-responsive($screen-tablet) {
+				flex-basis: auto;
+			}
+			@include min-responsive($screen-large-desktop) {
+				flex-basis: calc(100% - 315px);
+			}
+		}
+		.tile-card.-small {
+			@include min-responsive($screen-tablet) {
+				flex-basis: 100%;
+			}
+			@include min-responsive($screen-large-desktop) {
 				flex-basis: 300px;
 			}
 		}

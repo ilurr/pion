@@ -204,6 +204,29 @@
 			</div>
 		</section>
 
+		<!-- sticky button -->
+		<div class="inquiry-widget -sticky">
+			<button class="inquiry-button button -primary -auto" type="button" onclick="document.querySelector('.inquiry-box').classList.toggle('-hide')"><span class="fa-solid fa-envelope"></span> Hubungi Kami</button>
+			<div class="inquiry-box -hide">
+				<button class="button modal-dismiss" aria-label="Close" onclick="document.querySelector('.inquiry-box').classList.add('-hide')">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+				<div class="inquiry-form form-main">
+					<h2 class="title -tiny">Please send us your information to learn more about PION EAP</h2>
+					<form action="register-success-v2.html">
+						{{>input type="text" label="Name" name="name" placeholder=""}}
+						{{>input type="text" label="Email" name="email" placeholder=""}}
+						{{>input type="text" label="Company Name" name="company-name" placeholder=""}}
+						{{>input type="text" label="Phone Number" name="phone" placeholder=""}}
+						{{>select type="select" label="Topic" name="topic" placeholder="" option="Individual & Family Services,Pion Edu,Corporate Service"}}
+						{{>textarea label="Details" placeholder="" id="detail" name="detail"}}
+						{{>input type="text" label="Expected Response Date" name="response" placeholder="" function="js-datepicker" parent="js-datepicker-container" readonly="true"}}
+						{{>button type="submit" class="-primary" label="Send Inquiry"}}
+					</form>
+				</div>
+			</div>
+		</div>
+
 		<!-- footer -->
 		{{>footer brand="pion-clinician"}}
 

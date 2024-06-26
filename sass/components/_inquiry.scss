@@ -1,0 +1,64 @@
+.inquiry {
+	&-widget {
+		position: relative;
+		&.-sticky {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 9;
+			@include min-responsive($screen-small-desktop) {
+				z-index: 10;
+				bottom: 50px;
+				right: 50px;
+			}
+		}
+	}
+	&-button {
+		position: relative;
+		z-index: 2;
+	}
+	&-box {
+		position: absolute;
+		bottom: 70px;
+		right: 0;
+		z-index: 3;
+		background: #fff;
+		border-radius: 12px;
+		width: calc(100vw - 40px);
+		box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.2);
+		@include min-responsive($screen-small-desktop) {
+			width: 400px;
+			// max-height: 80vh;
+		}
+		&.-hide {
+			opacity: 0;
+			visibility: hidden;
+		}
+		.title {
+			margin: -1.5rem -1rem 0;
+			padding: 1.5rem 1rem;
+			color: #fff;
+			background: #0DACDD;
+		}
+		.modal-dismiss {
+			position: absolute;
+			right: -10px;
+			top: -10px;
+			background: #2e90bc;
+			z-index: 3;
+			border-radius: 50%;
+			color: #fff;
+		}
+	}
+	&-form {
+		position: relative;
+    overflow-y: auto;
+    max-height: 70vh;
+		overscroll-behavior: contain;
+		padding: 1.5rem 1rem;
+		border-radius: 12px 12px 0 0;
+		@include min-responsive($screen-small-desktop) {
+			max-height: 75vh;
+		}
+	}
+}

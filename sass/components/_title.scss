@@ -93,6 +93,16 @@
 		// 	}
 		// }
 	}
+	&.-tiny{
+		font-size: 1rem;
+		line-height: 20px;
+		font-weight: 600;
+		// & ~ .title-button {
+		// 	@include min-responsive($screen-tablet) {
+		// 		margin-bottom: -50px;
+		// 	}
+		// }
+	}
 }
 .logo {
 	img {

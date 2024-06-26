@@ -21,10 +21,14 @@
 		justify-content: flex-start;
 		flex-wrap: wrap;
 		gap: 5px;
-		@include min-responsive($screen-tablet) {
-			flex-wrap: nowrap;
-			justify-content: space-between;
-			gap: 0;
+		// @include min-responsive($screen-tablet) {
+		// 	flex-wrap: nowrap;
+		// 	justify-content: space-between;
+		// 	gap: 0;
+		// }
+		.form-row {
+			flex-basis: calc(100% / 12);
+			flex-grow: 0;
 		}
 		.form-row,
 		.form-radio {

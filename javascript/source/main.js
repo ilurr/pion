@@ -83,3 +83,20 @@ var mswiper4 = new Swiper(".swiper-cover", {
 });
 
 
+var mswiper5 = new Swiper(".swiper-eap", {
+	slidesPerView: 1,
+	loop: true,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	autoplay: {
+		delay: 8000,
+		disableOnInteraction: false,
+	},
+	pagination: {
+		el: ".swiper-pagination",
+	}
+});
+
+
