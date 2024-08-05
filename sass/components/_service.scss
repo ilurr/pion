@@ -135,8 +135,17 @@
 	&-cover.cover {
 		padding: .5rem .5rem 0;
 		height: auto;
+		background: #fff;
 		@include min-responsive($screen-small-desktop) {
 			padding: 1rem 1rem 0;
+		}
+	}
+	&-package {
+		.package-title {
+			font-size: 23px;
+		}
+		.issue-block {
+			padding: 0 0 20px;
 		}
 	}
 	&-slider {

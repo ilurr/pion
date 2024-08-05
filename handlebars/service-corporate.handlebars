@@ -62,11 +62,93 @@
 			</div>
 		</section>
 		
+		<!-- package -->
+		<section class="section package service-package">
+			<div class="board-row">
+
+				<div class="package-page">
+					<h1 class="title -medium">Layanan PION Clinician untuk Korporasi</h1>
+					<!-- package package -->
+					<div class="package-block">
+						<div class="package-item package-bgyellow">
+							<div class="package-asset">
+								<img src="https://dev-asset.pionindonesia.com/images/corporate/eap.png" alt="">
+							</div>
+							<h2 class="package-title">EAP</h2>
+							<div class="package-lead">
+								<p>Memberikan dukungan, pengetahuan dan keterampilan kepada karyawan dalam mengatasi tantangan.</p>
+							</div>
+						</div>
+						<div class="package-item package-bgyellow">
+							<div class="package-asset">
+								<img src="https://dev-asset.pionindonesia.com/images/corporate/asesmen-psikologis.png" alt="">
+							</div>
+							<h2 class="package-title">Assessment Center</h2>
+							<div class="package-lead">
+								<p>Menggali kompetensi individu untuk mengukur kompetensi yang dibutuhkan.</p>
+							</div>
+						</div>
+						<div class="package-item package-bgyellow">
+							<div class="package-asset">
+								<img src="https://dev-asset.pionindonesia.com/images/corporate/training-development.png" alt="">
+							</div>
+							<h2 class="package-title">Training & Development</h2>
+							<div class="package-lead">
+								<p>Pelatihan profesional yang dirancang untuk menilai keterampilan, kesesuaian, dan kebutuhan perkembangan individu.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- package -->
+		<section class="section package service-package">
+			<div class="board-row">
+				<!-- issue -->
+				<div class="issue-page">
+					<div class="issue-block">
+						<div class="issue-content">
+							<h1 class="title -medium">Layanan EAP</h1>
+							<ul class="issue-list">
+								{{#each issue}}
+								<li class="issue-item">
+									<a href="javascript:openModal('issueModal-{{@index}}')" role="button" class="issue-button">
+										<span>{{title}}</span> 
+										<div class="issue-figure">
+											<img src="./asset/images/issue/{{figure}}" alt="{{title}}">
+										</div>
+									</a>
+								</li>
+
+								<div class="modal-content -medium" data-modal-target="issueModal-{{@index}}" data-modal-bgclick="true">
+									<div class="modal-header">
+										{{!-- <div class="modal-title">{{!title}}</div> --}}
+										<button class="button modal-dismiss" aria-label="Close" data-modal-button="dismiss">
+											<i class="fa-solid fa-xmark"></i>
+										</button>
+									</div>
+									<div class="modal-body">
+										<div class="issue-popup-title">{{title}}</div>
+										<div class="issue-popup">
+											{{{content}}}
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<!-- faq -->
 		<section class="section service-faq">
 			<div class="board-row">
 				<div class="faq-block">
-					<h1 class="title -small">F.A.Q. PION Corporate Service</h1>
+					<h1 class="title -medium">F.A.Q. PION Corporate Service</h1>
 					<div class="faq-list">
 						<div class="faq-item">
 							<a href="#Walk-in-Appointment" class="faq-toggle accordion-toggle">

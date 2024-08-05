@@ -391,6 +391,9 @@
 		flex-direction: column;
 		align-items: center;
 	}
+	&-page .title + &-block {
+		margin-top: 20px;
+	}
 	&-page &-item {
 		&:hover {
 			@include min-responsive($screen-tablet) {
@@ -398,12 +401,17 @@
 			}
 		}
 	}
+	&-page &-item &-lead {
+		order: 2;
+	}
 	&-page &-item &-title {
 		order: 1;
 	}
 	&-page &-item &-asset {
 		order: 3;
 		margin: 0 -18px -24px;
+		border-radius: 0 0 24px 24px;
+		overflow: hidden;
 		@include min-responsive($screen-tablet) {
 			margin: 0 -24px -36px;
 		}
@@ -671,6 +679,7 @@
 		}
 	}
 	&-page &-content {
+		align-items: center;
 		gap: 36px;
 	}
 	&-page &-item {
