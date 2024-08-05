@@ -1,2 +1,5 @@
 .DS_Store
-html/
+node_modules
+html/*
+!html/asset/images/*
+package-lock.json
