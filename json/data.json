@@ -80,7 +80,18 @@
       "modal": "",
       "notification": "",
       "badge": false,
-      "login": ""
+      "login": "",
+      "submenu": [
+        {
+          "title": "Corporate",
+          "icon": "",
+          "link": "service-corporate.html",
+          "modal": "",
+          "notification": "",
+          "badge": false,
+          "login": ""    
+        }
+      ]
     },
     {
       "title": "Media",
